@@ -18,17 +18,17 @@ Before you create event rules for AWS Config, however, you should do the followi
 The CloudWatch [event](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/CloudWatchEventsandEventPatterns.html) for AWS Config has the following format:
 
 ```
-          {
-           "version":"0",
-            "id":" cd4d811e-ab12-322b-8255-872ce65b1bc8",
-             "detail-type":"event type",
-             "source":"aws.config",
-             "account":"111122223333",
-             "time":"2018-03-22T00:38:11Z",
-             "region":"us-east-1",
-             "resources":[resources],
-             "detail":{specific message type
-            }
+        {
+            "version": "0",
+            "id": " cd4d811e-ab12-322b-8255-872ce65b1bc8",
+            "detail-type": "event type",
+            "source": "aws.config",
+            "account": "111122223333",
+            "time": "2018-03-22T00:38:11Z",
+            "region": "us-east-1",
+            "resources": [resources],
+            "detail": {specific message type}
+        }
 ```
 
 ## Creating Amazon CloudWatch Events Rule for AWS Config<a name="create-cloudwatch-events-rule-for-awsconfig"></a>
