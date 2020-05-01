@@ -13,7 +13,8 @@ For more information about working with AWS CloudFormation templates, see [Getti
 
 1. For **Specify template**:
    + If you downloaded the template, choose **Upload a template file**, and then **Choose file** to upload the template\.
-   + If you have an Amazon S3 bucket, choose **Amazon S3 URL**, and enter the template URL `https://s3.amazonaws.com/aws-configservice-us-east-1/cloudformation-templates-for-managed-rules/the rule identifier.template`\.
+   + Alternatively, you may choose **Amazon S3 URL**, and enter the template URL `https://s3.amazonaws.com/aws-configservice-us-east-1/cloudformation-templates-for-managed-rules/the rule identifier.template` 
+     + For Example: `https://s3.amazonaws.com/aws-configservice-us-east-1/cloudformation-templates-for-managed-rules/CLOUDWATCH_LOG_GROUP_ENCRYPTED.template`
 
 1. Choose **Next**\.
 
