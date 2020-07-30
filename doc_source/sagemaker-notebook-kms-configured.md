@@ -10,7 +10,7 @@ Check whether an AWS Key Management Service \(KMS\) key is configured for Amazon
 
 **Parameters:**
 
- keyArns \(optional\)  
+ kmsKeyArns \(optional\)  
 Comma\-separated list of allowed AWS KMS key IDs allowed for Amazon SageMaker notebook instance\.
 
 ## AWS CloudFormation template<a name="w4aac13c29c17d261c15"></a>
