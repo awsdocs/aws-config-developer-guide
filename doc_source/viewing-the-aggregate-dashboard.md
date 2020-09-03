@@ -32,7 +32,7 @@ AWS Config is unable to access your organization details due to invalid IAM role
 AWS Config service access is disabled in your organization\.
 
 ## Learn More<a name="learn-more-setup-console"></a>
-+ [AWS Config Concepts](config-concepts.md)
++ [Concepts](config-concepts.md)
 + [Viewing Configuration and Compliance Data in the Aggregated View](#viewing-the-aggregate-dashboard)
 + [Setting Up an Aggregator Using the Console](setup-aggregator-console.md)
 + [Authorizing Aggregator Accounts to Collect AWS Config Configuration and Compliance Data Using the Console](authorize-aggregator-account-console.md)

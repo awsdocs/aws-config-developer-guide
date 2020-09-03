@@ -1,6 +1,6 @@
 # Looking Up Resources That Are Discovered by AWS Config<a name="looking-up-discovered-resources"></a>
 
-You can use the AWS Config console, AWS CLI, and AWS Config API to look up the resources that AWS Config has taken an inventory of, or *discovered*, including deleted resources and resources that AWS Config is not currently recording\. AWS Config discovers supported resource types only\. For more information, see [AWS Config Supported AWS Resource Types and Resource Relationships](resource-config-reference.md)\.
+You can use the AWS Config console, AWS CLI, and AWS Config API to look up the resources that AWS Config has taken an inventory of, or *discovered*, including deleted resources and resources that AWS Config is not currently recording\. AWS Config discovers supported resource types only\. For more information, see [Supported Resource Types](resource-config-reference.md)\.
 
 ## Looking Up Resources \(AWS Config Console\)<a name="looking-up-resources"></a>
 

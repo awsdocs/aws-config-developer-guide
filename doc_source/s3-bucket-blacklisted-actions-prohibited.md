@@ -6,11 +6,13 @@ Checks that the Amazon Simple Storage Service bucket policy does not allow black
 
 **Trigger type:** Configuration changes
 
+**AWS Region:** All supported AWS Regions
+
 **Parameters:**
 
  blacklistedactionpatterns  
 Comma\-separated list of blacklisted action patterns, for example, s3:GetBucket\* and s3:DeleteObject\.
 
-## AWS CloudFormation template<a name="w4aac13c29c17d239c13"></a>
+## AWS CloudFormation template<a name="w22aac11c29c17d285c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

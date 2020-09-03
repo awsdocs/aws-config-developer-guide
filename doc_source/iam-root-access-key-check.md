@@ -6,10 +6,12 @@ Checks whether the root user access key is available\. The rule is COMPLIANT if 
 
 **Trigger type:** Periodic
 
+**AWS Region:** All supported AWS Regions except Middle East \(Bahrain\)
+
 **Parameters:**
 
  None   
 
-## AWS CloudFormation template<a name="w4aac13c29c17d183c13"></a>
+## AWS CloudFormation template<a name="w22aac11c29c17d205c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

@@ -24,7 +24,7 @@ Access the compliance timeline by selecting a specific resource from the Resourc
 
 1. Select the **Resources** from the left navigation\.
 
-1. On the Resource inventory page, select all the exisiting resources from the drop\-down and if appropriate, select include deleted resources\.
+1. On the Resource inventory page, select all the existing resources from the drop\-down and if appropriate, select include deleted resources\.
 
 1. Click **Lookup**\.
 

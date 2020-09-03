@@ -64,6 +64,6 @@ $ aws configservice describe-configuration-recorder-status
 }
 ```
 
-The value `true` in the `recording` field confirms that the configuration recorder has started recording configurations of all your resources\. AWS Config uses UTC format \(GMT \- 8:00\) to record the time\.
+The value `true` in the `recording` field confirms that the configuration recorder has started recording configurations of all your resources\. AWS Config records the time in UTC\. The output is displayed as a Unix timestamp\.  
 
 For information about looking up the resources existing in your account and understanding the configurations of your resources, see [Viewing AWS Resource Configurations and History](view-manage-resource.md)\.

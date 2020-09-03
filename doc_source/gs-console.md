@@ -17,11 +17,11 @@ If you are using AWS Config for the first time or configuring AWS Config for a n
 
 1. Choose **Get Started Now**\.
 
-1. On the **Settings** page, for **Resource types to record**, specify the AWS resource types you want AWS Config to record:
+1. On the **Settings** page, for **Resource types to record**, specify all the resource types you want AWS Config to record\. These resource types are AWS resources or third\-party resources or custom resources\.
    + **All resources** – AWS Config records all supported resources with the following options:
-     + **Record all resources supported in this region** – AWS Config records configuration changes for every supported type of regional resource\. When AWS Config adds support for a new resource type, AWS Config automatically starts recording resources of that type\.
+     + **Record all resources supported in this region** – AWS Config records configuration changes for supported AWS resource types as well as third\-party resource types registered in AWS CloudFormation registry\. AWS Config automatically starts recording new supported AWS resource types\. It also automatically starts recording third\-party resource types that are managed \(i\.e\. created/updated/deleted\) through AWS CloudFormation\.
      + **Include global resources** – AWS Config includes supported types of global resources with the resources that it records \(for example, IAM resources\)\. When AWS Config adds support for a new global resource type, AWS Config automatically starts recording resources of that type\.
-   + **Specific types** – AWS Config records configuration changes for only the AWS resource types that you specify\.
+   + **Specific types** – AWS Config records configuration changes for only the resource types that you specify\.
 
    For more information about these options, see [Selecting Which Resources AWS Config Records](select-resources.md)\.
 
@@ -47,7 +47,7 @@ The Amazon SNS topic must exist in the same region as the region in which you se
    + **Create a role** – AWS Config creates a role that has the required permissions\. For **Role name**, you can customize the name that AWS Config creates\.
    + **Choose a role from your account** – For **Role name**, choose an IAM role in your account\. AWS Config will attach the required policies\. For more information, see [Permissions for the IAM Role Assigned to AWS Config](iamrole-permissions.md)\.
 **Note**  
-Check the box if you want to use the IAM role as it\. AWS Config will not attach policies to the role\.
+Check the box if you want to use the IAM role as is\. AWS Config will not attach policies to the role\.
 
 1. If you are setting up AWS Config in a region that supports rules, choose **Next**\. See [Setting Up AWS Config Rules with the Console](setting-up-aws-config-rules-with-console.md)\. 
 

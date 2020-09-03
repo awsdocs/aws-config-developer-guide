@@ -4,9 +4,14 @@ Checks that the access granted by the Amazon S3 bucket is restricted by any of t
 
 For example, if the input parameter to the rule is the list of two principals: `111122223333` and `444455556666` and the bucket policy specifies that only `111122223333` can access the bucket, then the rule is COMPLIANT\. With the same input parameters: If the bucket policy specifies that `111122223333` and `444455556666` can access the bucket, it is also compliant\. However, if the bucket policy specifies that `999900009999` can access the bucket, the rule is NON\-COMPLIANT\. 
 
+**Note**  
+If a bucket policy contains more than one statement, each statement in the bucket policy is evaluated against this rule\.
+
 **Identifier:** S3\_BUCKET\_POLICY\_GRANTEE\_CHECK
 
 **Trigger type:** Configuration changes
+
+**AWS Region:** All supported AWS Regions
 
 **Parameters:**
 
@@ -25,6 +30,6 @@ Comma\-separated list of principals such as IAM User ARNs, IAM Role ARNs and AWS
  vpcIds  
  Comma\-separated list of Amazon Virtual Private Cloud \(Amazon VPC\) IDs, for example '`vpc-1234abc0`, `vpc-ab1234c0`’\.
 
-## AWS CloudFormation template<a name="w4aac13c29c17d245c15"></a>
+## AWS CloudFormation template<a name="w22aac11c29c17d291c19"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

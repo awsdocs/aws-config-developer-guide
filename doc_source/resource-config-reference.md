@@ -1,4 +1,4 @@
-# AWS Config Supported AWS Resource Types and Resource Relationships<a name="resource-config-reference"></a>
+# Supported Resource Types<a name="resource-config-reference"></a>
 
 AWS Config supports the following AWS resources types and resource relationships\.
 
@@ -104,7 +104,7 @@ AWS Config also records the following attributes for the Amazon S3 bucket resour
 
 For more information about the attributes, see [Bucket Configuration Options](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html#bucket-config-options-intro) in the *Amazon Simple Storage Service Developer Guide*\.
 
-## Amazon Simple Queue Service<a name="amazonsimplequeueservice"></a>
+## Amazon Simple Queue Service<a name="amazonsimplenotificationservice"></a>
 
 
 ****  
@@ -112,6 +112,15 @@ For more information about the attributes, see [Bucket Configuration Options](ht
 | AWS Service | Resource Type Value | Relationship | Related Resource | 
 | --- | --- | --- | --- | 
 | Amazon Simple Queue Service | AWS::SQS::Queue | NA | NA | 
+
+## Amazon Simple Notification Service<a name="amazonsimplequeueservice"></a>
+
+
+****  
+
+| AWS Service | Resource Type Value | Relationship | Related Resource | 
+| --- | --- | --- | --- | 
+| Amazon Simple Notification Service | AWS::SNS::Topic | NA | NA | 
 
 ## Amazon Simple Storage Service<a name="amazonsimplestorageservice"></a>
 
@@ -209,6 +218,12 @@ AWS Config includes inline policies with the configuration details that it recor
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
+## AWS Secrets Manager<a name="awssecretsmanager"></a>
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
+
 ## AWS Service Catalog<a name="servicecatalog"></a>
 
 
@@ -238,6 +253,12 @@ AWS Config includes inline policies with the configuration details that it recor
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
 \*The AWS WAF resource type values are available only in the US East \(N\. Virginia\) Region\. The `AWS::WAFRegional::RateBasedRule`, `AWS::WAFRegional::Rule`, `AWS::WAFRegional::WebACL`, and `AWS::WAFRegional::RuleGroup` are available in all regions where AWS WAF is supported\. 
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
+
+\*The AWS WAFv2 resource type values are available in all the AWS Regions where AWS WAFv2 is supported\. 
 
 ## AWS X\-Ray<a name="awsxray"></a>
 

@@ -6,11 +6,13 @@ Checks whether your EC2 instances belong to a virtual private cloud \(VPC\)\. Op
 
 **Trigger type:** Configuration changes
 
+**AWS Region:** All supported AWS Regions except Africa \(Cape Town\) and Europe \(Milan\)
+
 **Parameters:**
 
  vpcId   
  The ID of the VPC that contains these instances\.
 
-## AWS CloudFormation template<a name="w4aac13c29c17d111c13"></a>
+## AWS CloudFormation template<a name="w22aac11c29c17d117c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

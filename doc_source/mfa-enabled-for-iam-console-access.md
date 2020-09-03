@@ -6,10 +6,12 @@ Checks whether AWS Multi\-Factor Authentication \(MFA\) is enabled for all AWS I
 
 **Trigger type:** Periodic
 
+**AWS Region:** All supported AWS Regions
+
 **Parameters:**
 
  None  
 
-## AWS CloudFormation template<a name="w4aac13c29c17d207c13"></a>
+## AWS CloudFormation template<a name="w22aac11c29c17d229c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

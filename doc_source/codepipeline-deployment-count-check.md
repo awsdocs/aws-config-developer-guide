@@ -6,11 +6,13 @@ Checks whether the first deployment stage of the AWS CodePipeline performs more 
 
 **Trigger type:** Configuration changes
 
+**AWS Region:** All supported AWS Regions except China \(Beijing\), China \(Ningxia\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), Asia Pacific \(Hong Kong\), Europe \(Stockholm\), Middle East \(Bahrain\), Africa \(Cape Town\) and Europe \(Milan\)
+
 **Parameters:**
 
  deploymentLimit  
 The maximum number of deployments each stage can perform\.
 
-## AWS CloudFormation template<a name="w4aac13c29c17c81c13"></a>
+## AWS CloudFormation template<a name="w22aac11c29c17c73c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

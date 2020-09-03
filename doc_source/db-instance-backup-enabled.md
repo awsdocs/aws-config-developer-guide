@@ -6,6 +6,8 @@ Checks whether RDS DB instances have backups enabled\. Optionally, the rule chec
 
 **Trigger type:** Configuration changes
 
+**AWS Region:** All supported AWS Regions
+
 **Parameters:**
 
  backupRetentionPeriod   
@@ -17,6 +19,6 @@ Checks whether RDS DB instances have backups enabled\. Optionally, the rule chec
  checkReadReplicas   
  Checks whether RDS DB instances have backups enabled for read replicas\. 
 
-## AWS CloudFormation template<a name="w4aac13c29c17c85c13"></a>
+## AWS CloudFormation template<a name="w22aac11c29c17c81c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

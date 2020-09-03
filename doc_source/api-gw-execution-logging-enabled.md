@@ -6,13 +6,13 @@ Checks that all methods in Amazon API Gateway stage has logging enabled\. The ru
 
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS regions
+**AWS Region:** All supported AWS Regions except Africa \(Cape Town\) and Europe \(Milan\)
 
 **Parameters:**
 
  loggingLevel  
 \(Optional\) Comma\-separated list of specific logging levels \(for example, ERROR, INFO or ERROR,INFO\)\.
 
-## AWS CloudFormation template<a name="w4aac13c29c17c43c15"></a>
+## AWS CloudFormation template<a name="w22aac11c29c17c25c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

@@ -6,6 +6,8 @@ Checks whether the specified resource type has a CloudWatch alarm for the specif
 
 **Trigger type:** Periodic
 
+**AWS Region:** All supported AWS Regions
+
 **Parameters:**
 
 resourceType  
@@ -17,6 +19,6 @@ AWS resource type\. The value can be one of the following:
 metricName  
 The name of the metric associated with the alarm \(for example, "CPUUtilization" for EC2 instances\)\.
 
-## AWS CloudFormation template<a name="w4aac13c29c17c69c13"></a>
+## AWS CloudFormation template<a name="w22aac11c29c17c61c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

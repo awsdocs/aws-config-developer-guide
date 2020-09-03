@@ -1,4 +1,4 @@
-# AWS Config Concepts<a name="config-concepts"></a>
+# Concepts<a name="config-concepts"></a>
 
 AWS Config provides a detailed view of the resources associated with your AWS account, including how they are configured, how they are related to one another, and how the configurations and their relationships have changed over time\. Let's take a closer look at the concepts of AWS Config\.
 
@@ -33,7 +33,7 @@ Understanding the basic components of AWS Config will help you track resource in
 
 ### AWS Resources<a name="aws-resources"></a>
 
-*AWS resources* are entities that you create and manage using the AWS Management Console, the AWS Command Line Interface \(CLI\), the AWS SDKs, or AWS partner tools\. Examples of AWS resources include Amazon EC2 instances, security groups, Amazon VPCs, and Amazon Elastic Block Store\. AWS Config refers to each resource using its unique identifier, such as the resource ID or an [Amazon Resource Name \(ARN\)](https://docs.aws.amazon.com/general/latest/gr/glos-chap.html#ARN)\. For details, see [AWS Config Supported AWS Resource Types and Resource Relationships](resource-config-reference.md)\.
+*AWS resources* are entities that you create and manage using the AWS Management Console, the AWS Command Line Interface \(CLI\), the AWS SDKs, or AWS partner tools\. Examples of AWS resources include Amazon EC2 instances, security groups, Amazon VPCs, and Amazon Elastic Block Store\. AWS Config refers to each resource using its unique identifier, such as the resource ID or an [Amazon Resource Name \(ARN\)](https://docs.aws.amazon.com/general/latest/gr/glos-chap.html#ARN)\. For details, see [Supported Resource Types](resource-config-reference.md)\.
 
 ### Configuration History<a name="config-history"></a>
 
@@ -65,7 +65,7 @@ A configuration stream is an automatically updated list of all configuration ite
 
 AWS Config discovers AWS resources in your account and then creates a map of relationships between AWS resources\. For example, a relationship might include an Amazon EBS volume `vol-123ab45d` attached to an Amazon EC2 instance `i-a1b2c3d4` that is associated with security group `sg-ef678hk`\. 
 
-For more information, see [AWS Config Supported AWS Resource Types and Resource Relationships](resource-config-reference.md)\.
+For more information, see [Supported Resource Types](resource-config-reference.md)\.
 
 ## AWS Config Managed and Custom Rules<a name="aws-config-rules"></a>
 
@@ -79,7 +79,7 @@ After you activate a rule, AWS Config compares your resources to the conditions 
 + Configuration changes – AWS Config triggers the evaluation when any resource that matches the rule's scope changes in configuration\. The evaluation runs after AWS Config sends a configuration item change notification\.
 + Periodic – AWS Config runs evaluations for the rule at a frequency that you choose \(for example, every 24 hours\)\.
 
-For more information, see [Evaluating Resources with Rules](evaluate-config.md)\.
+For more information, see [Evaluating Resources with AWS Config Rules](evaluate-config.md)\.
 
 ## Multi\-Account Multi\-Region Data Aggregation<a name="multi-account-multi-region-data-aggregation"></a>
 
@@ -138,8 +138,8 @@ As an alternative to using the AWS Config API, you can use one of the AWS SDKs\.
 
 ## Control Access to AWS Config<a name="config-concepts-iam"></a>
 
-AWS Identity and Access Management is a web service that enables Amazon Web Services \(AWS\) customers to manage users and user permissions\. Use IAM to create individual users for anyone who needs access to AWS Config\. Create an IAM user for yourself, give that IAM user administrative privileges, and use that IAM user for all of your work\. By creating individual IAM users for people accessing your account, you can give each IAM user a unique set of security credentials\. You can also grant different permissions to each IAM user\. If necessary, you can change or revoke an IAM user’s permissions at any time\. For more information, see [Controlling Permissions for AWS Config](example-policies.md)\.
+AWS Identity and Access Management is a web service that enables Amazon Web Services \(AWS\) customers to manage users and user permissions\. Use IAM to create individual users for anyone who needs access to AWS Config\. Create an IAM user for yourself, give that IAM user administrative privileges, and use that IAM user for all of your work\. By creating individual IAM users for people accessing your account, you can give each IAM user a unique set of security credentials\. You can also grant different permissions to each IAM user\. If necessary, you can change or revoke an IAM user’s permissions at any time\. For more information, see [AWS Identity and Access Management](security-iam.md)\.
 
 ## Partner Solutions<a name="config-concepts-partner-solutions"></a>
 
-AWS partners with third\-party specialists in logging and analysis to provide solutions that use AWS Config output\. For more information, visit the AWS Config detail page at [AWS AWS Config](https://aws.amazon.com/config)\.
+AWS partners with third\-party specialists in logging and analysis to provide solutions that use AWS Config output\. For more information, visit the AWS Config detail page at [ AWS Config](https://aws.amazon.com/config)\.

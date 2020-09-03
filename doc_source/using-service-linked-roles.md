@@ -12,7 +12,7 @@ AWS Config uses the service\-linked role named **AWSServiceRoleForConfig** – A
 
 The **AWSServiceRoleForConfig** service\-linked role trusts the `config.amazonaws.com` service to assume the role\.
 
-The permissions policy for the `AWSServiceRoleForConfig` role contains read\-only and write\-only permissions on the AWS Config resources and read\-only permissions for resources in other services that AWS Config supports\. For more information, see [AWS Config Supported AWS Resource Types and Resource Relationships](resource-config-reference.md)\. 
+The permissions policy for the `AWSServiceRoleForConfig` role contains read\-only and write\-only permissions on the AWS Config resources and read\-only permissions for resources in other services that AWS Config supports\. For more information, see [Supported Resource Types](resource-config-reference.md)\. 
 
 You must configure permissions to allow an IAM entity \(such as a user, group, or role\) to create, edit, or delete a service\-linked role\. For more information, see [Service\-Linked Role Permissions](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html#service-linked-role-permissions) in the *IAM User Guide*\.
 

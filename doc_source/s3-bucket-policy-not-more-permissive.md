@@ -9,6 +9,8 @@ If you provide an invalid parameter value, you will see the following error: Val
 
 **Trigger type:** Configuration changes
 
+**AWS Region:** All supported AWS Regions
+
 **Parameters:**
 
  controlPolicy  
@@ -126,6 +128,6 @@ The following bucket policy is COMPLIANT because the control policy allows a pri
 }
 ```
 
-## AWS CloudFormation template<a name="w4aac13c29c17d241c41"></a>
+## AWS CloudFormation template<a name="w22aac11c29c17d287c43"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

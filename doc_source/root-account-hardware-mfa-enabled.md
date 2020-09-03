@@ -6,10 +6,12 @@ Checks whether your AWS account is enabled to use multi\-factor authentication \
 
 **Trigger type:** Periodic
 
+**AWS Region:** All supported AWS Regions except China \(Beijing\), China \(Ningxia\), AWS GovCloud \(US\-East\), and AWS GovCloud \(US\-West\)
+
 **Parameters:**
 
  None   
 
-## AWS CloudFormation template<a name="w4aac13c29c17d233c15"></a>
+## AWS CloudFormation template<a name="w22aac11c29c17d271c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

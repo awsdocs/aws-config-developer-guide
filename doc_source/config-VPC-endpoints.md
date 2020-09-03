@@ -1,4 +1,4 @@
-# Using AWS Config with Interface VPC Endpoints<a name="config-VPC-endpoints"></a>
+# Using AWS Config with Interface Amazon VPC Endpoints<a name="config-VPC-endpoints"></a>
 
 If you use Amazon Virtual Private Cloud \(Amazon VPC\) to host your AWS resources, you can establish a private connection between your VPC and AWS Config\. You can use this connection to communicate with AWS Config from your VPC without going through the public internet\.
 
@@ -8,7 +8,7 @@ The following steps are for users of Amazon VPC\. For more information, see [Get
 
 ## Availability<a name="config-interface-VPC-availability"></a>
 
-AWS Config currently supports VPC endpoints in the following regions:
+AWS Config currently supports VPC endpoints in the following Regions:
 + US East \(Ohio\)
 + US East \(N\. Virginia\)
 + US West \(N\. California\)
@@ -24,6 +24,13 @@ AWS Config currently supports VPC endpoints in the following regions:
 + Europe \(London\)
 + Europe \(Paris\)
 + South America \(São Paulo\)
++ Asia Pacific \(Hong Kong\)
++ Africa \(Cape Town\) 
++ Europe \(Milan\) 
++ Europe \(Stockholm\) 
++ Middle East \(Bahrain\) 
++ AWS GovCloud \(US\-East\) 
++ AWS GovCloud \(US\-West\) 
 
 ## Create a VPC Endpoint for AWS Config<a name="create-VPC-endpoint-for-Config"></a>
 

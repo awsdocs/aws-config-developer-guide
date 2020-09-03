@@ -21,11 +21,8 @@ The following is an example payload of an Amazon SNS notification that is genera
                 "accountId": "123456789012",
                "configurationStateID": "3e660fdf-4e34-4f32-afeb-0ace5bf3d63a",
                 "configuationItemStatus": "OK",
-                "relatedEvents": [
-                    "06c12a39-eb35-11de-ae07-adb69edbb1e4",
-                    "c376e30d-71a2-4694-89b7-a5a04ad92281"
-                ],
-                "availibilityZone": "us-west-2b",
+                "relatedEvents": [],
+                "availabilityZone": "us-west-2b",
                 "resourceType": "AWS::EC2::VOLUME",
                 "resourceCreationTime": "2014-02-27T21:43:53.885Z",
                 "tags": {},
@@ -233,7 +230,7 @@ This notification contains the configuration item change for the EC2 instance wh
             "changeType": "UPDATE"
         },
         "configurationItem": {
-            "relatedEvents": ["e61e1419-7cb0-477f-8dde-bbfe27467a96"],
+            "relatedEvents": [],
             "relationships": [
                 {
                     "resourceId": "eni-fde9493f",
@@ -408,7 +405,7 @@ This notification contains the configuration item change for the EC2 security gr
             "changeType": "CREATE"
         },
         "configurationItem": {
-            "relatedEvents": ["e61e1419-7cb0-477f-8dde-bbfe27467a96"],
+            "relatedEvents": [],
             "relationships": [{
                 "resourceId": "vpc-14400670",
                 "resourceName": null,

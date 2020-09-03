@@ -6,11 +6,13 @@ Checks that Amazon API Gateway APIs are of the type specified in the rule parame
 
 **Trigger type:** Configuration changes
 
+**AWS Region:** All supported AWS Regions except Africa \(Cape Town\) and Europe \(Milan\)
+
 **Parameters:**
 
  endpointConfigurationType  
 \(Required\) Comma\-separated list of allowed endpoint types\. Allowed values are REGIONAL, PRIVATE and EDGE\.
 
-## AWS CloudFormation template<a name="w4aac13c29c17c41c13"></a>
+## AWS CloudFormation template<a name="w22aac11c29c17c23c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

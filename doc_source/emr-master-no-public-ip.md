@@ -9,12 +9,12 @@ This rule checks clusters that are in RUNNING or WAITING state\.
 
 **Trigger type:** Periodic
 
-**AWS Region:** All supported AWS regions 
+**AWS Region:** All supported AWS Regions except Africa \(Cape Town\) and Europe \(Milan\)
 
 **Parameters:**
 
 None  
 
-## AWS CloudFormation template<a name="w4aac13c29c17d151c17"></a>
+## AWS CloudFormation template<a name="w22aac11c29c17d171c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

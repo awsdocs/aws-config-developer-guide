@@ -9,3 +9,6 @@ In the AWS Config console, the service\-linked AWS Config rules are visible in t
 While using the AWS Command Line Interface, the `PutConfigRule`, `DeleteConfigRule`, and `DeleteEvaluationResults` APIs return access denied with the following error message:
 
 `INSUFFICIENT_SLCR_PERMISSIONS = "An AWS service owns ServiceLinkedConfigRule. You do not have permissions to take action on this rule." ` 
+
+**Topics**
++ [Using Service\-Linked Roles for AWS Config](using-service-linked-roles.md)

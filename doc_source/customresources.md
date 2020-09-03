@@ -3,7 +3,8 @@
 Record configurations for third\-party resources or custom resource types such as on premise servers, SAAS monitoring tools, and version control systems \(like GitHub\)\. You can publish the configuration data of third\-party resources into AWS Config and view and monitor the resource inventory and configuration history using AWS Config console and APIs\. Now, you can use AWS Config to manage all your resources and evaluate resource configuration for compliance against best practices using AWS Config rules\. You can also create AWS Config rules or conformance packs to evaluate these third\-party resources against best practices, internal policies, and regulatory policies\. 
 
 **Note**  
-This feature is only available in the redesigned AWS Config console\.
+This feature is only available in the redesigned AWS Config console\.  
+If you have configured AWS Config to record all resource types, then third\-party resources that are managed \(i\.e\. created/updated/deleted\) through AWS CloudFormation are automatically tracked in AWS Config as configuration items\.
 
 **Prerequisite:** The third\-party resources or custom resource type must be registered using AWS CloudFormation\. 
 
@@ -18,7 +19,7 @@ This feature is only available in the redesigned AWS Config console\.
 
 ## Step 1: Setup Your Development Environment<a name="customresources-setupdevenvironment"></a>
 
-Install and configure AWS CloudFormation AWS CLI\. The AWS CLI allows you to model and register your custom resources\. For more information, see [Setting Up Your Environment for Developing Resource Providers](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-type-setup.html)\.
+Install and configure AWS CloudFormation AWS CLI\. The AWS CLI allows you to model and register your custom resources\. For more information, see [Custom Resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-custom-resources.html) and [What Is the CloudFormation Command Line Interface?](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cloudformation-cli.html)\.
 
 ## Step 2: Model Your Resource<a name="customresources-modelresource"></a>
 
@@ -91,7 +92,7 @@ Create a resource provider schema that conforms to and validates the configurati
    $ cfn generate
    ```
 
-For more information, see [Modeling Resource Providers for Use in AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-type-model.html)\.
+For more information, see [Modeling Resource Providers for Use in AWS CloudFormation](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-model.html)\.
 
 ## Step 3: Register Your Resource<a name="customresources-registerresource"></a>
 
@@ -101,7 +102,7 @@ AWS Config does not require resource provider handlers to perform configuration 
 $ cfn submit
 ```
 
-For more information, see [Registering Resource Providers for Use in AWS CloudFormation Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-type-register.html)\.
+For more information, see [Registering Resource Providers for Use in AWS CloudFormation Templates](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-register.html)\.
 
 ## Step 4: Publish Resource Configuration<a name="customresources-publishresourceconfiguration"></a>
 

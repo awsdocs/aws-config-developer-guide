@@ -9,7 +9,7 @@ Only AWS Firewall Manager can create this rule\.
 
 **Trigger type:** Configuration changes
 
-**AWS Regions: ** Only available in US East \(N\. Virginia\), EU \(Ireland\), US West \(N\. California\), Asia Pacific \(Singapore\), Asia Pacific \(Tokyo\), US West \(Oregon\), Asia Pacific \(Sydney\), EU \(Frankfurt\), Asia Pacific \(Seoul\), US East \(Ohio\), and EU \(London\)\. 
+**AWS Region:** All supported AWS Regions except China \(Beijing\), China \(Ningxia\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), Middle East \(Bahrain\), Asia Pacific \(Hong Kong\) , Africa \(Cape Town\) and Europe \(Milan\)
 
 **Parameters:**
 
@@ -31,6 +31,6 @@ If true, the rule will check to ensure that all `inScope` security groups are wi
 masterSecurityGroupsIds \(optional\)  
 This parameter only applies to AWS Firewall Manager admin account\. Comma\-separated list of master security groups ID in Firewall Manager admin account\.
 
-## AWS CloudFormation template<a name="w4aac13c29c17d157c17"></a>
+## AWS CloudFormation template<a name="w22aac11c29c17d177c19"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

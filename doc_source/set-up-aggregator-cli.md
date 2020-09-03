@@ -222,7 +222,7 @@ Before you begin this procedure, you must be signed in to the master account and
   If successful, the command executes with no additional output\.
 
 ## Learn More<a name="learn-more-setup-console"></a>
-+ [AWS Config Concepts](config-concepts.md)
++ [Concepts](config-concepts.md)
 + [Authorizing Aggregator Accounts to Collect AWS Config Configuration and Compliance Data Using the AWS Command Line Interface](authorize-aggregator-account-cli.md)
 + [Viewing Configuration and Compliance Data in the Aggregated View](viewing-the-aggregate-dashboard.md)
 + [Troubleshooting for Multi\-Account Multi\-Region Data Aggregation](aggregate-data-troubleshooting.md)

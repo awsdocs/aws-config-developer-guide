@@ -21,12 +21,12 @@ You can attach a permission policy to the Amazon SNS topic owned by a different 
         "SNS:Publish"
       ],
       "Effect": "Allow",
-      "Resource": "arn:aws:sns:region:account-id:myTopic"
+      "Resource": "arn:aws:sns:region:account-id:myTopic",
       "Principal": {
         "AWS": [
           "account-id1",
           "account-id2",
-          "account-id3",
+          "account-id3"
         ]
       }
     }
@@ -51,7 +51,7 @@ If you set up AWS Config using a service\-linked role, you need to attach a perm
         "AWS": "[configRoleArn]"
       },
       "Action": "SNS:Publish",
-      "Resource": "arn:aws:sns:region:account-id:myTopic"
+      "Resource": "arn:aws:sns:region:account-id:myTopic",
     }
   ]
 }

@@ -9,6 +9,8 @@ Ensure that SSM agent is running on the EC2 instance and configure SSM agents\.
 
 **Trigger type:** Configuration changes
 
+**AWS Region:** All supported AWS Regions
+
 **Parameters:**
 
 applicationNames  
@@ -18,6 +20,6 @@ Comma\-separated list of application names\. Optionally, specify versions append
 platformType  
  The platform type \(for example, "Linux" or "Windows"\)\. 
 
-## AWS CloudFormation template<a name="w4aac13c29c17d115c15"></a>
+## AWS CloudFormation template<a name="w22aac11c29c17d121c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

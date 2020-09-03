@@ -104,7 +104,7 @@ $ aws configservice get-resource-config-history --resource-type AWS::EC2::Securi
      ..........
 ```
 
-For detailed explanation of the response fields, see [Components of a Configuration Item](config-item-table.md) and [AWS Config Supported AWS Resource Types and Resource Relationships](resource-config-reference.md)\.
+For detailed explanation of the response fields, see [Components of a Configuration Item](config-item-table.md) and [Supported Resource Types](resource-config-reference.md)\.
 
 ### Example Amazon EBS Configuration History from AWS Config<a name="example-s3-config-history"></a>
 

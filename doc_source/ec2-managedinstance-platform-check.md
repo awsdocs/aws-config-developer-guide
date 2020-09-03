@@ -6,6 +6,8 @@ Checks whether EC2 managed instances have the desired configurations\.
 
 **Trigger type:** Configuration changes
 
+**AWS Region:** All supported AWS Regions
+
 **Parameters:**
 
  agentVersion   
@@ -15,8 +17,8 @@ Checks whether EC2 managed instances have the desired configurations\.
  The platform type \(for example, "Linux" or "Windows"\)\. 
 
  platformVersion   
- The version of the platform \(for example, "2016\.09"\)\. 
+ The version of the OS platform running on your instance\. 
 
-## AWS CloudFormation template<a name="w4aac13c29c17d123c13"></a>
+## AWS CloudFormation template<a name="w22aac11c29c17d129c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

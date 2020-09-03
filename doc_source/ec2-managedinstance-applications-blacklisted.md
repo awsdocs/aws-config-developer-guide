@@ -6,6 +6,8 @@ Checks that none of the specified applications are installed on the instance\. O
 
 **Trigger type:** Configuration changes
 
+**AWS Region:** All supported AWS Regions
+
 **Parameters:**
 
 applicationNames  
@@ -15,6 +17,6 @@ Comma\-separated list of application names\. Optionally, specify versions append
 platformType  
  The platform type \(for example, "Linux" or "Windows"\)\. 
 
-## AWS CloudFormation template<a name="w4aac13c29c17d113c13"></a>
+## AWS CloudFormation template<a name="w22aac11c29c17d119c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

@@ -6,11 +6,13 @@ Checks whether Amazon Elastic File System \(Amazon EFS\) is configured to encryp
 
 **Trigger type:** Periodic
 
+**AWS Region:** All supported AWS Regions except Africa \(Cape Town\) and Europe \(Milan\)
+
 **Parameters:**
 
-kmskeyid \(optional\)  
+KmsKeyId \(optional\)  
 Amazon Resource Name \(ARN\) of the AWS KMS key that is used to encrypt the Amazon EFS file system\.
 
-## AWS CloudFormation template<a name="w4aac13c29c17d129c13"></a>
+## AWS CloudFormation template<a name="w22aac11c29c17d137c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

@@ -1,6 +1,6 @@
 # Remediating Noncompliant AWS Resources by AWS Config Rules<a name="remediation"></a>
 
- AWS Config allows you to remediate noncompliant resources that are evaluated by AWS Config Rules\. AWS Config applies remediation using [AWS Systems Manager Automation documents](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-automation.html)\. These documents define the actions to be performed on noncompliant AWS resources evaluated by AWS Config Rules\. You can associate SSM documents with using the AWS Management Console or by using APIs\.
+ AWS Config allows you to remediate noncompliant resources that are evaluated by AWS Config Rules\. AWS Config applies remediation using [AWS Systems Manager Automation documents](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-automation.html)\. These documents define the actions to be performed on noncompliant AWS resources evaluated by AWS Config Rules\. You can associate SSM documents by using AWS Management Console or by using APIs\.
 
 AWS Config provides a set of managed automation documents with remediation actions\. You can also create and associate custom automation documents with AWS Config rules\. 
 

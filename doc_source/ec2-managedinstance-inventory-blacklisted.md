@@ -6,6 +6,8 @@ Checks whether instances managed by AWS Systems Manager are configured to collec
 
 **Trigger type:** Configuration changes
 
+**AWS Region:** All supported AWS Regions
+
 **Parameters:**
 
  inventoryNames   
@@ -14,6 +16,6 @@ Comma\-separated list of Systems Manager inventory types \(for example, "AWS:Net
  platformType   
 Platform type \(for example, “Linux”\)\.
 
-## AWS CloudFormation template<a name="w4aac13c29c17d119c13"></a>
+## AWS CloudFormation template<a name="w22aac11c29c17d125c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

@@ -6,6 +6,8 @@ Checks whether the web ACL is associated with an Application Load Balancer, API 
 
 **Trigger type:** Configuration changes
 
+**AWS Region:** All supported AWS Regions except China \(Beijing\), China \(Ningxia\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), Asia Pacific \(Hong Kong\), Middle East \(Bahrain\), Africa \(Cape Town\) and Europe \(Milan\)
+
 **Parameters:**
 
  webACLId  
@@ -23,6 +25,6 @@ Checks whether the web ACL is associated with an Application Load Balancer, API 
  fmsRemediationEnabled  
  If true, AWS Firewall Manager will update NON\_COMPLIANT resources according to FMS policy\. AWS Config ignores this parameter when you create this rule\.
 
-## AWS CloudFormation template<a name="w4aac13c29c17d163c13"></a>
+## AWS CloudFormation template<a name="w22aac11c29c17d183c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

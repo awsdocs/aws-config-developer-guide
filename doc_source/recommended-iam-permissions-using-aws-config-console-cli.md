@@ -10,7 +10,7 @@ AWS Config policies grant permissions to users who work with AWS Config\. If you
 
 ## Read\-only access<a name="read-only-config-permission"></a>
 
-The following example shows a AWS managed policy, `AWSConfigUserAccess` that grants read\-only access to AWS Config\. The policy also grants permission to read objects in Amazon S3 buckets, but not create or delete them\. 
+The following example shows a AWS managed policy, `AWSConfigUserAccess` that grants read\-only access to AWS Config\.
 
 ```
 {
@@ -141,11 +141,14 @@ The following example shows a policy that grants full access to AWS Config\. It 
 }
 ```
 
+**Note**  
+This policy grants broad permissions\. Before granting full access, consider starting with a minimum set of permissions and granting additional permissions as necessary\. Doing so is better practice than starting with permissions that are too lenient and then trying to tighten them later\.
+
 ## Controlling User Permissions for Actions on Multi\-Account Multi\-Region Data Aggregation<a name="resource-level-permission"></a>
 
-You can use resource\-level permissions to control a user's ability to perform specific actions on multi\-account multi\-region data aggregation\. AWS Config multi\-account multi\-region data aggregation API's support resource level permissions\. With resource level permission can restrict to access/modify the resource data to specific users\.
+You can use resource\-level permissions to control a user's ability to perform specific actions on multi\-account multi\-region data aggregation\. AWS Config multi\-account multi\-region data aggregation APIs support resource level permissions\. With resource level permission can restrict to access/modify the resource data to specific users\.
 
-For example, you want to retrict access to resource data to specific users\.  You can create two aggregators `AccessibleAggregator` and `InAccessibleAggregator`\. Then attach an IAM policy that allows access to the `AccessibleAggregator`\. 
+For example, you want to restrict access to resource data to specific users\.  You can create two aggregators `AccessibleAggregator` and `InAccessibleAggregator`\. Then attach an IAM policy that allows access to the `AccessibleAggregator`\. 
 
 In the first policy, you allow the aggregator actions such as `DescribeConfigurationAggregators` and `DeleteConfigurationAggregator` actions for the config ARN that you specify\. In the following example, the config ARN is `arn:aws:config:ap-northeast-1:AccountID:config-aggregator/config-aggregator-mocpsqhs`\.
 

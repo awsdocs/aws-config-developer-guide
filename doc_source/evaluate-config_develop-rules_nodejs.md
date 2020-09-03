@@ -106,7 +106,7 @@ When you create a custom rule with the AWS Config console, the appropriate permi
 
 ## Evaluating Additional Resource Types<a name="creating-custom-rules-for-additional-resource-types"></a>
 
-You can create custom rules to run evaluations for resource types not yet recorded by AWS Config\. This is useful if you want to evaluate compliance for additional resource types, such as Amazon S3 Glacier vaults or Amazon SNS topics, that AWS Config doesn't currently record\. For a list of additional resource types that you can evaluate with custom rules, see [AWS Resource Types Reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)\.
+You can create custom rules to run evaluations for resource types not yet recorded by AWS Config\. This is useful if you want to evaluate compliance for additional resource types that AWS Config doesn't currently record\. For a list of additional resource types that you can evaluate with custom rules, see [AWS Resource Types Reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)\.
 
 **Note**  
 The list in the AWS CloudFormation User Guide may contain recently added resource types that are not yet available for creating custom rules in AWS Config\. AWS Config adds resource types support at regular intervals\.
@@ -124,4 +124,4 @@ The list in the AWS CloudFormation User Guide may contain recently added resourc
 1. AWS Config returns the evaluations and you can view the compliance results for your rule\.
 
 **Note**  
-You can view the configuration details in the AWS Config timeline and look up resources in the AWS Config console for resources that AWS Config supports\. If you configured AWS Config to record all resource types, newly supported resources will automatically be recorded\. For more information, see [AWS Config Supported AWS Resource Types and Resource Relationships](resource-config-reference.md)\.
+You can view the configuration details in the AWS Config timeline and look up resources in the AWS Config console for resources that AWS Config supports\. If you configured AWS Config to record all resource types, newly supported resources will automatically be recorded\. For more information, see [Supported Resource Types](resource-config-reference.md)\.

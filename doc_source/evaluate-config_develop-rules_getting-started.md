@@ -2,7 +2,7 @@
 
 This procedure guides you through the process of creating a custom rule that evaluates whether each of your EC2 instances is the t2\.micro type\. AWS Config will run event\-based evaluations for this rule, meaning it will check your instance configurations each time AWS Config detects a configuration change in an instance\. AWS Config will flag t2\.micro instances as compliant and all other instances as noncompliant\. The compliance status will appear in the AWS Config console\.
 
-To have the best outcome with this procedure, your should have one or more EC2 instances in your AWS account\. Your instances should include a combination of at least one t2\.micro instance and other types\.
+To have the best outcome with this procedure, you should have one or more EC2 instances in your AWS account\. Your instances should include a combination of at least one t2\.micro instance and other types\.
 
 To create this rule, first, you will create an AWS Lambda function by customizing a blueprint in the AWS Lambda console\. Then, you will create a custom rule in AWS Config, and you will associate the rule with the function\.
 

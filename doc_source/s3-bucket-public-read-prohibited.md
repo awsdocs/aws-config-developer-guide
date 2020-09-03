@@ -12,12 +12,14 @@ The rule is noncompliant when:
 
 **Identifier:** S3\_BUCKET\_PUBLIC\_READ\_PROHIBITED
 
-**Trigger type:** Configuration changes
+**Trigger type:** Configuration changes and Periodic
+
+**AWS Region:** All supported AWS Regions
 
 **Parameters:**
 
 None  
 
-## AWS CloudFormation template<a name="w4aac13c29c17d247c21"></a>
+## AWS CloudFormation template<a name="w22aac11c29c17d293c23"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

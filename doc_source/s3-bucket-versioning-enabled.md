@@ -6,11 +6,13 @@ Checks whether versioning is enabled for your S3 buckets\. Optionally, the rule 
 
 **Trigger type:** Configuration changes
 
+**AWS Region:** All supported AWS Regions
+
 **Parameters:**
 
  isMfaDeleteEnabled   
  MFA delete is enabled for your S3 buckets\.
 
-## AWS CloudFormation template<a name="w4aac13c29c17d257c13"></a>
+## AWS CloudFormation template<a name="w22aac11c29c17d303c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

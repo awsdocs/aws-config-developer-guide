@@ -13,7 +13,7 @@ If necessary, type `aws configure` to configure the AWS CLI\.
 
 ## Record a Configuration Item<a name="add-custom-resource-type-cli"></a>
 
-Record a configuration item for a third\-party resouce or a custom resource type using the following procedure:
+Record a configuration item for a third\-party resource or a custom resource type using the following procedure:
 
 Ensure you register the resource type `MyCustomNamespace::Testing::WordPress` with its matching schema\.
 

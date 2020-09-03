@@ -6,6 +6,8 @@ Checks whether Amazon Redshift clusters have the specified maintenance settings\
 
 **Trigger type:** Configuration changes
 
+**AWS Region:** All supported AWS Regions except Middle East \(Bahrain\)
+
 **Parameters:**
 
  allowVersionUpgrade   
@@ -17,6 +19,6 @@ Checks whether Amazon Redshift clusters have the specified maintenance settings\
  automatedSnapshotRetentionPeriod   
  Number of days to retain automated snapshots\. 
 
-## AWS CloudFormation template<a name="w4aac13c29c17d223c13"></a>
+## AWS CloudFormation template<a name="w22aac11c29c17d261c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

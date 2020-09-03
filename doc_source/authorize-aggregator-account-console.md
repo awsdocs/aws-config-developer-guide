@@ -59,7 +59,7 @@ After authorization for an aggregator is deleted the data will remain in the agg
    The aggregator account is deleted\.
 
 ## Learn More<a name="learn-more-setup-console"></a>
-+ [AWS Config Concepts](config-concepts.md)
++ [Concepts](config-concepts.md)
 + [Setting Up an Aggregator Using the Console](setup-aggregator-console.md)
 + [Viewing Configuration and Compliance Data in the Aggregated View](viewing-the-aggregate-dashboard.md)
 + [Troubleshooting for Multi\-Account Multi\-Region Data Aggregation](aggregate-data-troubleshooting.md)

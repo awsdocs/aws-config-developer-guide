@@ -1,6 +1,6 @@
 # Prerequisites<a name="cpack-prerequisites"></a>
 
-Before you deploy your conformance pack, turn on AWS Config recording, create a service\-linked role, and provide resource\-level permissions for the Amazon S3 bucket to which AWS Config delivers evaluation results\.
+Before you deploy your conformance pack, turn on AWS Config recording, create a service\-linked role, and provide resource\-level permissions for the Amazon S3 bucket\. 
 
 ## Step 1: Start AWS Config Recording<a name="cpack-prerequisites-config-recording"></a>
 
@@ -22,13 +22,13 @@ There is now a new role, `AWSServiceRoleForConfigConforms`, in your account\.
 
 ## Step 3: Provide Resource\-Level Permissions<a name="cpack-prerequisites-provide-resource-level-permissions"></a>
 
-Follow these steps to provide resource\-level permissions on an Amazon S3 bucket to enable AWS Config to access that S3 bucket\. The access policy allows AWS Config to deliver evaluation results to the Amazon S3 bucket\.
+Follow these steps to provide resource\-level permissions on an Amazon S3 bucket to enable AWS Config to access that S3 bucket\.  
 
 1. Sign in to the AWS Management Console using the account that has the S3 bucket\.
 
 1. Open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
 
-1. Select the bucket that you want AWS Config to use to deliver evaluation results, and then choose **Properties**\. 
+1. Select the bucket and then choose **Properties**\. 
 
 1. Choose **Permissions**\.
 
@@ -36,7 +36,7 @@ Follow these steps to provide resource\-level permissions on an Amazon S3 bucket
 
 1. Copy the appropriate bucket policy into the **Bucket Policy Editor** window\.
 
-   **Same Account Same Bucket Policy**: Use the following bucket policy if your template or delivery input bucket is in the same AWS account in which the conformance pack is created\. Delivery bucket is a bucket where you want AWS Config to deliver conformance pack artifacts such as reports\. 
+   **Same Account Same Bucket Policy**: Use the following bucket policy if your template or delivery input bucket is in the same AWS account in which the conformance pack is created\. 
 
    ```
    {

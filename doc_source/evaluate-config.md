@@ -1,4 +1,4 @@
-# Evaluating Resources with Rules<a name="evaluate-config"></a>
+# Evaluating Resources with AWS Config Rules<a name="evaluate-config"></a>
 
 Use AWS Config to evaluate the configuration settings of your AWS resources\. You do this by creating AWS Config rules, which represent your ideal configuration settings\. AWS Config provides customizable, predefined rules called managed rules to help you get started\. You can also create your own custom rules\. While AWS Config continuously tracks the configuration changes that occur among your resources, it checks whether these changes violate any of the conditions in your rules\. If a resource violates a rule, AWS Config flags the resource and the rule as *noncompliant*\.
 

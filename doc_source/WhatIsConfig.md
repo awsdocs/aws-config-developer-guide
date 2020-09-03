@@ -2,7 +2,7 @@
 
 AWS Config provides a detailed view of the configuration of AWS resources in your AWS account\. This includes how the resources are related to one another and how they were configured in the past so that you can see how the configurations and relationships change over time\. 
 
-An AWS *resource* is an entity you can work with in AWS, such as an Amazon Elastic Compute Cloud \(EC2\) instance, an Amazon Elastic Block Store \(EBS\) volume, a security group, or an Amazon Virtual Private Cloud \(VPC\)\. For a complete list of AWS resources supported by AWS Config, see [AWS Config Supported AWS Resource Types and Resource Relationships](resource-config-reference.md)\.
+An AWS *resource* is an entity you can work with in AWS, such as an Amazon Elastic Compute Cloud \(EC2\) instance, an Amazon Elastic Block Store \(EBS\) volume, a security group, or an Amazon Virtual Private Cloud \(VPC\)\. For a complete list of AWS resources supported by AWS Config, see [Supported Resource Types](resource-config-reference.md)\.
 
 With AWS Config, you can do the following:
 + Evaluate your AWS resource configurations for desired settings\.
@@ -32,7 +32,7 @@ When you use multiple AWS resources that depend on one another, a change in the 
 
 You can also use the historical configurations of your resources provided by AWS Config to troubleshoot issues and to access the last known good configuration of a problem resource\.
 
-### Security Analysis<a name="w4aab5c10c10"></a>
+### Security Analysis<a name="w22aab5c10c10"></a>
 
 To analyze potential security weaknesses, you need detailed historical information about your AWS resource configurations, such as the AWS Identity and Access Management \(IAM\) permissions that are granted to your users, or the Amazon EC2 security group rules that control access to your resources\.
 

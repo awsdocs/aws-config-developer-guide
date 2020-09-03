@@ -20,8 +20,14 @@ If an AWS Config Rules API action is not listed in this table, then it does not 
 | GetComplianceDetailsByConfigRule | Config Rule arn:aws:config:*region:accountID*:config\-rule/config\-rule\-*ID* | 
 | PutConfigRule | Config Rule arn:aws:config:*region:accountID*:config\-rule/config\-rule\-*ID* | 
 | StartConfigRulesEvaluation | Config Rule arn:aws:config:*region:accountID*:config\-rule/config\-rule\-*ID* | 
+| PutRemediationConfigurations | Remediation Configuration arn:aws:config:*region:accountId*:remediation\-configuration/*config rule name/remediation configuration id* | 
+| DescribeRemediationConfigurations | Remediation Configuration arn:aws:config:*region:accountId*:remediation\-configuration/*config rule name/remediation configuration id* | 
+| DeleteRemediationConfiguration | Remediation Configuration arn:aws:config:*region:accountId*:remediation\-configuration/*config rule name/remediation configuration id* | 
+| PutRemediationExceptions | Remediation Configuration arn:aws:config:*region:accountId*:remediation\-configuration/*config rule name/remediation configuration id* | 
+| DescribeRemediationExceptions | Remediation Configuration arn:aws:config:*region:accountId*:remediation\-configuration/*config rule name/remediation configuration id* | 
+| DeleteRemediationExceptions | Remediation Configuration arn:aws:config:*region:accountId*:remediation\-configuration/*config rule name/remediation configuration id* | 
 
-For example, you want to allow read access and deny write access to specfic rules to specific users\.
+For example, you want to allow read access and deny write access to specific rules to specific users\.
 
 In the first policy, you allow the AWS Config Rules read actions such as `DescribeConfigRules` and `DescribeConfigRuleEvaluationStatus` on the specified rules\.
 

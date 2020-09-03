@@ -6,6 +6,8 @@ Checks whether CloudWatch alarms with the given metric name have the specified s
 
 **Trigger type:** Configuration changes
 
+**AWS Region:** All supported AWS Regions
+
 **Parameters:**
 
 metricName  
@@ -27,6 +29,6 @@ The operation for comparing the specified statistic and threshold \(for example,
 statistic  
 The statistic for the metric associated with the alarm \(for example, "Average" or "Sum"\)\.
 
-## AWS CloudFormation template<a name="w4aac13c29c17c71c13"></a>
+## AWS CloudFormation template<a name="w22aac11c29c17c63c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

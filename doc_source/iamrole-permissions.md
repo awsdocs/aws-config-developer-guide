@@ -119,7 +119,7 @@ If you have a custom policy for your S3 bucket, you can add the following policy
 {
     "Sid": "AWSConfig_ReadConfiguration_Access",
     "Effect": "Allow",
-    "Principal": {"AWS": "arn:aws:iam::myAccountID::role/config-role"},
+    "Principal": {"AWS": "arn:aws:iam::myAccountID:role/config-role"},
     "Action": [
         "s3:GetAccelerateConfiguration",
         "s3:GetBucketAcl",
