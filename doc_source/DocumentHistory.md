@@ -2,13 +2,14 @@
 
 The following table describes the documentation release history of AWS Config\.
 + **API version**: 2014\-11\-12
-+ **Latest documentation update**: September 1, 2020
++ **Latest documentation update**: September 17, 2020
 
 
 ****  
 
 | Change | Description | Release Date | 
 | --- | --- | --- | 
+| AWS Config updates managed rules |  With this release, AWS Config supports the following managed rules: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/DocumentHistory.html)  | September 17, 2020 | 
 | AWS Config supports AWS WAFv2 |  With this release, you can use AWS Config to record configuration changes to your AWS WAFv2 WebACL, IPSet, RegexPatternSet, RuleGroup, and ManagedRuleSet resource types\. For more information, see [Supported Resource Types](resource-config-reference.md)\. | September 1, 2020 | 
 | Documetation update |  A note has been added to [Granting Custom Permissions for AWS Config Users ](recommended-iam-permissions-using-aws-config-console-cli.md) about creating custom permissions that grant full access\. The documentation has been updated for the following rules:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/DocumentHistory.html)  | August 24, 2020 | 
 | Documentation update |  [Operational Best Practices for PCI DSS 3\.2\.1 ](operational-best-practices-for-pci-dss.md) and [Operational Best Practices for NIST CSF ](operational-best-practices-for-nist-csf.md) templates are updated\.  | August 14, 2020 | 

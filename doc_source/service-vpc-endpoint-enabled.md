@@ -13,6 +13,6 @@ Checks whether Service Endpoint for the service provided in rule parameter is cr
 serviceName  
 \(Optional\) The short name or suffix for the service\. To get a list of available service names or valid suffix list, use `DescribeVpcEndpointServices`\. 
 
-## AWS CloudFormation template<a name="w22aac11c29c17d315c15"></a>
+## AWS CloudFormation template<a name="w22aac11c29c17d319c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

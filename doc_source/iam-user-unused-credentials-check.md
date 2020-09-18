@@ -13,6 +13,6 @@ Checks whether your AWS Identity and Access Management \(IAM\) users have passwo
  maxCredentialUsageAge  
 Maximum number of days within which a credential must be used\. The default value is 90 days\.
 
-## AWS CloudFormation template<a name="w22aac11c29c17d213c15"></a>
+## AWS CloudFormation template<a name="w22aac11c29c17d217c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

@@ -281,7 +281,7 @@ The response lists the status of all the three delivery formats that AWS Config 
 Take a look at the `lastSuccessfulTime` field in `configSnapshotDeliveryInfo`\. The time should match the time you last requested the delivery of the configuration snapshot\.
 
 **Note**  
-AWS Config uses the UTC format \(GMT\-08:00\) to record the time\.
+AWS Config uses the UTC format \(Coordinated Universal Time\) to record the time\.
 
 ## Viewing Configuration Snapshot in Amazon S3 bucket<a name="view-configuration-snapshot"></a>
 

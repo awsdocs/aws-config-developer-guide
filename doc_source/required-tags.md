@@ -46,6 +46,6 @@ Checks whether your resources have the tags that you specify\. For example, you 
  tag6Value   
  Optional value of the required tag\. Separate multiple values with commas\. 
 
-## AWS CloudFormation template<a name="w22aac11c29c17d265c17"></a>
+## AWS CloudFormation template<a name="w22aac11c29c17d269c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

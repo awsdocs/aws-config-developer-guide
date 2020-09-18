@@ -13,6 +13,6 @@ Checks that Internet gateways \(IGWs\) are only attached to an authorized Amazon
  AuthorizedVpcIds  
 Comma\-separated list of the authorized VPC IDs with attached IGWs\. If parameter is not provided all attached IGWs will be NON\_COMPLIANT\. 
 
-## AWS CloudFormation template<a name="w22aac11c29c17d215c15"></a>
+## AWS CloudFormation template<a name="w22aac11c29c17d219c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

@@ -13,6 +13,6 @@ Checks whether storage encryption is enabled for your RDS DB instances\.
  kmsKeyId   
  KMS key ID or ARN used to encrypt the storage\.
 
-## AWS CloudFormation template<a name="w22aac11c29c17d257c15"></a>
+## AWS CloudFormation template<a name="w22aac11c29c17d261c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

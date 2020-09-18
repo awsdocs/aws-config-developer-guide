@@ -13,6 +13,6 @@ Checks that AWS Identity and Access Management \(IAM\) policies in a list of pol
  managedPolicyNames  
 Comma\-separated list of AWS managed policy ARNs\.
 
-## AWS CloudFormation template<a name="w22aac11c29c17d203c17"></a>
+## AWS CloudFormation template<a name="w22aac11c29c17d207c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

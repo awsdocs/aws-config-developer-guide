@@ -19,16 +19,16 @@ The CloudWatch [event](https://docs.aws.amazon.com/AmazonCloudWatch/latest/event
 
 ```
           {
-           "version":"0",
-            "id":" cd4d811e-ab12-322b-8255-872ce65b1bc8",
-             "detail-type":"event type",
-             "source":"aws.config",
-             "account":"111122223333",
-             "time":"2018-03-22T00:38:11Z",
-             "region":"us-east-1",
-             "resources":[resources],
-             "detail":{specific message type
-            }
+             "version": "0",
+             "id": "cd4d811e-ab12-322b-8255-872ce65b1bc8",
+             "detail-type": "event type",
+             "source": "aws.config",
+             "account": "111122223333",
+             "time": "2018-03-22T00:38:11Z",
+             "region": "us-east-1",
+             "resources": [resources],
+             "detail": {specific message type}
+          }
 ```
 
 ## Creating Amazon CloudWatch Events Rule for AWS Config<a name="create-cloudwatch-events-rule-for-awsconfig"></a>

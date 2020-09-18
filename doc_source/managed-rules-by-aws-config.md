@@ -3,6 +3,8 @@
 AWS Config currently supports the following managed rules in the analytics; compute; cryptography and PKI; database; machine learning; management and governance; migration and transfer; network and content delivery; security; identity and compliance; and storage categories\. 
 
 **Topics**
++ [iam\-inline\-policy\-blocked\-kms\-actions](iam-inline-policy-blocked-kms-actions.md)
++ [iam\-customer\-policy\-blocked\-kms\-actions](iam-customer-policy-blocked-kms-actions.md)
 + [access\-keys\-rotated](access-keys-rotated.md)
 + [account\-part\-of\-organizations](account-part-of-organizations.md)
 + [acm\-certificate\-expiration\-check](acm-certificate-expiration-check.md)
@@ -152,7 +154,7 @@ AWS Config currently supports the following managed rules in the analytics; comp
 + [s3\-bucket\-ssl\-requests\-only](s3-bucket-ssl-requests-only.md)
 + [s3\-bucket\-versioning\-enabled](s3-bucket-versioning-enabled.md)
 + [sagemaker\-endpoint\-configuration\-kms\-key\-configured](sagemaker-endpoint-configuration-kms-key-configured.md)
-+ [sagemaker\-notebook\-kms\-configured](sagemaker-notebook-kms-configured.md)
++ [sagemaker\-notebook\-instance\-kms\-key\-configured](sagemaker-notebook-instance-kms-key-configured.md)
 + [sagemaker\-notebook\-no\-direct\-internet\-access](sagemaker-notebook-no-direct-internet-access.md)
 + [secretsmanager\-rotation\-enabled\-check](secretsmanager-rotation-enabled-check.md)
 + [secretsmanager\-scheduled\-rotation\-success\-check](secretsmanager-scheduled-rotation-success-check.md)

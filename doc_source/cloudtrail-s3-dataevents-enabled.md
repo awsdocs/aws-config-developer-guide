@@ -16,6 +16,6 @@ The rule checks for trails in their home region only\. The rule does not evaluat
  S3BucketNames  
 \(Optional\) Comma\-separated list of S3 bucket names for which data events logging should be enabled\. Default behavior checks for all S3 buckets\.
 
-## AWS CloudFormation template<a name="w22aac11c29c17c55c17"></a>
+## AWS CloudFormation template<a name="w22aac11c29c17c59c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

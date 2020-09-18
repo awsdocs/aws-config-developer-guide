@@ -13,6 +13,6 @@ Checks whether running instances are using specified AMIs\. Specify a list of ap
  amiIds   
 The AMI IDs \(comma\-separated list of up to 10\)\.
 
-## AWS CloudFormation template<a name="w22aac11c29c17c27c15"></a>
+## AWS CloudFormation template<a name="w22aac11c29c17c31c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

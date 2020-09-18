@@ -13,6 +13,6 @@ Checks whether there are instances stopped for more than the allowed number of d
 AllowedDays  
 \(Optional\) The number of days an ec2 instance can be stopped before it is NON\_COMPLIANT\. The default number of days is 30\.
 
-## AWS CloudFormation template<a name="w22aac11c29c17d133c15"></a>
+## AWS CloudFormation template<a name="w22aac11c29c17d137c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

@@ -31,6 +31,6 @@ If true, the rule will check to ensure that all `inScope` security groups are wi
 masterSecurityGroupsIds \(optional\)  
 This parameter only applies to AWS Firewall Manager admin account\. Comma\-separated list of master security groups ID in Firewall Manager admin account\.
 
-## AWS CloudFormation template<a name="w22aac11c29c17d177c19"></a>
+## AWS CloudFormation template<a name="w22aac11c29c17d181c19"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

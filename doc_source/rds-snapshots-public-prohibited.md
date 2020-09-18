@@ -17,6 +17,6 @@ It can take up to 12 hours for compliance results to be captured\.
 
 None  
 
-## AWS CloudFormation template<a name="w22aac11c29c17d255c19"></a>
+## AWS CloudFormation template<a name="w22aac11c29c17d259c19"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.
