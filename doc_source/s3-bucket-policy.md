@@ -1,8 +1,11 @@
 # Permissions for the Amazon S3 Bucket<a name="s3-bucket-policy"></a>
 
-By default, all Amazon S3 buckets and objects are private\. Only the resource owner which is the AWS account that created the bucket can access that bucket and any objects it contains\. The resource owner can, however, choose to grant access permissions to other resources and users\. One way to do this is to write an access policy\. 
+By default, all Amazon S3 buckets and objects are private\. Only the resource owner which is the AWS account that created the bucket can access that bucket\. The resource owner can, however, choose to grant access permissions to other resources and users\. One way to do this is to write an access policy\.
 
 If AWS Config creates an Amazon S3 bucket for you automatically \(for example, if you use AWS Config console to set up your delivery channel\), these permissions are automatically added to Amazon S3 bucket\. However, if you specify an existing Amazon S3 bucket, you must ensure that the S3 bucket has the correct permissions\.
+
+**Note**  
+An object does not inherit the permissions from its bucket\. For example, if you create a bucket and grant write access to a user, you can't access that user’s objects unless the user explicitly grants you access\.
 
 **Contents**
 + [Required Permissions for the Amazon S3 Bucket When Using IAM Roles](#required-permissions-in-another-account)
@@ -73,7 +76,7 @@ Follow these steps to add an access policy to the Amazon S3 bucket in your own a
          "Resource": "arn:aws:s3:::targetBucketName/[optional] prefix/AWSLogs/sourceAccountID-WithoutHyphens/Config/*",
          "Condition": { 
            "StringEquals": { 
-             "s3:x-amz-acl": "bucket-owner-full-control" 
+             "s3:x-amz-acl": "bucket-owner-full-control"
            }
          }
        }

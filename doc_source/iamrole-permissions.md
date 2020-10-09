@@ -95,14 +95,14 @@ If your SNS topic is encrypted for additional setup instructions, see [Configuri
 
 To record your AWS resource configurations, AWS Config requires IAM permissions to get the configuration details about your resources\. 
 
-Use the AWS managed policy **AWSConfigRole** and attach it to the IAM role that you assign to AWS Config\. AWS updates this policy each time AWS Config adds support for an AWS resource type, which means AWS Config will continue to have the required permissions to get configuration details as long as the role has this managed policy attached\.
+Use the AWS managed policy **AWS\_ConfigRole** and attach it to the IAM role that you assign to AWS Config\. AWS updates this policy each time AWS Config adds support for an AWS resource type, which means AWS Config will continue to have the required permissions to get configuration details as long as the role has this managed policy attached\.
 
-If you create or update a role with the console, AWS Config attaches the **AWSConfigRole** for you\. 
+If you create or update a role with the console, AWS Config attaches the **AWS\_ConfigRole** for you\. 
 
-If you use the AWS CLI, use the `attach-role-policy` command and specify the Amazon Resource Name \(ARN\) for **AWSConfigRole**:
+If you use the AWS CLI, use the `attach-role-policy` command and specify the Amazon Resource Name \(ARN\) for **AWS\_ConfigRole**:
 
 ```
-$ aws iam attach-role-policy --role-name myConfigRole --policy-arn arn:aws:iam::aws:policy/service-role/AWSConfigRole
+$ aws iam attach-role-policy --role-name myConfigRole --policy-arn arn:aws:iam::aws:policy/service-role/AWS_ConfigRole
 ```
 
 ## Troubleshooting for recording S3 buckets<a name="troubleshooting-recording-s3-bucket-policy"></a>
@@ -110,7 +110,7 @@ $ aws iam attach-role-policy --role-name myConfigRole --policy-arn arn:aws:iam::
 If you configured AWS Config to record S3 buckets for your account, AWS Config records and delivers notifications when an S3 bucket is created, updated, or deleted\.
 
 If you configured AWS Config to record S3 buckets, and are not receiving configuration change notifications:
-+ Verify that the IAM role assigned to AWS Config has the `AWSConfigRole` managed policy\.
++ Verify that the IAM role assigned to AWS Config has the `AWS_ConfigRole` managed policy\.
 + If you have S3 bucket policies attached to your buckets, verify that they allow AWS Config permission to record changes to your buckets\.
 
 If you have a custom policy for your S3 bucket, you can add the following policy to your existing bucket policy\. Your policy input must be alpha\-numeric\. This policy grants AWS Config permission to record the S3 bucket\.

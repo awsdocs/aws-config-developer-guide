@@ -10,7 +10,7 @@ Checks that the Amazon Simple Storage Service bucket policy does not allow black
 
 **Parameters:**
 
- blacklistedactionpatterns  
+blacklistedActionPatterns  
 Comma\-separated list of blacklisted action patterns, for example, s3:GetBucket\* and s3:DeleteObject\.
 
 ## AWS CloudFormation template<a name="w22aac11c29c17d289c15"></a>

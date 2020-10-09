@@ -24,10 +24,6 @@ You can deploy a conformance pack using AWS Config sample templates\.
 
    The conformance pack name must be a unique name with a maximum of 256 alphanumeric characters\. The name can contain hyphens but cannot contain spaces\. 
 
-1. Type the name of the Amazon S3 bucket\.  Optionally, type a bucket prefix\. 
-
-   The S3 bucket name must be a minimum of 3 and maximum of 63 lower case alphanumeric characters\. The bucket name can contain dashes and must start and end with alphanumeric characters\.
-
 1. Optional: Add a parameter\. 
 
    Parameters are defined in your template and help you manage and organize your resources\.

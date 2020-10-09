@@ -50,7 +50,7 @@ You must be signed in to the master account and all features must be enabled in 
 
         Choose **Choose a role from your account** to select an existing IAM role\.
 **Note**  
-In the IAM console, attach the `AWSConfigRoleForOrganizations` managed policy to your IAM role\. Attaching this policy allows AWS Config to call AWS Organizations `DescribeOrganization`, `ListAWSServiceAccessForOrganization`, and `ListAccounts` APIs\. You must edit the control policy document to include `config.amazonaws.com` trusted entity\.
+In the IAM console, attach the `AWSConfigRoleForOrganizations` managed policy to your IAM role\. Attaching this policy allows AWS Config to call AWS Organizations `DescribeOrganization`, `ListAWSServiceAccessForOrganization`, and `ListAccounts` APIs\. By default `config.amazonaws.com` is automatically specified as a trusted entity\.
 
      1. Choose **Choose IAM role** to confirm your selection\.
 

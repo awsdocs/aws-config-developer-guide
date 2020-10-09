@@ -11,6 +11,9 @@ When you update the delivery channel, you can set the following options:
 + How often AWS Config delivers configuration snapshots to your Amazon S3 bucket\.
 + The Amazon SNS topic to which AWS Config sends notifications about configuration changes\.
 
+**Note**  
+ When AWS Config detects a configuration change for a resource and the notification exceeds the maximum size allowed by Amazon SNS, the notification includes a brief summary of the configuration item\. You can view the complete notification in the Amazon S3 bucket location specified in the `s3BucketLocation` field\. For more information, see [Example Oversized Configuration Item Change Notification ](https://docs.aws.amazon.com/config/latest/developerguide/oversized-notification-example.html)\. 
+
 **To update the delivery channel \(console\)**
 + You can use the AWS Config console to set the Amazon S3 bucket and the Amazon SNS topic for your delivery channel\. For steps to manage these settings, see [Setting Up AWS Config with the Console](gs-console.md)\.
 

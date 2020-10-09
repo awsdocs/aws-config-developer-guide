@@ -87,7 +87,7 @@ To create an IAM role with the AWS CLI, use the [create\-role](https://docs.aws.
 
 1. Choose **AWS Service Roles**, and then choose **Select** for **AWS Config **\.
 
-1. On the **Attach Policy** page, select **AWSConfigRole**\. This AWS managed policy grants AWS Config permission to get configuration details for supported AWS resources\. Then, choose **Next Step**\.
+1. On the **Attach Policy** page, select **AWS\_ConfigRole**\. This AWS managed policy grants AWS Config permission to get configuration details for supported AWS resources\. Then, choose **Next Step**\.
 
 1. On the **Review** page, review the details about your role, and choose **Create Role**\.
 

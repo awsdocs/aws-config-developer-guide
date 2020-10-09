@@ -1,13 +1,13 @@
 # secretsmanager\-scheduled\-rotation\-success\-check<a name="secretsmanager-scheduled-rotation-success-check"></a>
 
-Checks and verifies whether AWS Secrets Manager secret rotation has rotated successfully as per the rotation schedule\. The rule is NON\_COMPLIANT if `RotationOccurringAsScheduled` is false\. 
+Checks whether AWS Secrets Manager secret rotation has rotated successfully as per the rotation schedule\. The rule returns NON\_COMPLIANT if `RotationOccurringAsScheduled` is false\. 
 
 **Note**  
-The rule marks secrets without rotation NOT\_APPLICABLE\.
+The rule returns NOT\_APPLICABLE for secrets without rotation\.
 
 **Identifier:** SECRETSMANAGER\_SCHEDULED\_ROTATION\_SUCCESS\_CHECK
 
-**Trigger type:** Periodic
+**Trigger type:** Configuration changes
 
 **AWS Region:** All supported AWS Regions except Africa \(Cape Town\) and Europe \(Milan\)
 

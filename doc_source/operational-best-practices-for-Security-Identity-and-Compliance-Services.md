@@ -1,0 +1,3 @@
+# Operational Best Practices for Security, Identity, and Compliance Services<a name="operational-best-practices-for-Security-Identity-and-Compliance-Services"></a>
+
+The template is available on GitHub: [Operational Best Practices for Security, Identity, and Compliance Services](https://github.com/awslabs/aws-config-rules/blob/master/aws-config-conformance-packs/Operational-Best-Practices-for-Security-Services.yaml)\.

@@ -2,21 +2,25 @@
 
 The following table describes the documentation release history of AWS Config\.
 + **API version**: 2014\-11\-12
-+ **Latest documentation update**: September 17, 2020
++ **Latest documentation update**: Octomber 8, 2020
 
 
 ****  
 
 | Change | Description | Release Date | 
 | --- | --- | --- | 
+| AWS Config supports new conformance packs |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/DocumentHistory.html)  | October 8, 2020 | 
+| AWS Config supports new conformance packs |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/DocumentHistory.html)  | September 30, 2020 | 
+| AWS Config supports new conformance packs |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/DocumentHistory.html)  | September 28, 2020 | 
+| Documentation update | The following conformance pack topics are updated\. [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/DocumentHistory.html)  | September 28, 2020 | 
 | AWS Config updates managed rules |  With this release, AWS Config supports the following managed rules: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/DocumentHistory.html)  | September 17, 2020 | 
 | AWS Config supports AWS WAFv2 |  With this release, you can use AWS Config to record configuration changes to your AWS WAFv2 WebACL, IPSet, RegexPatternSet, RuleGroup, and ManagedRuleSet resource types\. For more information, see [Supported Resource Types](resource-config-reference.md)\. | September 1, 2020 | 
-| Documetation update |  A note has been added to [Granting Custom Permissions for AWS Config Users ](recommended-iam-permissions-using-aws-config-console-cli.md) about creating custom permissions that grant full access\. The documentation has been updated for the following rules:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/DocumentHistory.html)  | August 24, 2020 | 
+| Documentation update |  A note has been added to [Granting Custom Permissions for AWS Config Users ](recommended-iam-permissions-using-aws-config-console-cli.md) about creating custom permissions that grant full access\. The documentation has been updated for the following rules:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/DocumentHistory.html)  | August 24, 2020 | 
 | Documentation update |  [Operational Best Practices for PCI DSS 3\.2\.1 ](operational-best-practices-for-pci-dss.md) and [Operational Best Practices for NIST CSF ](operational-best-practices-for-nist-csf.md) templates are updated\.  | August 14, 2020 | 
 | Documentation update | Example relationship queries are added\. For more information, see [Example Relationship Queries](examplerelationshipqueries.md)\.  | July 30, 2020 | 
 | Documentation update | The following API's are updated: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/DocumentHistory.html)  | July 23, 2020 | 
 | AWS Config supports AWS Systems Manager resource type |  With this release, you can use AWS Config to record configuration changes to the AWS Systems Manager file data resource type\. For more information, see [Supported Resource Types](resource-config-reference.md)\.  | July 9, 2020 | 
-| Documentation update |  [Operational Best Practices For AWS Identity And Access Management](operational-best-practices-for-aws-identity-and-access-management.md) and [Operational Best Practices for PCI DSS 3\.2\.1 ](operational-best-practices-for-pci-dss.md) templates are updated\.  | July 9, 2020 | 
+| Documentation update |  [Operational Best Practices for AWS Identity And Access Management](operational-best-practices-for-aws-identity-and-access-management.md) and [Operational Best Practices for PCI DSS 3\.2\.1 ](operational-best-practices-for-pci-dss.md) templates are updated\.  | July 9, 2020 | 
 | AWS Config updates managed rules |  With this release, AWS Config supports the following managed rules: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/DocumentHistory.html) For more information, see [List of AWS Config Managed Rules](managed-rules-by-aws-config.md)\.  | July 9, 2020 | 
 | Multi\-account multi\-region data aggregation Region support | With this release, multi\-account multi\-region data aggregation is now supported in Asia Pacific \(Hong Kong\) and Middle East \(Bahrain\) Regions\. For more information, see [Multi\-Account Multi\-Region Data Aggregation](aggregate-data.md) and [Troubleshooting for Multi\-Account Multi\-Region Data Aggregation](aggregate-data-troubleshooting.md)\.  | July 1, 2020 | 
 | Advanced queries Region support | With this release, advanced queries is now supported in Asia Pacific \(Hong Kong\) and Middle East \(Bahrain\) Regions\. For more information, see [Querying the Current Configuration State of AWS Resources](querying-AWS-resources.md)\.  | July 1, 2020 | 

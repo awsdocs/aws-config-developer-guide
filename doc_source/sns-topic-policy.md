@@ -2,6 +2,9 @@
 
 Use the information in this topic only if you want to configure AWS Config to deliver Amazon SNS topics owned by your account or by a different account\. AWS Config must have permissions to send notifications to an Amazon SNS topic\.
 
+**Note**  
+ AWS Config currently only supports same region and cross account access\. SNS topics used for remediation AWS Systems Manager documents \(SSM documents\) or for the recorder delivery channel cannot be cross\-region\.
+
 **Contents**
 + [Required Permissions for the Amazon SNS Topic When Using IAM Roles](#required-permissions-snstopic-in-another-account)
 + [Required Permissions for the Amazon SNS Topic When Using Service\-Linked Roles](#required-permissions-snstopic-using-servicelinkedrole)

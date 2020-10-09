@@ -1,6 +1,6 @@
 # iam\-password\-policy<a name="iam-password-policy"></a>
 
-Checks whether the account password policy for IAM users meets the specified requirements\.
+Checks whether the account password policy for IAM users meets the specified requirements indicated in the parameters\. This rule is NON\_COMPLIANT if the account password policy does not meet the specified requirements\.
 
 **Identifier:** IAM\_PASSWORD\_POLICY
 

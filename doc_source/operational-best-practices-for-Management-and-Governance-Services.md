@@ -1,0 +1,3 @@
+# Operational Best Practices for Management and Governance Services<a name="operational-best-practices-for-Management-and-Governance-Services"></a>
+
+The template is available on GitHub: [Operational Best Practices for Management and Governance Services](https://github.com/awslabs/aws-config-rules/blob/master/aws-config-conformance-packs/Operational-Best-Practices-for-Management-Governance-Services.yaml)\.

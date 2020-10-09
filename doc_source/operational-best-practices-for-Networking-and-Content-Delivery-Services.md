@@ -1,0 +1,3 @@
+# Operational Best Practices for Networking and Content Delivery Services<a name="operational-best-practices-for-Networking-and-Content-Delivery-Services"></a>
+
+The template is available on GitHub: [Operational Best Practices for Networking and Content Delivery Services](https://github.com/awslabs/aws-config-rules/blob/master/aws-config-conformance-packs/Operational-Best-Practices-for-Networking-Services.yaml)\.
