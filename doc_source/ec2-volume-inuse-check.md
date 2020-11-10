@@ -13,6 +13,6 @@ Checks whether EBS volumes are attached to EC2 instances\. Optionally checks if 
  deleteOnTermination   
 EBS volumes are marked for deletion when an instance is terminated\.
 
-## AWS CloudFormation template<a name="w22aac11c29c17d139c15"></a>
+## AWS CloudFormation template<a name="w24aac11c29c17d139c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

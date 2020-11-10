@@ -59,7 +59,7 @@ AWS Config publishes an event when it evaluates your resources at a frequency th
 }
 ```
 
-## Event Attributes<a name="w22aac11c31c25c11c11"></a>
+## Event Attributes<a name="w24aac11c31c25c11c11"></a>
 
 The JSON object for an AWS Config event contains the following attributes:
 

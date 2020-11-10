@@ -16,6 +16,6 @@ Comma\-separated list of TCP ports authorized to be open to 0\.0\.0\.0/0\. Range
 authorizedUdpPorts \(Optional\)  
 Comma\-separated list of UDP ports authorized to be open to 0\.0\.0\.0/0\. Ranges are defined by a dash; for example, "500,1020\-1025"\.
 
-## AWS CloudFormation template<a name="w22aac11c29c17d329c15"></a>
+## AWS CloudFormation template<a name="w24aac11c29c17d329c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

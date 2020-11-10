@@ -2,13 +2,16 @@
 
 The following table describes the documentation release history of AWS Config\.
 + **API version**: 2014\-11\-12
-+ **Latest documentation update**: Octomber 8, 2020
++ **Latest documentation update**: October 30, 2020
 
 
 ****  
 
 | Change | Description | Release Date | 
 | --- | --- | --- | 
+| AWS Config supports new conformance packs |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/DocumentHistory.html)  | October 30, 2020 | 
+| AWS Config supports new conformance packs |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/DocumentHistory.html)  | October 22, 2020 | 
+| AWS Config supports new conformance packs |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/DocumentHistory.html)  | October 15, 2020 | 
 | AWS Config supports new conformance packs |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/DocumentHistory.html)  | October 8, 2020 | 
 | AWS Config supports new conformance packs |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/DocumentHistory.html)  | September 30, 2020 | 
 | AWS Config supports new conformance packs |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/DocumentHistory.html)  | September 28, 2020 | 

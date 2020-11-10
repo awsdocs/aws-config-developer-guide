@@ -4,6 +4,8 @@ Conformance packs provide a general\-purpose compliance framework designed to en
 
 The following provides a sample mapping between the North American Electric Reliability Corporation Critical Infrastructure Protection Standards \(NERC CIP\) AWS managed Config rules\. Each AWS Config rule applies to a specific AWS resource, and relates to one or more NERC CIP controls\. A NERC CIP control can be related to multiple Config rules\. Refer to the table below for more detail and guidance related to these mappings\.
 
+**AWS Region:** All supported AWS Regions except Middle East \(Bahrain\)
+
 
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/operational-best-practices-for-nerc.html)

@@ -45,25 +45,22 @@ If you set up AWS Config using a service\-linked role, you need to attach a perm
 
 ```
 {
-  "Id": "Policy_ID",
-  "Statement": [
-    {
-      "Sid": "AWSConfigSNSPolicy",
-      "Effect": "Allow",
-      "Principal": {
-        "AWS": "[configRoleArn]"
-      },
-      "Action": "SNS:Publish",
+"Id": "Policy_ID",
+"Statement": [
+  {
+    "Sid": "AWSConfigSNSPolicy",
+    "Effect": "Allow",
+    "Principal": {
+      "Service": "config.amazonaws.com"
+    },
+    "Action": "SNS:Publish",
       "Resource": "arn:aws:sns:region:account-id:myTopic",
     }
-  ]
+]
 }
 ```
 
 You must substitute appropriate values for *region*, *account\-id*, and *myTopic*\.
-
-**Note**  
-AWS Config does not recommend using a service\-linked role when using Amazon SNS topic from other accounts\.
 
 ## Troubleshooting for the Amazon SNS Topic<a name="troubleshooting-for-snstopic-using-servicelinkedrole"></a>
 

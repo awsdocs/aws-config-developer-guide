@@ -2,7 +2,7 @@
 
 Checks whether S3 buckets have policies that require requests to use Secure Socket Layer \(SSL\)\.
 
-**Identifier:**S3\_BUCKET\_SSL\_REQUESTS\_ONLY
+**Identifier:** S3\_BUCKET\_SSL\_REQUESTS\_ONLY
 
 **Trigger type:** Configuration changes
 
@@ -74,6 +74,6 @@ An example of a bucket policy that is **NON\_COMPLIANT** with the SSL AWS Config
 }
 ```
 
-## AWS CloudFormation template<a name="w22aac11c29c17d305c23"></a>
+## AWS CloudFormation template<a name="w24aac11c29c17d305c23"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

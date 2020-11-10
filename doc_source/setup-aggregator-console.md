@@ -25,6 +25,8 @@ On the **Aggregator** page, you can do the following:
    The aggregator name must be a unique name with a maximum of 64 alphanumeric characters\. The name can contain hyphens and underscores\.
 
 1. For **Select source accounts**, either choose **Add individual account IDs** or **Add my organization** from which you want to aggregate data\.
+**Note**  
+Authorization is required when using **Add individual account IDs** to select source accounts\.
    + If you choose **Add individual account IDs**, you can add individual account IDs for an aggregator account\.
 
      1. Choose **Add source accounts** to add account IDs\.
@@ -38,6 +40,7 @@ On the **Aggregator** page, you can do the following:
      1. Choose **Add source accounts** to confirm your selection\.
    + If you choose **Add my organization**, you can add all accounts in your organization to an aggregator account\.
 **Note**  
+Authorization is not required when using **Add my organization** to select source accounts\.  
 You must be signed in to the master account and all features must be enabled in your organization\. This option automatically [enables the integration](https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnableAWSServiceAccess.html) between AWS Config and AWS Organizations\.
 
      1. Choose **Choose IAM role** to create an IAM role or choose an existing IAM role from your account\.

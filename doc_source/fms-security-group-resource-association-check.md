@@ -34,6 +34,6 @@ If true, AWS Firewall Manager will update NON\_COMPLIANT resources according to 
 exclusiveResourceSecurityGroupManagementFlag \(mandatory  
 If true, only allows AWS Firewall Manager created security groups associated with resource\.
 
-## AWS CloudFormation template<a name="w22aac11c29c17d183c19"></a>
+## AWS CloudFormation template<a name="w24aac11c29c17d183c19"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

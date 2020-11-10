@@ -6,6 +6,8 @@ The following provides a sample mapping between Amazon Web Services’ Well\-Arc
 
 This Conformance Pack was validated by AWS Security Assurance Services LLC \(AWS SAS\), which is a team of Payment Card Industry Qualified Security Assessors \(QSAs\), HITRUST Certified Common Security Framework Practitioners \(CCSFPs\), and compliance professionals certified to provide guidance and assessments for various industry frameworks\. AWS SAS professionals designed this Conformance Pack to enable a customer to align to a subset of the Well\-Architected Framework Security Pillar design principles\.
 
+**AWS Region:** All supported AWS Regions except Middle East \(Bahrain\)
+
 
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/operational-best-practices-for-wa-Security-Pillar.html)

@@ -14,7 +14,7 @@ You can deploy a conformance pack using AWS Config sample templates\.
    + If you choose **Use sample template**, select a **Sample template** from the drop\-down list of sample templates\.
 
      For information about the contents of each template, see Conformance Pack Sample Templates\.
-   + If you choose **Template is ready**, specify the template source\. It is either an Amazon S3 URI or a that you upload\. 
+   + If you choose **Template is ready**, specify the template source\. It is either an Amazon S3 URI or a template that you upload\. 
 
      If your template is more than 50 KB, upload it to the S3 bucket and select that S3 bucket location\. For example: s3://*bucketname/prefix*\.
 

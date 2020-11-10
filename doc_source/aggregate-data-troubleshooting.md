@@ -7,7 +7,7 @@ AWS Config might not aggregate data from source accounts for one of the followin
 
 | If this happens | Do this | 
 | --- | --- | 
-| AWS Config is not enabled in the source account\. | Enable AWS Config in the source account and authorize the aggregator account to collect data\. | 
+| AWS Config is not enabled in the source account for accounts within an Organization\. | Enable AWS Config in the source account and authorize the aggregator account to collect data\. | 
 | Authorization is not granted to an aggregator account\. | Sign in to the source account and grant authorization to the aggregator account to collect AWS Config data\. | 
 | There might be a temporary issue that is preventing data aggregation\. | Data aggregation is subject to delays\. Wait for a few minutes\. | 
 

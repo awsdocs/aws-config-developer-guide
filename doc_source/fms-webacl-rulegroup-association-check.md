@@ -19,6 +19,6 @@ Checks that the rule groups associate with the web ACL at the correct priority\.
  fmsRemediationEnabled  
  If true, AWS Firewall Manager will update NON\_COMPLIANT resources according to FMS policy\. AWS Config ignores this parameter when you create this rule\.
 
-## AWS CloudFormation template<a name="w22aac11c29c17d189c15"></a>
+## AWS CloudFormation template<a name="w24aac11c29c17d189c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

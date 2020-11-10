@@ -9,7 +9,7 @@ For information about other limits in AWS, see [AWS Service Limits](https://docs
 
 | Description | Limit Value | Can be increased | 
 | --- | --- | --- | 
-| Maximum number of AWS Config Rules per Region per account | 150 | Yes | 
+| Maximum number of AWS Config Rules per Region per account | 250 | Yes | 
 | Maximum number of configuration aggregators | 50 | Yes | 
 | Maximum number of accounts in an aggregator | 10000 | No | 
 | Maximum number of accounts added or deleted per week for all aggregators | 1000 | Yes | 
@@ -29,7 +29,7 @@ For information about other limits in AWS, see [AWS Service Limits](https://docs
 
 | Description | Limit Value | Can be increased | 
 | --- | --- | --- | 
-| Maximum number of conformance packs per organization | 6 | No | 
+| Maximum number of conformance packs per organization | 50 | No | 
 | Maximum AWS Config Rules per organization conformance pack | 25 | No | 
 | Maximum number of AWS Config Rules per account across all organization conformance packs | 150 | No | 
 

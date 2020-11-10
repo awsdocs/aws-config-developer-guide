@@ -11,8 +11,9 @@ If you have configured AWS Config to record all resource types, then third\-part
 **Topics**
 + [Step 1: Setup Your Development Environment](#customresources-setupdevenvironment)
 + [Step 2: Model Your Resource](#customresources-modelresource)
-+ [Step 3: Register Your Resource](#customresources-registerresource)
-+ [Step 4: Publish Resource Configuration](#customresources-publishresourceconfiguration)
++ [Step 3: Generate Artifacts](#generateartifactsforcfnsubmit)
++ [Step 4: Register Your Resource](#customresources-registerresource)
++ [Step 5: Publish Resource Configuration](#customresources-publishresourceconfiguration)
 + [Record and Delete a Configuration State for Third\-Party Resources Using AWS CLI](customresources-cli.md)
 + [Managing a Configuration State for Third\-Party Resources Type Using APIs](customresources-api.md)
 + [Region Support](#custom-resources-regions)
@@ -46,12 +47,14 @@ Create a resource provider schema that conforms to and validates the configurati
    ```
 
 1. Open the `custom-testing-wordpress.json` file that contains the schema for your resource\. Copy and paste the following schema into `custom-testing-wordpress.json`\.
+**Note**  
+You can change the source URL from the default url mentioned below\.
 
    ```
    {
      "typeName": "MyCustomNamespace::Testing::WordPress",
      "description": "An example resource that creates a website based on WordPress 5.2.2.",
-     "sourceUrl": "The URL of the source code for this resource, if public.",
+     "sourceUrl": "https://github.com/aws-cloudformation/aws-cloudformation-rpdk.git",
      "properties": {
        "Name": {
          "description": "A name associated with the website.",
@@ -94,7 +97,15 @@ Create a resource provider schema that conforms to and validates the configurati
 
 For more information, see [Modeling Resource Providers for Use in AWS CloudFormation](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-model.html)\.
 
-## Step 3: Register Your Resource<a name="customresources-registerresource"></a>
+## Step 3: Generate Artifacts<a name="generateartifactsforcfnsubmit"></a>
+
+Run the following command to generate artifacts for `cfn submit`\.
+
+```
+$ mvn package
+```
+
+## Step 4: Register Your Resource<a name="customresources-registerresource"></a>
 
 AWS Config does not require resource provider handlers to perform configuration tracking for your resource\. Run the following command to register your resource\.
 
@@ -104,13 +115,13 @@ $ cfn submit
 
 For more information, see [Registering Resource Providers for Use in AWS CloudFormation Templates](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-register.html)\.
 
-## Step 4: Publish Resource Configuration<a name="customresources-publishresourceconfiguration"></a>
+## Step 5: Publish Resource Configuration<a name="customresources-publishresourceconfiguration"></a>
 
 Determine the configuration for MyCustomNamespace::Testing::WordPress\.
 
 ```
 {
-  "Name": "MyWordPressSite"
+  "Name": "MyWordPressSite",
   "SubnetId": "subnet-abcd0123",
   "InstanceId": "i-01234567",
   "PublicIp": "my-wordpress-site.com"
