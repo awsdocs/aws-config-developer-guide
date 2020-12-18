@@ -13,6 +13,6 @@ Checks whether logging is enabled on AWS Web Application Firewall \(WAFV2\) regi
 KinesisFirehoseDeliveryStreamArns \(Optional\)Type: CSV  
 Comma separated list of Kinesis Firehose delivery stream ARNs\.
 
-## AWS CloudFormation template<a name="w24aac11c29c17d335c15"></a>
+## AWS CloudFormation template<a name="w24aac11c29c17d359c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

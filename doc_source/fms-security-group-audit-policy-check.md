@@ -34,6 +34,6 @@ If true, AWS Firewall Manager will update NON\_COMPLIANT resources according to 
  allowSecurityGroup \(mandatory\)  
 If true, the rule will check to ensure that all `inScope` security groups are within the reference security group's inbound/outbound rules\.
 
-## AWS CloudFormation template<a name="w24aac11c29c17d179c19"></a>
+## AWS CloudFormation template<a name="w24aac11c29c17d189c19"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

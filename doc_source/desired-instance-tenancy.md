@@ -19,6 +19,6 @@ Checks instances for specified tenancy\. Specify AMI IDs to check instances that
  hostId   
  The ID of the Amazon EC2 Dedicated Host on which the instances are meant to be launched\. Separate multiple host IDs with commas\. 
 
-## AWS CloudFormation template<a name="w24aac11c29c17c87c15"></a>
+## AWS CloudFormation template<a name="w24aac11c29c17c95c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

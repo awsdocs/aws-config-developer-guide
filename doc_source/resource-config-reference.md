@@ -104,16 +104,7 @@ AWS Config also records the following attributes for the Amazon S3 bucket resour
 
 For more information about the attributes, see [Bucket Configuration Options](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html#bucket-config-options-intro) in the *Amazon Simple Storage Service Developer Guide*\.
 
-## Amazon Simple Queue Service<a name="amazonsimplenotificationservice"></a>
-
-
-****  
-
-| AWS Service | Resource Type Value | Relationship | Related Resource | 
-| --- | --- | --- | --- | 
-| Amazon Simple Queue Service | AWS::SQS::Queue | NA | NA | 
-
-## Amazon Simple Notification Service<a name="amazonsimplequeueservice"></a>
+## Amazon Simple Notification Service<a name="amazonsimplenotificationservice"></a>
 
 
 ****  
@@ -121,6 +112,15 @@ For more information about the attributes, see [Bucket Configuration Options](ht
 | AWS Service | Resource Type Value | Relationship | Related Resource | 
 | --- | --- | --- | --- | 
 | Amazon Simple Notification Service | AWS::SNS::Topic | NA | NA | 
+
+## Amazon Simple Queue Service<a name="amazonsimplequeueservice"></a>
+
+
+****  
+
+| AWS Service | Resource Type Value | Relationship | Related Resource | 
+| --- | --- | --- | --- | 
+| Amazon Simple Queue Service | AWS::SQS::Queue | NA | NA | 
 
 ## Amazon Simple Storage Service<a name="amazonsimplestorageservice"></a>
 
@@ -217,6 +217,14 @@ AWS Config includes inline policies with the configuration details that it recor
 
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
+
+## AWS Network Firewall<a name="awsnetworkfirewall"></a>
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
+
+AWS Config support for Network Firewall is available only in the US East \(N\. Virginia\), Europe \(Ireland\) and US West \(Oregon\) regions\.
 
 ## AWS Secrets Manager<a name="awssecretsmanager"></a>
 

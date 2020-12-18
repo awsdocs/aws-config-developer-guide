@@ -20,7 +20,7 @@ If you have configured AWS Config to record all resource types, then third\-part
 
 ## Step 1: Setup Your Development Environment<a name="customresources-setupdevenvironment"></a>
 
-Install and configure AWS CloudFormation AWS CLI\. The AWS CLI allows you to model and register your custom resources\. For more information, see [Custom Resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-custom-resources.html) and [What Is the CloudFormation Command Line Interface?](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cloudformation-cli.html)\.
+Install and configure AWS CloudFormation AWS CLI\. The AWS CLI allows you to model and register your custom resources\. For more information, see [Custom Resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-custom-resources.html) and [What Is the CloudFormation Command Line Interface?](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/what-is-cloudformation-cli.html)\.
 
 ## Step 2: Model Your Resource<a name="customresources-modelresource"></a>
 

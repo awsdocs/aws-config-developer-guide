@@ -1,5 +1,8 @@
 # Monitoring AWS Config with Amazon CloudWatch Events<a name="monitor-config-with-cloudwatchevents"></a>
 
+**Note**  
+Amazon EventBridge is the preferred way to manage your events\. CloudWatch Events and EventBridge are the same underlying service and API, but EventBridge provides more features\. Changes you make in either CloudWatch or EventBridge will appear in each console\. For more informance, see [Amazon EventBridge](https://docs.aws.amazon.com/eventbridge/index.html)\. 
+
 Amazon CloudWatch Events delivers a near real\-time stream of system events that describe changes in AWS resources\. Use Amazon CloudWatch Events to detect and react to changes in the status of AWS Config events\.
 
 You can create a rule that runs whenever there is a state transition, or when there is a transition to one or more states that are of interest\. Then, based on rules you create, Amazon CloudWatch Events invokes one or more target actions when an event matches the values you specify in a rule\. Depending on the type of event, you might want to send notifications, capture event information, take corrective action, initiate events, or take other actions\. 

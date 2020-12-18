@@ -12,6 +12,7 @@ Checks whether the project contains environment variables AWS\_ACCESS\_KEY\_ID a
 
  None   
 
-## AWS CloudFormation template<a name="w24aac11c29c17c73c15"></a>
+
+## AWS CloudFormation template<a name="w24aac11c29c17c81c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

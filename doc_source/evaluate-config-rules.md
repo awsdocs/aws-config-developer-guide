@@ -25,6 +25,8 @@ AWS Config runs evaluations for the rule at a frequency that you choose \(for ex
 
 If you choose configuration changes and periodic, AWS Config invokes your Lambda function when it detects a configuration change and also at the frequency that you specify\. 
 
+
+
 ## Example rules with triggers<a name="example-triggers"></a>
 
 **Example rule with configuration change trigger**

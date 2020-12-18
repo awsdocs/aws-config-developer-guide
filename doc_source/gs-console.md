@@ -49,7 +49,9 @@ The Amazon SNS topic must exist in the same region as the region in which you se
 **Note**  
 Check the box if you want to use the IAM role as is\. AWS Config will not attach policies to the role\.
 
-1. If you are setting up AWS Config in a region that supports rules, choose **Next**\. See [Setting Up AWS Config Rules with the Console](setting-up-aws-config-rules-with-console.md)\. 
+1. 
+
+   If you are setting up AWS Config in a region that supports rules, choose **Next**\. See [Setting Up AWS Config Rules with the Console](setting-up-aws-config-rules-with-console.md)\. 
 
    Otherwise, choose **Save**\. AWS Config displays the **Resource inventory** page\.
 

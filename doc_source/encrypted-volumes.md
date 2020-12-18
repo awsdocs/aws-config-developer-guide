@@ -15,6 +15,6 @@ For more information, see [Amazon EBS Encryption](https://docs.aws.amazon.com/AW
  kmsId   
  ID or ARN of the KMS key that is used to encrypt the volume\. 
 
-## AWS CloudFormation template<a name="w24aac11c29c17d177c17"></a>
+## AWS CloudFormation template<a name="w24aac11c29c17d187c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

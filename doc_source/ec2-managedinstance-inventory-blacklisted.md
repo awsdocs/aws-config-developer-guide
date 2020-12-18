@@ -16,6 +16,6 @@ Comma\-separated list of Systems Manager inventory types \(for example, "AWS:Net
  platformType   
 Platform type \(for example, “Linux”\)\.
 
-## AWS CloudFormation template<a name="w24aac11c29c17d129c15"></a>
+## AWS CloudFormation template<a name="w24aac11c29c17d137c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

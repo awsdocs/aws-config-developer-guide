@@ -12,6 +12,6 @@ Checks if Amazon Elastic Block Store \(Amazon EBS\) volumes are added in backup 
 
 None  
 
-## AWS CloudFormation template<a name="w24aac11c29c17d105c15"></a>
+## AWS CloudFormation template<a name="w24aac11c29c17d113c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

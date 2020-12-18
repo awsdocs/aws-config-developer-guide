@@ -2,13 +2,16 @@
 
 The following table describes the documentation release history of AWS Config\.
 + **API version**: 2014\-11\-12
-+ **Latest documentation update**: October 30, 2020
++ **Latest documentation update**: December 17, 2020
 
 
 ****  
 
 | Change | Description | Release Date | 
 | --- | --- | --- | 
+| AWS Config updates managed rules |  With this release, AWS Config supports the following managed rules: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/DocumentHistory.html)  | December 17, 2020 | 
+| AWS Config supports AWS Network Firewall |  With this release, you can use AWS Config to record configuration changes to your AWS Network Firewall FirewallPolicy, RuleGroup, and Firewall resource types\. For more information, see [Supported Resource Types](resource-config-reference.md)\. | December 4, 2020 | 
+| Documentation update |  AWS Config added support for organization\-wide resource data aggregation in a delegated administrator account\. You can now use a delegated administrator account to aggregate resource configuration and compliance data from all member accounts of an organization in AWS Organizations\. For more information, see [PutConfigurationAggregator](https://docs.aws.amazon.com/config/latest/APIReference/API_PutConfigurationAggregator.html), [Setting Up an Aggregator Using the Console](setup-aggregator-console.md) and [Register a Delegated Administrator](set-up-aggregator-cli.md#register-a-delegated-administrator-cli)\. | December 4, 2020 | 
 | AWS Config supports new conformance packs |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/DocumentHistory.html)  | October 30, 2020 | 
 | AWS Config supports new conformance packs |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/DocumentHistory.html)  | October 22, 2020 | 
 | AWS Config supports new conformance packs |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/DocumentHistory.html)  | October 15, 2020 | 
@@ -32,7 +35,7 @@ The following table describes the documentation release history of AWS Config\.
 | Documentation update |  AWS Control Tower Detective Guardrails Conformance Pack template is updated\. For more information, see [AWS Control Tower Detective Guardrails Conformance Pack](aws-control-tower-detective-guardrails.md)\.  | June 4, 2020 | 
 | AWS Config supports a new conformance pack |  With this release, AWS Config supports Operational Best Practices for NIST CSF conformance pack\. For more information, see [Operational Best Practices for NIST CSF ](operational-best-practices-for-nist-csf.md)\. | May 29, 2020 | 
 | AWS Config updates managed rules |  With this release, AWS Config supports the following managed rules: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/DocumentHistory.html) For more information, see [List of AWS Config Managed Rules](managed-rules-by-aws-config.md)\.  | May 28, 2020 | 
-| Delegated administrator support | With this release, you can deploy AWS Config rules and conformance packs from any delegated member account in your organization, in addition to the master account\.  For more information about APIs, see the *AWS Config API Reference*: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/DocumentHistory.html) For more information, see [Service Limits](configlimits.md)\. | May 27, 2020 | 
+| Delegated administrator support | With this release, you can deploy AWS Config rules and conformance packs from any delegated member account in your organization, in addition to the management account\.  For more information about APIs, see the *AWS Config API Reference*: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/DocumentHistory.html) For more information, see [Service Limits](configlimits.md)\. | May 27, 2020 | 
 | AWS Config rules Region support | With this release, few AWS Config rules are supported in Africa \(Cape Town\) and Europe \(Milan\) regions\. For a detailed list of rules and the regions they are supported in, see [List of AWS Config Managed Rules](managed-rules-by-aws-config.md)\.  | April 28, 2020 | 
 | AWS Config supports new conformance packs |  With this release, AWS Config supports two conformance packs\. [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/DocumentHistory.html) For more information, see [Conformance Pack Sample Templates](conformancepack-sample-templates.md)\. | April 22, 2020 | 
 | AWS Config supports AWS Secrets Manager |  With this release, you can use AWS Config to record configuration changes to your Secrets Manager secret\. For more information, see [Supported Resource Types](resource-config-reference.md)\. | April 20, 2020 | 

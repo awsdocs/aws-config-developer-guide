@@ -16,6 +16,6 @@ Re\-evaluating this rule within 4 hours of the first evaluation will have no eff
  maxAccessKeyAge  
 Maximum number of days within which the access keys must be rotated\. The default value is 90 days\.
 
-## AWS CloudFormation template<a name="w24aac11c29c17c13c19"></a>
+## AWS CloudFormation template<a name="w24aac11c29c17b9c19"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

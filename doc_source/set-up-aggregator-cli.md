@@ -11,6 +11,7 @@ If necessary, type `aws configure` to configure the AWS CLI to use an AWS Region
 **Topics**
 + [Add an Aggregator Using Individual Accounts](#add-an-aggregator-cli)
 + [Add an Aggregator Using AWS Organizations](#add-an-aggregator-organization-cli)
++ [Register a Delegated Administrator](#register-a-delegated-administrator-cli)
 + [View an Aggregator](#view-an-aggregator-cli)
 + [Edit an Aggregator](#edit-an-aggregator-cli)
 + [Delete an Aggregator](#delete-an-aggregator-cli)
@@ -72,7 +73,10 @@ If necessary, type `aws configure` to configure the AWS CLI to use an AWS Region
 
 ## Add an Aggregator Using AWS Organizations<a name="add-an-aggregator-organization-cli"></a>
 
-Before you begin this procedure, you must be signed in to the master account and all features must be enabled in your organization\.
+Before you begin this procedure, you must be signed in to the management account or a registered delegated administrator and all the features must be enabled in your organization\. 
+
+**Note**  
+Ensure that the management account registers delagated administrator for AWS Config service principle name \(config\.amazonaws\.com\) before the delegated administrator creates an aggregator\. To register a delegated administrator, see [Register a Delegated Administrator](#register-a-delegated-administrator-cli)\.
 
 1. Open a command prompt or a terminal window\.
 
@@ -98,6 +102,70 @@ Before you begin this procedure, you must be signed in to the master account and
             },
            "LastUpdatedTime": 1517942461.442
        }
+   }
+   ```
+
+## Register a Delegated Administrator<a name="register-a-delegated-administrator-cli"></a>
+
+Delegated administrators are accounts within a given AWS Organization that are granted additional administrative privileges for a specified AWS service\.
+
+1. Login with management account credentials\.
+
+1. Open a command prompt or a terminal window\.
+
+1. Type the following command to enable service access:
+
+   ```
+   aws organizations enable-aws-service-access --service-principal config.amazonaws.com
+   ```
+
+1. To verify if the enable service access is complete, type the following command and press Enter to execute the command\.
+
+   ```
+   aws organizations list-aws-service-access-for-organization
+   ```
+
+   You should see output similar to the following:
+
+   ```
+   {
+       "EnabledServicePrincipals": [
+           {
+               "ServicePrincipal": "config.amazonaws.com",
+               "DateEnabled": 1607020860.881
+           }
+       ]
+   }
+   ```
+
+1. Next, type the following command to register a member account as a delegated administrator for AWS Config\.
+
+   ```
+   aws organizations register-delegated-administrator --service-principal config.amazonaws.com --account-id MemberAccountID
+   ```
+
+1. To verify if the registration of delegated administrator is complete, type the following command and press Enter to execute the command\.
+
+   ```
+   aws organizations list-delegated-administrators --service-principal config.amazonaws.com 
+   ```
+
+   You should see output similar to the following:
+
+   ```
+   {
+       "DelegatedAdministrators": [
+           {
+               "Id": "MemberAccountID",
+               "Arn": "arn:aws:organizations::MemeberAccountID:account/o-c7esubdi38/DelegatedAdministratorAccountID",
+               "Email": "name@amazon.com",
+               "Name": "name",
+               "Status": "ACTIVE",
+               "JoinedMethod": "INVITED",
+               "JoinedTimestamp": 1604867734.48,
+               "DelegationEnabledDate": 1607020986.801
+           }
+       ]
    }
    ```
 

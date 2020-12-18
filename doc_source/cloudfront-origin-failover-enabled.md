@@ -12,6 +12,6 @@ Checks whether an origin group is configured for the distribution of at least 2 
 
 None  
 
-## AWS CloudFormation template<a name="w24aac11c29c17c45c15"></a>
+## AWS CloudFormation template<a name="w24aac11c29c17c53c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

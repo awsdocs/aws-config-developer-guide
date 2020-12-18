@@ -38,6 +38,8 @@ To create an Amazon SNS topic with the AWS CLI, use the [create\-topic](https://
 
 1. Sign in to the AWS Management Console and open the Amazon SNS console at [https://console\.aws\.amazon\.com/sns/v3/home](https://console.aws.amazon.com/sns/v3/home)\.
 
+   
+
 1. Choose **Create New Topic**\.
 
 1. For **Topic Name**, type a name for your SNS topic, such as *my\-config\-notice*\.

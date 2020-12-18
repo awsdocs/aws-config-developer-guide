@@ -19,6 +19,6 @@ The number of days the Amazon GuardDuty medium severity findings are allowed to 
 daysHighSev  
 The number of days Amazon GuardDuty high severity findings are allowed to stay non archived\. The default is 1 day\.
 
-## AWS CloudFormation template<a name="w24aac11c29c17d193c15"></a>
+## AWS CloudFormation template<a name="w24aac11c29c17d203c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

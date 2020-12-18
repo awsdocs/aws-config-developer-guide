@@ -13,6 +13,6 @@ Checks whether AWS account is part of AWS Organizations\. The rule is NON\_COMPL
 MasterAccountId \(Optional\)Type: String  
 The master account ID for an AWS account\.
 
-## AWS CloudFormation template<a name="w24aac11c29c17c15c15"></a>
+## AWS CloudFormation template<a name="w24aac11c29c17c11c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

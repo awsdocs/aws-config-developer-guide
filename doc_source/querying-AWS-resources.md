@@ -27,7 +27,33 @@ The query language supports querying AWS resources based on CI properties of all
 
 As a subset of SQL `SELECT`, the query syntax has following limitations:
 + No support for `ALL`, `AS`, `DISTINCT`, `FROM`, `HAVING`, `JOIN`, and `UNION` keywords in a query\.
-+ When querying against multiple properties within an array of objects, matches are computed against all array elements \(that is, arrays of objects are flattened for indexing\)\. For example, if the database had a document of the form `{ "a": [ { "b": 1, "c": 2, ... }, { "b": 3, "c": 4, ... } ] }`, a query like `SELECT a WHERE a.b=1 AND a.c=4` would match this document, even though no single array element had the specified values of `{ "b": 1, "c": 4 }`\.
++ When querying against multiple properties within an array of objects, matches are computed against all the array elements\. For example, for a resource R with rules A and B, the resource is compliant to rule A but noncompliant to rule B\. The resource R is stored as: 
+
+  ```
+  { 
+  configRuleList: [ 
+  { configRuleName: 'A', complianceType: 'compliant' }, 
+  { configRuleName: 'B', complianceType: 'non_compliant' } 
+  ]
+  }
+  ```
+
+   R will be returned by this query: 
+
+  ```
+  SELECT configuration WHERE configuration.configRuleList.complianceType = 'non_compliant' 
+  AND configuration.configRuleList.configRuleName = 'A'
+  ```
+
+   The first condition `configuration.configRuleList.complianceType = 'non_compliant'` is applied to ALL elements in R\.configRuleList, because R has a rule \(rule B\) with complianceType = ‘non\_compliant’, the condition is evaluated as true\. The second condition `configuration.configRuleList.configRuleName` is applied to ALL elements in R\.configRuleList, because R has a rule \(rule A\) with configRuleName = ‘A’, the condition is evaluated as true\. As both conditions are true, R will be returned\.
+
+  `configuration.configRuleList.complianceType = 'non_compliant'` is applied to ALL elements in R\.configRuleList, because R has a rule \(rule B\) with complianceType = ‘non\_compliant’, the condition is evaluated as true\. The second condition `configuration.configRuleList.configRuleName` is applied to ALL elements in R\.configRuleList, because R has a rule \(rule A\) with configRuleName = ‘A’, the condition is evaluated as true\. As both conditions are true, R will be returned\.
+
+   is applied to ALL elements in R\.configRuleList, because R has a rule \(rule B\) with complianceType = ‘non\_compliant’, the condition is evaluated as true\. The second condition `configuration.configRuleList.configRuleName` is applied to ALL elements in R\.configRuleList, because R has a rule \(rule A\) with configRuleName = ‘A’, the condition is evaluated as true\. As both conditions are true, R will be returned\.
+
+  `configuration.configRuleList.configRuleName` is applied to ALL elements in R\.configRuleList, because R has a rule \(rule A\) with configRuleName = ‘A’, the condition is evaluated as true\. As both conditions are true, R will be returned\.
+
+   is applied to ALL elements in R\.configRuleList, because R has a rule \(rule A\) with configRuleName = ‘A’, the condition is evaluated as true\. As both conditions are true, R will be returned\.
 + The `SELECT` all columns shorthand \(that is `SELECT *`\) selects only the top\-level, scalar properties of a CI\. The scalar properties returned are `accountId`, `awsRegion`, `arn`, `availabilityZone`, `configurationItemCaptureTime`, `resourceCreationTime`, `resourceId`, `resourceName`, `resourceType`, and `version`\.
 + Wildcard limitations:
   + Wildcards are supported only for property values and not for property keys \(for example, `...WHERE someKey LIKE 'someValue%'` is supported but `...WHERE 'someKey%' LIKE 'someValue%'` is not supported\)\.

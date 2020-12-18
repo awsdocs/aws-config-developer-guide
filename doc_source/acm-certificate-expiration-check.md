@@ -13,6 +13,6 @@ Checks whether ACM Certificates in your account are marked for expiration within
  daysToExpiration   
 Specify the number of days before the rule flags the ACM Certificate as NON\_COMPLIANT\.
 
-## AWS CloudFormation template<a name="w24aac11c29c17c17c15"></a>
+## AWS CloudFormation template<a name="w24aac11c29c17c13c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

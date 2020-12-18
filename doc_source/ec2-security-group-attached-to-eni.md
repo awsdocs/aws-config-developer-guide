@@ -1,6 +1,6 @@
 # ec2\-security\-group\-attached\-to\-eni<a name="ec2-security-group-attached-to-eni"></a>
 
-Checks that security groups are attached to Amazon Elastic Compute Cloud \(Amazon EC2\) instances or to an elastic network interface\. The rule returns NON\_COMPLIANT if the security group is not associated with an Amazon EC2 instance or an elastic network interface\.
+Checks that Amazon Elastic Compute Cloud \(Amazon EC2\) instances use security groups that are attached to an elastic network interface\. The rule returns NON\_COMPLIANT if a security group is not associated with an elastic network interface\.
 
 **Identifier:** EC2\_SECURITY\_GROUP\_ATTACHED\_TO\_ENI
 
@@ -12,6 +12,6 @@ Checks that security groups are attached to Amazon Elastic Compute Cloud \(Amazo
 
 None  
 
-## AWS CloudFormation template<a name="w24aac11c29c17d135c15"></a>
+## AWS CloudFormation template<a name="w24aac11c29c17d143c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.
