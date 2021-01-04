@@ -14,6 +14,7 @@ For information about other limits in AWS, see [AWS Service Limits](https://docs
 | Maximum number of accounts in an aggregator | 10000 | No | 
 | Maximum number of accounts added or deleted per week for all aggregators | 1000 | Yes | 
 | Maximum number of Tags | 50 | No | 
+| Maximum number of saved queries in a single account and a Region | 300 | Yes | 
 
 
 **Single Account Conformance Packs**  

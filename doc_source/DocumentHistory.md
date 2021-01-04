@@ -2,13 +2,15 @@
 
 The following table describes the documentation release history of AWS Config\.
 + **API version**: 2014\-11\-12
-+ **Latest documentation update**: December 17, 2020
++ **Latest documentation update**: December 21, 2020
 
 
 ****  
 
 | Change | Description | Release Date | 
 | --- | --- | --- | 
+| Saved Query support | With this release, AWS Config allows you to save your queries\. After you save the query, you can search it, copy it to the query editor, edit it, or delete it\. For more information about how to save a query, see the [Query Using the SQL Query Editor \(Console\)](query-using-sql-editor-console.md) and [Query Using the SQL Query Editor \(AWS CLI\)](query-using-sql-editor-cli.md)\. For more information about APIs, see the *AWS Config API Reference*: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/DocumentHistory.html) Also see [Service Limits](configlimits.md)\. | December 21, 2020 | 
+| Process checks support | With this release, AWS Config supports process checks that is a type of AWS Config rule that allows you to track your external and internal tasks that require verification as part of the conformance packs\. With process checks, you can list the compliance of requirements and actions at a single location\. For more information about process checks, see the [AWS Config Process Checks Within a Conformance Pack](process-checks.md) topic and the [PutExternalEvaluation](https://docs.aws.amazon.com/config/latest/APIReference/API_PutExternalEvaluation.html) API\.  | December 17, 2020 | 
 | AWS Config updates managed rules |  With this release, AWS Config supports the following managed rules: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/DocumentHistory.html)  | December 17, 2020 | 
 | AWS Config supports AWS Network Firewall |  With this release, you can use AWS Config to record configuration changes to your AWS Network Firewall FirewallPolicy, RuleGroup, and Firewall resource types\. For more information, see [Supported Resource Types](resource-config-reference.md)\. | December 4, 2020 | 
 | Documentation update |  AWS Config added support for organization\-wide resource data aggregation in a delegated administrator account\. You can now use a delegated administrator account to aggregate resource configuration and compliance data from all member accounts of an organization in AWS Organizations\. For more information, see [PutConfigurationAggregator](https://docs.aws.amazon.com/config/latest/APIReference/API_PutConfigurationAggregator.html), [Setting Up an Aggregator Using the Console](setup-aggregator-console.md) and [Register a Delegated Administrator](set-up-aggregator-cli.md#register-a-delegated-administrator-cli)\. | December 4, 2020 | 

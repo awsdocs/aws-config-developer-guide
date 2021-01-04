@@ -10,6 +10,7 @@ Conformance packs are only available in the redesigned AWS Config console\.
 **Topics**
 + [Prerequisites](cpack-prerequisites.md)
 + [Region Support](#conformance-packs-regions)
++ [AWS Config Process Checks Within a Conformance Pack](process-checks.md)
 + [Conformance Pack Sample Templates](conformancepack-sample-templates.md)
 + [Deploying a Conformance Pack Using the AWS Config Console](conformance-pack-console.md)
 + [Deploying a Conformance Pack Using the AWS Command Line Interface](conformance-pack-cli.md)
@@ -24,5 +25,3 @@ Conformance packs are supported in the following Regions\.
 
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/conformance-packs.html)
-
-\* Management of conformance packs with the AWS Config console is not available in the Europe \(Stockholm\)\(eu\-north\-1\) Region\. However, you can use all APIs in this Region\.

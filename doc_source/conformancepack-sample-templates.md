@@ -21,6 +21,8 @@ Here are the conformance pack YAML templates that you see in AWS Config console\
 + [Operational Best Practices for AWS Well\-Architected Framework Security Pillar](operational-best-practices-for-wa-Security-Pillar.md)
 + [Operational Best Practices for BCP and DR](operational-best-practices-for-BCP-and-DR.md)
 + [Operational Best Practices for BNM RMiT](operational-best-practices-for-bnm-rmit.md)
++ [Operational Best Practices for CIS AWS Foundations Benchmark v1\.3 Level 1](operational-best-practices-for-cis_aws_benchmark_level_1.md)
++ [Operational Best Practices for CIS AWS Foundations Benchmark v1\.3 Level 2](operational-best-practices-for-cis_aws_benchmark_level_2.md)
 + [Operational Best Practices for CIS Top 20](operational-best-practices-for-cis_top_20.md)
 + [Operational Best Practices for CMMC Level 1](operational-best-practices-for-cmmc_level_1.md)
 + [Operational Best Practices for CMMC Level 2](operational-best-practices-for-cmmc_level_2.md)

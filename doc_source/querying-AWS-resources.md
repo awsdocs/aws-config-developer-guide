@@ -14,7 +14,7 @@ You can use advanced query for:
 + [Limitations](#query-limitations)
 + [Region Support](#query-regionsupport)
 + [Query Using the SQL Query Editor \(Console\)](query-using-sql-editor-console.md)
-+ [Query Using the SQL Query Editor AWS CLI](query-using-sql-editor-cli.md)
++ [Query Using the SQL Query Editor \(AWS CLI\)](query-using-sql-editor-cli.md)
 + [Example Queries](example-query.md)
 + [Example Relationship Queries](examplerelationshipqueries.md)
 + [Query Components](query-components.md)
@@ -73,3 +73,5 @@ Advanced queries is supported in the following Regions:
 
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/querying-AWS-resources.html)
+
+\*Saved queries is not available in AWS GovCloud \(US\-East\) and AWS GovCloud \(US\-West\) regions\.
