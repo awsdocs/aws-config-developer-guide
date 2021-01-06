@@ -352,5 +352,6 @@ Amazon's trademarks and trade dress may not be used in
    + [Infrastructure Security in AWS Config](infrastructure-security.md)
    + [Security Best Practices for AWS Config](security-best-practices.md)
 + [AWS Config Resources](cloudconfig-resources.md)
++ [Frequently Asked Questions](faq.md)
 + [Document History](DocumentHistory.md)
 + [AWS glossary](glossary.md)

@@ -84,7 +84,9 @@ Follow these steps to add an access policy to the Amazon S3 bucket in your own a
    }
    ```
 **Note**  
-When granting permissions to your IAM role instead of AWS Config service principle name \(SPN\), ensure that your IAM role has `putObjectACL` permission on cross\-account bucket to avoid insufficient permission error\.  See sample IAM role policy at [ IAM Role Policy for Amazon S3 Bucket](iamrole-permissions.md#iam-role-policies-S3-bucket)\.
+AWS Config is owned by AWS and does not belong specifically to one of your AWS accounts or linked accounts within your AWS Organization\. This means that the service won't work with organization ID or organization units based conditions\.
+**Note**  
+When granting permissions to your IAM role instead of AWS Config service principle name \(SPN\), ensure that your IAM role has `PutObjectACL` permission on cross\-account bucket to avoid insufficient permission error\.  See sample IAM role policy at [ IAM Role Policy for Amazon S3 Bucket](iamrole-permissions.md#iam-role-policies-S3-bucket)\.
 
 1. Substitute the following values in the bucket policy:
    + *targetBucketName* – The name of the Amazon S3 bucket to which AWS Config will deliver configuration items\.

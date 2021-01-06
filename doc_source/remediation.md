@@ -26,9 +26,9 @@ Before you begin to apply remediation on noncompliant resources, you must select
 
 1. Choose **Rules** on the left and then on the **Rules** page, choose **Add Rule** to add new rules to the rule list\. 
 
-   For existing rules, select the noncompliant rule from the rule list and choose **Edit**\.
+   For existing rules, select the noncompliant rule from the rule list and choose the **Actions** dropdown list\.
 
-1. On the **Edit ***name of the rule* page, in the **Choose remediation action** section, choose the appropriate remediation action from the recommended list\.
+1. From the **Actions** dropdown list, choose **Manage remediation**\. Select "Manual remediation" and then choose the appropriate remediation action from the recommended list\.
 
    Depending on the selected remediation action, you see specific parameters or no parameters\.
 
@@ -44,9 +44,9 @@ Before you begin to apply remediation on noncompliant resources, you must select
 
 1. Choose **Rules** on the left and then on the **Rules** page, choose **Add Rule** to add new rules to the rule list\. 
 
-   For existing rules, select the noncompliant rule from the rule list and choose **Edit**\.
+   For existing rules, select the noncompliant rule from the rule list and choose the **Actions** dropdown list\.
 
-1. On the **Edit ***name of the rule* page, in the **Choose remediation action** section, choose the appropriate remediation action from the recommended list\.
+1. From the **Actions** dropdown list, choose **Manage remediation**\. Select "Automatic remediation" and then choose the appropriate remediation action from the recommended list\.
 
    Depending on the selected remediation action, you see specific parameters or no parameters\.
 

@@ -1,6 +1,6 @@
 # rds\-logging\-enabled<a name="rds-logging-enabled"></a>
 
-Checks that respective logs of Amazon Relational Database Service \(Amazon RDS\) are enabled\. The rule is NON\_COMPLIANT if any log types are not enabled\. 
+Checks if log types exported to Amazon CloudWatch for an Amazon Relational Database Service \(Amazon RDS\) instance are enabled\. The rule is NON\_COMPLIANT if any such log types are not enabled\.
 
 **Identifier:** RDS\_LOGGING\_ENABLED
 
