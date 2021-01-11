@@ -89,5 +89,5 @@ You cannot change source type from individual account\(s\) to organization and v
 ## Learn More<a name="learn-more-setup-console"></a>
 + [Concepts](config-concepts.md)
 + [Authorizing Aggregator Accounts to Collect AWS Config Configuration and Compliance Data Using the Console](authorize-aggregator-account-console.md)
-+ [Viewing Configuration and Compliance Data in the Aggregated View](viewing-the-aggregate-dashboard.md)
++ [Viewing Configuration and Compliance Data in the Aggregator Dashboard](viewing-the-aggregate-dashboard.md)
 + [Troubleshooting for Multi\-Account Multi\-Region Data Aggregation](aggregate-data-troubleshooting.md)

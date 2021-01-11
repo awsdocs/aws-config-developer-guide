@@ -325,7 +325,7 @@ Amazon's trademarks and trade dress may not be used in
    + [Managing Conformance Packs Across all Accounts in Your Organization](conformance-pack-organization-apis.md)
    + [Troubleshooting](troubleshooting-conformance-pack.md)
 + [Multi-Account Multi-Region Data Aggregation](aggregate-data.md)
-   + [Viewing Configuration and Compliance Data in the Aggregated View](viewing-the-aggregate-dashboard.md)
+   + [Viewing Configuration and Compliance Data in the Aggregator Dashboard](viewing-the-aggregate-dashboard.md)
    + [Setting Up an Aggregator Using the Console](setup-aggregator-console.md)
    + [Setting Up an Aggregator Using the AWS Command Line Interface](set-up-aggregator-cli.md)
    + [Authorizing Aggregator Accounts to Collect AWS Config Configuration and Compliance Data Using the Console](authorize-aggregator-account-console.md)

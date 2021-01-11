@@ -10,24 +10,13 @@ After setup, AWS Config starts recording the specified resources and then evalua
 
 1. Choose **Dashboard**\.
 
-1. Use the **Dashboard** to see an overview of your resources, rules, and their compliance state\.  
-![\[The AWS Config Dashboard page shows you the number of resources and noncompliant rules that you have in your account.\]](http://docs.aws.amazon.com/config/latest/developerguide/images/AWS-Config-Dashboard-20.png)
-
-   On the **Dashboard**, you can do the following:
-
-   1. View the total number of resources that AWS Config is recording\.
-
-   1. View the resource types that AWS Config is recording, in descending order \(the number of resources\)\. Choose a resource type to go to the **Resources inventory** page\.
-
-   1. Choose **View all resources** to go to the **Resources inventory** page\.
-
-   1. View the number of noncompliant rules\.
-
-   1. View the number of noncompliant resources\.
-
-   1. View the top noncompliant rules, in descending order \(the number of resources\)\.
-
-   1. Choose **View all noncompliant rules** to go to the **Rules** page\.
+1. Use the **Dashboard** to see an overview of your resources, rules, and their compliance state\. You can do the following:
+   + View the total number of resources that AWS Config is recording\.
+   + View the resource types that AWS Config is recording, in descending order \(the number of resources\)\. Choose a resource type to go to the **Resources inventory** page\.
+   + View the number of noncompliant rules\.
+   + View the number of noncompliant resources\.
+   + View the top noncompliant rules, in descending order \(the number of resources\)\.
+   + Choose **View all noncompliant rules** to go to the **Rules** page\.
 
 The **Dashboard** shows the resources and rules specific to your region and account\. It does not show resources or rules from other regions or other AWS accounts\. 
 

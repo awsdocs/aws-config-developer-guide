@@ -29,7 +29,7 @@ Currently, multi\-account multi\-region data aggregation is supported in the fol
 
 ## Learn More<a name="learn-more-aggregator-landing-page"></a>
 + [Concepts](config-concepts.md)
-+ [Viewing Configuration and Compliance Data in the Aggregated View](viewing-the-aggregate-dashboard.md)
++ [Viewing Configuration and Compliance Data in the Aggregator Dashboard](viewing-the-aggregate-dashboard.md)
 + [Setting Up an Aggregator Using the Console](setup-aggregator-console.md)
 + [Setting Up an Aggregator Using the AWS Command Line Interface](set-up-aggregator-cli.md)
 + [Authorizing Aggregator Accounts to Collect AWS Config Configuration and Compliance Data Using the Console](authorize-aggregator-account-console.md)

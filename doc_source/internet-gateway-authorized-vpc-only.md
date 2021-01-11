@@ -10,7 +10,7 @@ Checks that Internet gateways \(IGWs\) are only attached to an authorized Amazon
 
 **Parameters:**
 
- AuthorizedVpcIds  
+ InternetGatewayAuthorizedVpcOnlyParamAuthorizedVpcIds  
 Comma\-separated list of the authorized VPC IDs with attached IGWs\. If parameter is not provided all attached IGWs will be NON\_COMPLIANT\. 
 
 ## AWS CloudFormation template<a name="w24aac11c29c17d233c15"></a>

@@ -17,23 +17,15 @@ On the **Rules** page, you can view the rules for the region in your account\. Y
 
 1. In the AWS Management Console, verify that the region selector is set to a region that supports AWS Config rules\. For the list of supported regions, see [AWS Config Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html#awsconfig_region) in the *Amazon Web Services General Reference*\.
 
-1. Choose **Rules**\. The **Rules** page shows your rules and the compliance status for each\.
-
-![\[The AWS Config rules page shows you how to view your rules.\]](http://docs.aws.amazon.com/config/latest/developerguide/images/rules-page-10.png)
-
-1. Choose **Add rule** to get started with creating a rule\.
-
-1. Choose a rule name to see its settings\.
-
-1. See the compliance status of the rule when it evaluates your resources\.
-
-1. Choose the **Edit rule** icon \(![\[Edit rule icon.\]](http://docs.aws.amazon.com/config/latest/developerguide/images/edit-icon.png)\) to edit the rule\.
-
-1. Choose the refresh \(![\[Edit rule icon.\]](http://docs.aws.amazon.com/config/latest/developerguide/images/refresh-icon.png)\) icon to reload compliance results\.
+1. Choose **Rules**\. The **Rules** page shows all the rule that are currently in your AWS account\. It lists the name, associated remediation action, and compliance status of each rule\.
+   + Choose **Add rule** to get started with creating a rule\.
+   + Choose a rule to see its settings, or choose a rule and **View details**\.
+   + See the compliance status of the rule when it evaluates your resources\.
+   + Choose a rule and **Edit rule** to change the configuration settings of the rule and set a remediation action for a noncompliant rule\.
 
 **To update a rule**
 
-1. Choose the **Edit rule** icon \(![\[Edit rule icon.\]](http://docs.aws.amazon.com/config/latest/developerguide/images/edit-icon.png)\) for the rule that you want to update\.
+1. Choose a rule and **Edit rule** for the rule that you want to update\.
 
 1. Modify the settings on the **Config rule** page to change your rule as needed\.
 
@@ -41,7 +33,7 @@ On the **Rules** page, you can view the rules for the region in your account\. Y
 
 **To delete a rule**
 
-1. Choose the **Edit rule** icon \(![\[Edit rule icon.\]](http://docs.aws.amazon.com/config/latest/developerguide/images/edit-icon.png)\) for the rule that you want to delete\.
+1. Choose a rule and **Edit rule** for the rule that you want to delete\.
 
 1. On the **Configure rule** page, choose **Delete rule**\.
 
@@ -55,19 +47,13 @@ If you choose **Add rule**, you can see the available AWS managed rules on the *
 
 1. To add a managed rule, choose a rule on the page and follow the procedure in [Working with AWS Config Managed Rules](managing-aws-managed-rules.md)\.
 
-![\[The AWS Config rules page shows how to manage your rules after set up.\]](http://docs.aws.amazon.com/config/latest/developerguide/images/aws-config-rules-page-50.png)
-
 On the **Add rule** page, you can do the following:
-
-1. Choose **Add custom rule** to create your own rule\.
-
-1. Type in the search field to filter results by rule name, description, or label\. For example, type **EC2** to return rules that evaluate EC2 resource types or type **periodic** to return rules with periodic triggers\. Type "new" to search for newly added rules\. For more information about trigger types, see [Specifying Triggers for AWS Config Rules](evaluate-config-rules.md)\.
-
-1. Choose the arrow icon to see the next page of rules\.
-
-1. Recently added rules are marked as **New**\.
-
-1. See the labels to identify the resource type that the rule evaluates and if the rule has a periodic trigger\.
++ Choose **Add custom rule** to create your own rule\.
++ Type in the search field to filter results by rule name, description, or label\. For example, type **EC2** to return rules that evaluate EC2 resource types or type **periodic** to return rules with periodic triggers\. Type "new" to search for newly added rules\. For more information about trigger types, see [Specifying Triggers for AWS Config Rules](evaluate-config-rules.md)\.
++ Reorder the results alphabetically by choosing the arrow by the **Name** label\.
++ Choose the arrow icon to see the next page of rules\.
++ See recently added rules that are marked as **New**\.
++ See labels to identify the resource type that the rule evaluates and if the rule has a periodic trigger\.
 
 ## View, Update, and Delete Rules \(AWS CLI\)<a name="managing-aws-config-rules-with-the-CLI"></a>
 
@@ -88,7 +74,7 @@ On the **Add rule** page, you can do the following:
    $ aws configservice put-config-rule --generate-cli-skeleton > putConfigRule.json
    ```
 
-1. Open the JSON file in a text editor and remove any parameters that don't need updating, with the following exceptions:
+1. Open the JSON file in a text editor and remove any parameters that rdon't need updating, with the following exceptions:
    + Include at least one of the following parameters to identify the rule: 
 
      `ConfigRuleName`, `ConfigRuleArn`, or `ConfigRuleId`\.

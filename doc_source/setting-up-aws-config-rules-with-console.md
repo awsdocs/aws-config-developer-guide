@@ -6,19 +6,12 @@ To see the complete list of AWS managed rules, see [List of AWS Config Managed R
 
 For example, you can choose the **cloudtrail\-enabled** rule, which evaluates whether your account has a CloudTrail trail\. If your account doesn't have a trail, AWS Config flags the resource type and the rule as noncompliant\.
 
-![\[The AWS Config rules page shows how to add rules to your account for the first time.\]](http://docs.aws.amazon.com/config/latest/developerguide/)![\[The AWS Config rules page shows how to add rules to your account for the first time.\]](http://docs.aws.amazon.com/config/latest/developerguide/)![\[The AWS Config rules page shows how to add rules to your account for the first time.\]](http://docs.aws.amazon.com/config/latest/developerguide/)
-
 On the **Rules** page, you can do the following:
-
-1. Type in the search field to filter results by rule name, description, or label\. For example, type **EC2** to return rules that evaluate EC2 resource types or type **periodic** to return rules that have a periodic trigger\. Type "new" to search for newly added rules\. For more information about trigger types, see [Specifying Triggers for AWS Config Rules](evaluate-config-rules.md)\.
-
-1. Choose **Select all** to add all rules or **Clear all** to remove all rules\.
-
-1. Choose the arrow icon to see the next page of rules\.
-
-1. Recently added rules are marked as **New**\.
-
-1. See the labels to identify the service that the rule evaluates and if the rule has a periodic trigger\.
++ Type in the search field to filter results by rule name, description, or label\. For example, type **EC2** to return rules that evaluate EC2 resource types or type **periodic** to return rules that have a periodic trigger\. Type "new" to search for newly added rules\. For more information about trigger types, see [Specifying Triggers for AWS Config Rules](evaluate-config-rules.md)\.
++ Choose a rule to view its specific details\. You can also reorder the results alphabetically by choosing the arrow by the **Rule name** label\.
++ Choose the arrow icon to see the next page of rules\.
++ See recently added rules that are marked as **New**\.
++ See labels to identify the resource type that a rule evaluates and if the rule has a periodic trigger\.
 
 **To set up AWS Config rules**
 

@@ -52,5 +52,5 @@ If necessary, type `aws configure` to configure the AWS CLI to use an AWS Region
 ## Learn More<a name="learn-more-setup-console"></a>
 + [Concepts](config-concepts.md)
 + [Setting Up an Aggregator Using the AWS Command Line Interface](set-up-aggregator-cli.md)
-+ [Viewing Configuration and Compliance Data in the Aggregated View](viewing-the-aggregate-dashboard.md)
++ [Viewing Configuration and Compliance Data in the Aggregator Dashboard](viewing-the-aggregate-dashboard.md)
 + [Troubleshooting for Multi\-Account Multi\-Region Data Aggregation](aggregate-data-troubleshooting.md)

@@ -14,4 +14,4 @@ For more infomation about process checks, see [AWS Config Process Checks Within 
 
 ## Template<a name="cis_aws_benchmark_level_1-conformance-pack-sample"></a>
 
-The template is available on GitHub: [Operational Best Practices for CIS AWS Foundations Benchmark v1\.3 Level 1](https://github.com/awslabs/aws-config-rules/blob/master/aws-config-conformance-packs/Operational-Best-Practices-for-CIS-AWS-v1.3-Level1.yaml)\.
+The template is available on GitHub: [Operational Best Practices for CIS AWS Foundations Benchmark v1\.3 Level 1](https://github.com/awslabs/aws-config-rules/blob/master/aws-config-conformance-packs/Operational-Best-Practices-for-CIS-AWS-FB-v1.3-Level1.yaml)\.

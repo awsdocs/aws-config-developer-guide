@@ -37,8 +37,7 @@ You can also add authorization to aggregator accounts and regions programaticall
 
 If you have a pending authorization request from an exisiting aggregator account you will see the request status on the **Authorizations** page\. You can authorize a pending request from this page\.
 
-1. For the aggregator account you want to authorize, choose **Authorize** in the Actions column\.  
-![\[Authorize button requests for authorization for a pending request.\]](http://docs.aws.amazon.com/config/latest/developerguide/images/Add_Authorization_Authorize_button.png)
+1. For the aggregator account you want to authorize, choose **Authorize** in the Actions column\.
 
    A confirmation message is displayed to confirm you grant permission to an aggregator account and region for collecting AWS Config data\.
 
@@ -61,5 +60,5 @@ After authorization for an aggregator is deleted the data will remain in the agg
 ## Learn More<a name="learn-more-setup-console"></a>
 + [Concepts](config-concepts.md)
 + [Setting Up an Aggregator Using the Console](setup-aggregator-console.md)
-+ [Viewing Configuration and Compliance Data in the Aggregated View](viewing-the-aggregate-dashboard.md)
++ [Viewing Configuration and Compliance Data in the Aggregator Dashboard](viewing-the-aggregate-dashboard.md)
 + [Troubleshooting for Multi\-Account Multi\-Region Data Aggregation](aggregate-data-troubleshooting.md)
