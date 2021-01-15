@@ -45,16 +45,20 @@ Create a resource provider schema that conforms to and validates the configurati
    Enter a package name (empty for default 'com.custom.testing.wordpress'): com.custom.testing.wordpress 
    Initialized a new project in /workplace/user/custom-testing-wordpress
    ```
-
-1. Open the `custom-testing-wordpress.json` file that contains the schema for your resource\. Copy and paste the following schema into `custom-testing-wordpress.json`\.
 **Note**  
-You can change the source URL from the default url mentioned below\.
+In order to guarantee that any project dependencies are correctly resolved, you can import the generated project into your IDE with Maven support\.  
+For example, if you are using IntelliJ IDEA, you would need to do the following:  
+From the **File** menu, choose **New**, then choose **Project From Existing Sources**\.
+Navigate to the project directory
+In the **Import Project** dialog box, choose **Import project from external model** and then choose **Maven**\.
+Choose **Next** and accept any defaults to complete importing the project\.
+
+1. Open the `mycustomnamespace-testing-wordpress.json` file that contains the schema for your resource\. Copy and paste the following schema into `mycustomnamespace-testing-wordpress.json`\.
 
    ```
    {
      "typeName": "MyCustomNamespace::Testing::WordPress",
      "description": "An example resource that creates a website based on WordPress 5.2.2.",
-     "sourceUrl": "https://github.com/aws-cloudformation/aws-cloudformation-rpdk.git",
      "properties": {
        "Name": {
          "description": "A name associated with the website.",
@@ -94,8 +98,11 @@ You can change the source URL from the default url mentioned below\.
    ```
    $ cfn generate
    ```
+**Note**  
+When using Maven, as part of the build process the `generate` command is automatically run before the code is compiled\. So your changes will never get out of sync with the generated code\.  
+Be aware the CloudFormation CLI must be in a location Maven/the system can find\. For more information, see [Setting up your environment for developing extensions](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/what-is-cloudformation-cli.html#resource-type-setup)\.
 
-For more information, see [Modeling Resource Providers for Use in AWS CloudFormation](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-model.html)\.
+For more information on the whole process, see [Modeling Resource Providers for Use in AWS CloudFormation](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-model.html)\.
 
 ## Step 3: Generate Artifacts<a name="generateartifactsforcfnsubmit"></a>
 
@@ -130,7 +137,7 @@ Determine the configuration for MyCustomNamespace::Testing::WordPress\.
 
 Determine the schema version id from AWS CloudFormation `DescribeType`\. 
 
-In the AWS Config see if this resource configuration is accepted\. To evaluate compliance you can write AWS Config rules using this resource\.
+In the AWS Config see if this resource configuration is accepted\. To evaluate compliance you can write AWS Config rules using this resource\. For additional information, see [Record and Delete a Configuration State for Third\-Party Resources Using AWS CLI](https://docs.aws.amazon.com/config/latest/developerguide/customresources-cli.html)\. 
 
 Optional: To automate recording of configuration, implement a periodic or change\-based configuration collectors\.
 

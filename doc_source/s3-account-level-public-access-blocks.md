@@ -4,7 +4,7 @@ Checks whether the required public access block settings are configured from acc
 
 **Identifier:** S3\_ACCOUNT\_LEVEL\_PUBLIC\_ACCESS\_BLOCKS
 
-**Trigger type:** Configuration changes
+**Trigger type:** Configuration changes \(current status not checked, only evaluted when changes generate new events\)
 
 **Note**  
 This rule is only triggered by configuration changes for the specific region where the S3 endpoint is located\. In all other regions, the rule is checked periodically\. If a change was made in another region, there could be a delay before the rule returns NON\_COMPLIANT\. 

@@ -29,6 +29,9 @@ Ensure you register the resource type `MyCustomNamespace::Testing::WordPress` wi
    }'
    ```
 
+**Note**  
+As defined in the type schema, `writeOnlyProperties` will be removed from the configuration prior to being recorded by AWS Config\. This means that these values will not be present when the configuration is obtained via read APIs\. For more information on `writeOnlyProperties`, see [Resource type schema](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html)\.
+
 ## Read the Configuration Item using AWS Config APIs<a name="view-custom-resource-type-cli"></a>
 
 1. Open a command prompt or a terminal window\.

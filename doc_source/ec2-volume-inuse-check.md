@@ -10,8 +10,8 @@ Checks whether EBS volumes are attached to EC2 instances\. Optionally checks if 
 
 **Parameters:**
 
- deleteOnTermination   
-EBS volumes are marked for deletion when an instance is terminated\.
+ deleteOnTermination \(Optional\)  
+EBS volumes are marked for deletion when an instance is terminated\. Possible values: True or False \(other input values are marked as non\-compliant\)\. 
 
 ## AWS CloudFormation template<a name="w24aac11c29c17d147c15"></a>
 
