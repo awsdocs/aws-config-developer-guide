@@ -6,13 +6,13 @@ Checks whether an AWS Lambda function is in an Amazon Virtual Private Cloud\. Th
 
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS Regions except China \(Ningxia\)
+**AWS Region:** All supported AWS regions except China \(Ningxia\) Region
 
 **Parameters:**
 
- subnetIds  
-\(Optional\) Comma\-separated list of subnet IDs that Lambda functions must be associated with\.
+subnetIds \(Optional\)Type: String  
+Comma\-separated list of Subnet IDs that Lambda functions can be associated with\.
 
-## AWS CloudFormation template<a name="w24aac11c29c17d245c15"></a>
+## AWS CloudFormation template<a name="w24aac11c29c17b7d241c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

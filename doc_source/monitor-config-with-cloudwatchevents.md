@@ -38,7 +38,7 @@ The CloudWatch [event](https://docs.aws.amazon.com/AmazonCloudWatch/latest/event
 
 Use the following steps to create a CloudWatch Events rule that triggers on an event emitted by AWS Config\.
 
-1. Open the CloudWatch console at [https://console\.aws\.amazon\.com/cloudwatch/]()\.
+1. Open the CloudWatch console at [https://console\.aws\.amazon\.com/cloudwatch/](https://console.aws.amazon.com/cloudwatch/)\.
 
 1. In the navigation pane, choose **Events**\.
 

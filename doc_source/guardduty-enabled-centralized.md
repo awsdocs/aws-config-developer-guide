@@ -1,18 +1,18 @@
 # guardduty\-enabled\-centralized<a name="guardduty-enabled-centralized"></a>
 
-Checks whether Amazon GuardDuty is enabled in your AWS account and region\. If you provide an AWS account for centralization, the rule evaluates the Amazon GuardDuty results in the centralized account\. The rule is COMPLIANT when Amazon GuardDuty is enabled\.
+Checks whether GuardDuty is enabled\. You can optionally verify that the results are centralized in a specific AWS Account\. 
 
 **Identifier:** GUARDDUTY\_ENABLED\_CENTRALIZED
 
 **Trigger type:** Periodic
 
-**AWS Region:** All supported AWS Regions except China \(Beijing\), China \(Ningxia\), AWS GovCloud \(US\-East\), Middle East \(Bahrain\), Asia Pacific \(Hong Kong\), Africa \(Cape Town\) and Europe \(Milan\)
+**AWS Region:** All supported AWS regions except China \(Beijing\), China \(Ningxia\), AWS GovCloud \(US\-East\), Europe \(Milan\), Middle East \(Bahrain\), Africa \(Cape Town\) Region
 
 **Parameters:**
 
- CentralMonitoringAccount \(optional\)  
-Specify 12\-digit AWS Account for centralization of Amazon GuardDuty results\.
+CentralMonitoringAccount \(Optional\)Type: String  
+Comma separated list of AWS Accounts \(12\-digit\) where Amazon GuardDuty results are allowed to be centralized\.
 
-## AWS CloudFormation template<a name="w24aac11c29c17d201c15"></a>
+## AWS CloudFormation template<a name="w24aac11c29c17b7d193c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

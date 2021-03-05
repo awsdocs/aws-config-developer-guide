@@ -8,9 +8,10 @@ When you use the AWS Config console to create or update an IAM role, AWS Config 
 + [Creating IAM Role Policies](#iam-role-policies)
   + [Adding an IAM Trust Policy to your Role](#iam-trust-policy)
   + [IAM Role Policy for Amazon S3 Bucket](#iam-role-policies-S3-bucket)
+  + [IAM Role Policy for KMS Key](#iam-role-policies-S3-kms-key)
   + [IAM Role Policy for Amazon SNS Topic](#iam-role-policies-sns-topic)
   + [IAM Role Policy for Getting Configuration Details](#iam-role-policies-describe-apis)
-+ [Troubleshooting for recording S3 buckets](#troubleshooting-recording-s3-bucket-policy)
++ [Managing Permissions for S3 Bucket Recording](#troubleshooting-recording-s3-bucket-policy)
 
 ## Creating IAM Role Policies<a name="iam-role-policies"></a>
 
@@ -74,6 +75,26 @@ The following example policy grants AWS Config permissions to access your Amazon
 }
 ```
 
+### IAM Role Policy for KMS Key<a name="iam-role-policies-S3-kms-key"></a>
+
+The following example policy grants AWS Config permissions to use KMS\-based encryption on new objects for S3 bucket delivery:
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "kms:Decrypt",
+                "kms:GenerateDataKey"
+            ],
+            "Resource": "myKMSKeyARN"
+        }
+    ]
+}
+```
+
 ### IAM Role Policy for Amazon SNS Topic<a name="iam-role-policies-sns-topic"></a>
 
 The following example policy grants AWS Config permissions to access your SNS topic:
@@ -108,36 +129,10 @@ If you use the AWS CLI, use the `attach-role-policy` command and specify the Ama
 $ aws iam attach-role-policy --role-name myConfigRole --policy-arn arn:aws:iam::aws:policy/service-role/AWS_ConfigRole
 ```
 
-## Troubleshooting for recording S3 buckets<a name="troubleshooting-recording-s3-bucket-policy"></a>
+## Managing Permissions for S3 Bucket Recording<a name="troubleshooting-recording-s3-bucket-policy"></a>
 
-If you configured AWS Config to record S3 buckets for your account, AWS Config records and delivers notifications when an S3 bucket is created, updated, or deleted\.
+AWS Config records and delivers notifications when an S3 bucket is created, updated, or deleted\.
 
-If you configured AWS Config to record S3 buckets, and are not receiving configuration change notifications:
-+ Verify that the IAM role assigned to AWS Config has the `AWS_ConfigRole` managed policy\.
-+ If you have S3 bucket policies attached to your buckets, verify that they allow AWS Config permission to record changes to your buckets\.
+It's recommended that you use either the `AWSServiceRoleForConfig` \(see [Using Service\-Linked Roles for AWS Config](https://docs.aws.amazon.com/config/latest/developerguide/using-service-linked-roles.html)\) or a custom IAM role utilizing the `AWS_ConfigRole` managed policy\. For more information on best practices for configuration recording, see [AWS Config Best Practices](https://aws.amazon.com/blogs/mt/aws-config-best-practices/)\.
 
-If you have a custom policy for your S3 bucket, you can add the following policy to your existing bucket policy\. Your policy input must be alpha\-numeric\. This policy grants AWS Config permission to record the S3 bucket\.
-
-```
-{
-    "Sid": "AWSConfig_ReadConfiguration_Access",
-    "Effect": "Allow",
-    "Principal": {"AWS": "arn:aws:iam::myAccountID:role/config-role"},
-    "Action": [
-        "s3:GetAccelerateConfiguration",
-        "s3:GetBucketAcl",
-        "s3:GetBucketCORS",
-        "s3:GetBucketLocation",
-        "s3:GetBucketLogging",
-        "s3:GetBucketNotification",
-        "s3:GetBucketPolicy",
-        "s3:GetBucketRequestPayment",
-        "s3:GetBucketTagging",
-        "s3:GetBucketVersioning",
-        "s3:GetBucketWebsite",
-        "s3:GetLifecycleConfiguration",
-        "s3:GetReplicationConfiguration"
-    ],
-    "Resource": "arn:aws:s3:::myBucketName"
-}
-```
+If you need to manage object\-level permissions for your bucket recording, make sure in the S3 bucket policy to provide `config.amazonaws.com` \(the AWS Config service principal name\) access to all S3 related permissions from the `AWS_ConfigRole` managed policy\. For more information, see [Permissions for the Amazon S3 Bucket](https://docs.aws.amazon.com/config/latest/developerguide/s3-bucket-policy.html)\.

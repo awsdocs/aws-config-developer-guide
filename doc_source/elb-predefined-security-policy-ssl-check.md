@@ -6,13 +6,13 @@ Checks whether your Classic Load Balancer SSL listeners are using a predefined p
 
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS Regions AWS GovCloud \(US\-East\), Africa \(Cape Town\) and Europe \(Milan\)
+**AWS Region:** All supported AWS regions except AWS GovCloud \(US\-East\), Europe \(Milan\), Africa \(Cape Town\) Region
 
 **Parameters:**
 
-predefinedPolicyName  
+predefinedPolicyNameType: String  
 Name of the predefined policy\.
 
-## AWS CloudFormation template<a name="w24aac11c29c17d181c15"></a>
+## AWS CloudFormation template<a name="w24aac11c29c17b7d171c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

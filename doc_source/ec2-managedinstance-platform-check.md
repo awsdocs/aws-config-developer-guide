@@ -1,24 +1,27 @@
 # ec2\-managedinstance\-platform\-check<a name="ec2-managedinstance-platform-check"></a>
 
-Checks whether EC2 managed instances have the desired configurations\.
+Checks whether EC2 managed instances have the desired configurations\. 
 
 **Identifier:** EC2\_MANAGEDINSTANCE\_PLATFORM\_CHECK
 
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS Regions
+**AWS Region:** All supported AWS regions
 
 **Parameters:**
 
- agentVersion   
- The version of the agent \(for example, "2\.0\.433\.0"\)\. 
+platformTypeType: String  
+Platform type \(for example, 'Linux'\)\.
 
- platformType   
- The platform type \(for example, "Linux" or "Windows"\)\. 
+platformVersion \(Optional\)Type: String  
+Platform version \(for example, '2016\.09'\)\.
 
- platformVersion   
- The version of the OS platform running on your instance\. 
+agentVersion \(Optional\)Type: String  
+Agent version \(for example, '2\.0\.433\.0'\)\.
 
-## AWS CloudFormation template<a name="w24aac11c29c17d141c15"></a>
+platformName \(Optional\)Type: String  
+The version of the platform \(for example, '2016\.09'\)
+
+## AWS CloudFormation template<a name="w24aac11c29c17b7d131c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

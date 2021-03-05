@@ -1,17 +1,17 @@
 # rds\-instance\-iam\-authentication\-enabled<a name="rds-instance-iam-authentication-enabled"></a>
 
-Checks if an Amazon Relational Database Service \(Amazon RDS\) instance has AWS Identity and Access Management \(IAM\) authentication enabled\. This rule is NON\_COMPLIANT if an Amazon RDS instance does not have AWS IAM authentication enabled i\.e `configuration.iAMDatabaseAuthenticationEnabled` is set to false\.
+Checks if an Amazon Relational Database Service \(Amazon RDS\) instance has AWS Identity and Access Management \(IAM\) authentication enabled\. This rule is NON\_COMPLIANT if an Amazon RDS instance does not have AWS IAM authentication enabled\. 
 
 **Identifier:** RDS\_INSTANCE\_IAM\_AUTHENTICATION\_ENABLED
 
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS Regions except China \(Beijing\), China \(Ningxia\), Asia Pacific \(Hong Kong\), Africa \(Cape Town\) Regions
+**AWS Region:** All supported AWS regions except China \(Beijing\), China \(Ningxia\), Asia Pacific \(Hong Kong\), Africa \(Cape Town\) Region
 
 **Parameters:**
 
 None  
 
-## AWS CloudFormation template<a name="w24aac11c29c17d257c15"></a>
+## AWS CloudFormation template<a name="w24aac11c29c17b7d255c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

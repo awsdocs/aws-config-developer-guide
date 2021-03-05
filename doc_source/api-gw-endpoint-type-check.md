@@ -1,18 +1,18 @@
 # api\-gw\-endpoint\-type\-check<a name="api-gw-endpoint-type-check"></a>
 
-Checks that Amazon API Gateway APIs are of the type specified in the rule parameter `endpointConfigurationType`\. The rule returns NON\_COMPLIANT if the REST API does not match the endpoint type configured in the rule parameter\.
+Checks that Amazon API Gateway APIs are of type as specified in the rule parameter '`endpointConfigurationTypes`'\. The rule returns COMPLIANT if any of the RestApi endpoint types matches the `endpointConfigurationTypes` configured in the rule parameter\. 
 
 **Identifier:** API\_GW\_ENDPOINT\_TYPE\_CHECK
 
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS Regions except Africa \(Cape Town\) and Europe \(Milan\)
+**AWS Region:** All supported AWS regions except Europe \(Milan\), Africa \(Cape Town\) Region
 
 **Parameters:**
 
- endpointConfigurationTypes  
-\(Required\) Comma\-separated list of allowed endpoint types\. Allowed values are REGIONAL, PRIVATE and EDGE\.
+endpointConfigurationTypesType: String  
+Comma\-separated list of allowed endpointConfigurationTypes\. Allowed values are REGIONAL, PRIVATE and EDGE\.
 
-## AWS CloudFormation template<a name="w24aac11c29c17c23c15"></a>
+## AWS CloudFormation template<a name="w24aac11c29c17b7c15c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

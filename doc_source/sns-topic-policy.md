@@ -54,7 +54,7 @@ If you set up AWS Config using a service\-linked role, you need to attach a perm
       "Service": "config.amazonaws.com"
     },
     "Action": "SNS:Publish",
-      "Resource": "arn:aws:sns:region:account-id:myTopic",
+      "Resource": "arn:aws:sns:region:account-id:myTopic"
     }
 ]
 }

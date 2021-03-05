@@ -1,30 +1,30 @@
 # emr\-kerberos\-enabled<a name="emr-kerberos-enabled"></a>
 
-Checks that Amazon EMR clusters have Kerberos enabled\. The rule is NON\_COMPLIANT if a security configuration is not attached to the cluster or the security configuration does not satisfy the specified rule parameters\.
+The rule is NON\_COMPLIANT if a security configuration is not attached to the cluster or the security configuration does not satisfy the specified rule parameters\. 
 
 **Identifier:** EMR\_KERBEROS\_ENABLED
 
-**Trigger type:** Periodic 
+**Trigger type:** Periodic
 
-**AWS Region:** All supported AWS Regions
+**AWS Region:** All supported AWS regions
 
 **Parameters:**
 
- ticketLifetimeInHours \(optional\)   
+TicketLifetimeInHours \(Optional\)Type: int  
 Period for which Kerberos ticket issued by cluster's KDC is valid\.
 
- realm \(optional\)   
-Kereberos realm name of the other realm in the trust relationship\. 
+Realm \(Optional\)Type: String  
+Kereberos realm name of the other realm in the trust relationship\.
 
- domain \(optional\)   
+Domain \(Optional\)Type: String  
 Domain name of the other realm in the trust relationship\.
 
- adminServer \(optional\)   
+AdminServer \(Optional\)Type: String  
 Fully qualified domain of the admin server in the other realm of the trust relationship\.
 
- kdcServer \(optional\)   
+KdcServer \(Optional\)Type: String  
 Fully qualified domain of the KDC server in the other realm of the trust relationship\.
 
-## AWS CloudFormation template<a name="w24aac11c29c17d183c15"></a>
+## AWS CloudFormation template<a name="w24aac11c29c17b7d175c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

@@ -2,13 +2,19 @@
 
 The following table describes the documentation release history of AWS Config\.
 + **API version**: 2014\-11\-12
-+ **Latest documentation update**: December 21, 2020
++ **Latest documentation update**: February 25, 2021
 
 
 ****  
 
 | Change | Description | Release Date | 
 | --- | --- | --- | 
+| AWS Config supports new resources types |  With this release, you can use AWS Config to record configuration changes to Amazon Elastic Container Registry, Amazon Elastic Container Service, and Amazon Elastic Kubernetes Service resource types\. For more information, see [Supported Resource Types](resource-config-reference.md)\. | February 25, 2021 | 
+| AWS Config updates managed rules |  With this release, AWS Config supports the following managed rules: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/DocumentHistory.html)  | February 16, 2021 | 
+| KMS encryption support |  With this release, AWS Config allows you to use KMS\-based encryption on objects delivered by AWS Config for S3 bucket delivery\. The following API's are updated: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/DocumentHistory.html) The following pages in the developer guide were updated: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/DocumentHistory.html)  | February 16, 2021 | 
+| Saved Query Region support | With this release, saved query is now supported in AWS GovCloud \(US\-East\) and AWS GovCloud \(US\-West\) Regions\.  | February 15, 2021 | 
+| Multi\-account multi\-region data aggregation Region support | With this release, multi\-account multi\-region data aggregation is now supported in Africa \(Cape Town\) and Europe \(Milan\) Regions\. For more information, see [Multi\-Account Multi\-Region Data Aggregation](aggregate-data.md)\.  | February 15, 2021 | 
+| Advanced queries Region support | With this release, advanced queries is now supported in Africa \(Cape Town\) and Europe \(Milan\) Regions\. For more information, see [Querying the Current Configuration State of AWS Resources](querying-AWS-resources.md)\.  | February 15, 2021 | 
 | Saved Query support | With this release, AWS Config allows you to save your queries\. After you save the query, you can search it, copy it to the query editor, edit it, or delete it\. For more information about how to save a query, see the [Query Using the SQL Query Editor \(Console\)](query-using-sql-editor-console.md) and [Query Using the SQL Query Editor \(AWS CLI\)](query-using-sql-editor-cli.md)\. For more information about APIs, see the *AWS Config API Reference*: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/DocumentHistory.html) Also see [Service Limits](configlimits.md)\. | December 21, 2020 | 
 | Process checks support | With this release, AWS Config supports process checks that is a type of AWS Config rule that allows you to track your external and internal tasks that require verification as part of the conformance packs\. With process checks, you can list the compliance of requirements and actions at a single location\. For more information about process checks, see the [AWS Config Process Checks Within a Conformance Pack](process-checks.md) topic and the [PutExternalEvaluation](https://docs.aws.amazon.com/config/latest/APIReference/API_PutExternalEvaluation.html) API\.  | December 17, 2020 | 
 | AWS Config updates managed rules |  With this release, AWS Config supports the following managed rules: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/DocumentHistory.html)  | December 17, 2020 | 

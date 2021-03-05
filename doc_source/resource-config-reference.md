@@ -53,6 +53,36 @@ To learn more about how AWS Config integrates with Amazon API Gateway, see [Moni
 
 \*AWS Config records the configuration details of Dedicated hosts and the instances that you launch on them\. As a result, you can use AWS Config as a data source when you report compliance with your server\-bound software licenses\. For example, you can view the configuration history of an instance and determine which Amazon Machine Image \(AMI\) it is based on\. Then, you can look up the configuration history of the host, which includes details such as the numbers of sockets and cores, to verify that the host complies with the license requirements of the AMI\. For more information, see [Tracking Configuration Changes with AWS Config ](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-aws-config.html) in the *Amazon EC2 User Guide for Linux Instances*\. 
 
+## Amazon Elastic Container Registry<a name="amazonelasticcontainerregistry"></a>
+
+
+****  
+
+| AWS Service | Resource Type Value | Relationship | Related Resource | 
+| --- | --- | --- | --- | 
+| Amazon Elastic Container Registry | AWS::ECR::Cluster | NA | NA | 
+
+## Amazon Elastic Container Service<a name="amazonelasticcontainerservice"></a>
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
+
+\*This service currently only support the new Amazon Resource Name \(ARN\) format\. For more information, see [Amazon Resource Names \(ARNs\) and IDs](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-account-settings.html#ecs-resource-ids) in the ECS developer guide\.
+
+Old \(not supported\): `arn:aws:ecs:region:aws_account_id:service/service-name`
+
+New \(supported\): `arn:aws:ecs:region:aws_account_id:service/cluster-name/service-name`
+
+## Amazon Elastic Kubernetes Service<a name="amazonelastickubernetesservice"></a>
+
+
+****  
+
+| AWS Service | Resource Type Value | Relationship | Related Resource | 
+| --- | --- | --- | --- | 
+| Amazon Elastic Kubernetes Service | AWS::EKS::Cluster | NA | NA | 
+
 ## Amazon Elasticsearch Service<a name="amazonelasticsearchservice"></a>
 
 
@@ -128,7 +158,7 @@ For more information about the attributes, see [Bucket Configuration Options](ht
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
-\*If you configured AWS Config to record your S3 buckets, and are not receiving configuration change notifications, verify your S3 bucket policies have the required permissions\. For more information, see [Troubleshooting for recording S3 buckets](iamrole-permissions.md#troubleshooting-recording-s3-bucket-policy)\. 
+\*If you configured AWS Config to record your S3 buckets, and are not receiving configuration change notifications, verify your S3 bucket policies have the required permissions\. For more information, see [Managing Permissions for S3 Bucket Recording](iamrole-permissions.md#troubleshooting-recording-s3-bucket-policy)\. 
 
 ## Amazon Virtual Private Cloud<a name="amazonvirtualprivatecloud"></a>
 

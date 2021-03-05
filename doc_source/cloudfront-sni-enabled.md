@@ -1,6 +1,6 @@
 # cloudfront\-sni\-enabled<a name="cloudfront-sni-enabled"></a>
 
-Checks if Amazon CloudFront distributions are using a custom SSL certificate and are configured to use SNI to serve HTTPS requests\. This rule is NON\_COMPLIANT if a custom SSL certificate is associated but the SSL support method is using a dedicated IP address\. 
+Checks if Amazon CloudFront distributions are using a custom SSL certificate and are configured to use SNI to serve HTTPS requests\. This rule is NON\_COMPLIANT if a custom SSL certificate is associated but the SSL support method is a dedicated IP address\. 
 
 **Identifier:** CLOUDFRONT\_SNI\_ENABLED
 
@@ -12,6 +12,6 @@ Checks if Amazon CloudFront distributions are using a custom SSL certificate and
 
 None  
 
-## AWS CloudFormation template<a name="w24aac11c29c17c55c15"></a>
+## AWS CloudFormation template<a name="w24aac11c29c17b7c47c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

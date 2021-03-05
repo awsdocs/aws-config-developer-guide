@@ -1,18 +1,17 @@
 # codebuild\-project\-source\-repo\-url\-check<a name="codebuild-project-source-repo-url-check"></a>
 
-Checks whether the GitHub or Bitbucket source repository URL contains either personal access tokens or user name and password\. The rule is COMPLIANT with the usage of OAuth to grant authorization for accessing GitHub or Bitbucket repositories\.
+Checks whether the GitHub or Bitbucket source repository URL contains either personal access tokens or user name and password\. The rule is complaint with the usage of OAuth to grant authorization for accessing GitHub or Bitbucket repositories\. 
 
 **Identifier:** CODEBUILD\_PROJECT\_SOURCE\_REPO\_URL\_CHECK
 
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS Regions except China \(Beijing\), China \(Ningxia\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), Europe \(Stockholm\), Africa \(Cape Town\) and Europe \(Milan\)
+**AWS Region:** All supported AWS regions except AWS GovCloud \(US\-East\), Europe \(Milan\), Africa \(Cape Town\) Region
 
 **Parameters:**
 
- None   
+None  
 
-
-## AWS CloudFormation template<a name="w24aac11c29c17c83c15"></a>
+## AWS CloudFormation template<a name="w24aac11c29c17b7c75c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

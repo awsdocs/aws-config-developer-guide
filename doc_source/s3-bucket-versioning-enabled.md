@@ -1,18 +1,18 @@
 # s3\-bucket\-versioning\-enabled<a name="s3-bucket-versioning-enabled"></a>
 
-Checks whether versioning is enabled for your S3 buckets\. Optionally, the rule checks if MFA delete is enabled for your S3 buckets\.
+Checks whether versioning is enabled for your S3 buckets\. 
 
 **Identifier:** S3\_BUCKET\_VERSIONING\_ENABLED
 
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS Regions
+**AWS Region:** All supported AWS regions
 
 **Parameters:**
 
- isMfaDeleteEnabled   
- MFA delete is enabled for your S3 buckets\.
+isMfaDeleteEnabled \(Optional\)Type: String  
+MFA delete is enabled for your S3 buckets\.
 
-## AWS CloudFormation template<a name="w24aac11c29c17d323c15"></a>
+## AWS CloudFormation template<a name="w24aac11c29c17b7d315c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

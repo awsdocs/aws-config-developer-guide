@@ -74,7 +74,7 @@ On the **Add rule** page, you can do the following:
    $ aws configservice put-config-rule --generate-cli-skeleton > putConfigRule.json
    ```
 
-1. Open the JSON file in a text editor and remove any parameters that rdon't need updating, with the following exceptions:
+1. Open the JSON file in a text editor and remove any parameters that don't need updating, with the following exceptions:
    + Include at least one of the following parameters to identify the rule: 
 
      `ConfigRuleName`, `ConfigRuleArn`, or `ConfigRuleId`\.

@@ -1,33 +1,33 @@
 # dynamodb\-autoscaling\-enabled<a name="dynamodb-autoscaling-enabled"></a>
 
-Checks whether Auto Scaling or On\-Demand is enabled on your DynamoDB tables and/or global secondary indexes\. Optionally you can set the read and write capacity units for the table or global secondary index\.
+This rule checks whether Auto Scaling is enabled on your DynamoDB tables\. Optionally you can set the read and write capacity units for the table\. 
 
 **Identifier:** DYNAMODB\_AUTOSCALING\_ENABLED
 
 **Trigger type:** Periodic
 
-**AWS Region:** All supported AWS Regions except AWS GovCloud \(US\-East\) and AWS GovCloud \(US\-West\)
+**AWS Region:** All supported AWS regions except AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\) Region
 
 **Parameters:**
 
-minProvisionedReadCapacity  
-The minimum number of units that should be provisioned with read capacity in the Auto Scaling group\.
+minProvisionedReadCapacity \(Optional\)Type: int  
+Minimum provisioned capacity\.
 
-minProvisionedWriteCapacity  
-The minimum number of units that should be provisioned with write capacity in the Auto Scaling group\.
+maxProvisionedReadCapacity \(Optional\)Type: int  
+Maximum provisioned capacity\.
 
-maxProvisionedReadCapacity  
-The maximum number of units that should be provisioned with read capacity in the Auto Scaling group\.
+targetReadUtilization \(Optional\)Type: double  
+Target utilization of read capacity
 
-maxProvisionedWriteCapacity  
-The maximum number of units that should be provisioned with write capacity in the Auto Scaling group\.
+minProvisionedWriteCapacity \(Optional\)Type: int  
+Minimum provisioned capacity\.
 
-targetReadUtilization  
-The target utilization percentage for read capacity\. Target utilization is expressed in terms of the ratio of consumed capacity to provisioned capacity\.
+maxProvisionedWriteCapacity \(Optional\)Type: int  
+Maximum provisioned capacity\.
 
-targetWriteUtilization  
-The target utilization percentage for write capacity\. Target utilization is expressed in terms of the ratio of consumed capacity to provisioned capacity\.
+targetWriteUtilization \(Optional\)Type: double  
+Target utilization of write capacity
 
-## AWS CloudFormation template<a name="w24aac11c29c17d101c15"></a>
+## AWS CloudFormation template<a name="w24aac11c29c17b7c93c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

@@ -1,36 +1,39 @@
 # iam\-password\-policy<a name="iam-password-policy"></a>
 
-Checks whether the account password policy for IAM users meets the specified requirements indicated in the parameters\. This rule is NON\_COMPLIANT if the account password policy does not meet the specified requirements\.
+Checks whether the account password policy for IAM users meets the specified requirements\. 
+
+**Important**  
+The `true` and `false` values for the rule parameters are case\-sensitive\. If `true` is not provided in lowercase, it will be treated as `false.`
 
 **Identifier:** IAM\_PASSWORD\_POLICY
 
 **Trigger type:** Periodic
 
-**AWS Region:** All supported AWS Regions
+**AWS Region:** All supported AWS regions
 
 **Parameters:**
 
- RequireUppercaseCharacters   
- Require at least one uppercase character in password\. 
+RequireUppercaseCharacters \(Optional\)Type: booleanDefault: true  
+Require at least one uppercase character in password\.
 
- RequireLowercaseCharacters   
- Require at least one lowercase character in password\. 
+RequireLowercaseCharacters \(Optional\)Type: booleanDefault: true  
+Require at least one lowercase character in password\.
 
- RequireSymbols   
- Require at least one symbol in password\. 
+RequireSymbols \(Optional\)Type: booleanDefault: true  
+Require at least one symbol in password\.
 
- RequireNumbers   
- Require at least one number in password\. 
+RequireNumbers \(Optional\)Type: booleanDefault: true  
+Require at least one number in password\.
 
- MinimumPasswordLength   
- Password minimum length\. 
+MinimumPasswordLength \(Optional\)Type: intDefault: 14  
+Password minimum length\.
 
- PasswordReusePrevention   
- Number of passwords before allowing reuse\. 
+PasswordReusePrevention \(Optional\)Type: intDefault: 24  
+Number of passwords before allowing reuse\.
 
- MaxPasswordAge   
- Number of days before password expiration\. 
+MaxPasswordAge \(Optional\)Type: intDefault: 90  
+Number of days before password expiration\.
 
-## AWS CloudFormation template<a name="w24aac11c29c17d213c15"></a>
+## AWS CloudFormation template<a name="w24aac11c29c17b7d205c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

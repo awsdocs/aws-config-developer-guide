@@ -1,18 +1,18 @@
 # acm\-certificate\-expiration\-check<a name="acm-certificate-expiration-check"></a>
 
-Checks whether ACM Certificates in your account are marked for expiration within the specified number of days\. Certificates provided by ACM are automatically renewed\. ACM does not automatically renew certificates that you import\.
+Checks whether ACM Certificates in your account are marked for expiration within the specified number of days\. Certificates provided by ACM are automatically renewed\. ACM does not automatically renew certificates that you import\. 
 
 **Identifier:** ACM\_CERTIFICATE\_EXPIRATION\_CHECK
 
-**Trigger type:** Configuration changes and periodic
+**Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS Regions except China \(Beijing\), China \(Ningxia\), Africa \(Cape Town\) and Europe \(Milan\)
+**AWS Region:** All supported AWS regions except China \(Beijing\), China \(Ningxia\), Europe \(Milan\) Region
 
 **Parameters:**
 
- daysToExpiration   
-Specify the number of days before the rule flags the ACM Certificate as NON\_COMPLIANT\.
+daysToExpiration \(Optional\)Type: intDefault: 14  
+Specify the number of days before the rule flags the ACM Certificate as noncompliant\.
 
-## AWS CloudFormation template<a name="w24aac11c29c17c13c15"></a>
+## AWS CloudFormation template<a name="w24aac11c29c17b7b5c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

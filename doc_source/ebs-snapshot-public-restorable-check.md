@@ -1,17 +1,17 @@
 # ebs\-snapshot\-public\-restorable\-check<a name="ebs-snapshot-public-restorable-check"></a>
 
-Checks whether Amazon Elastic Block Store snapshots are not publicly restorable\. The rule is NON\_COMPLIANT if one or more snapshots with the `RestorableByUserIds` field is set to `all`\. If this field is set to `all`, then Amazon EBS snapshots are public\.
+Checks whether Amazon Elastic Block Store \(Amazon EBS\) snapshots are not publicly restorable\. The rule is NON\_COMPLIANT if one or more snapshots with RestorableByUserIds field are set to all, that is, Amazon EBS snapshots are public\. 
 
 **Identifier:** EBS\_SNAPSHOT\_PUBLIC\_RESTORABLE\_CHECK
 
 **Trigger type:** Periodic
 
-**AWS Region:** All supported AWS Regions except Africa \(Cape Town\) and Europe \(Milan\)
+**AWS Region:** All supported AWS regions
 
 **Parameters:**
 
- None  
+None  
 
-## AWS CloudFormation template<a name="w24aac11c29c17d121c15"></a>
+## AWS CloudFormation template<a name="w24aac11c29c17b7d109c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

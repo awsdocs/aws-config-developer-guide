@@ -4,15 +4,15 @@ Checks that Internet gateways \(IGWs\) are only attached to an authorized Amazon
 
 **Identifier:** INTERNET\_GATEWAY\_AUTHORIZED\_VPC\_ONLY
 
-**Trigger type:** Configuration changes 
+**Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS Regions except Africa \(Cape Town\) and Europe \(Milan\)
+**AWS Region:** All supported AWS regions
 
 **Parameters:**
 
- InternetGatewayAuthorizedVpcOnlyParamAuthorizedVpcIds  
-Comma\-separated list of the authorized VPC IDs with attached IGWs\. If parameter is not provided all attached IGWs will be NON\_COMPLIANT\. 
+AuthorizedVpcIds \(Optional\)Type: String  
+Comma\-separated list of the authorized VPC IDs with attached IGWs\. If parameter is not provided all attached IGWs will be NON\_COMPLIANT\.
 
-## AWS CloudFormation template<a name="w24aac11c29c17d233c15"></a>
+## AWS CloudFormation template<a name="w24aac11c29c17b7d229c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.
