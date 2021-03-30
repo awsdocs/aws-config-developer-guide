@@ -1,7 +1,7 @@
 # AWS Config Developer Guide
 
 -----
-*****Copyright &copy; 2021 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy;  Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -35,7 +35,7 @@ Amazon's trademarks and trade dress may not be used in
    + [Viewing AWS Resource Configurations and History](view-manage-resource.md)
       + [Looking Up Resources That Are Discovered by AWS Config](looking-up-discovered-resources.md)
       + [Viewing Configuration Details](view-manage-resource-console.md)
-      + [Viewing Compliance History for Resources as Evaluated by AWS Config Rules](view-compliance-history.md)
+      + [Viewing Compliance History Timeline for Resources](view-compliance-history.md)
       + [Delivering Configuration Snapshot to an Amazon S3 Bucket](deliver-snapshot-cli.md)
    + [Managing AWS Config](manage-config.md)
       + [Managing the Delivery Channel](manage-delivery-channel.md)
@@ -323,13 +323,14 @@ Amazon's trademarks and trade dress may not be used in
       + [Operational Best Practices for Storage Services](operational-best-practices-for-Storage-Services.md)
       + [Example Templates with Remediation Action](templateswithremediation.md)
       + [Custom Conformance Pack](custom-conformance-pack.md)
+   + [Viewing Compliance Data in the Conformance Packs Dashboard](conformance-pack-dashboard.md)
    + [Deploying a Conformance Pack Using the AWS Config Console](conformance-pack-console.md)
    + [Deploying a Conformance Pack Using the AWS Command Line Interface](conformance-pack-cli.md)
    + [Managing Conformance Packs (API)](conformance-pack-apis.md)
    + [Managing Conformance Packs Across all Accounts in Your Organization](conformance-pack-organization-apis.md)
-   + [Troubleshooting](troubleshooting-conformance-pack.md)
+   + [Viewing Compliance History Timeline for Conformance Packs](compliance-history-conformance-pack.md)
 + [Multi-Account Multi-Region Data Aggregation](aggregate-data.md)
-   + [Viewing Configuration and Compliance Data in the Aggregator Dashboard](viewing-the-aggregate-dashboard.md)
+   + [Viewing Compliance Data in the Aggregator Dashboard](viewing-the-aggregate-dashboard.md)
    + [Setting Up an Aggregator Using the Console](setup-aggregator-console.md)
    + [Setting Up an Aggregator Using the AWS Command Line Interface](set-up-aggregator-cli.md)
    + [Authorizing Aggregator Accounts to Collect AWS Config Configuration and Compliance Data Using the Console](authorize-aggregator-account-console.md)

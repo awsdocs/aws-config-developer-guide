@@ -13,6 +13,6 @@ Checks if Amazon CloudFront distributions are associated with either WAF or WAFv
 wafWebAclIds \(Optional\)Type: CSV  
 Comma\-separated list of web ACL IDs for WAF or web ACL Amazon Resource Names \(ARNs\) for WAFV2\.
 
-## AWS CloudFormation template<a name="w24aac11c29c17b7c37c15"></a>
+## AWS CloudFormation template<a name="w26aac11c31c17b7c37c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

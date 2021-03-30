@@ -2,7 +2,7 @@
 
 AWS Config continuously detects when any resource of a supported type is created, changed, or deleted\. AWS Config records these events as configuration items\. You can customize AWS Config to record changes for all supported types of resources or for only those types that are relevant to you\. To learn which types of resources AWS Config can record, see [Supported Resource Types](resource-config-reference.md)\.
 
-## Recording All Supported Resource Types<a name="w24aab9c17c15b5"></a>
+## Recording All Supported Resource Types<a name="w26aab9c19c15b5"></a>
 
 By default, AWS Config records the configuration changes for all supported types of *regional resources* that AWS Config discovers in the region in which it is running\. Regional resources are tied to a region and can be used only in that region\. Examples of regional resources are EC2 instances and EBS volumes\.
 
@@ -11,7 +11,7 @@ You can also have AWS Config record supported types of *global resources*\. Glob
 **Important**  
 The configuration details for a specific global resource are the same in all regions\. If you customize AWS Config in multiple regions to record global resources, AWS Config creates multiple configuration items each time a global resource changes: one configuration item for each region\. These configuration items will contain identical data\. To prevent duplicate configuration items, you should consider customizing AWS Config in only one region to record global resources, unless you want the configuration items to be available in multiple regions\.
 
-## Recording Specific Resource Types<a name="w24aab9c17c15b7"></a>
+## Recording Specific Resource Types<a name="w26aab9c19c15b7"></a>
 
 If you don't want AWS Config to record the changes for all supported resources, you can customize it to record changes for only specific types\. AWS Config records configuration changes for the types of resources that you specify, including the creation and deletion of such resources\.
 

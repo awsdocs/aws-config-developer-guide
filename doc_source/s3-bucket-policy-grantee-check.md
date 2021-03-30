@@ -1,6 +1,11 @@
 # s3\-bucket\-policy\-grantee\-check<a name="s3-bucket-policy-grantee-check"></a>
 
-Checks that the access granted by the Amazon S3 bucket is restricted to any of the AWS principals, federated users, service principals, IP addresses, or VPCs that you provide\. The rule is COMPLIANT if a bucket policy is not present\. 
+Checks that the access granted by the Amazon S3 bucket is restricted by any of the AWS principals, federated users, service principals, IP addresses, or VPCs that you provide\. The rule is COMPLIANT if a bucket policy is not present\.
+
+For example, if the input parameter to the rule is the list of two principals: `111122223333` and `444455556666` and the bucket policy specifies that only `111122223333` can access the bucket, then the rule is COMPLIANT\. With the same input parameters: If the bucket policy specifies that `111122223333` and `444455556666` can access the bucket, it is also compliant\. However, if the bucket policy specifies that `999900009999` can access the bucket, the rule is NON\-COMPLIANT\. 
+
+**Note**  
+If a bucket policy contains more than one statement, each statement in the bucket policy is evaluated against this rule\.
 
 **Identifier:** S3\_BUCKET\_POLICY\_GRANTEE\_CHECK
 
@@ -25,6 +30,6 @@ Comma\-separated list of CIDR formatted IP addresses, for example '10\.0\.0\.1, 
 vpcIds \(Optional\)Type: CSV  
 Comma\-separated list of Amazon Virtual Private Clouds \(Amazon VPC\) IDs, for example 'vpc\-1234abc0, vpc\-ab1234c0'\.
 
-## AWS CloudFormation template<a name="w24aac11c29c17b7d301c15"></a>
+## AWS CloudFormation template<a name="w26aac11c31c17b7d301c19"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

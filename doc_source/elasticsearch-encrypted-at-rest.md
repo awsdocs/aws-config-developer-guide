@@ -1,6 +1,6 @@
 # elasticsearch\-encrypted\-at\-rest<a name="elasticsearch-encrypted-at-rest"></a>
 
-Checks whether Amazon Elasticsearch Service \(Amazon ES\) domains have encryption at rest configuration enabled\. The rule is NON\_COMPLIANT if EncryptionAtRestOptions field is not enabled\. 
+Checks if Amazon Elasticsearch Service \(Amazon ES\) domains have encryption at rest configuration enabled\. The rule is NON\_COMPLIANT if the `EncryptionAtRestOptions` field is not enabled\.
 
 **Identifier:** ELASTICSEARCH\_ENCRYPTED\_AT\_REST
 
@@ -12,6 +12,6 @@ Checks whether Amazon Elasticsearch Service \(Amazon ES\) domains have encryptio
 
 None  
 
-## AWS CloudFormation template<a name="w24aac11c29c17b7d153c15"></a>
+## AWS CloudFormation template<a name="w26aac11c31c17b7d153c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

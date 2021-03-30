@@ -22,6 +22,6 @@ AWS Lambda function timeout in seconds
 memorySize \(Optional\)Type: intDefault: 128  
 AWS Lambda function size in megabytes
 
-## AWS CloudFormation template<a name="w24aac11c29c17b7d239c15"></a>
+## AWS CloudFormation template<a name="w26aac11c31c17b7d239c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

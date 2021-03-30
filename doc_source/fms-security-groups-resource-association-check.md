@@ -1,6 +1,9 @@
 # fms\-security\-groups\-resource\-association\-check<a name="fms-security-groups-resource-association-check"></a>
 
-Checks whether EC2 or Elastic Network Interface or ALB or ELB associated with FMS security groups\. 
+Checks if Amazon EC2 or an elastic network interface is associated with AWS Firewall Manager security groups\. The rule is NON\_COMPLIANT if the resources are not associated with FMS security groups\. 
+
+**Note**  
+Only AWS Firewall Manager can create this rule\.
 
 **Identifier:** FMS\_SECURITY\_GROUP\_RESOURCE\_ASSOCIATION\_CHECK
 
@@ -34,6 +37,6 @@ Only allow AWS Firewall Manager created security groups associate with resource 
 applyToAllEC2InstanceENIs \(Optional\)Type: boolean  
 If true, AWS Firewall Manager will enforce the policy on all ENIs on EC2 Instance\. Otherwise AWS Firewall Manager enforce the policy on default ENI on EC2 Instance\.
 
-## AWS CloudFormation template<a name="w24aac11c29c17b7d185c15"></a>
+## AWS CloudFormation template<a name="w26aac11c31c17b7d185c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

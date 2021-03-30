@@ -1,6 +1,6 @@
 # ec2\-volume\-inuse\-check<a name="ec2-volume-inuse-check"></a>
 
-Checks whether EBS volumes are attached to EC2 instances\. 
+Checks if EBS volumes are attached to EC2 instances\. Optionally checks if EBS volumes are marked for deletion when an instance is terminated\.
 
 **Identifier:** EC2\_VOLUME\_INUSE\_CHECK
 
@@ -11,8 +11,8 @@ Checks whether EBS volumes are attached to EC2 instances\.
 **Parameters:**
 
 deleteOnTermination \(Optional\)Type: boolean  
-EBS volumes are marked for deletion when an instance is terminated\.
+EBS volumes are marked for deletion when an instance is terminated\. Possible values: True or False \(other input values are marked as non\-compliant\)\.
 
-## AWS CloudFormation template<a name="w24aac11c29c17b7d137c15"></a>
+## AWS CloudFormation template<a name="w26aac11c31c17b7d137c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

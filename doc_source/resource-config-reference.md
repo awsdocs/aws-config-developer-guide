@@ -60,7 +60,7 @@ To learn more about how AWS Config integrates with Amazon API Gateway, see [Moni
 
 | AWS Service | Resource Type Value | Relationship | Related Resource | 
 | --- | --- | --- | --- | 
-| Amazon Elastic Container Registry | AWS::ECR::Cluster | NA | NA | 
+| Amazon Elastic Container Registry | AWS::ECR::Repository | NA | NA | 
 
 ## Amazon Elastic Container Service<a name="amazonelasticcontainerservice"></a>
 
@@ -216,6 +216,17 @@ For more information about the attributes, see [Bucket Configuration Options](ht
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
 \*AWS Config records configuration changes to CodePipeline pipelines and supported resource types in the pipelines\. AWS Config does not record configuration changes for resource types in the pipelines that are not yet supported\. Unsupported resource types such as `CodeCommit repository, CodeDeploy application, ECS cluster,` and `ECS service` appear in the supplementary configuration section of the configuration item for the stack\. 
+
+## AWS Config<a name="awsconfig"></a>
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
+
+\*The relationship between `AWS::Config::ResourceCompliance` and a related resource depends on how `AWS::Config::ResourceCompliance` reports compliance for that specific resource type\.
+
+**Note**  
+Recording for the `AWS::Config::ConformancePackCompliance` resource type is available at no additional charge\.
 
 ## AWS Elastic Beanstalk<a name="awselasticbeanstalk"></a>
 

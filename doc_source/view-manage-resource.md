@@ -5,5 +5,5 @@ You can view all of the resources that AWS Config is recording in your account, 
 **Topics**
 + [Looking Up Resources That Are Discovered by AWS Config](looking-up-discovered-resources.md)
 + [Viewing Configuration Details](view-manage-resource-console.md)
-+ [Viewing Compliance History for Resources as Evaluated by AWS Config Rules](view-compliance-history.md)
++ [Viewing Compliance History Timeline for Resources](view-compliance-history.md)
 + [Delivering Configuration Snapshot to an Amazon S3 Bucket](deliver-snapshot-cli.md)

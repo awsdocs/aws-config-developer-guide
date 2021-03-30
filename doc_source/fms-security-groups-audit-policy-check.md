@@ -1,6 +1,9 @@
 # fms\-security\-groups\-audit\-policy\-check<a name="fms-security-groups-audit-policy-check"></a>
 
-Check if security groups associated in scope resource compliant with the master security groups at rule level based on `allowSecurityGroup` and denySecurityGroup flag\. 
+Checks if the security groups associated `inScope` resources are compliant with the master security groups at each rule level based on `allowSecurityGroup` and `denySecurityGroup` flag\.
+
+**Note**  
+Only AWS Firewall Manager can create this rule\.
 
 **Identifier:** FMS\_SECURITY\_GROUP\_AUDIT\_POLICY\_CHECK
 
@@ -31,6 +34,6 @@ If true, AWS Firewall Manager will update non\-compliant resources according to 
 allowSecurityGroupType: boolean  
 If true, the rule will check to ensure that all the in\-scope security groups are within \(outside, if false\) the reference security group's inbound/outbound rules\.
 
-## AWS CloudFormation template<a name="w24aac11c29c17b7d181c15"></a>
+## AWS CloudFormation template<a name="w26aac11c31c17b7d181c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

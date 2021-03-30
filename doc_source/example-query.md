@@ -86,6 +86,46 @@ Result
 }
 ```
 
+**Query for the compliance status of AWS Conformance packs** 
+
+```
+SELECT
+    resourceId,
+    resourceName,
+    resourceType,
+    configuration.complianceType
+WHERE
+    resourceType = 'AWS::Config::ConformancePackCompliance'
+```
+
+Result
+
+```
+{
+    "QueryInfo": {
+        "SelectFields": [
+            {
+                "Name": "resourceId"
+            }, 
+            {
+                "Name": "resourceName"
+            }, 
+            {
+                "Name": "resourceType"
+            }, 
+            {
+                "Name": "configuration.complianceType"
+            }
+        ]
+    }, 
+    "Results": [
+        "{\"resourceId\":\"conformance-pack-conformance-pack-ID\",\"configuration\":{\"complianceType\":\"COMPLIANT\"},\"resourceName\":\"MyConformancePack1\",\"resourceType\":\"AWS::Config::ConformancePackCompliance\"}", 
+        "{\"resourceId\":\"conformance-pack-conformance-pack-ID\",\"configuration\":{\"complianceType\":\"NON_COMPLIANT\"},\"resourceName\":\"MyConformancePack2\",\"resourceType\":\"AWS::Config::ConformancePackCompliance\"}", 
+        "{\"resourceId\":\"conformance-pack-conformance-pack-ID\",\"configuration\":{\"complianceType\":\"NON_COMPLIANT\"},\"resourceName\":\"MyConformancePack3\",\"resourceType\":\"AWS::Config::ConformancePackCompliance\"}"
+    ]
+}
+```
+
 **Query to get counts of AWS resources grouped by account ID** 
 
 ```

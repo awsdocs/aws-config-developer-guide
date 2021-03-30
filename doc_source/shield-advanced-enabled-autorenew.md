@@ -1,6 +1,9 @@
 # shield\-advanced\-enabled\-autorenew<a name="shield-advanced-enabled-autorenew"></a>
 
-Checks whether AWS Shield Advanced is enabled in your AWS account and this subscription is set to autorenew\. 
+Checks if AWS Shield Advanced is enabled in your AWS account and this subscription is set to automatically renew\.
+
+**Note**  
+The API endpoint of AWS Shield Advanced is only available in US East \(N\. Virginia\) Region\. This rule should only be scheduled to run in the US East \(N\. Virginia\) Region\.
 
 **Identifier:** SHIELD\_ADVANCED\_ENABLED\_AUTORENEW
 
@@ -12,6 +15,6 @@ Checks whether AWS Shield Advanced is enabled in your AWS account and this subsc
 
 None  
 
-## AWS CloudFormation template<a name="w24aac11c29c17b7d339c15"></a>
+## AWS CloudFormation template<a name="w26aac11c31c17b7d339c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

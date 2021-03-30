@@ -1,6 +1,6 @@
 # cloudformation\-stack\-drift\-detection\-check<a name="cloudformation-stack-drift-detection-check"></a>
 
-Checks whether your CloudFormation stacks' actual configuration differs, or has drifted, from its expected configuration\. 
+Checks if the actual configuration of a Cloud Formation stack differs, or has drifted, from the expected configuration\. A stack is considered to have drifted if one or more of its resources differ from their expected configuration\. The rule and the stack are COMPLIANT when the stack drift status is IN\_SYNC\. The rule and the stack are NON\_COMPLIANT when the stack drift status is DRIFTED\.
 
 **Identifier:** CLOUDFORMATION\_STACK\_DRIFT\_DETECTION\_CHECK
 
@@ -13,6 +13,6 @@ Checks whether your CloudFormation stacks' actual configuration differs, or has 
 cloudformationRoleArnType: String  
 The AWS CloudFormation role ARN with IAM policy permissions to detect drift for AWS CloudFormation Stacks
 
-## AWS CloudFormation template<a name="w24aac11c29c17b7c31c15"></a>
+## AWS CloudFormation template<a name="w26aac11c31c17b7c31c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

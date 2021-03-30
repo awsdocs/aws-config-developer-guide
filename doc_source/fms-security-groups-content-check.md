@@ -1,6 +1,9 @@
 # fms\-security\-groups\-content\-check<a name="fms-security-groups-content-check"></a>
 
-Check whether the security groups content is the same as the master security group\. 
+Checks if AWS Firewall Manager created security groups content is the same as the master security groups\. The rule is NON\_COMPLIANT if the content does not match\. 
+
+**Note**  
+Only AWS Firewall Manager can create this rule\.
 
 **Identifier:** FMS\_SECURITY\_GROUP\_CONTENT\_CHECK
 
@@ -25,6 +28,6 @@ If true, AWS Firewall Manager will check the security groups in the securityGrou
 masterSecurityGroupsIds \(Optional\)Type: String  
 This parameter only applies to AWS Firewall Manager admin account\. Comma\-separated list of master security groups id in AWS Firewall manager admin account\. Rule will check if the AWS Firewall manager created security groups in the account are same as the master security groups\.
 
-## AWS CloudFormation template<a name="w24aac11c29c17b7d183c15"></a>
+## AWS CloudFormation template<a name="w26aac11c31c17b7d183c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

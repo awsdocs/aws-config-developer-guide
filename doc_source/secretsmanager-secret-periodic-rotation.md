@@ -13,6 +13,6 @@ Checks if AWS Secrets Manager secrets have been rotated in the past specified nu
 maxDaysSinceRotation \(Optional\)Type: int  
 Maximum number of days in which a secret can remain unchanged\. The default value is 90 days\.
 
-## AWS CloudFormation template<a name="w24aac11c29c17b7d329c15"></a>
+## AWS CloudFormation template<a name="w26aac11c31c17b7d329c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

@@ -1,6 +1,6 @@
 # dynamodb\-autoscaling\-enabled<a name="dynamodb-autoscaling-enabled"></a>
 
-This rule checks whether Auto Scaling is enabled on your DynamoDB tables\. Optionally you can set the read and write capacity units for the table\. 
+Checks if Auto Scaling or On\-Demand is enabled on your DynamoDB tables and/or global secondary indexes\. Optionally you can set the read and write capacity units for the table or global secondary index\.
 
 **Identifier:** DYNAMODB\_AUTOSCALING\_ENABLED
 
@@ -11,23 +11,23 @@ This rule checks whether Auto Scaling is enabled on your DynamoDB tables\. Optio
 **Parameters:**
 
 minProvisionedReadCapacity \(Optional\)Type: int  
-Minimum provisioned capacity\.
+The minimum number of units that should be provisioned with read capacity in the Auto Scaling group\.
 
 maxProvisionedReadCapacity \(Optional\)Type: int  
-Maximum provisioned capacity\.
+The minimum number of units that should be provisioned with write capacity in the Auto Scaling group\.
 
 targetReadUtilization \(Optional\)Type: double  
-Target utilization of read capacity
+The maximum number of units that should be provisioned with read capacity in the Auto Scaling group\.
 
 minProvisionedWriteCapacity \(Optional\)Type: int  
-Minimum provisioned capacity\.
+The maximum number of units that should be provisioned with write capacity in the Auto Scaling group\.
 
 maxProvisionedWriteCapacity \(Optional\)Type: int  
-Maximum provisioned capacity\.
+The target utilization percentage for read capacity\. Target utilization is expressed in terms of the ratio of consumed capacity to provisioned capacity\.
 
 targetWriteUtilization \(Optional\)Type: double  
-Target utilization of write capacity
+The target utilization percentage for write capacity\. Target utilization is expressed in terms of the ratio of consumed capacity to provisioned capacity\.
 
-## AWS CloudFormation template<a name="w24aac11c29c17b7c93c15"></a>
+## AWS CloudFormation template<a name="w26aac11c31c17b7c93c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

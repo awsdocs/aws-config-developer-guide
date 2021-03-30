@@ -60,5 +60,5 @@ After authorization for an aggregator is deleted the data will remain in the agg
 ## Learn More<a name="learn-more-setup-console"></a>
 + [Concepts](config-concepts.md)
 + [Setting Up an Aggregator Using the Console](setup-aggregator-console.md)
-+ [Viewing Configuration and Compliance Data in the Aggregator Dashboard](viewing-the-aggregate-dashboard.md)
++ [Viewing Compliance Data in the Aggregator Dashboard](viewing-the-aggregate-dashboard.md)
 + [Troubleshooting for Multi\-Account Multi\-Region Data Aggregation](aggregate-data-troubleshooting.md)

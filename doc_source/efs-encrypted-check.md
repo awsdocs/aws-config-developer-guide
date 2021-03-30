@@ -1,6 +1,6 @@
 # efs\-encrypted\-check<a name="efs-encrypted-check"></a>
 
-Checks whether Amazon EFS are configured to encrypt file data using AWS KMS\. The rule is NON\_COMPLIANT if the Encrypted key is set to False on DescribeFileSystems or, if specified, `KmsKeyId` key on DescribeFileSystems is not matching `KmsKeyId` parameter\. 
+Checks if Amazon Elastic File System \(Amazon EFS\) is configured to encrypt the file data using AWS Key Management Service \(AWS KMS\)\. The rule is NON\_COMPLIANT if the encrypted key is set to false on `DescribeFileSystems` or if the `KmsKeyId` key on `DescribeFileSystems` does not match the `KmsKeyId` parameter\.
 
 **Identifier:** EFS\_ENCRYPTED\_CHECK
 
@@ -13,6 +13,6 @@ Checks whether Amazon EFS are configured to encrypt file data using AWS KMS\. Th
 KmsKeyId \(Optional\)Type: String  
 Amazon Resource Name \(ARN\) of the KMS key that is used to encrypt the EFS file system\.
 
-## AWS CloudFormation template<a name="w24aac11c29c17b7d139c15"></a>
+## AWS CloudFormation template<a name="w26aac11c31c17b7d139c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

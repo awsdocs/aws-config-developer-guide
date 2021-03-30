@@ -1,6 +1,6 @@
 # approved\-amis\-by\-tag<a name="approved-amis-by-tag"></a>
 
-Checks whether running instances are using specified AMIs\. 
+Checks if running instances are using specified AMIs\. Specify a list of approved AMI IDs\. Running instances with AMIs that are not on this list are NON\_COMPLIANT\.
 
 **Identifier:** APPROVED\_AMIS\_BY\_TAG
 
@@ -11,8 +11,8 @@ Checks whether running instances are using specified AMIs\.
 **Parameters:**
 
 amisByTagKeyAndValueType: StringMapDefault: tag\-key:tag\-value,other\-tag\-key  
-Specify AMIs by tag \(comma separated list up to 10; for example, 'tag\-key:tag\-value'\)\.
+The AMIs by tag \(comma\-separated list up to 10; for example,`tag-key:tag-value`; i\.e\. `tag-key1` matches AMIs with `tag-key1`,`tag-key2:value2` matches `tag-key2` having value2\)\.
 
-## AWS CloudFormation template<a name="w24aac11c29c17b7c25c15"></a>
+## AWS CloudFormation template<a name="w26aac11c31c17b7c25c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

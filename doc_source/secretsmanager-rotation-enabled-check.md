@@ -1,6 +1,9 @@
 # secretsmanager\-rotation\-enabled\-check<a name="secretsmanager-rotation-enabled-check"></a>
 
-Checks whether AWS Secret Manager secret has rotation enabled\. If the `maximumAllowedRotationFrequency` parameter is specified, the rotation frequency of the secret is compared with the maximum allowed frequency\. 
+Checks if AWS Secrets Manager secret has rotation enabled\. The rule also checks an optional `maximumAllowedRotationFrequency` parameter\. If the parameter is specified, the rotation frequency of the secret is compared with the maximum allowed frequency\. The rule is NON\_COMPLIANT if the secret is not scheduled for rotation\. The rule is also NON\_COMPLIANT if the rotation frequency is higher than the number specified in the maximumAllowedRotationFrequency parameter\.
+
+**Note**  
+Re\-evaluating this rule within 4 hours of the first evaluation will have no effect on the results\. 
 
 **Identifier:** SECRETSMANAGER\_ROTATION\_ENABLED\_CHECK
 
@@ -13,6 +16,6 @@ Checks whether AWS Secret Manager secret has rotation enabled\. If the `maximumA
 maximumAllowedRotationFrequency \(Optional\)Type: int  
 Maximum allowed rotation frequency of the secret in days\.
 
-## AWS CloudFormation template<a name="w24aac11c29c17b7d325c15"></a>
+## AWS CloudFormation template<a name="w26aac11c31c17b7d325c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

@@ -1,6 +1,6 @@
 # vpc\-network\-acl\-unused\-check<a name="vpc-network-acl-unused-check"></a>
 
-Checks to see if there are unused Network Access Control List \(NACL\)\. The rule is COMPLIANT if NACL is associated with a subnet, NON\_COMPLIANT otherwise\. 
+Checks if there are unused network access control lists \(network ACLs\)\. The rule is COMPLIANT if each network ACL is associated with a subnet\. The rule is NON\_COMPLIANT if a network ACL is not associated with a subnet\.
 
 **Identifier:** VPC\_NETWORK\_ACL\_UNUSED\_CHECK
 
@@ -12,6 +12,6 @@ Checks to see if there are unused Network Access Control List \(NACL\)\. The rul
 
 None  
 
-## AWS CloudFormation template<a name="w24aac11c29c17b7d351c15"></a>
+## AWS CloudFormation template<a name="w26aac11c31c17b7d351c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

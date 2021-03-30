@@ -12,11 +12,13 @@ Conformance packs are only available in the redesigned AWS Config console\.
 + [Region Support](#conformance-packs-regions)
 + [AWS Config Process Checks Within a Conformance Pack](process-checks.md)
 + [Conformance Pack Sample Templates](conformancepack-sample-templates.md)
++ [Viewing Compliance Data in the Conformance Packs Dashboard](conformance-pack-dashboard.md)
 + [Deploying a Conformance Pack Using the AWS Config Console](conformance-pack-console.md)
 + [Deploying a Conformance Pack Using the AWS Command Line Interface](conformance-pack-cli.md)
 + [Managing Conformance Packs \(API\)](conformance-pack-apis.md)
 + [Managing Conformance Packs Across all Accounts in Your Organization](conformance-pack-organization-apis.md)
-+ [Troubleshooting](troubleshooting-conformance-pack.md)
++ [Viewing Compliance History Timeline for Conformance Packs](compliance-history-conformance-pack.md)
++ [Troubleshooting](#w26aac13c34)
 
 ## Region Support<a name="conformance-packs-regions"></a>
 
@@ -25,3 +27,46 @@ Conformance packs are supported in the following Regions\.
 
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/conformance-packs.html)
+
+## Troubleshooting<a name="w26aac13c34"></a>
+
+If you get an error indicating that the conformance pack failed while creating, updating, or deleting it, you can check the status of your conformance pack\.
+
+```
+aws configservice describe-conformance-pack-status --conformance-pack-name=ConformancePackName
+```
+
+You should see output similar to the following\.
+
+```
+"ConformancePackStatusDetails": [
+    {
+        "ConformancePackName": "ConformancePackName",
+        "ConformancePackId": "ConformancePackId",
+        "ConformancePackArn": "ConformancePackArn",
+        "ConformancePackState": "CREATE_FAILED",
+        "StackArn": "CloudFormation stackArn",
+        "ConformancePackStatusReason": "Failure Reason",
+        "LastUpdateRequestedTime": 1573865201.619,
+        "LastUpdateCompletedTime": 1573864244.653
+    }
+]
+```
+
+Check the **ConformancePackStatusReason** for information about the failure\. 
+
+**When the stackArn is present in the response**
+
+If the error message is not clear or if the failure is due to an internal error, go to the AWS CloudFormation console and do the following:
+
+1. Search for the **stackArn** from the output\.
+
+1. Choose the **Events** tab of the AWS CloudFormation stack and check for failed events\.
+
+   The status reason indicates why the conformance pack failed\.
+
+**When the stackArn is not present in the response**
+
+If you receive a failure while you create a conformance pack but the stackArn is not present in the status response, the possible reason is that the stack creation failed and AWS CloudFormation rolled back and deleted the stack\. Go to the AWS CloudFormation console and search for stacks that are in a **Deleted** state\. The failed stack might be available there\. The AWS CloudFormation stack contains the conformance pack name\. If you find the failed stack, choose the **Events** tab of the AWS CloudFormation stack and check for failed events\.
+
+If none of these steps worked and if the failure reason is an internal service error, then try operation again or contact AWS Config support\.

@@ -1,6 +1,6 @@
 # iam\-password\-policy<a name="iam-password-policy"></a>
 
-Checks whether the account password policy for IAM users meets the specified requirements\. 
+Checks if the account password policy for IAM users meets the specified requirements indicated in the parameters\. This rule is NON\_COMPLIANT if the account password policy does not meet the specified requirements\.
 
 **Important**  
 The `true` and `false` values for the rule parameters are case\-sensitive\. If `true` is not provided in lowercase, it will be treated as `false.`
@@ -34,6 +34,6 @@ Number of passwords before allowing reuse\.
 MaxPasswordAge \(Optional\)Type: intDefault: 90  
 Number of days before password expiration\.
 
-## AWS CloudFormation template<a name="w24aac11c29c17b7d205c17"></a>
+## AWS CloudFormation template<a name="w26aac11c31c17b7d205c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

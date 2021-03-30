@@ -15,6 +15,7 @@ You can create up to 150 AWS Config rules per region in your account\. For more 
 You can also create custom rules to evaluate additional resources that AWS Config doesn't yet record\. For more information, see [Evaluating Additional Resource Types](evaluate-config_develop-rules_nodejs.md#creating-custom-rules-for-additional-resource-types)\.
 
 **Topics**
++ [Region Support](#region-support-config-rules)
 + [Viewing Configuration Compliance](evaluate-config_view-compliance.md)
 + [Specifying Triggers for AWS Config Rules](evaluate-config-rules.md)
 + [AWS Config Managed Rules](evaluate-config_use-managed-rules.md)
@@ -25,3 +26,11 @@ You can also create custom rules to evaluate additional resources that AWS Confi
 + [Enabling AWS Config Rules Across all Accounts in Your Organization](config-rule-multi-account-deployment.md)
 + [Remediating Noncompliant AWS Resources by AWS Config Rules](remediation.md)
 + [Tagging Your AWS Config Resources](tagging.md)
+
+## Region Support<a name="region-support-config-rules"></a>
+
+Currently, AWS Config Rules is supported in the following regions:
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/evaluate-config.html)

@@ -1,6 +1,6 @@
 # guardduty\-enabled\-centralized<a name="guardduty-enabled-centralized"></a>
 
-Checks whether GuardDuty is enabled\. You can optionally verify that the results are centralized in a specific AWS Account\. 
+Checks if Amazon GuardDuty is enabled in your AWS account and region\. If you provide an AWS account for centralization, the rule evaluates the Amazon GuardDuty results in the centralized account\. The rule is COMPLIANT when Amazon GuardDuty is enabled\.
 
 **Identifier:** GUARDDUTY\_ENABLED\_CENTRALIZED
 
@@ -13,6 +13,6 @@ Checks whether GuardDuty is enabled\. You can optionally verify that the results
 CentralMonitoringAccount \(Optional\)Type: String  
 Comma separated list of AWS Accounts \(12\-digit\) where Amazon GuardDuty results are allowed to be centralized\.
 
-## AWS CloudFormation template<a name="w24aac11c29c17b7d193c15"></a>
+## AWS CloudFormation template<a name="w26aac11c31c17b7d193c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

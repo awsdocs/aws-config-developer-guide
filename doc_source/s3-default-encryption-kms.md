@@ -13,6 +13,6 @@ Checks whether the Amazon S3 buckets are encrypted with AWS Key Management Servi
 kmsKeyArns \(Optional\)Type: CSV  
 Comma separated list of AWS KMS key ARNs allowed for encrypting Amazon S3 Buckets\.
 
-## AWS CloudFormation template<a name="w24aac11c29c17b7d317c15"></a>
+## AWS CloudFormation template<a name="w26aac11c31c17b7d317c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

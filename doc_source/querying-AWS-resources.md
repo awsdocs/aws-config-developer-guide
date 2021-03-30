@@ -8,6 +8,7 @@ You can use advanced query for:
 + Inventory management; for example, to retrieve a list of Amazon EC2 instances of a particular size\.
 + Security and operational intelligence; for example, to retrieve a list of resources that have a specific configuration property enabled or disabled\.
 + Cost optimization; for example, to identify a list of Amazon EBS volumes that are not attached to any EC2 instance\.
++ Compliance data; for example, to retrieve a list of all your conformance packs and their compliance status\.
 
 **Topics**
 + [Features](#query-features)
@@ -54,10 +55,11 @@ As a subset of SQL `SELECT`, the query syntax has following limitations:
   + Support for only suffix wildcards \(for example, `...LIKE 'AWS::EC2::%'` is supported but `...LIKE '%::EC2::Instance'` is not supported\)\.
   + Wildcard matches must be at least three characters long \(for example, `...LIKE 'ab%'` is not allowed but `...LIKE 'abc%'` is allowed\)\. 
 + Aggregation limitations:
-  + `GROUP BY` clauses in aggregations may contain only a single property\.
   + Aggregate functions can accept only a single argument or property\.
   + Aggregate functions cannot take other functions as arguments\.
-  + No support for pagination for aggregate queries; a maximum of 500 results is returned\.
+  + `GROUP BY` with an `ORDER BY` clause referencing aggregate functions may contain only a single property\.
+  + For all other aggregations `GROUP BY` clauses may contain up to three properties\.
+  + Pagination is supported for all aggregate queries except when `ORDER BY` clause has an aggregate function\. For example, `GROUP BY X, ORDER BY Y` does not work if `Y` is an aggregate function\.
   + No support for `HAVING` clauses in aggregations\.
 
 ## Region Support<a name="query-regionsupport"></a>
@@ -70,4 +72,4 @@ Advanced queries is supported in the following Regions:
 
 \*Saved queries is not available in Africa \(Cape Town\) and Europe \(Milan\) Regions\. 
 
-Advanced queries for multi\-account multi\-regions is not available in Africa \(Cape Town\) and Europe \(Milan\) Regions\.
+\*Advanced queries for multi\-account multi\-regions is not available in Africa \(Cape Town\) and Europe \(Milan\) Regions\.

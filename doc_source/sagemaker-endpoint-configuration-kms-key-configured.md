@@ -13,6 +13,6 @@ Checks whether AWS Key Management Service \(KMS\) key is configured for an Amazo
 kmsKeyArns \(Optional\)Type: String  
 Comma\-separated list of specific AWS KMS key ARNs allowed for an Amazon SageMaker endpoint configuration\.
 
-## AWS CloudFormation template<a name="w24aac11c29c17b7d319c15"></a>
+## AWS CloudFormation template<a name="w26aac11c31c17b7d319c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

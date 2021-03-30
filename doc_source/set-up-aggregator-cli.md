@@ -292,5 +292,5 @@ Delegated administrators are accounts within a given AWS Organization that are g
 ## Learn More<a name="learn-more-setup-console"></a>
 + [Concepts](config-concepts.md)
 + [Authorizing Aggregator Accounts to Collect AWS Config Configuration and Compliance Data Using the AWS Command Line Interface](authorize-aggregator-account-cli.md)
-+ [Viewing Configuration and Compliance Data in the Aggregator Dashboard](viewing-the-aggregate-dashboard.md)
++ [Viewing Compliance Data in the Aggregator Dashboard](viewing-the-aggregate-dashboard.md)
 + [Troubleshooting for Multi\-Account Multi\-Region Data Aggregation](aggregate-data-troubleshooting.md)

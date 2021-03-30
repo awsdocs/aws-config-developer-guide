@@ -1,22 +1,8 @@
-# Viewing Compliance History for Resources as Evaluated by AWS Config Rules<a name="view-compliance-history"></a>
+# Viewing Compliance History Timeline for Resources<a name="view-compliance-history"></a>
 
 AWS Config supports storing compliance state changes of resources as evaluated by AWS Config Rules\. The resource compliance history is presented in the form of a timeline\. The timeline captures changes as `ConfigurationItems` over a period of time for a specific resource\. The resource timeline is available in the AWS Config console adjacent to the Configuration timeline\. 
 
-You can opt in or opt out to record all resource types in AWS Config\. If you have opted to record all resource types, AWS Config will automatically begin to record the resource compliance history as evaluated by AWS Config Rules\. You can select all the resources or specific types of resources for which you want AWS Config to record configuration changes\. By default, AWS Config records the configuration changes for all supported resources\. 
-
-**Topics**
-+ [Recording Resource Types in the AWS Console](#recording-resource-types)
-+ [Viewing Resource Timeline Using Resources](#resources-route-compliance-history)
-+ [Viewing Resource Timeline Using Rules](#rules-route-compliance-history)
-+ [Querying Resource Compliance History](#quering-resource-compliance-history)
-
-## Recording Resource Types in the AWS Console<a name="recording-resource-types"></a>
-
-On the **Settings** page, for **Resource types to record**, specify the AWS resource types you want AWS Config to record:
-+ **All resources** – AWS Config records all supported resources with the following options:
-  + **Record all resources supported in this region** – AWS Config records configuration changes for every supported type of regional resource\. When AWS Config adds support for a new resource type, AWS Config automatically starts recording resources of that type\.
-  + **Include global resources** – AWS Config includes supported types of global resources with the resources that it records \(for example, IAM resources\)\. When AWS Config adds support for a new global resource type, AWS Config automatically starts recording resources of that type\.
-+ **Specific types** – AWS Config records configuration changes for only the AWS resource types that you specify\. Choose resource type `Config:ResourceCompliance` to record compliance history\.
+You can opt in or out to record all resource types in AWS Config\. If you have opted to record all resource types, AWS Config automatically begins to recording the resource compliance history as evaluated by AWS Config Rules\. By default, AWS Config records the configuration changes for all supported resources\. You can also select only the specific resource compliance history resource type: `AWS::Config::ResourceCompliance`\. For more information, see [Selecting Which Resources AWS Config Records](https://docs.aws.amazon.com/config/latest/developerguide/select-resources.html#select-resources-console)\.
 
 ## Viewing Resource Timeline Using Resources<a name="resources-route-compliance-history"></a>
 
@@ -46,7 +32,7 @@ Access the resource timeline by selecting a specific rule from the Rule page\.
 
 1. Select the **Resource Timeline** button\. The resource timeline is displayed\.
 
-## Querying Resource Compliance History<a name="quering-resource-compliance-history"></a>
+## Querying Compliance History<a name="quering-resource-compliance-history"></a>
 
 Query the resource compliance history using get\-resource\-config\-history using the resource type `AWS::Config::ResourceCompliance`\.
 

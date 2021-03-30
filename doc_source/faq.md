@@ -17,7 +17,7 @@
 
 ### What is the new change in the AWS Config Resource Relationships?<a name="faq"></a>
 
-To optimize costs associated with recording changes related to ephemeral workloads, AWS Config released an update to relationships modeled within ConfigurationItems \(CI\) for seven Amazon EC2 resource types\. Examples of ephemeral workloads include changes to Amazon Elastic Compute Cloud \(Amazon EC2\) spot instances, Amazon Elastic MapReduce jobs, and Amazon EC2 autoscaling\. This update optimized CI models for Amazon EC2 instance, security group, network interface, subnet, VPC, VPN gateway, and customer gateway resource types to record direct relationships and deprecate indirect relationships\.
+To optimize costs associated with recording changes related to ephemeral workloads, AWS Config will release an update to relationships modeled within ConfigurationItems \(CI\) for seven Amazon EC2 resource types on **August 1, 2021**\. Examples of ephemeral workloads include changes to Amazon Elastic Compute Cloud \(Amazon EC2\) spot instances, Amazon Elastic MapReduce jobs, and Amazon EC2 autoscaling\. This update optimized CI models for Amazon EC2 instance, security group, network interface, subnet, VPC, VPN gateway, and customer gateway resource types to record direct relationships and deprecate indirect relationships\.
 
 ### What is a direct and an in\-direct relationship with respect to a resource?<a name="faq"></a>
 

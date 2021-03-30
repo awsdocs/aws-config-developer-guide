@@ -27,4 +27,4 @@ AWS Config might not aggregate data from an organization for one of the followin
 + [Concepts](config-concepts.md)
 + [Setting Up an Aggregator Using the Console](setup-aggregator-console.md)
 + [Authorizing Aggregator Accounts to Collect AWS Config Configuration and Compliance Data Using the Console](authorize-aggregator-account-console.md)
-+ [Viewing Configuration and Compliance Data in the Aggregator Dashboard](viewing-the-aggregate-dashboard.md)
++ [Viewing Compliance Data in the Aggregator Dashboard](viewing-the-aggregate-dashboard.md)

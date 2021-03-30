@@ -1,6 +1,6 @@
 # dynamodb\-table\-encryption\-enabled<a name="dynamodb-table-encryption-enabled"></a>
 
-Checks whether the Amazon DynamoDB tables are encrypted and checks their status\. The rule is compliant if the status is enabled or enabling\. 
+Checks if the Amazon DynamoDB tables are encrypted and checks their status\. The rule is COMPLIANT if the status is enabled or enabling\.
 
 **Identifier:** DYNAMODB\_TABLE\_ENCRYPTION\_ENABLED
 
@@ -12,6 +12,6 @@ Checks whether the Amazon DynamoDB tables are encrypted and checks their status\
 
 None  
 
-## AWS CloudFormation template<a name="w24aac11c29c17b7d101c15"></a>
+## AWS CloudFormation template<a name="w26aac11c31c17b7d101c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.
