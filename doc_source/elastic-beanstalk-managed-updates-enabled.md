@@ -6,13 +6,13 @@ Checks if managed platform updates in an AWS Elastic Beanstalk environment is en
 
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS regions
+**AWS Region:** All supported AWS regions except China \(Beijing\), China \(Ningxia\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), Asia Pacific \(Osaka\) Region
 
 **Parameters:**
 
 UpdateLevel \(Optional\)Type: String  
 UpdateLevel: \(optional\): A parameter for platform update, to check if updates level will be a 'minor' version update, or a 'patch'
 
-## AWS CloudFormation template<a name="w26aac11c31c17b7d159c15"></a>
+## AWS CloudFormation template<a name="w29aac11c33c17b7d165c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

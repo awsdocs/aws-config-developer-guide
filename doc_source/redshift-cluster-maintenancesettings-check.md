@@ -19,6 +19,6 @@ Scheduled maintenance window for clusters \(for example, Mon:09:30\-Mon:10:00\)\
 automatedSnapshotRetentionPeriod \(Optional\)Type: intDefault: 1  
 Number of days to retain automated snapshots\.
 
-## AWS CloudFormation template<a name="w26aac11c31c17b7d277c15"></a>
+## AWS CloudFormation template<a name="w29aac11c33c17b7d287c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

@@ -16,6 +16,6 @@ Re\-evaluating this rule within 4 hours of the first evaluation will have no eff
 maxAccessKeyAgeType: intDefault: 90  
 Maximum number of days without rotation\. Default 90\.
 
-## AWS CloudFormation template<a name="w26aac11c31c17b7b1c17"></a>
+## AWS CloudFormation template<a name="w29aac11c33c17b7b1c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

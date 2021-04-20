@@ -9,7 +9,7 @@ Only AWS Firewall Manager can create this rule\.
 
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS regions except China \(Beijing\), China \(Ningxia\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\) Region
+**AWS Region:** All supported AWS regions except China \(Beijing\), China \(Ningxia\), Asia Pacific \(Osaka\) Region
 
 **Parameters:**
 
@@ -37,6 +37,6 @@ Only allow AWS Firewall Manager created security groups associate with resource 
 applyToAllEC2InstanceENIs \(Optional\)Type: boolean  
 If true, AWS Firewall Manager will enforce the policy on all ENIs on EC2 Instance\. Otherwise AWS Firewall Manager enforce the policy on default ENI on EC2 Instance\.
 
-## AWS CloudFormation template<a name="w26aac11c31c17b7d185c17"></a>
+## AWS CloudFormation template<a name="w29aac11c33c17b7d191c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

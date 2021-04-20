@@ -12,6 +12,10 @@ For data protection purposes, we recommend that you protect AWS account credenti
 
 We strongly recommend that you never put sensitive identifying information, such as your customers' account numbers, into free\-form fields such as a **Name** field\. This includes when you work with AWS Config or other AWS services using the console, API, AWS CLI, or AWS SDKs\. Any data that you enter into AWS Config or other services might get picked up for inclusion in diagnostic logs\. When you provide a URL to an external server, don't include credentials information in the URL to validate your request to that server\.
 
+## Encryption of Data at Rest<a name="data-protection-encryption-at-rest"></a>
+
+Data is encrypted at rest using transparent server\-side encryption\. This helps reduce the operational burden and complexity involved in protecting sensitive data\. With encryption at rest, you can build security\-sensitive applications that meet encryption compliance and regulatory requirements\.
+
 ## Encryption of Data in Transit<a name="data-protection-encryption-in-transit"></a>
 
-Data gathered and accessed by AWS Config is exclusively over a TLS\-protected channel\.
+Data gathered and accessed by AWS Config is exclusively over a Transport Layer Security \(TLS\) protected channel\.

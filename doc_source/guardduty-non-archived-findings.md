@@ -6,7 +6,7 @@ Checks whether Amazon GuardDuty has findings that are non archived\. The rule is
 
 **Trigger type:** Periodic
 
-**AWS Region:** All supported AWS regions except China \(Beijing\), China \(Ningxia\), AWS GovCloud \(US\-East\), Europe \(Milan\), Middle East \(Bahrain\), Africa \(Cape Town\) Region
+**AWS Region:** All supported AWS regions except China \(Beijing\), China \(Ningxia\), AWS GovCloud \(US\-East\), Asia Pacific \(Osaka\), Europe \(Milan\), Middle East \(Bahrain\), Africa \(Cape Town\) Region
 
 **Parameters:**
 
@@ -19,6 +19,6 @@ The number of days Amazon GuardDuty medium severity findings are allowed to stay
 daysHighSev \(Optional\)Type: intDefault: 1  
 The number of days Amazon GuardDuty high severity findings are allowed to stay non archived\. The default is 1 day\.
 
-## AWS CloudFormation template<a name="w26aac11c31c17b7d195c15"></a>
+## AWS CloudFormation template<a name="w29aac11c33c17b7d201c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

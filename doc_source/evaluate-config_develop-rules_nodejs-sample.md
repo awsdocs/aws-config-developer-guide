@@ -151,7 +151,7 @@ exports.handler = (event, context, callback) => {
 
 The function performs the following operations at runtime:
 
-1. The function runs when AWS Lambda passes the `event` object to the `handler` function\. AWS Lambda also passes a `context` object, which contains information and methods that the function can use while it runs\. In this example, the function accepts the optional `callback` parameter, which it uses to return information to the caller\.
+1. The function runs when AWS Lambda passes the `event` object to the `handler` function\. In this example, the function accepts the optional `callback` parameter, which it uses to return information to the caller\. AWS Lambda also passes a `context` object, which contains information and methods that the function can use while it runs\. Note that in newer versions of Lambda, context is no longer used\.
 
 1. The function checks whether the `messageType` for the event is a configuration item or an oversized configuration item, and then returns the configuration item\. 
 
@@ -262,7 +262,7 @@ function countResourceTypes(applicableResourceType, nextToken, count, callback) 
 
 The function performs the following operations at runtime:
 
-1. The function runs when AWS Lambda passes the `event` object to the `handler` function\. AWS Lambda also passes a `context` object, which contains information and methods that the function can use while it runs\. In this example, the function accepts the optional `callback` parameter, which it uses to return information to the caller\.
+1. The function runs when AWS Lambda passes the `event` object to the `handler` function\. In this example, the function accepts the optional `callback` parameter, which it uses to return information to the caller\. AWS Lambda also passes a `context` object, which contains information and methods that the function can use while it runs\. Note that in newer versions of Lambda, context is no longer used\.
 
 1. To count the resources of the specified type, the handler calls the `countResourceTypes` function, and it passes the `applicableResourceType` parameter that it received from the event\. The `countResourceTypes` function calls the `listDiscoveredResources` method of the `config` client, which returns a list of identifiers for the applicable resources\. The function uses the length of this list to determine the number of applicable resources, and it returns this count to the handler\.
 

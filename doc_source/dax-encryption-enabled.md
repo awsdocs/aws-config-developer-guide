@@ -6,12 +6,12 @@ Checks that Amazon DynamoDB Accelerator \(DAX\) clusters are encrypted\. The rul
 
 **Trigger type:** Periodic
 
-**AWS Region:** All supported AWS regions except China \(Beijing\), China \(Ningxia\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), Asia Pacific \(Hong Kong\), Asia Pacific \(Seoul\), Canada \(Central\), Europe \(Milan\), Europe \(Stockholm\), Middle East \(Bahrain\), Africa \(Cape Town\) Region
+**AWS Region:** All supported AWS regions except China \(Beijing\), China \(Ningxia\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), Asia Pacific \(Hong Kong\), Asia Pacific \(Osaka\), Asia Pacific \(Seoul\), Canada \(Central\), Europe \(Milan\), Europe \(Stockholm\), Middle East \(Bahrain\), Africa \(Cape Town\) Region
 
 **Parameters:**
 
 None  
 
-## AWS CloudFormation template<a name="w26aac11c31c17b7c83c15"></a>
+## AWS CloudFormation template<a name="w29aac11c33c17b7c85c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

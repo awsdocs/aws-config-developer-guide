@@ -9,7 +9,7 @@ Only AWS Firewall Manager can create this rule\.
 
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS regions except China \(Beijing\), China \(Ningxia\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\) Region
+**AWS Region:** All supported AWS regions except China \(Beijing\), China \(Ningxia\), Asia Pacific \(Osaka\) Region
 
 **Parameters:**
 
@@ -34,6 +34,6 @@ If true, AWS Firewall Manager will update non\-compliant resources according to 
 allowSecurityGroupType: boolean  
 If true, the rule will check to ensure that all the in\-scope security groups are within \(outside, if false\) the reference security group's inbound/outbound rules\.
 
-## AWS CloudFormation template<a name="w26aac11c31c17b7d181c17"></a>
+## AWS CloudFormation template<a name="w29aac11c33c17b7d187c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

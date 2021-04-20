@@ -6,13 +6,13 @@ Checks whether at least one AWS CloudTrail trail is logging Amazon S3 data event
 
 **Trigger type:** Periodic
 
-**AWS Region:** All supported AWS regions
+**AWS Region:** All supported AWS regions except Asia Pacific \(Osaka\) Region
 
 **Parameters:**
 
 S3BucketNames \(Optional\)Type: String  
 Comma\-separated list of S3 bucket names for which data events logging should be enabled\. Default behavior checks for all S3 buckets\.
 
-## AWS CloudFormation template<a name="w26aac11c31c17b7c51c15"></a>
+## AWS CloudFormation template<a name="w29aac11c33c17b7c53c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

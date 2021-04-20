@@ -11,6 +11,7 @@ This documentation helps you understand how to apply the shared responsibility m
 **Topics**
 + [Data Protection in AWS Config](data-protection.md)
 + [AWS Identity and Access Management](security-iam.md)
++ [AWS managed policies for AWS Config](security-iam-awsmanpol.md)
 + [Logging and Monitoring in AWS Config](security-logging-and-monitoring.md)
 + [Using AWS Config with Interface Amazon VPC Endpoints](config-VPC-endpoints.md)
 + [Incident Response in AWS Config](incident-response.md)

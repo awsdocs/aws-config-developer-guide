@@ -79,6 +79,6 @@ Key of a sixth required tag\.
 tag6Value \(Optional\)Type: CSV  
 Optional value of the sixth required tag\. Separate multiple values with commas\.
 
-## AWS CloudFormation template<a name="w26aac11c31c17b7d283c17"></a>
+## AWS CloudFormation template<a name="w29aac11c33c17b7d295c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

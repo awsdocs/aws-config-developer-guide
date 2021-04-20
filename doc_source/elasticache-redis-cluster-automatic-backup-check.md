@@ -6,13 +6,13 @@ Check if the Amazon ElastiCache Redis clusters have automatic backup turned on\.
 
 **Trigger type:** Periodic
 
-**AWS Region:** All supported AWS regions
+**AWS Region:** All supported AWS regions except Asia Pacific \(Osaka\) Region
 
 **Parameters:**
 
 snapshotRetentionPeriod \(Optional\)Type: intDefault: 15  
 Minimum snapshot retention period in days for Redis cluster\. Default is 15 days\.
 
-## AWS CloudFormation template<a name="w26aac11c31c17b7d149c15"></a>
+## AWS CloudFormation template<a name="w29aac11c33c17b7d155c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

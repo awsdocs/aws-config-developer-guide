@@ -32,7 +32,7 @@ When you use multiple AWS resources that depend on one another, a change in the 
 
 You can also use the historical configurations of your resources provided by AWS Config to troubleshoot issues and to access the last known good configuration of a problem resource\.
 
-### Security Analysis<a name="w26aab5c10c10"></a>
+### Security Analysis<a name="w29aab5c10c10"></a>
 
 To analyze potential security weaknesses, you need detailed historical information about your AWS resource configurations, such as the AWS Identity and Access Management \(IAM\) permissions that are granted to your users, or the Amazon EC2 security group rules that control access to your resources\.
 

@@ -9,7 +9,7 @@ Only AWS Firewall Manager can create this rule\.
 
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS regions except China \(Beijing\), China \(Ningxia\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\) Region
+**AWS Region:** All supported AWS regions except China \(Beijing\), China \(Ningxia\), Asia Pacific \(Osaka\) Region
 
 **Parameters:**
 
@@ -28,6 +28,6 @@ If true, AWS Firewall Manager will check the security groups in the securityGrou
 masterSecurityGroupsIds \(Optional\)Type: String  
 This parameter only applies to AWS Firewall Manager admin account\. Comma\-separated list of master security groups id in AWS Firewall manager admin account\. Rule will check if the AWS Firewall manager created security groups in the account are same as the master security groups\.
 
-## AWS CloudFormation template<a name="w26aac11c31c17b7d183c17"></a>
+## AWS CloudFormation template<a name="w29aac11c33c17b7d189c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

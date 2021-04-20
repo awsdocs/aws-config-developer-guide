@@ -6,12 +6,12 @@ Checks whether Amazon Elastic Block Store \(Amazon EBS\) snapshots are not publi
 
 **Trigger type:** Periodic
 
-**AWS Region:** All supported AWS regions
+**AWS Region:** All supported AWS regions except Asia Pacific \(Osaka\) Region
 
 **Parameters:**
 
 None  
 
-## AWS CloudFormation template<a name="w26aac11c31c17b7d109c15"></a>
+## AWS CloudFormation template<a name="w29aac11c33c17b7d111c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.
