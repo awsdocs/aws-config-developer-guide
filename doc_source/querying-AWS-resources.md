@@ -52,8 +52,10 @@ As a subset of SQL `SELECT`, the query syntax has following limitations:
 + The `SELECT` all columns shorthand \(that is `SELECT *`\) selects only the top\-level, scalar properties of a CI\. The scalar properties returned are `accountId`, `awsRegion`, `arn`, `availabilityZone`, `configurationItemCaptureTime`, `resourceCreationTime`, `resourceId`, `resourceName`, `resourceType`, and `version`\.
 + Wildcard limitations:
   + Wildcards are supported only for property values and not for property keys \(for example, `...WHERE someKey LIKE 'someValue%'` is supported but `...WHERE 'someKey%' LIKE 'someValue%'` is not supported\)\.
-  + Support for only suffix wildcards \(for example, `...LIKE 'AWS::EC2::%'` is supported but `...LIKE '%::EC2::Instance'` is not supported\)\.
-  + Wildcard matches must be at least three characters long \(for example, `...LIKE 'ab%'` is not allowed but `...LIKE 'abc%'` is allowed\)\. 
+  + Support for only suffix wildcards \(for example, `...LIKE 'AWS::EC2::%'` and `...LIKE 'AWS::EC2::_'` is supported but `...LIKE '%::EC2::Instance'` and `...LIKE '_::EC2::Instance'`is not supported\)\.
+  + Wildcard matches must be at least three characters long \(for example, `...LIKE 'ab%'` and `...LIKE 'ab_'` is not allowed but `...LIKE 'abc%'` and `...LIKE 'abc_'` is allowed\)\. 
+**Note**  
+The "`_`" \(single underscore\) is also treated as a wildcard\.
 + Aggregation limitations:
   + Aggregate functions can accept only a single argument or property\.
   + Aggregate functions cannot take other functions as arguments\.

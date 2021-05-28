@@ -29,15 +29,15 @@ A public repository of sample functions for custom rules is available on GitHub,
 
 1. Choose **Create a Lambda function**\.
 
-1. On the **Select blueprint** page, you can choose one of the blueprint functions for AWS Config rules as a starting point, or you can proceed without a blueprint by choosing **Skip**\.
+1. On the **Use a blueprint** page, you can choose one of the blueprint functions for AWS Config rules as a starting point, or you can proceed without a blueprint by choosing **Skip**\.
 
 1. On the **Configure triggers** page, choose **Next**\.
 
-1. On the **Configure function** page, type a name and description\.
+1. On the **Basic information** page, type a name and description\.
 
 1. For **Runtime**, choose the programming language in which your function is written\.
 
-1. For **Code entry type**, choose your preferred entry type\. If you are using a blueprint, keep **Edit code inline**\.
+1. For **Code entry type**, choose your preferred entry type\. If you are using a blueprint, keep the preconfigured code\.
 
 1. Provide your code using the method required by the code entry type that you selected\. If you are using a blueprint, the function code is provided in the code editor, and you can customize it to include your own evaluation logic\. Your code can evaluate the event data that AWS Config provides when it invokes your function:
    + For functions based on the **config\-rule\-change\-triggered** blueprint, or for functions triggered by configuration changes, the event data is the configuration item or an oversized configuration item object for the AWS resource that changed\.
@@ -45,17 +45,13 @@ A public repository of sample functions for custom rules is available on GitHub,
    + For both types of functions, AWS Config passes rule parameters in JSON format\. You can define which rule parameters are passed when you create the custom rule in AWS Config\.
    + For example events that AWS Config publishes when it invokes your function, see [Example Events for AWS Config Rules](evaluate-config_develop-rules_example-events.md)\.
 
-1. For **Handler**, specify the handler for your function\. If you are using a blueprint, keep the default value\.
-
-1. For **Role**, choose **Create new role from template\(s\)**\.
+1. For **Execution role**, choose **Create new role from AWS Policy templates**\.
 
 1. For **Role name**, type a name\.
 
 1. For **Policy templates**, choose **AWS Config Rules permission**\. 
 
-1. On the **Configure function** page, choose **Next**\.
-
-1. On the **Review page**, verify the details about your function, and choose **Create function**\.
+1. Verify the details and choose **Create function**\.
 
 ## Creating a Custom Rule in AWS Config<a name="creating-a-custom-rule-with-the-AWS-Config-console"></a>
 
@@ -69,7 +65,7 @@ Use AWS Config to create a custom rule and associate the rule with a Lambda func
 
 1. On the **Rules** page, choose **Add rule**\.
 
-1. On the **Add rule** page, choose **Add custom rule**\.
+1. On the **Specify rule type** page, choose **Create custom rule**\.
 
 1. On the **Configure rule** page, type a name and description\.
 
@@ -82,15 +78,15 @@ The ARN that you specify in this step must not include the `$LATEST` qualifier\.
    + **Periodic** – AWS Config invokes your Lambda function at the frequency that you choose \(for example, every 24 hours\)\. 
 
 1. If the trigger types for your rule include **Configuration changes**, specify one of the following options for **Scope of changes** with which AWS Config invokes your Lambda function:
-   + **Resources** – When a resource that matches the specified resource type, or the type plus identifier, is created, changed, or deleted\.
-   + **Tags** – When a resource with the specified tag is created, changed, or deleted\.
-   + **All changes** – When a resource recorded by AWS Config is created, changed, or deleted\.
+   + **All changes** – When any resource recorded by AWS Config is created, changed, or deleted\.
+   + **Resources** – When any resource that matches the specified type, or the type plus identifier, is created, changed, or deleted\.
+   + **Tags** – When any resource with the specified tag is created, changed, or deleted
 
 1. If the trigger types for your rule include **Periodic**, specify the **Frequency** with which AWS Config invokes your Lambda function\.
 
-1. In the **Rule parameters** section, specify any rule parameters that your AWS Lambda function evaluates and the desired value\.
+1. In the **Parameters** section, specify any rule parameters that your AWS Lambda function evaluates and the desired value\.
 
-1. Choose **Save**\. Your new rule displays on the **Rules** page\.
+1. Choose **Next**\. On the **Review and create** page, verify the details about your rule, and choose **Add rule function**\. Your new rule displays on the **Rules**page\.
 
    **Compliance** will display **Evaluating\.\.\.** until AWS Config receives evaluation results from your AWS Lambda function\. If the rule and the function are working as expected, a summary of results appears after several minutes\. You can update the results with the refresh button\.
 

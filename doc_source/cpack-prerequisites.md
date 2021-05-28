@@ -30,6 +30,110 @@ If you do not have an existing custom AWS Config rule, you can create a AWS Lamb
 
 If your AWS Lambda function is present in a different AWS account, you can create AWS Config rules with appropriate cross\-account AWS Lambda function authorization\. For more information, see [How to Centrally Manage AWS Config Rules across Multiple AWS Accounts](https://aws.amazon.com/blogs/devops/how-to-centrally-manage-aws-config-rules-across-multiple-aws-accounts/) blog post\.
 
+**Same account bucket policy:**
+
+For AWS Config to be able to store conformance pack artifacts, you will need to provide an Amazon S3 bucket and add the following permissions\. For more information on naming your bucket, see [Bucket naming rules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html)\.
+
+```
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AWSConfigConformsBucketPermissionsCheck",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": [
+            "arn:aws:iam::AccountId:role/aws-service-role/config-conforms.amazonaws.com/AWSServiceRoleForConfigConforms"
+        ]
+      },
+      "Action": "s3:GetBucketAcl",
+      "Resource": "arn:aws:s3:::delivery-bucket-name"
+    },
+    {
+      "Sid": "AWSConfigConformsBucketDelivery",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": [
+            "arn:aws:iam::AccountId:role/aws-service-role/config-conforms.amazonaws.com/AWSServiceRoleForConfigConforms"
+        ]
+      },
+      "Action": "s3:PutObject",
+      "Resource": "arn:aws:s3:::delivery-bucket-name/[optional] prefix/AWSLogs/AccountId/Config/*",
+      "Condition": {
+        "StringEquals": {
+          "s3:x-amz-acl": "bucket-owner-full-control"
+        }
+      }
+    },
+    {
+      "Sid": " AWSConfigConformsBucketReadAccess",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": [
+            "arn:aws:iam::AccountId:role/aws-service-role/config-conforms.amazonaws.com/AWSServiceRoleForConfigConforms"
+        ]
+      },
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::delivery-bucket-name/[optional] prefix/AWSLogs/AccountId/Config/*"
+    }
+  ]
+}
+```
+
+**Cross\-account bucket policy:**
+
+For AWS Config to be able to store conformance pack artifacts, you will need to provide an Amazon S3 bucket and add the following permissions\. For more information on naming your bucket, see [Bucket naming rules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html)\.
+
+```
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AWSConfigConformsBucketPermissionsCheck",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": [
+            "arn:aws:iam::SourceAccountId:role/aws-service-role/config-conforms.amazonaws.com/AWSServiceRoleForConfigConforms",
+            "PutConformancePack API caller user principal like arn:aws:iam::SourceAccountId:user/userName "
+        ]
+      },
+      "Action": "s3:GetBucketAcl",
+      "Resource": "arn:aws:s3:::awsconfigconforms-suffix in bucket name"
+    },
+    {
+      "Sid": "AWSConfigConformsBucketDelivery",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": [
+            "arn:aws:iam::SourceAccountId:role/aws-service-role/config-conforms.amazonaws.com/AWSServiceRoleForConfigConforms"
+        ]
+      },
+      "Action": "s3:PutObject",
+      "Resource": "arn:aws:s3:::awsconfigconforms-suffix in bucket name/[optional] prefix/AWSLogs/AccountID/Config/*",
+      "Condition": {
+        "StringEquals": {
+          "s3:x-amz-acl": "bucket-owner-full-control"
+        }
+      }
+    },
+    {
+      "Sid": " AWSConfigConformsBucketReadAccess",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": [
+            "arn:aws:iam::SourceAccountId:role/aws-service-role/config-conforms.amazonaws.com/AWSServiceRoleForConfigConforms"
+        ]
+      },
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::awsconfigconforms-suffix in bucket name/[optional] prefix/AWSLogs/AccountID/Config/*"
+    }
+  ]
+}
+```
+
+**Note**  
+The statement ID should start with `awsconfigconforms`\.
+
 ## Prerequisites for Organization Conformance Packs<a name="cpack-prerequisites-organizationcpack"></a>
 
 Specify an automation execution role ARN for that remediation in the template if the input template has an autoremediation configuration\. Ensure a role with the specified name exists in all the accounts \(master and member\) of an organization\. You must create this role in all accounts before calling `PutOrganizationConformancePack`\. You can create this role manually or using the AWS CloudFormation stack\-sets to create this role in every account\.
@@ -37,3 +141,51 @@ Specify an automation execution role ARN for that remediation in the template if
 If your template uses AWS CloudFormation intrinsic function `[Fn::ImportValue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-importvalue.html)` to import a particular variable, then that variable must be defined as an `[Export Value](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html)` in all the member accounts of that organization\.
 
 For custom AWS Config rule, see [How to Centrally Manage AWS Config Rules across Multiple AWS Accounts](https://aws.amazon.com/blogs/devops/how-to-centrally-manage-aws-config-rules-across-multiple-aws-accounts/) blog to setup proper permissions\.
+
+**Organization bucket policy:**
+
+For AWS Config to be able to store conformance pack artifacts, you will need to provide an Amazon S3 bucket and add the following permissions\. For more information on naming your bucket, see [Bucket naming rules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html)\.
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                 "s3:GetObject",
+                 "s3:PutObject"
+            ],
+            "Resource": "arn:aws:s3:::awsconfigconforms--suffix in bucket name/*",
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalOrgID": "customer_org_id"
+                },
+                "ArnLike": {
+                    "aws:PrincipalArn": "arn:aws:iam::*:role/aws-service-role/config-conforms.amazonaws.com/AWSServiceRoleForConfigConforms"
+                }
+            }
+        },
+        {
+            "Sid": "AllowGetBucketAcl",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetBucketAcl",
+            "Resource": "arn:aws:s3:::awsconfigconforms-suffix in bucket name",
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalOrgID": "customer_org_id"
+                },
+                "ArnLike": {
+                    "aws:PrincipalArn": "arn:aws:iam::*:role/aws-service-role/config-conforms.amazonaws.com/AWSServiceRoleForConfigConforms"
+                }
+            }
+        }
+    ]
+}
+```
+
+**Note**  
+The statement ID should start with `awsconfigconforms`\.

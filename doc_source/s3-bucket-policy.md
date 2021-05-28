@@ -20,7 +20,7 @@ Before AWS Config can deliver logs to your Amazon S3 bucket AWS Config checks wh
 
 ## Required Permissions for the Amazon S3 Bucket When Using Service\-Linked Roles<a name="required-permissions-using-servicelinkedrole"></a>
 
-If you set up AWS Config using a service\-linked role, you need to attach an access policy, mentioned in step 6 below to the Amazon S3 bucket in your own account or another account to grant AWS Config access to the Amazon S3 bucket\.
+If you set up AWS Config using a service\-linked role, you need to attach an access policy, mentioned in step 6 below to the Amazon S3 bucket in your own account or another account to grant AWS Config access to the Amazon S3 bucket\. It is not recommended to use service\-linked roles for AWS Config cross\-account setup\.
 
 ## Granting AWS Config access to the Amazon S3 Bucket<a name="granting-access-in-another-account"></a>
 

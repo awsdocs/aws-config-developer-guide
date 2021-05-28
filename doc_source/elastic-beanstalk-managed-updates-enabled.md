@@ -11,7 +11,7 @@ Checks if managed platform updates in an AWS Elastic Beanstalk environment is en
 **Parameters:**
 
 UpdateLevel \(Optional\)Type: String  
-UpdateLevel: \(optional\): A parameter for platform update, to check if updates level will be a 'minor' version update, or a 'patch'
+Indicates whether update levels are set to 'minor' version updates or a 'patch' version updates\.
 
 ## AWS CloudFormation template<a name="w29aac11c33c17b7d165c15"></a>
 

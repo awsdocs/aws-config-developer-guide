@@ -12,6 +12,6 @@ Checks if Amazon Relational Database Service \(RDS\) database instances are conf
 
 None  
 
-## AWS CloudFormation template<a name="w29aac11c33c17b7d255c15"></a>
+## AWS CloudFormation template<a name="w29aac11c33c17b7d245c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

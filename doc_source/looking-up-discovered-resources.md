@@ -11,10 +11,9 @@ You can use resource types or tag information to look up resources in the AWS Co
 1. Sign in to the AWS Management Console and open the AWS Config console at [https://console\.aws\.amazon\.com/config/](https://console.aws.amazon.com/config/)\.
 
 1. On the **Resource inventory** page, specify the search options for the resources that you want to look up:
-   + Choose **Resources** and then choose one or more resource types in the list\. This list includes resource types that AWS Config supports\. To narrow results, type a resource ID or, if applicable, a resource name in the next box\. You can also choose **Include deleted resources**\. 
-   + Choose **Tag** and type a tag key that is applied to your resources, such as **CostCenter**\. To narrow results, type a tag value in the next box\.
-
-1. After you specify the search options, choose **Look up**\.
+   + **Resource category** – Choose all resource categories or narrow results to only AWS Resources\.
+   + **Resource type** – Choose all resource types or select which resource\(s\) to filter by\.
+   + **Compliance** – Choose to filter by any compliance status, compliant, or noncompliant\.
 
 1. AWS Config lists the resources that match your search options\. You can see the following information about the resources:
    + **Resource identifier** – The resource identifier might be a resource ID or a resource name, if applicable\. Choose the resource identifier link to view the resource details page\. 

@@ -12,7 +12,6 @@ In the AWS Management Console, you can either choose to **manually** or **automa
 + [Prerequisite](#prerequisite)
 + [Setting Up Manual Remediation \(Console\)](#setup-manualremediation)
 + [Setting Up Auto Remediation \(Console\)](#setup-autoremediation)
-+ [Setting Up and Applying a Remediation Action Remediation Using Rules and Resources \(Console\)](#remediation-using-rules-resources-page)
 + [Delete Remediation Action \(Console\)](#delete-remediation-action)
 + [Managing Remediation \(API\)](#remediate-api)
 
@@ -38,6 +37,9 @@ Before you begin to apply remediation on noncompliant resources, you must select
 
 1. Choose **Save**\. The **Rules** page is displayed\.
 
+**Note**  
+For troubleshooting failed remediation actions, you can run the AWS Command Line Interface \(AWS CLI\) command `describe-remediation-execution-status` to get detailed view of a Remediation Execution for a set of resources\. The details include state, timestamps for remediation execution steps, and any error messages for the failed steps\.
+
 ## Setting Up Auto Remediation \(Console\)<a name="setup-autoremediation"></a>
 
 1. Sign in to the AWS Management Console and open the AWS Config console at [https://console\.aws\.amazon\.com/config/](https://console.aws.amazon.com/config/)\.
@@ -62,77 +64,6 @@ There are costs associated with running a remediation script multiple times\.
 
 1. Choose **Save**\. The **Rules** page is displayed\.
 
-## Setting Up and Applying a Remediation Action Remediation Using Rules and Resources \(Console\)<a name="remediation-using-rules-resources-page"></a>
-
-You can also set up remediation from the Rules and the Resources pages\. The following procedures provide more details about each workflow\.
-
-### Using Rules<a name="remediation-using-console-rules"></a>
-
-You can apply a remediation action to a noncompliant rule from **Rules** on the left\.
-
-1. Sign in to the AWS Management Console and open the AWS Config console at [https://console\.aws\.amazon\.com/config/](https://console.aws.amazon.com/config/)\.
-
-1. Choose **Rules** on the left and then on the **Rules** page, choose **Add Rule** to add new rules to the rule list\.
-
-   For existing rules, select the noncompliant rule from the rule list and choose **Edit**\.
-
-1. Choose **Manage remediation** and on the **Manage remediation: ***name of the rule* page, select the appropriate remediation action from the recommended list\. The remediation actions are related to AWS Systems Manager automation documents\.
-
-   Depending on the selected remediation action, you will see either specific parameters or no parameters\.
-
-1. If you want to pass the resource ID of noncompliant resources to the remediation action, choose **Resource ID parameter**\. If selected, at runtime that parameter is substituted with the ID of the resource to be remediated\.
-
-   Each parameter has either a static value or a dynamic value\. If you do not choose a specific resource ID parameter from the drop\-down list, you can enter values for each key\. If you choose a resource ID parameter from the drop\-down list, you can enter values for all the other keys except the selected resource ID parameter\. 
-
-1. Choose **Save**\.
-
-1. In the **Choose resources in scope** section, choose all the noncompliant resources\. The resources in scope include those resources where this rule is applied and their compliance status\.
-
-   For more information about a resource, choose **Resource actions** and either choose **View details**, **Configuration timeline**, or **Compliance timeline**\.
-
-1. Choose **Remediate**\.
-
-   If the resources are remediated, the resource compliance status is compliant\. To view the compliant resources, select **Compliant** from the compliance status list\.
-
-   If the resources are not remediated, the action status column displays ** Action execution failed \(details\)**\. Choose **\(details\)** to view the main action steps invoked during the execution of the remediation action and the status of each action step\. 
-**Note**  
-For troubleshooting failed remediation actions, you can run the AWS Command Line Interface \(AWS CLI\) command `describe-remediation-execution-status` to get detailed view of a Remediation Execution for a set of resources\. The details include state, timestamps for remediation execution steps, and any error messages for the failed steps\.
-
-### Using Resources<a name="remediation-using-console-resources"></a>
-
-You can also apply a remediation action to a noncompliant rule from **Resources** on the left\.
-
-1. Sign in to the AWS Management Console and open the AWS Config console at [https://console\.aws\.amazon\.com/config/](https://console.aws.amazon.com/config/)\.
-
-1. Choose **Resources** on the left and then on the **Resource inventory** page, **Resources** is selected by default\.
-
-1. Select one or more resources from the resource type and choose **Look up**\.
-
-1. Choose the name of the appropriate noncompliant resource from the resource table\.
-
-1. On the **Resource details: *** name of the resource* page, choose one or more noncompliant rules from the rules in scope\.
-
-1. Choose **Rule actions** and select **Manage remediation**\. 
-
-1. On the **Manage remediation: ***name of the rule* page, select the appropriate remediation action\.
-
-   Depending on the selected remediation action, you will see either specific parameters or no parameters\.
-
-1. If you want to pass the resource ID of noncompliant resources to the remediation action, choose **Resource ID parameter**\. If selected, at runtime that parameter is substituted with the ID of the resource to be remediated\.
-
-   Each parameter has either a static value or a dynamic value\. If you do not choose a specific resource ID parameter from the drop\-down list, you can enter values for each key\. If you choose a resource ID parameter from the drop\-down list, you can enter values for all the other keys except the selected resource ID parameter\. 
-
-1. Choose **Save**\.
-
-1. In the **Choose resources in scope** section, choose all the noncompliant resources\. The resources in scope include those resources where this rule is applied and their compliance status\.
-
-   For more information about a resource, choose **Resource actions** and either choose **View details**, **Configuration timeline**, or **Compliance timeline**\.
-
-1. Choose **Remediate**\.
-
-   If the resources are remediated, the resource compliance status is **compliant**\. To view the compliant resources, select **Compliant** from the compliance status list\.
-
-   If the resources are not remediated, the action status column displays ** Action execution failed \(details\)**\. Choose **\(details\)** to view the main action steps invoked during the execution of the remediation action and the status of each action step\.
 **Note**  
 For troubleshooting failed remediation actions, you can run the AWS Command Line Interface \(AWS CLI\) command `describe-remediation-execution-status` to get detailed view of a Remediation Execution for a set of resources\. The details include state, timestamps for remediation execution steps, and any error messages for the failed steps\.
 
@@ -142,15 +73,15 @@ To delete a rule first you must delete remediation action associated with that r
 
 1. Sign in to the AWS Management Console and open the AWS Config console at [https://console\.aws\.amazon\.com/config/](https://console.aws.amazon.com/config/)\.
 
-1. Choose **Rules** on the left and then on the **Rules** page, select the rule from the rule list and choose **Edit**\.
+1. Choose **Rules** on the left and then on the **Rules** page, select the rule from the rule list and choose **View details**\.
 
-1. On the rule page, choose **Edit** again\.
+1. On the *name of the rule* page, go to the **Remediation action** section\. Expand the section to view additional details\.
 
-1. On the **Edit ***name of the rule* page, in the **Choose remediation action** section, choose **Delete remediation action** and confirm your delete action\.
+1. In the **Remediation action** section, choose **Delete** and confirm your delete action\.
 **Note**  
-If remediation is in progress, the remediation action is not deleted\. If you choose **Delete remediation action**, you cannot retrieve the remediation action\. When you delete a remediation action, AWS Config does not delete a rule\.
+If remediation is in progress, a remediation action won't be deleted\. Once you choose delete a remediation action, you cannot retrieve the remediation action\. Deleting a remediation action does not delete the associated rule\.
 
-   If the remediation action is deleted, the **Resource ID parameter** is empty and displays N/A\. On the **Rules** page, the remediation action column displays **Not set** for the corresponding rule\.
+   If a remediation action is deleted, the **Resource ID parameter** will be empty and display N/A\. On the **Rules** page, the remediation action column displays **Not set** for the associated rule\.
 
 ## Managing Remediation \(API\)<a name="remediate-api"></a>
 

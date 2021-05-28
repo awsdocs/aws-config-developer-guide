@@ -1,8 +1,8 @@
-# rds\-cluster\-iam\-authentication\-enabled<a name="rds-cluster-iam-authentication-enabled"></a>
+# rds\-cluster\-multi\-az\-enabled<a name="rds-cluster-multi-az-enabled"></a>
 
-Checks if an Amazon RDS Cluster has AWS Identity and Access Management \(IAM\) authentication enabled\. The rule is NON\_COMPLIANT if an RDS Cluster does not have IAM authentication enabled\. 
+Checks if Multi\-AZ replication is enabled on Amazon Aurora clusters managed by Amazon Relational Database Service \(Amazon RDS\)\. This rule is NON\_COMPLIANT if an Amazon RDS instance is not configured with Multi\-AZ\. 
 
-**Identifier:** RDS\_CLUSTER\_IAM\_AUTHENTICATION\_ENABLED
+**Identifier:** RDS\_CLUSTER\_MULTI\_AZ\_ENABLED
 
 **Trigger type:** Configuration changes
 
@@ -12,6 +12,6 @@ Checks if an Amazon RDS Cluster has AWS Identity and Access Management \(IAM\) a
 
 None  
 
-## AWS CloudFormation template<a name="w29aac11c33c17b7d249c15"></a>
+## AWS CloudFormation template<a name="w29aac11c33c17b7d251c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

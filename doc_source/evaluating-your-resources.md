@@ -20,13 +20,13 @@ When you create custom rules or use managed rules, AWS Config evaluates your res
 
 1. In the AWS Management Console menu, verify that the region selector is set to a region that supports AWS Config rules\. For the list of supported regions, see [AWS Config Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html#awsconfig_region) in the *Amazon Web Services General Reference*\.
 
-1. In the navigation pane, choose **Rules**\. The **Rules** page shows your rules and the compliance status for each\.
+1. In the navigation pane, choose **Rules**\. The **Rules** page shows the name, associated remediation action, and compliance status of each rule\.
 
-1. Choose a rule from the list\.
+1. Choose a rule from the table\.
 
-1.  In the **Re\-evaluate rule** section, choose **Re\-evaluate**\. 
+1. From the **Actions** dropdown list, choose **Re\-evaluate**\.
 
-1.  AWS Config starts evaluating the resources against your rule\. 
+1.  AWS Config starts evaluating the resources against your rule\.
 
 **Note**  
 You can re\-evaluate a rule once per minute\. You must wait for AWS Config to complete the evaluation for your rule before you start another evaluation\. You can't run an evaluation if at the same time the rule is being updated or if the rule is being deleted\.

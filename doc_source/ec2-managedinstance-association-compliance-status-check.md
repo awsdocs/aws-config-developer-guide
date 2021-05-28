@@ -12,6 +12,6 @@ Checks whether the compliance status of the AWS Systems Manager association comp
 
 None  
 
-## AWS CloudFormation template<a name="w29aac11c33c17b7d129c15"></a>
+## AWS CloudFormation template<a name="w29aac11c33c17b7d127c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

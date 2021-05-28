@@ -17,6 +17,6 @@ Checks if Amazon Elastic Kubernetes Service clusters are configured to have Kube
 kmsKeyArns \(Optional\)Type: CSV  
 Comma separated list of Amazon Resource Name \(ARN\) of the KMS key that should be used for encrypted secrets in an EKS cluster\.
 
-## AWS CloudFormation template<a name="w29aac11c33c17b7d153c17"></a>
+## AWS CloudFormation template<a name="w29aac11c33c17b7d151c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

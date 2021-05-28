@@ -13,6 +13,6 @@ Checks if the Amazon Simple Storage Service bucket policy does not allow blackli
 blacklistedActionPatternType: CSV  
 Comma\-separated list of blacklisted action patterns, for example, s3:GetBucket\* and s3:DeleteObject\.
 
-## AWS CloudFormation template<a name="w29aac11c33c17b7d305c15"></a>
+## AWS CloudFormation template<a name="w29aac11c33c17b7d295c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

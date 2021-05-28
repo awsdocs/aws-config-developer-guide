@@ -76,7 +76,7 @@ If necessary, type `aws configure` to configure the AWS CLI to use an AWS Region
 Before you begin this procedure, you must be signed in to the management account or a registered delegated administrator and all the features must be enabled in your organization\. 
 
 **Note**  
-Ensure that the management account registers delagated administrator for AWS Config service principle name \(config\.amazonaws\.com\) before the delegated administrator creates an aggregator\. To register a delegated administrator, see [Register a Delegated Administrator](#register-a-delegated-administrator-cli)\.
+Ensure that the management account registers delegated administrator for AWS Config service principal name \(config\.amazonaws\.com\) before the delegated administrator creates an aggregator\. To register a delegated administrator, see [Register a Delegated Administrator](#register-a-delegated-administrator-cli)\.
 
 1. Open a command prompt or a terminal window\.
 

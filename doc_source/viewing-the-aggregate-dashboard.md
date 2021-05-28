@@ -1,6 +1,6 @@
 # Viewing Compliance Data in the Aggregator Dashboard<a name="viewing-the-aggregate-dashboard"></a>
 
-The dashboard on the **Aggregators** page displays the configuration data of AWS resources and provides an overview of your rules and conformance packs and their compliance states\.
+The dashboard on the **Aggregators** page displays the configuration data of AWS resources and provides an overview of your rules and conformance packs and their compliance states\. This dashboard only displays rules with compliance results\.
 
 It provides the total resource count of AWS resources\. The resource types and source accounts are ranked by the highest number of resources\. It also provides a count of compliant and noncompliant rules and conformance packs\. The noncompliant rules are ranked by highest number of noncompliant resources\. The noncompliant conformance packs and source accounts are ranked by the highest number of noncompliant rules\.
 

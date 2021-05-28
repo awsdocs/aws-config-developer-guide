@@ -10,8 +10,8 @@ After setup, AWS Config starts recording the specified resources and then evalua
 
 1. Choose **Dashboard**\.
 
-1. Use the **Dashboard** to see an overview of your resources, rules, and their compliance state\. You can do the following:
-   + View the total number of resources that AWS Config is recording\.
+1. Use the **Dashboard** to see an overview of your resources, rules, and their compliance state\. For the following options, you can filter between All resources and AWS Resources:
+   + View the number of resources that AWS Config is recording\.
    + View the resource types that AWS Config is recording, in descending order \(the number of resources\)\. Choose a resource type to go to the **Resources inventory** page\.
    + View the number of noncompliant rules\.
    + View the number of noncompliant resources\.

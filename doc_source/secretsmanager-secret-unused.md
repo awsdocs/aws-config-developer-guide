@@ -13,6 +13,6 @@ Checks if AWS Secrets Manager secrets have been accessed within a specified numb
 unusedForDays \(Optional\)Type: int  
 The number of days in which a secret can remain unused\. The default value is 90 days\.
 
-## AWS CloudFormation template<a name="w29aac11c33c17b7d343c15"></a>
+## AWS CloudFormation template<a name="w29aac11c33c17b7d333c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

@@ -5,16 +5,16 @@ On the **Aggregator** page, you can do the following:
 + Edit and delete an aggregator\.
 
 **Topics**
-+ [Add an Aggregator](#add-an-aggregator-console)
++ [Create an Aggregator](#add-an-aggregator-console)
 + [Edit an Aggregator](#edit-an-aggregator-console)
 + [Delete an Aggregator](#delete-an-aggregator-console)
 + [Learn More](#learn-more-setup-console)
 
-## Add an Aggregator<a name="add-an-aggregator-console"></a>
+## Create an Aggregator<a name="add-an-aggregator-console"></a>
 
 1. Sign in to the AWS Management Console and open the AWS Config console at [https://console\.aws\.amazon\.com/config/](https://console.aws.amazon.com/config/)\.
 
-1. Navigate to the **Aggregators** page and choose **Add aggregator**\.
+1. Navigate to the **Aggregators** page and choose **Create aggregator**\.
 
 1. **Allow data replication**, gives permission to AWS Config to replicate data from the source accounts into an aggregator account\.
 

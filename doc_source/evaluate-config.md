@@ -36,3 +36,9 @@ Currently, AWS Config Rules is supported in the following regions:
 
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/evaluate-config.html)
+
+Deploying AWS Config Rules across member accounts in an AWS Organization is supported in the following Regions\.
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/evaluate-config.html)

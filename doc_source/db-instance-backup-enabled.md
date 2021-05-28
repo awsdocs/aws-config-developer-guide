@@ -13,6 +13,9 @@ Checks if RDS DB instances have backups enabled\. Optionally, the rule checks th
 backupRetentionPeriod \(Optional\)Type: int  
 Retention period for backups\.
 
+backupRetentionMinimum \(Optional\)Type: int  
+Minimum retention period for backups\.
+
 preferredBackupWindow \(Optional\)Type: String  
 Time range in which backups are created\.
 

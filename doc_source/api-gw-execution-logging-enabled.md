@@ -13,6 +13,6 @@ Checks that all methods in Amazon API Gateway stage has logging enabled\. The ru
 loggingLevel \(Optional\)Type: StringDefault: ERROR,INFO  
 Comma\-separated list of specific logging levels \(for example, ERROR, INFO or ERROR,INFO\)\.
 
-## AWS CloudFormation template<a name="w29aac11c33c17b7c17c15"></a>
+## AWS CloudFormation template<a name="w29aac11c33c17b7c19c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

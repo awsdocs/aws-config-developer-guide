@@ -8,11 +8,13 @@ You can use the AWS Config console, AWS CLI, or AWS Config API to view the compl
 
 1. In the AWS Management Console menu, verify that the region selector is set to a region that supports AWS Config rules\. For the list of supported regions, see [AWS Config Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html#awsconfig_region) in the *Amazon Web Services General Reference*\.
 
-1. In the navigation pane, choose **Rules**\. The console shows the **Rules** page, which lists your rules and the compliance status of each\.
+1. In the navigation pane, choose **Resources**\. On the Resource inventory page, you can filter by resource category, resource type, and compliance status\. Choose **Include deleted resources** if appropriate\. The table displays the resource identifier for the resource type and the resource compliance status for that resource\. The resource identifier might be a resource ID or a resource name\. 
 
-1. Choose a rule to view its **Rule details** page\. This page shows the rule's configuration, its status, and any AWS resources that do not comply with it\.
+1. Choose a resource from the resource identifier column\.
 
-1. If the **Rule details** shows any noncompliant resources, choose the **Config timeline** icon \(![\[Config timeline icon.\]](http://docs.aws.amazon.com/config/latest/developerguide/images/config-timeline.png)\) for a resource to see its configuration timeline page\. The page shows the configuration settings that AWS Config captured when it detected that the resource was noncompliant\. This information can help you determine why the resource fails to comply with the rule\. For more information, see [Viewing Configuration Details](view-manage-resource-console.md)\.
+1. Choose the **Resource Timeline** button\. You can filter by Configuration events, Compliance events, or CloudTrail Events\.
+**Note**  
+Alternatively, on the Resource inventory page, you can directly choose the resource name\. To access the resource timeline from the resource details page, choose the **Resource Timeline** button\.
 
 You can also view the compliance of your resources by looking them up on the **Resource inventory** page\. For more information, see [Looking Up Resources That Are Discovered by AWS Config](looking-up-discovered-resources.md)\.
 

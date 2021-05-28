@@ -25,8 +25,8 @@ Amazon Linux 2
 Ubuntu Server 16\.04
 Ubuntu Server 18\.04
 On EC2 instances that were not created from an AMI with the agent preinstalled, you must install the agent manually\. For information, see the following topics in the *AWS Systems Manager User Guide*:   
-[Installing and Configuring SSM Agent on Windows Instances](url-sys-user;sysman-install-ssm-win.html)
-[Installing and Configuring SSM Agent on Amazon EC2 Linux Instances](url-sys-user;sysman-install-ssm-agent.html)
+[Installing and configuring SSM Agent on EC2 instances for Windows Server](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-install-ssm-win.html)
+[Installing and configuring SSM Agent on EC2 instances for Linux](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-install-ssm-agent.html)
 
 1. Initiate inventory collection as described in [Configuring Inventory Collection](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-inventory-configuring.html) in the *AWS Systems Manager User Guide*\. The procedures are the same for Linux and Windows instances\.
 

@@ -18,42 +18,40 @@ To create this rule, first, you will create an AWS Lambda function by customizin
 
 1. In the AWS Lambda console, choose **Create a Lambda function**\.
 
-1. On the **Select blueprint** page, for **filter**, type **config\-rule\-change\-triggered**\. Select the blueprint in the filter results\. 
+1. Choose **Use a blueprint**\. In the search bar, type **config\-rule\-change\-triggered**\. Select the blueprint in the filter results and choose **Configure**\.
 
 1. On the **Configure triggers** page, choose **Next**\.
 
-1. On the **Configure function** page, complete the following steps:
+1. On the **Basic information** page, complete the following steps:
 
-   1. For **Name**, type **InstanceTypeCheck**\.
+   1. For **Function name**, type **InstanceTypeCheck**\.
+
+   1. For **Execution role**, choose **Create new role from AWS Policy templates**\.
 
    1. For **Runtime**, keep **Node\.js**\.
 
-   1. For **Code entry type**, keep **Edit code inline**\. The Node\.js code for your function is provided in the code editor\. For this procedure, you do not need to change the code\.
+   1. For **Role name**, type name\.
 
-   1. For **Handler**, keep **index\.handler**\.
+   1. For **Policy templates**, choose **AWS Config Rules permission**\.
 
-   1. For **Role**, choose **Create new role from template\(s\)**\.
+   1. For **Lambda function code function**, keep the preconfigured code\. The Node\.js code for your function is provided in the code editor\. For this procedure, you do not need to change the code\.
 
-   1. For **Role name**, type a name\.
-
-   1. For **Policy templates**, choose **AWS Config Rules permission**\. 
-
-   1. On the **Configure function** page, choose **Next**\.
-
-   1. On the **Review page**, verify the details about your function, and choose **Create function**\. The AWS Lambda console displays your function\.
+   1. Verify the details and choose **Create function**\. The AWS Lambda console displays your function\.
 
 1. To verify that your function is set up correctly, test it with the following steps:
 
-   1. Choose **Actions**, and then choose **Configure test event**\.
+   1. Choose **Test** from the menu below **Function overview** and then choose **Configure test event**\.
 
-   1. In the **Input test event** window, for **Sample event template**, choose **AWS Config Change Triggered Rule**\.
+   1. For **Template**, choose **AWS Config Configuration Item Change Notification**\.
 
-   1. Choose **Save and test**\. AWS Lambda tests your function with the example event\. If your function is working as expected, an error message similar to the following appears under **Execution result**:
+   1. For **Name**, type a name\.
+
+   1. Choose **Test**\. AWS Lambda tests your function with the example event\. If your function is working as expected, an error message similar to the following appears under **Execution result**:
 
       ```
       {
+        "errorType": "InvalidResultTokenException,"
         "errorMessage": "Result Token provided is invalid",
-        "errorType": "InvalidResultTokenException",
       . . .
       ```
 
@@ -67,7 +65,7 @@ To create this rule, first, you will create an AWS Lambda function by customizin
 
 1. On the **Rules** page, choose **Add rule**\.
 
-1. On the **Add rule** page, choose **Add custom rule**\.
+1. On the **Specify rule type** page, choose **Create custom rule**\.
 
 1. On the **Configure rule** page, complete the following steps:
 
@@ -79,24 +77,24 @@ To create this rule, first, you will create an AWS Lambda function by customizin
 **Note**  
 The ARN that you specify in this step must not include the `$LATEST` qualifier\. You can specify an ARN without a version qualifier or with any qualifier besides `$LATEST`\. AWS Lambda supports function versioning, and each version is assigned an ARN with a qualifier\. AWS Lambda uses the `$LATEST` qualifier for the latest version\. 
 
-   1. For **Trigger type**, choose **Configuration changes**\.
+   1. For **Trigger type**, choose **When configuration changes**\.
 
    1. For **Scope of changes**, choose **Resources**\.
 
-   1. For **Resources**, choose **Instance**\.
+   1. For **Resources**, choose **AWS EC2 Instance** from the **Resource Type** dropdown list\.
 
-   1. In the **Rule parameters** section, you must specify the rule parameter that your AWS Lambda function evaluates and the desired value\. The function for this procedure evaluates the `desiredInstanceType` parameter\.
+   1. In the **Parameters** section, you must specify the rule parameter that your AWS Lambda function evaluates and the desired value\. The function for this procedure evaluates the `desiredInstanceType` parameter\.
 
       For **Key**, type **desiredInstanceType**\. For **Value**, type **t2\.micro**\.
 
-1. Choose **Save**\. Your new rule displays on the **Rules** page\. 
+1. Choose **Next**\. On the **Review and create** page, verify the details about your rule, and choose **Add rule function**\. Your new rule displays on the **Rules**page\.
 
    **Compliance** will display **Evaluating\.\.\.** until AWS Config receives evaluation results from your AWS Lambda function\. If the rule and the function are working as expected, a summary of the results appears after several minutes\. For example, a result of **2 noncompliant resource\(s\)** indicates that 2 of your instances are not t2\.micro instances, and a result of **Compliant** indicates that all instances are t2\.micro\. You can update the results with the refresh button\.
 
    If the rule or function is not working as expected, you might see one of the following for **Compliance**:
    + **No results reported** \- AWS Config evaluated your resources against the rule\. The rule did not apply to the AWS resources in its scope, the specified resources were deleted, or the evaluation results were deleted\. To get evaluation results, update the rule, change its scope, or choose **Re\-evaluate**\. 
 
-     Verify that the scope includes **Instance** for **Resources**, and try again\.
+     Verify that the scope includes **AWS EC2 Instance** for **Resources**, and try again\.
    + **No resources in scope ** \- AWS Config cannot evaluate your recorded AWS resources against this rule because none of your resources are within the rule’s scope\. To get evaluation results, edit the rule and change its scope, or add resources for AWS Config to record by using the **Settings** page\.
 
      Verify that AWS Config is recording EC2 instances\.

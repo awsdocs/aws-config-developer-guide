@@ -8,13 +8,13 @@ After AWS Config evaluates your rule, you can see the evaluation results on the 
 
 1. In the AWS Management Console menu, verify that the region selector is set to a region that supports AWS Config rules\. For the list of supported regions, see [AWS Config Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html#awsconfig_region) in the *Amazon Web Services General Reference*\.
 
-1. In the navigation pane, choose **Rules**\. The **Rules** page shows your rules and the compliance status\.
+1. In the navigation pane, choose **Rules**\. The **Rules** page shows the name, associated remediation action, and compliance status of each rule\.
 
-1. Choose a rule from the list\.
+1. Choose a rule from the table\.
 
-1. In the **Delete evaluation results** section, choose **Delete results**\. AWS Config deletes the evaluation results for this rule\. 
+1. From the **Actions** dropdown list, choose **Delete results**\.
 
-1. When prompted, choose **Delete**\. Deleted evaluations can't be retrieved\.
+1. When prompted, type "Delete" \(case\-sensitive\) and then choose **Delete**\. Deleted evaluations can't be retrieved\.
 
 1. After the evaluation results are deleted, you can manually start a new evaluation\.
 

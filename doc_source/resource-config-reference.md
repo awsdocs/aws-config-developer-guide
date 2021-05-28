@@ -74,6 +74,12 @@ Old \(not supported\): `arn:aws:ecs:region:aws_account_id:service/service-name`
 
 New \(supported\): `arn:aws:ecs:region:aws_account_id:service/cluster-name/service-name`
 
+## Amazon Elastic File System<a name="amazonelasticfilesystem"></a>
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
+
 ## Amazon Elastic Kubernetes Service<a name="amazonelastickubernetesservice"></a>
 
 

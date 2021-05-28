@@ -27,17 +27,17 @@ On the **Rules** page, you can view the rules for the region in your account\. Y
 
 1. Choose a rule and **Edit rule** for the rule that you want to update\.
 
-1. Modify the settings on the **Config rule** page to change your rule as needed\.
+1. Modify the settings on the **Edit rule** page to change your rule as needed\.
 
 1. Choose **Save**\.
 
 **To delete a rule**
 
-1. Choose a rule and **Edit rule** for the rule that you want to delete\.
+1. Choose a rule from the table that you want to delete\.
 
-1. On the **Configure rule** page, choose **Delete rule**\.
+1. From the **Actions** dropdown list, choose **Delete rule**\.
 
-1. When prompted, choose **Delete**\.
+1. When prompted, type "Delete" \(case\-sensitive\) and then choose **Delete**\.
 
 **To add a rule**
 

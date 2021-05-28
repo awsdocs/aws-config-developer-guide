@@ -6,7 +6,7 @@ You can view the configuration, relationships, and number of changes made to a r
 
 When you look up resources on the **Resource inventory** page, choose the resource name or ID in the resource identifier column to view the resource's details page\. The details page provides information about the configuration, relationships, and number of changes made to that resource\.
 
-To access the resource timeline from the resource details page, choose the **Resource Timeline** button\.
+To access the resource timeline from the resource details page, choose the **Resource Timeline** button\. The Resource timeline captures changes as `ConfigurationItems` over a period of time for a specific resource\. You can filter by Configuration events, Compliance events, or CloudTrail Events\.
 
 ## Viewing Configuration Details \(AWS CLI\)<a name="view-config-details-cli"></a>
 

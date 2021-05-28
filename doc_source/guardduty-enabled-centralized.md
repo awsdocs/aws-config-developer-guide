@@ -13,6 +13,6 @@ Checks if Amazon GuardDuty is enabled in your AWS account and region\. If you pr
 CentralMonitoringAccount \(Optional\)Type: String  
 Comma separated list of AWS Accounts \(12\-digit\) where Amazon GuardDuty results are allowed to be centralized\.
 
-## AWS CloudFormation template<a name="w29aac11c33c17b7d199c15"></a>
+## AWS CloudFormation template<a name="w29aac11c33c17b7d193c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

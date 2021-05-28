@@ -1,6 +1,6 @@
 # Viewing Compliance History Timeline for Resources<a name="view-compliance-history"></a>
 
-AWS Config supports storing compliance state changes of resources as evaluated by AWS Config Rules\. The resource compliance history is presented in the form of a timeline\. The timeline captures changes as `ConfigurationItems` over a period of time for a specific resource\. The resource timeline is available in the AWS Config console adjacent to the Configuration timeline\. 
+AWS Config supports storing compliance state changes of resources as evaluated by AWS Config Rules\. The resource compliance history is presented in the form of a timeline\. The timeline captures changes as `ConfigurationItems` over a period of time for a specific resource\.
 
 You can opt in or out to record all resource types in AWS Config\. If you have opted to record all resource types, AWS Config automatically begins to recording the resource compliance history as evaluated by AWS Config Rules\. By default, AWS Config records the configuration changes for all supported resources\. You can also select only the specific resource compliance history resource type: `AWS::Config::ResourceCompliance`\. For more information, see [Selecting Which Resources AWS Config Records](https://docs.aws.amazon.com/config/latest/developerguide/select-resources.html#select-resources-console)\.
 
@@ -8,15 +8,15 @@ You can opt in or out to record all resource types in AWS Config\. If you have o
 
 Access the resource timeline by selecting a specific resource from the Resource inventory page\.
 
-1. Select the **Resources** from the left navigation\.
+1. Choose the **Resources** from the left navigation\.
 
-1. On the Resource inventory page, select all the existing resources from the drop\-down and if appropriate, select include deleted resources\.
+1. On the Resource inventory page, you can filter by resource category, resource type, and compliance status\. Choose **Include deleted resources** if appropriate\.
 
-   The table displays the resource identifier for the resource type and the resource compliance status for that resource\. The resource identifier might be a resource ID or a resource name, if applicable\. 
+   The table displays the resource identifier for the resource type and the resource compliance status for that resource\. The resource identifier might be a resource ID or a resource name\.
 
-1. Select the resource from the resource identifier column\.
+1. Choose a resource from the resource identifier column\.
 
-1. Select the **Resource Timeline** button\.
+1. Choose the **Resource Timeline** button\. You can filter by Configuration events, Compliance events, or CloudTrail Events\.
 **Note**  
 Alternatively, on the Resource inventory page, you can directly choose the resource name\. To access the resource timeline from the resource details page, choose the **Resource Timeline** button\.
 

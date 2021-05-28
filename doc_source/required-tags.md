@@ -1,6 +1,6 @@
 # required\-tags<a name="required-tags"></a>
 
-Checks if your resources have the tags that you specify\. For example, you can check whether your Amazon EC2 instances have the `CostCenter` tag\. Separate multiple values with commas\.
+Checks if your resources have the tags that you specify\. For example, you can check whether your Amazon EC2 instances have the `CostCenter` tag\. Separate multiple values with commas\. You can check up to 6 tags at a time\.
 
 **Important**  
 The supported resource types for this rule are as follows:  
@@ -79,6 +79,6 @@ Key of a sixth required tag\.
 tag6Value \(Optional\)Type: CSV  
 Optional value of the sixth required tag\. Separate multiple values with commas\.
 
-## AWS CloudFormation template<a name="w29aac11c33c17b7d295c17"></a>
+## AWS CloudFormation template<a name="w29aac11c33c17b7d287c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.
