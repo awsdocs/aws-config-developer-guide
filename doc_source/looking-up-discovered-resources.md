@@ -27,7 +27,7 @@ You can use resource types or tag information to look up resources in the AWS Co
 You can use the AWS CLI to list resources that AWS Config has discovered\. 
 
 **To look up resources \(AWS CLI\)**
-+ Use the aws configservice [http://docs.aws.amazon.com/cli/latest/reference/configservice/list-discovered-resources.html](http://docs.aws.amazon.com/cli/latest/reference/configservice/list-discovered-resources.html) command:  
++ Use the AWS Configservice [http://docs.aws.amazon.com/cli/latest/reference/configservice/list-discovered-resources.html](http://docs.aws.amazon.com/cli/latest/reference/configservice/list-discovered-resources.html) command:  
 **Example**  
 
   ```

@@ -28,6 +28,6 @@ The operation for comparing the specified statistic and threshold \(for example,
 statistic \(Optional\)Type: String  
 The statistic for the metric associated with the alarm \(for example, 'Average' or 'Sum'\)\.
 
-## AWS CloudFormation template<a name="w29aac11c33c17b7c63c15"></a>
+## AWS CloudFormation template<a name="w29aac11c33c17b7c65c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

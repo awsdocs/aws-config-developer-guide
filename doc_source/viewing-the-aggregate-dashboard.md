@@ -11,7 +11,7 @@ After setup, AWS Config starts aggregating data from the specified source accoun
 1. Sign in to the AWS Management Console and open the AWS Config console at [https://console\.aws\.amazon\.com/config/](https://console.aws.amazon.com/config/)\.
 
 1. Navigate to the **Aggregators** page\. Review your rules and their compliance states; conformance packs and their compliance states, and AWS resources and their configuration data\. You can do the following:
-   + Choose an aggregator from the dashboard and filter through your aggregators by AWS region, or account ID\.
+   + Choose an aggregator from the dashboard and filter through your aggregators by AWS Region, or account ID\.
    + View the top ten resource types, in the descending order according to the number of resources\. Choose view all resources to go to the **Aggregated resources** page\. On this page, you can view all the aggregated resources for an account\.
    + View the top five accounts by the number of resources, in the descending order according to the number of resources\. Choose the number of resources for an account to go to the **Aggregated Resources** page\. On this page, you can view all the aggregated resources for an account\.
    + View the top five noncompliant rules, in descending order according to the number of noncompliant resources\. Choose a rule to go to the **Rule details** page\.

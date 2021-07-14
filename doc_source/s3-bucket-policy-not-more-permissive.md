@@ -16,6 +16,6 @@ If you provide an invalid parameter value, you will see the following error: Val
 controlPolicyType: String  
 Amazon S3 bucket policy that defines an upper bound on the permissions of your S3 buckets\. The policy can be a maximum of 1024 characters long\.
 
-## AWS CloudFormation template<a name="w29aac11c33c17b7d305c17"></a>
+## AWS CloudFormation template<a name="w29aac11c33c17b7d323c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

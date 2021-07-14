@@ -28,7 +28,7 @@ If you have an existing custom AWS Config rule, you can directly provide the `AR
 
 If you do not have an existing custom AWS Config rule, you can create a AWS Lambda function and use the ARN of the Lambda function\. For more information, see [AWS Config Custom Rules ](evaluate-config_develop-rules.md)\.
 
-If your AWS Lambda function is present in a different AWS account, you can create AWS Config rules with appropriate cross\-account AWS Lambda function authorization\. For more information, see [How to Centrally Manage AWS Config Rules across Multiple AWS Accounts](https://aws.amazon.com/blogs/devops/how-to-centrally-manage-aws-config-rules-across-multiple-aws-accounts/) blog post\.
+If your AWS Lambda function is present in a different AWS account, you can create AWS Config rules with appropriate cross\-account AWS Lambda function authorization\. For more information, see [How to Centrally Manage AWS Config Rules across Multiple AWS accounts](https://aws.amazon.com/blogs/devops/how-to-centrally-manage-aws-config-rules-across-multiple-aws-accounts/) blog post\.
 
 **Same account bucket policy:**
 
@@ -132,7 +132,7 @@ For AWS Config to be able to store conformance pack artifacts, you will need to 
 ```
 
 **Note**  
-The statement ID should start with `awsconfigconforms`\.
+When deploying cross\-account conformance packs, the name of the delivery Amazon S3 bucket should start with `awsconfigconforms`\.
 
 ## Prerequisites for Organization Conformance Packs<a name="cpack-prerequisites-organizationcpack"></a>
 
@@ -140,7 +140,7 @@ Specify an automation execution role ARN for that remediation in the template if
 
 If your template uses AWS CloudFormation intrinsic function `[Fn::ImportValue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-importvalue.html)` to import a particular variable, then that variable must be defined as an `[Export Value](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html)` in all the member accounts of that organization\.
 
-For custom AWS Config rule, see [How to Centrally Manage AWS Config Rules across Multiple AWS Accounts](https://aws.amazon.com/blogs/devops/how-to-centrally-manage-aws-config-rules-across-multiple-aws-accounts/) blog to setup proper permissions\.
+For custom AWS Config rule, see [How to Centrally Manage AWS Config Rules across Multiple AWS accounts](https://aws.amazon.com/blogs/devops/how-to-centrally-manage-aws-config-rules-across-multiple-aws-accounts/) blog to setup proper permissions\.
 
 **Organization bucket policy:**
 
@@ -158,7 +158,7 @@ For AWS Config to be able to store conformance pack artifacts, you will need to 
                  "s3:GetObject",
                  "s3:PutObject"
             ],
-            "Resource": "arn:aws:s3:::awsconfigconforms--suffix in bucket name/*",
+            "Resource": "arn:aws:s3:::awsconfigconforms-suffix in bucket name/*",
             "Condition": {
                 "StringEquals": {
                     "aws:PrincipalOrgID": "customer_org_id"
@@ -188,4 +188,4 @@ For AWS Config to be able to store conformance pack artifacts, you will need to 
 ```
 
 **Note**  
-The statement ID should start with `awsconfigconforms`\.
+When deploying conformance packs to an organization, the name of the delivery Amazon S3 bucket should start with `awsconfigconforms`\.

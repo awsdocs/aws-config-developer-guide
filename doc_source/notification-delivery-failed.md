@@ -3,7 +3,7 @@
 AWS Config sends a delivery failed notification if AWS Config can't deliver the configuration snapshot or an oversized configuration item change notification to your Amazon S3 bucket\. Verify that you specified a valid Amazon S3 bucket\.
 
 ```
-View the Timeline for this Resource in AWS Config Management Console:
+View the Timeline for this Resource in the Console:
     https://console.aws.amazon.com/config/home?region=us-west-2#/timeline/AWS::EC2::Instance/test_resourceId_014b953d-75e3-40ce-96b9-c7240b975457?time=2016-10-06T16:46:13.749Z
     
      The full configuration item change notification for this resource exceeded the maximum size allowed by Amazon Simple Notification Service (SNS). A summary of the configuration item is provided here. You can view the complete notification in the specified Amazon S3 bucket location.

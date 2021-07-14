@@ -43,7 +43,7 @@ You can use the AWS Config console to select the types of resources that AWS Con
 
 1. Save your changes:
    + If you are using AWS Config in a region that supports AWS Config rules, choose **Save**\.
-   + Otherwise, choose **Continue**\. In the **AWS Config is requesting permissions to read your resources' configuration** page, choose **Allow**\.
+   + Otherwise, choose **Continue**\. In the **AWS Config Config is requesting permissions to read your resources' configuration** page, choose **Allow**\.
 
 ## Selecting Resources \(AWS CLI\)<a name="select-resources-cli"></a>
 
@@ -91,7 +91,7 @@ You can use the AWS CLI to select the types of resources that you want AWS Confi
 
 **To select specific types of resources**
 
-1. Use the `aws configservice` [http://docs.aws.amazon.com/cli/latest/reference/configservice/put-configuration-recorder.html](http://docs.aws.amazon.com/cli/latest/reference/configservice/put-configuration-recorder.html) command, and pass one or more resource types through the `--recording-group` option, as shown in the following example:
+1. Use the `AWS Configservice` [http://docs.aws.amazon.com/cli/latest/reference/configservice/put-configuration-recorder.html](http://docs.aws.amazon.com/cli/latest/reference/configservice/put-configuration-recorder.html) command, and pass one or more resource types through the `--recording-group` option, as shown in the following example:
 
    ```
    $ aws configservice put-configuration-recorder --configuration-recorder name=default,roleARN=arn:aws:iam::012345678912:role/myConfigRole --recording-group file://recordingGroup.json

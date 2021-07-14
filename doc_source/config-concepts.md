@@ -91,7 +91,7 @@ A source account is the AWS account from which you want to aggregate AWS Config 
 
 ### Source Region<a name="source-region"></a>
 
-A source region is the AWS region from which you want to aggregate AWS Config configuration and compliance data\.
+A source region is the AWS Region from which you want to aggregate AWS Config configuration and compliance data\.
 
 ### Aggregator<a name="aggregator"></a>
 

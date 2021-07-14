@@ -61,7 +61,7 @@ AWS Config successfully delivered the configuration history to your Amazon S3 bu
 A resource has been created, deleted, or changed in configuration\. This message includes the details of the configuration item that AWS Config creates for this change, and it includes the type of change\. These notifications are delivered within minutes of a change and are collectively known as the *configuration stream*\.
 
 `OversizedConfigurationItemChangeNotification`  
-This message type is delivered when a configuration item change notification exceeded the maximum size allowed by Amazon SNS\. The message includes a summary of the configuration item\. You can view the complete notification in the specified Amazon S3 bucket location\.
+This message type is delivered when a configuration item change notification exceeded the maximum size allowed by Amazon SNS\. The message includes a summary of the configuration item\. With the exception of SMS messages, Amazon SNS messages can contain up to 256 KB of text data, including XML, JSON, and unformatted text\. You can view the complete notification in the specified Amazon S3 bucket location\.
 
 `OversizedConfigurationItemChangeDeliveryFailed`  
 AWS Config failed to deliver the oversized configuration item change notification to your Amazon S3 bucket\.

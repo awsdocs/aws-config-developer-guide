@@ -13,6 +13,6 @@ Checks if log types exported to Amazon CloudWatch for an Amazon Relational Datab
 additionalLogs \(Optional\)Type: StringMap  
 Comma\-separated list of engine names and log type names\. For example, "additionalLogs": "oracle: general, slowquery ; aurora: alert, slowquery"
 
-## AWS CloudFormation template<a name="w29aac11c33c17b7d263c15"></a>
+## AWS CloudFormation template<a name="w29aac11c33c17b7d277c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

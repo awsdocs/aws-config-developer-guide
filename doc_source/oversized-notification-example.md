@@ -5,7 +5,7 @@ When AWS Config detects a configuration change for a resource, it sends a config
 The following example notification shows a configuration item for an Amazon EC2 instance\. The notification includes a summary of the changes and the location of the notification in the Amazon S3 bucket\. 
 
 ```
-View the Timeline for this Resource in AWS Config Management Console:
+View the Timeline for this Resource in the Console:
     https://console.aws.amazon.com/config/home?region=us-west-2#/timeline/AWS::EC2::Instance/resourceId_14b76876-7969-4097-ab8e-a31942b02e80?time=2016-10-06T16:46:16.261Z
     
     The full configuration item change notification for this resource exceeded the maximum size allowed by Amazon Simple Notification Service (SNS). A summary of the configuration item is provided here. You can view the complete notification in the specified Amazon S3 bucket location.

@@ -14,7 +14,7 @@ Use AWS Config for the following:
 + [Region Support](#region-support-config)
 + [Components of a Configuration Item](config-item-table.md)
 + [Record Configurations for Third\-Party Resources](customresources.md)
-+ [View, and Manage Your AWS Resources](view-manage-resource.md)
++ [Viewing AWS Resource Configurations and History](view-manage-resource.md)
 + [Managing AWS Config](manage-config.md)
 + [Notifications that AWS Config Sends to an Amazon SNS topic](notifications-for-AWS-Config.md)
 

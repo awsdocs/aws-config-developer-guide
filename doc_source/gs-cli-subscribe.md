@@ -2,7 +2,7 @@
 
 You can use the AWS CLI to turn on AWS Config with the [put\-configuration\-recorder](https://docs.aws.amazon.com/cli/latest/reference/configservice/put-configuration-recorder.html) and [put\-delivery\-channel](https://docs.aws.amazon.com/cli/latest/reference/configservice/put-delivery-channel.html) commands and a few parameters\.
 
-You can use the `put-configuration-recorder` command to creates a new configuration recorder to record selected resource configurations\. The `put-delivery-channel` command creates a delivery channel object to deliver configuration information to an Amazon S3 bucket and Amazon SNS topic\. You can have one configuration recorder and one delivery channel per region in your account\.
+You can use the `put-configuration-recorder` command to create a new configuration recorder to record selected resource configurations\. The `put-delivery-channel` command creates a delivery channel object to deliver configuration information to an Amazon S3 bucket and Amazon SNS topic\. You can have one configuration recorder and one delivery channel per region in your account\.
 
 You can specify the name of the recorder and the Amazon Resource Name \(ARN\) of the IAM role used to describe the AWS resources associated with the account\. By default, AWS Config automatically assigns the name "default" when creating the configuration recorder\. You cannot change the assigned name\. The `put-configuration-recorder` command uses the following options for the `--recording-group` parameter:
 + `allSupported=true` – AWS Config records configuration changes for every supported type of *regional resource*\. When AWS Config adds support for a new type of regional resource, it automatically starts recording resources of that type\.

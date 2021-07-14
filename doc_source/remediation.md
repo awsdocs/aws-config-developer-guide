@@ -38,7 +38,7 @@ Before you begin to apply remediation on noncompliant resources, you must select
 1. Choose **Save**\. The **Rules** page is displayed\.
 
 **Note**  
-For troubleshooting failed remediation actions, you can run the AWS Command Line Interface \(AWS CLI\) command `describe-remediation-execution-status` to get detailed view of a Remediation Execution for a set of resources\. The details include state, timestamps for remediation execution steps, and any error messages for the failed steps\.
+For troubleshooting failed remediation actions, you can run the AWS Command Line Interface command `describe-remediation-execution-status` to get detailed view of a Remediation Execution for a set of resources\. The details include state, timestamps for remediation execution steps, and any error messages for the failed steps\.
 
 ## Setting Up Auto Remediation \(Console\)<a name="setup-autoremediation"></a>
 
@@ -65,7 +65,7 @@ There are costs associated with running a remediation script multiple times\.
 1. Choose **Save**\. The **Rules** page is displayed\.
 
 **Note**  
-For troubleshooting failed remediation actions, you can run the AWS Command Line Interface \(AWS CLI\) command `describe-remediation-execution-status` to get detailed view of a Remediation Execution for a set of resources\. The details include state, timestamps for remediation execution steps, and any error messages for the failed steps\.
+For troubleshooting failed remediation actions, you can run the AWS Command Line Interface command `describe-remediation-execution-status` to get detailed view of a Remediation Execution for a set of resources\. The details include state, timestamps for remediation execution steps, and any error messages for the failed steps\.
 
 ## Delete Remediation Action \(Console\)<a name="delete-remediation-action"></a>
 

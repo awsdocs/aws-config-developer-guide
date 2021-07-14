@@ -59,8 +59,8 @@ In the IAM console, attach the `AWSConfigRoleForOrganizations` managed policy to
      1. Choose **Choose IAM role** to confirm your selection\.
 
 1. For **Regions**, choose the regions for which you want to aggregate data\.
-   + Select one region or multiple regions or all the AWS regions\.
-   + Select **Include future AWS regions** to aggregate data from all future AWS regions where multi\-account multi\-region data aggregation is enabled\.
+   + Select one region or multiple regions or all the AWS Regions\.
+   + Select **Include future AWS Regions** to aggregate data from all future AWS Regions where multi\-account multi\-region data aggregation is enabled\.
 
 1. Choose **Save**\. AWS Config displays the aggregator\.
 

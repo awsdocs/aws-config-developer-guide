@@ -13,6 +13,6 @@ Checks if a log group in Amazon CloudWatch Logs is encrypted with a AWS Key Mana
 KmsKeyId \(Optional\)Type: String  
 Amazon Resource Name \(ARN\) of AWS Key Management Service \(KMS\) key that is used to encrypt the CloudWatch Logs log group\.
 
-## AWS CloudFormation template<a name="w29aac11c33c17b7c65c15"></a>
+## AWS CloudFormation template<a name="w29aac11c33c17b7c67c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

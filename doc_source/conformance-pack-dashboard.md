@@ -21,4 +21,4 @@ You cannot edit a deployed conformance pack\. You can modify the other selection
 
 [Deploying a Conformance Pack](https://docs.aws.amazon.com/config/latest/developerguide/conformance-pack-console.html)
 
-[AWS Service Limits](https://docs.aws.amazon.com/config/latest/developerguide/configlimits.html)
+[AWS service Limits](https://docs.aws.amazon.com/config/latest/developerguide/configlimits.html)

@@ -25,7 +25,7 @@ You can add authorization to grant permission to aggregator accounts and regions
 
 1. For **Aggregator account**, type the 12\-digit account ID of an aggregator account\.
 
-1. For **Aggregator region**, choose the AWS regions where aggregator account is allowed to collect AWS Config configuration and compliance data\.
+1. For **Aggregator region**, choose the AWS Regions where aggregator account is allowed to collect AWS Config configuration and compliance data\.
 
 1. Choose **Add authorization** to confirm your selection\.
 

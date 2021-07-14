@@ -13,6 +13,6 @@ Checks whether customer master keys \(CMKs\) are not scheduled for deletion in A
 kmsKeyIds \(Optional\)Type: String  
 \(Optional\) Comma\-separated list of specific customer managed key IDs not to be scheduled for deletion\. If you do not specify any keys, the rule checks all the keys\.
 
-## AWS CloudFormation template<a name="w29aac11c33c17b7d229c15"></a>
+## AWS CloudFormation template<a name="w29aac11c33c17b7d241c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

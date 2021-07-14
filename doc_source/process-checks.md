@@ -1,8 +1,8 @@
 # AWS Config Process Checks Within a Conformance Pack<a name="process-checks"></a>
 
-Process checks is a type of AWS Config rule that allows you to track your external and internal tasks that require verification as part of the conformance packs\. These checks can be added to an existing conformance pack or a new conformance pack\. You can track all compliance that includes AWS configurations and manual checks in a single location\. 
+Process checks is a type of AWS Config rule that allows you to track your external and internal tasks that require verification as part of the conformance packs\. These checks can be added to an existing conformance pack or a new conformance pack\. You can track all compliance that includes AWS Configurations and manual checks in a single location\. 
 
-With process checks, you can list the compliance of requirements and actions at a single location\. These process checks help increase the coverage of compliance regimes\-based conformance packs\. You can further expand the conformance pack by adding new process checks that track processes and actions needing manual verification and tracking\. This enables conformance pack to become the template that provides details about AWS configurations and manual processes for a compliance regime\.
+With process checks, you can list the compliance of requirements and actions at a single location\. These process checks help increase the coverage of compliance regimes\-based conformance packs\. You can further expand the conformance pack by adding new process checks that track processes and actions needing manual verification and tracking\. This enables conformance pack to become the template that provides details about AWS Configurations and manual processes for a compliance regime\.
 
   You can track and manage the compliance of processes not associated with resource configuration changes within a conformance packs as process checks\. For example, you can add a process check to track the PCI\-DSS compliance requirement to store media backup at an offsite location\. You will manually evaluate the compliance of this according to PCI\-DSS guidelines, or according to your organization's guidance\. 
 
@@ -87,7 +87,7 @@ You can update the compliance of process checks within a conformance pack using 
 
 To install the AWS CLI on your local machine, see [Installing the AWS CLI](http://docs.aws.amazon.com/cli/latest/userguide/installing.html) in the *AWS CLI User Guide*\.
 
-If necessary, type `aws configure` to configure the AWS CLI to use an AWS Region where AWS Config conformance packs are available\.
+If necessary, type `AWS Configure` to configure the AWS CLI to use an AWS Region where AWS Config conformance packs are available\.
 
 1. Open a command prompt or a terminal window\.
 

@@ -15,4 +15,4 @@ We consider it a best practice not to use root account credentials to perform ev
 + [Permissions for the Amazon S3 Bucket](s3-bucket-policy.md)
 + [Permissions for the KMS Key](s3-kms-key-policy.md)
 + [Permissions for the Amazon SNS Topic](sns-topic-policy.md)
-+ [Service-Linked AWS Config Rules](service-linked-awsconfig-rules.md)
++ [Service\-Linked AWS Config Rules](service-linked-awsconfig-rules.md)

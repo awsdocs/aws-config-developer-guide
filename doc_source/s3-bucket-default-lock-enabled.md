@@ -13,6 +13,6 @@ Checks whether Amazon S3 bucket has lock enabled, by default\. The rule is NON\_
 mode \(Optional\)Type: String  
 mode: \(optional\): A mode parameter with valid values of GOVERNANCE or COMPLIANCE\.
 
-## AWS CloudFormation template<a name="w29aac11c33c17b7d297c15"></a>
+## AWS CloudFormation template<a name="w29aac11c33c17b7d315c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

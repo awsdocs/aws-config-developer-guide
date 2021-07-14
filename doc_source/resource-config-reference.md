@@ -2,6 +2,8 @@
 
 AWS Config supports the following AWS resources types and resource relationships\.
 
+Advanced Queries for AWS Config supports a subset of these resource types\. For a list of those supported resource types, see [Support Resource Types for Advanced Queries](https://github.com/awslabs/aws-config-resource-schema/tree/master/config/properties/resource-types)\.
+
 ## Amazon API Gateway<a name="amazonapigateway"></a>
 
 
@@ -95,7 +97,7 @@ New \(supported\): `arn:aws:ecs:region:aws_account_id:service/cluster-name/servi
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
-## Amazon Quantum Ledger Database \(QLDB\)<a name="amazonqldb"></a>
+## Amazon Quantum Ledger Database \(Amazon QLDB\)<a name="amazonqldb"></a>
 
 
 ****  
@@ -177,6 +179,18 @@ For more information about the attributes, see [Bucket Configuration Options](ht
 
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
+
+## AWS Backup<a name="awsbackup"></a>
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
+
+Due to how AWS Backup works, some of these resource types relate to the other AWS Backup resource types in this table\.
+
+`AWS::Backup::BackupPlan` is related to `AWS::Backup::BackupSelection` where a Backup Plan has many selections\.
+
+For more information, see [Managing backups using backup plans](https://docs.aws.amazon.com/aws-backup/latest/devguide/about-backup-plans.html) and [Working with backup vaults](https://docs.aws.amazon.com/aws-backup/latest/devguide/vaults.html)\.
 
 ## AWS Certificate Manager<a name="awscertificatemanager"></a>
 

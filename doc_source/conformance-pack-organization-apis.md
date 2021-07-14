@@ -6,7 +6,7 @@ Use AWS Config to manage conformance packs across all AWS accounts within an org
 + Use the APIs from the master account in AWS Organizations to enforce governance by ensuring that the underlying AWS Config rules and remediation actions are not modifiable by your organization’s member accounts\.
 
 **Note**  
-*For deployments accross different regions*  
+*For deployments across different regions*  
 The API call to deploy rules and conformance packs across accounts is region specific\. At the organization level, you need to change the context of your API call to a different region if you want to deploy rules in other regions\. For example, to deploy a rule in US East \(N\. Virginia\), change the region to US East \(N\. Virginia\) and then call `PutOrganizationConfigRule`\.  
 *For accounts within an organzation*  
 If a new account joins an organization, the rule is deployed to that account\. When an account leaves an organization, the rule is removed\.  
