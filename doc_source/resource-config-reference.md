@@ -188,7 +188,7 @@ For more information about the attributes, see [Bucket Configuration Options](ht
 
 Due to how AWS Backup works, some of these resource types relate to the other AWS Backup resource types in this table\.
 
-`AWS::Backup::BackupPlan` is related to `AWS::Backup::BackupSelection` where a Backup Plan has many selections\.
+`AWS::Backup::BackupPlan` is related to `AWS::Backup::BackupSelection` where a Backup Plan has many selections, and `AWS::Backup::BackupVault` is related to `AWS::Backup::RecoveryPoint` where an AWS Backup Vault has multiple recovery points\.
 
 For more information, see [Managing backups using backup plans](https://docs.aws.amazon.com/aws-backup/latest/devguide/about-backup-plans.html) and [Working with backup vaults](https://docs.aws.amazon.com/aws-backup/latest/devguide/vaults.html)\.
 

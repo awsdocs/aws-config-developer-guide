@@ -89,7 +89,7 @@ As defined in the type schema, `writeOnlyProperties` will be removed from the co
 
 ## Delete the Third\-Party Resource<a name="delete-custom-resource-type"></a>
 
-You can record the configuration state for a third\-party resouce or custom resource type that you want to delete\.
+You can record the configuration state for a third\-party resource or custom resource type that you want to delete\.
 + Type the following command:
 
   ```
