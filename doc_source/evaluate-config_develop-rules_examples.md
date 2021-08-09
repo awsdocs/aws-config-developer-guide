@@ -6,4 +6,5 @@ For more information about functions and events in AWS Lambda, see [Function and
 
 **Topics**
 + [Example AWS Lambda Functions for AWS Config Rules \(Node\.js\)](evaluate-config_develop-rules_nodejs-sample.md)
++ [Example AWS Lambda Functions for AWS Config Rules \(Python\)](evaluate-config_develop-rules_python-sample.md)
 + [Example Events for AWS Config Rules](evaluate-config_develop-rules_example-events.md)

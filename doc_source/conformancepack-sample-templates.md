@@ -40,6 +40,7 @@ Here are the conformance pack YAML templates that you see in AWS Config console\
 + [Operational Best Practices for Encryption and Key Management](operational-best-practices-for-Encryption-and-Keys.md)
 + [Operational Best Practices for Esquema Nacional de Seguridad \(ENS\) Low](operational-best-practices-for-ens-low.md)
 + [Operational Best Practices for Esquema Nacional de Seguridad \(ENS\) Medium](operational-best-practices-for-ens-medium.md)
++ [Operational Best Practices for Esquema Nacional de Seguridad \(ENS\) High](operational-best-practices-for-ens_high.md)
 + [Operational Best Practices for FDA Title 21 CFR Part 11](operational-best-practices-for-FDA-21CFR-Part-11.md)
 + [Operational Best Practices for FedRAMP\(Low\)](operational-best-practices-for-fedramp-low.md)
 + [Operational Best Practices for FedRAMP\(Moderate\)](operational-best-practices-for-fedramp-moderate.md)

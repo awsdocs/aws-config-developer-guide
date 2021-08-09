@@ -12,7 +12,7 @@ On the **Authorizations** page, you can do the following:
 **Topics**
 + [Add Authorization for Aggregator Accounts and Regions](#add-authorization-console)
 + [Authorize a Pending Request for an Aggregator Account](#authorization-pending-request-console)
-+ [Delete Authorization for an Exisiting Aggregator Account](#delete-authorization-console)
++ [Delete Authorization for an Existing Aggregator Account](#delete-authorization-console)
 + [Learn More](#learn-more-setup-console)
 
 ## Add Authorization for Aggregator Accounts and Regions<a name="add-authorization-console"></a>
@@ -35,7 +35,7 @@ You can also add authorization to aggregator accounts and regions programaticall
 
 ## Authorize a Pending Request for an Aggregator Account<a name="authorization-pending-request-console"></a>
 
-If you have a pending authorization request from an exisiting aggregator account you will see the request status on the **Authorizations** page\. You can authorize a pending request from this page\.
+If you have a pending authorization request from an existing aggregator account you will see the request status on the **Authorizations** page\. You can authorize a pending request from this page\.
 
 1. For the aggregator account you want to authorize, choose **Authorize** in the Actions column\.
 
@@ -45,7 +45,7 @@ If you have a pending authorization request from an exisiting aggregator account
 
    The authorization status changes from **Requesting for authorization** to **Authorized**\.
 
-## Delete Authorization for an Exisiting Aggregator Account<a name="delete-authorization-console"></a>
+## Delete Authorization for an Existing Aggregator Account<a name="delete-authorization-console"></a>
 
 1. For the aggregator account you want to delete authorization, choose **Delete** in the Actions column\.
 

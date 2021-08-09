@@ -1,6 +1,6 @@
 # shield\-drt\-access<a name="shield-drt-access"></a>
 
-Checks if the DDoS response team \(DRT\) can access your AWS account\. The rule is NON\_COMPLIANT if AWS Shield Advanced is enabled but the role for DRT access is not configured\.
+Checks if the Shield Response Team \(SRT\) can access your AWS account\. The rule is NON\_COMPLIANT if AWS Shield Advanced is enabled but the role for SRT access is not configured\.
 
 **Identifier:** SHIELD\_DRT\_ACCESS
 

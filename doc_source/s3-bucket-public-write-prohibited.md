@@ -12,7 +12,7 @@ The rule is noncompliant when:
 
 **Identifier:** S3\_BUCKET\_PUBLIC\_WRITE\_PROHIBITED
 
-**Trigger type:** Configuration changes
+**Trigger type:** Configuration changes and Periodic
 
 **AWS Region:** All supported AWS regions
 

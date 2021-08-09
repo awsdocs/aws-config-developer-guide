@@ -106,6 +106,12 @@ New \(supported\): `arn:aws:ecs:region:aws_account_id:service/cluster-name/servi
 | --- | --- | --- | --- | 
 | Amazon QLDB | AWS::QLDB::Ledger | NA | NA | 
 
+## Amazon Kinesis<a name="amazonkinesis"></a>
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
+
 ## Amazon Redshift<a name="amazonredshift"></a>
 
 
