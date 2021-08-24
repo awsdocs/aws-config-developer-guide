@@ -2,8 +2,6 @@
 
 AWS Config allows you to authorize aggregator accounts to collect AWS Config configuration and compliance data\. 
 
-This flow is not required if you are aggregating source accounts that are part of AWS Organizations\.
-
 On the **Authorizations** page, you can do the following:
 + Add Authorization to allow an aggregator account and region to collect AWS Config configuration and compliance data\.
 + Authorize a pending request from an aggregator account to collect AWS Config configuration and compliance data\.

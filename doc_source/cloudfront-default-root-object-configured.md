@@ -12,6 +12,6 @@ Checks if an Amazon CloudFront distribution is configured to return a specific o
 
 None  
 
-## AWS CloudFormation template<a name="w29aac11c33c17b7c47c15"></a>
+## AWS CloudFormation template<a name="w29aac11c33c17b7c57c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

@@ -13,6 +13,6 @@ Checks if all secrets in AWS Secrets Manager are encrypted using an AWS Key Mana
 kmsKeyArns \(Optional\)Type: CSV  
 Comma\-separated list of KMS key Amazon Resource Names \(ARNs\) to check if the keys are used in the encryption\.
 
-## AWS CloudFormation template<a name="w29aac11c33c17b7d353c15"></a>
+## AWS CloudFormation template<a name="w29aac11c33c17b7d375c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

@@ -3,7 +3,7 @@
 Checks if all of the specified applications are installed on the instance\. Optionally, specify the minimum acceptable version\. You can also specify the platform to apply the rule only to instances running that platform\.
 
 **Note**  
-Ensure that SSM agent is running on the EC2 instance and configure SSM agents\.
+Ensure that SSM agent is running on the EC2 instance and an association to gather application software inventory is created\. The rule returns NOT\_APPLICABLE if SSM agent is not installed or an association is yet not created or running\.
 
 **Identifier:** EC2\_MANAGEDINSTANCE\_APPLICATIONS\_REQUIRED
 
@@ -20,6 +20,6 @@ The application names must be an exact match\. For example, use **firefox** on L
 platformType \(Optional\)Type: String  
 Platform type \(for example, 'Linux' or 'Windows'\)\.
 
-## AWS CloudFormation template<a name="w29aac11c33c17b7d133c17"></a>
+## AWS CloudFormation template<a name="w29aac11c33c17b7d147c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

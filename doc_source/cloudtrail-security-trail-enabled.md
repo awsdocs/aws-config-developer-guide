@@ -21,6 +21,6 @@ This rule is NON\_COMPLIANT if no trails meet all of the criteria mentioned abov
 
 None  
 
-## AWS CloudFormation template<a name="w29aac11c33c17b7c59c19"></a>
+## AWS CloudFormation template<a name="w29aac11c33c17b7c69c19"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

@@ -6,7 +6,7 @@ The following related resources can help you as you work with this service\.
 + **[Technical FAQ](https://aws.amazon.com/config/faq/)**
 + **[AWS Config Rule Development Kit \(RDK\)](https://rdk.readthedocs.io/en/latest/)** – An open\-source tool that helps you set up AWS Config, author rules, and then test them using a variety of AWS resource types\.
 + **[Partners](https://aws.amazon.com/config/partners/)** – Links to partner products that are fully integrated with AWS Config to help you visualize, monitor, and manage the data from your configuration stream, configuration snapshots, or configuration history\.
-+ ** [Classes & Workshops](https://aws.amazon.com/training/course-descriptions/)** – Links to role\-based and specialty courses as well as self\-paced labs to help sharpen your AWS skills and gain practical experience\.
++ ** [Classes & Workshops](https://aws.amazon.com/training/course-descriptions/)** – Links to role\-based and specialty courses, in addition to self\-paced labs to help sharpen your AWS skills and gain practical experience\.
 + ** [AWS Developer Tools](https://aws.amazon.com/tools/)** – Links to developer tools, SDKs, IDE toolkits, and command line tools for developing and managing AWS applications\.
 + ** [AWS Whitepapers](https://aws.amazon.com/whitepapers/)** – Links to a comprehensive list of technical AWS whitepapers, covering topics such as architecture, security, and economics and authored by AWS Solutions Architects or other technical experts\.
 + ** [AWS Support Center](https://console.aws.amazon.com/support/home#/)** – The hub for creating and managing your AWS Support cases\. Also includes links to other helpful resources, such as forums, technical FAQs, service health status, and AWS Trusted Advisor\.

@@ -2,9 +2,13 @@
 
 Complete the following procedure to create a custom rule\. To create a custom rule, you first create an AWS Lambda function, which contains the evaluation logic for the rule\. Then you associate the function with a custom rule that you create in AWS Config\.
 
+**Important**  
+As a security best practice when allowing AWS Config permission to invoke your Lambda function, we strongly recommend that you restrict access in the resource\-based policy for Lambda with `sourceARN` and/or `sourceAccountId` in the invoke request\. For more information, see [Security best practice for AWS Lambda resource\-based policy](#restricted-lambda-policy)\.
+
 **Contents**
 + [Creating an AWS Lambda Function for a Custom Config Rule](#create-lambda-function-for-custom-config-rule)
 + [Creating a Custom Rule in AWS Config](#creating-a-custom-rule-with-the-AWS-Config-console)
++ [Security best practice for AWS Lambda resource\-based policy](#restricted-lambda-policy)
 + [Evaluating Additional Resource Types](#creating-custom-rules-for-additional-resource-types)
 
 ## Creating an AWS Lambda Function for a Custom Config Rule<a name="create-lambda-function-for-custom-config-rule"></a>
@@ -98,7 +102,40 @@ The ARN that you specify in this step must not include the `$LATEST` qualifier\.
    + **Evaluations failed** \- For information that can help you determine the problem, choose the rule name to open its details page and see the error message\.
 
 **Note**  
-When you create a custom rule with the AWS Config console, the appropriate permissions are automatically created for you\. If you create a custom rule with the AWS CLI, you need to give AWS Config permission to invoke your Lambda function, using the `aws lambda add-permission` command\. For more information, see [Using Resource\-Based Policies for AWS Lambda \(Lambda Function Policies\)](https://docs.aws.amazon.com/lambda/latest/dg/access-control-resource-based.html) in the *AWS Lambda Developer Guide*\.
+When you create a custom rule with the AWS Config console, the appropriate permissions are automatically created for you\. If you create a custom rule with the AWS CLI, you need to give AWS Config permission to invoke your Lambda function, using the `aws lambda add-permission` command\. For more information, see [Using Resource\-Based Policies for AWS Lambda \(Lambda Function Policies\)](https://docs.aws.amazon.com/lambda/latest/dg/access-control-resource-based.html) in the *AWS Lambda Developer Guide*\.  
+Before giving AWS Config permission to invoke your Lambda function, see the following section [Security best practice for AWS Lambda resource\-based policy](#restricted-lambda-policy)\.
+
+## Security best practice for AWS Lambda resource\-based policy<a name="restricted-lambda-policy"></a>
+
+As a security best practice, to avoid giving invoke permission for the whole service principal name \(SPN\) to call your Lambda function, we strongly recommend that you restrict access in the Lambda resource\-based policy with `sourceARN` and/or `sourceAccountId` in the invoke request\.
+
+The `sourceARN` is the ARN of AWS Config rule that is invoking the Lambda function\.
+
+The `sourceAccountId` is the account ID of the user who created the rule\.
+
+Restricting access in the Lambda resource\-based policy helps make sure AWS Lambda is accessing your resources on behalf of expected users and scenarios only\.
+
+**To add SPN based permission, you need to use the following CLI**
+
+```
+aws lambda add-permission --function-name rule lambda function name --action lambda:InvokeFunction --statement-id config --principal config.amazonaws.com
+```
+
+**To add SourceAccountId based permission**
+
+Before the rule is created, you can add `sourceAccountId` based permission to the resource\-based policy with the following CLI
+
+```
+aws lambda add-permission --function-name rule lambda function name --action lambda:InvokeFunction --statement-id config --principal config.amazonaws.com --source-account your account ID
+```
+
+**To add both SourceArn and SourceAccountId based permissionn**
+
+After the rule is created, you can add `sourceARN` based permission to resource\-based policy with the following CLI\. This allows only a specific rule ARN to invoke the Lambda function\.
+
+```
+aws lambda add-permission --function-name rule lambda function name --action lambda:InvokeFunction --statement-id config --principal config.amazonaws.com --source-account your account ID --source-arn ARN of the created config rule
+```
 
 ## Evaluating Additional Resource Types<a name="creating-custom-rules-for-additional-resource-types"></a>
 

@@ -18,7 +18,7 @@ A typical approach is to create an IAM group that has the appropriate permission
 
 ## Creating an IAM Group and Users for AWS Config Access<a name="creating-an-IAM-group-user-for-config-access"></a>
 
-1. Open the IAM console at [https://console\.aws\.amazon\.com/iam](https://console.aws.amazon.com/iam)\.
+1. Sign in to the AWS Identity and Access Management \(IAM\) console at [https://console\.aws\.amazon\.com/iam](https://console.aws.amazon.com/iam)\.
 
 1. From the dashboard, choose **Groups** in the navigation pane, and then choose **Create New Group**\. 
 
@@ -54,25 +54,27 @@ You can edit the group name, but you will need to choose the policy again\.
 
 1. Sign in to the AWS Identity and Access Management \(IAM\) console at [https://console\.aws\.amazon\.com/iam](https://console.aws.amazon.com/iam)\.
 
-1. In the navigation pane, choose **Policies**, and then choose **Create Policy**\. 
+1. In the navigation pane, choose **Policies**, and then choose **Create Policy**\. This will bring up the Policy Editor\.
 
-1. For **Create Your Own Policy**, choose **Select**\.
+1. You can use the visual editor tab or the JSON tab to create your own custom policy\. You can select **import managed policy** to use the permissions from a policy created by yourself or one that is managed by AWS\.
 
-1. Type a policy name and description\. For example: `AWSConfigFullAccess`\.
+1. Select **Next:Tags**\.
 
-1. For **Policy Document**, type or paste the full\-access policy into the editor\. You can use the [Full access](recommended-iam-permissions-using-aws-config-console-cli.md#full-config-permission)\.
+1. Add any tags you would like your policy to have\.
 
-1. Choose **Validate Policy** and ensure that no errors display in a red box at the top of the screen\. Correct any errors that are reported\. 
+1. Select **Next:Review**\.
 
-1. Choose **Create Policy** to save your new policy\.
+1. Type a policy name and optionally a description\. Review the permissions provided by the policy\.
+
+1. Select **Create Policy**\.
 
 1. In the list of policies, select the policy that you created\. You can use the **Filter** menu and the **Search** box to find the policy\.
 
-1. Choose **Policy Actions**, and then choose **Attach**\.
+1. Select the radio button next to the policy you created, and then select **Actions** in the top right hand side\. In this drop down menu select **Attach**\.
 
 1. Select the users, groups, or roles, and then choose **Attach Policy**\. You can use the **Filter** menu and the **Search** box to filter the list\.
 
-1. Choose **Apply Policy**\. 
+1. Select **Attach policy**\.
 
 **Note**  
 Instead of creating a managed policy, you can also create an inline policy from the IAM console and attach it to an IAM user, group, or role\. For more information, see [Working with Inline Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_inline-using.html) in the *IAM User Guide*\.

@@ -13,6 +13,6 @@ Checks if the Application Load Balancer and the Classic Load Balancer have loggi
 s3BucketNames \(Optional\)Type: CSV  
 Comma\-separated list of Amazon S3 bucket names for Amazon ELB to deliver the log files\.
 
-## AWS CloudFormation template<a name="w29aac11c33c17b7d183c15"></a>
+## AWS CloudFormation template<a name="w29aac11c33c17b7d201c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

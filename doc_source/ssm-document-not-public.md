@@ -6,12 +6,12 @@ Checks if AWS Systems Manager documents owned by the account are public\. This r
 
 **Trigger type:** Periodic
 
-**AWS Region:** All supported AWS regions except China \(Beijing\), China \(Ningxia\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\) Region
+**AWS Region:** All supported AWS regions
 
 **Parameters:**
 
 None  
 
-## AWS CloudFormation template<a name="w29aac11c33c17b7d365c15"></a>
+## AWS CloudFormation template<a name="w29aac11c33c17b7d387c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

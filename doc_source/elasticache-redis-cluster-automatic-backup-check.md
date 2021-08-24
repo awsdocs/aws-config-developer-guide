@@ -13,6 +13,6 @@ Check if the Amazon ElastiCache Redis clusters have automatic backup turned on\.
 snapshotRetentionPeriod \(Optional\)Type: intDefault: 15  
 Minimum snapshot retention period in days for Redis cluster\. Default is 15 days\.
 
-## AWS CloudFormation template<a name="w29aac11c33c17b7d161c15"></a>
+## AWS CloudFormation template<a name="w29aac11c33c17b7d179c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

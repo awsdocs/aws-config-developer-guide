@@ -54,6 +54,9 @@ The read\-only policy doesn't grant user permission for the actions such as `Sta
 
 The following example shows a policy that grants full access to AWS Config\. It grants users the permission to perform all AWS Config actions\. It also lets users manage files in Amazon S3 buckets and manage Amazon SNS topics in the account that the user is associated with\.
 
+**Note**  
+This policy grants broad permissions\. Before granting full access, consider starting with a minimum set of permissions and granting additional permissions as necessary\. Doing so is better practice than starting with permissions that are too lenient and then trying to tighten them later\.
+
 ```
 {
     "Version": "2012-10-17",
@@ -140,9 +143,6 @@ The following example shows a policy that grants full access to AWS Config\. It 
     ]
 }
 ```
-
-**Note**  
-This policy grants broad permissions\. Before granting full access, consider starting with a minimum set of permissions and granting additional permissions as necessary\. Doing so is better practice than starting with permissions that are too lenient and then trying to tighten them later\.
 
 ## Controlling User Permissions for Actions on Multi\-Account Multi\-Region Data Aggregation<a name="resource-level-permission"></a>
 

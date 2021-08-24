@@ -37,7 +37,9 @@ You can attach a permission policy to the Amazon SNS topic owned by a different 
 }
 ```
 
-For the `Resource` key, *account\-id* is the account number of the topic owner\. For *account\-id1*, *account\-id2*, and *account\-id3*, use the AWS accounts that will send data to an Amazon SNS topic\. You must substitute appropriate values for *region* and *myTopic*\. 
+For the `Resource` key, *account\-id* is the AWS account number of the topic owner\. For *account\-id1*, *account\-id2*, and *account\-id3*, use the AWS accounts that will send data to an Amazon SNS topic\. You must substitute appropriate values for *region* and *myTopic*\.
+
+When AWS Config sends a notification to an Amazon SNS topic, it first attempts to use the IAM role, but this attempt fails if the role or AWS account does not have permission to publish to the topic\. In this event, AWS Config sends the notification again, this time as AWS Config service principal\. Before the publication can succeed, the access policy for the topic must grant `sns:publish` access to the `config.amazonaws.com` principal name\. You must attach an access policy, mentioned below, to the Amazon SNS topic to grant AWS Config access to the Amazon SNS topic in the event that the IAM role does not have permission to publish to the topic\.
 
 ## Required Permissions for the Amazon SNS Topic When Using Service\-Linked Roles<a name="required-permissions-snstopic-using-servicelinkedrole"></a>
 
@@ -55,12 +57,26 @@ If you set up AWS Config using a service\-linked role, you need to attach a perm
     },
     "Action": "SNS:Publish",
       "Resource": "arn:aws:sns:region:account-id:myTopic"
+        "Condition" : {
+        "StringEquals": {
+          "AWS:SourceAccount": [
+            "account-id1",
+            "account-id2",
+            "account-id3"
+          ],
+          "AWS:SourceArn": [
+            "arn:aws:config:region:account-id1:*",
+            "arn:aws:config:region:account-id2:*",
+            "arn:aws:config:region:account-id3:*"
+          ]
+        }
+      }
     }
-]
+  ]
 }
 ```
 
-You must substitute appropriate values for *region*, *account\-id*, and *myTopic*\.
+For the `Resource` key, *account\-id* is the AWS account number of the topic owner\. For *account\-id1*, *account\-id2*, and *account\-id3*, use the AWS accounts that will send data to an Amazon SNS topic\. You must substitute appropriate values for *region* and *myTopic*\.
 
 ## Troubleshooting for the Amazon SNS Topic<a name="troubleshooting-for-snstopic-using-servicelinkedrole"></a>
 

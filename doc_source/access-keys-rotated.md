@@ -3,6 +3,7 @@
 Checks if the active access keys are rotated within the number of days specified in `maxAccessKeyAge`\. The rule is NON\_COMPLIANT if the access keys have not been rotated for more than `maxAccessKeyAge` number of days\.
 
 **Note**  
+This rule requires you to turn on 'Include global resources' in general settings in order for resources to be evaluated\.  
 Re\-evaluating this rule within 4 hours of the first evaluation will have no effect on the results\.
 
 **Identifier:** ACCESS\_KEYS\_ROTATED

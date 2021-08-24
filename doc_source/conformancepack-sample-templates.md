@@ -63,6 +63,7 @@ Here are the conformance pack YAML templates that you see in AWS Config console\
 + [Operational Best Practices for NIST 1800 25](operational-best-practices-for-nist_1800_25.md)
 + [Operational Best Practices for NIST CSF](operational-best-practices-for-nist-csf.md)
 + [Operational Best Practices for NYDFS 23](operational-best-practices-for-us_nydfs.md)
++ [Operational Best Practices for NZISM](operational-best-practices-for-nzism.md)
 + [Operational Best Practices for PCI DSS 3\.2\.1](operational-best-practices-for-pci-dss.md)
 + [Operational Best Practices for Publicly Accessible Resources](operational-best-practices-for-Publicly-Accessible-Resources.md)
 + [Operational Best Practices for RBI Cyber Security Framework for UCBs](operational-best-practices-for-rbi-bcsf-ucb.md)
