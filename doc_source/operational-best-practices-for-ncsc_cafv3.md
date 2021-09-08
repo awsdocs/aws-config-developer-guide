@@ -1,4 +1,4 @@
-# Operational Best Practices for NCSC Cyber Assesment Framework<a name="operational-best-practices-for-ncsc_cafv8"></a>
+# Operational Best Practices for NCSC Cyber Assesment Framework<a name="operational-best-practices-for-ncsc_cafv3"></a>
 
 Conformance packs provide a general\-purpose compliance framework designed to enable you to create security, operational or cost\-optimization governance checks using managed or custom AWS Config rules and AWS Config remediation actions\. Conformance Packs, as sample templates, are not designed to fully ensure compliance with a specific governance or compliance standard\. You are responsible for making your own assessment of whether your use of the Services meets applicable legal and regulatory requirements\. 
 
@@ -10,8 +10,8 @@ This sample conformance pack template contains mappings to controls within the U
 
 
 ****  
-[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/operational-best-practices-for-ncsc_cafv8.html)
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/operational-best-practices-for-ncsc_cafv3.html)
 
-## Template<a name="ncsc_cafv8-conformance-pack-sample"></a>
+## Template<a name="ncsc_cafv3-conformance-pack-sample"></a>
 
 The template is available on GitHub: [Operational Best Practices for NCSC Cyber Assesment Framework](https://github.com/awslabs/aws-config-rules/blob/master/aws-config-conformance-packs/Operational-Best-Practices-for-NCSC-CAF.yaml)\.

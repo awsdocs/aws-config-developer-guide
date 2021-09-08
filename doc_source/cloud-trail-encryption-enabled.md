@@ -1,6 +1,6 @@
 # cloud\-trail\-encryption\-enabled<a name="cloud-trail-encryption-enabled"></a>
 
-Checks whether AWS CloudTrail is configured to use the server side encryption \(SSE\) AWS Key Management Service \(AWS KMS\) customer master key \(CMK\) encryption\. The rule is compliant if the KmsKeyId is defined\. 
+Checks if AWS CloudTrail is configured to use the server side encryption \(SSE\) AWS Key Management Service KMS key encryption\. The rule is COMPLIANT if the KmsKeyId is defined\. 
 
 **Identifier:** CLOUD\_TRAIL\_ENCRYPTION\_ENABLED
 

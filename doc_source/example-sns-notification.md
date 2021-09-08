@@ -5,6 +5,7 @@ AWS Config uses Amazon SNS to deliver notifications to subscription endpoints\. 
 The following is an example payload of an Amazon SNS notification that is generated when AWS Config detects that the Amazon Elastic Block Store volume `vol-ce676ccc` is attached to the instance with an ID of `i-344c463d`\. The notification contains the configuration item change for the resource\.
 
 ```
+{
     "Type": "Notification",
     "MessageId": "8b945cb0-db34-5b72-b032-1724878af488",
     "TopicArn": "arn:aws:sns:us-west-2:123456789012:example",

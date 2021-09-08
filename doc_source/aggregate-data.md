@@ -15,7 +15,11 @@ To collect your AWS Config data from source accounts and regions, start with:
 
 1. Adding an aggregator to aggregate AWS Config configuration and compliance data from multiple accounts and regions\.
 
-1. Authorizing aggregator accounts to collect AWS Config configuration and compliance data\. Authorization is required when your source accounts are individual accounts\.
+1. Authorizing aggregator accounts to collect AWS Config configuration and compliance data\.
+**Note**  
+**There are two types of aggregators: Individual accounts aggregator and Organization aggregator**  
+For the individual accounts aggregator, authorization is required for any included source account regions including external account regions or Organization member account regions\.  
+For the organization aggregator, authorization is not required for Organization member account regions since authorization is integrated with the Organizations service\.
 
 1. Monitoring compliance data for rules and accounts in the aggregated view\.
 

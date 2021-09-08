@@ -1,9 +1,9 @@
 # cmk\-backing\-key\-rotation\-enabled<a name="cmk-backing-key-rotation-enabled"></a>
 
-Checks if key rotation is enabled for each key and matches to the key ID of the customer created customer master key \(CMK\)\. The rule is COMPLIANT, if the key rotation is enabled for specific key object\. The rule is not applicable to CMKs that have imported key material\.
+Checks if key rotation is enabled for each key and matches to the key ID of the customer created AWS KMS key \(KMS key\)\. The rule is COMPLIANT, if the key rotation is enabled for specific key object\. The rule is not applicable to KMS keys that have imported key material\.
 
 **Note**  
-This rule only evaluates symmetric AWS KMS; keys and ignores asymmetric AWS KMS keys\.
+This rule only evaluates symmetric KMS keys and ignores asymmetric KMS keys\.
 
 **Identifier:** CMK\_BACKING\_KEY\_ROTATION\_ENABLED
 

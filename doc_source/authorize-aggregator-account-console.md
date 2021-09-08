@@ -20,6 +20,12 @@ You can add authorization to grant permission to aggregator accounts and regions
 1. Sign in to the AWS Management Console and open the AWS Config console at [https://console\.aws\.amazon\.com/config/](https://console.aws.amazon.com/config/)\.
 
 1. Navigate to the **Authorizations** page and choose **Add authorization**\.
+**Note**  
+**There are two types of aggregators: Individual accounts aggregator and Organization aggregator**  
+For the individual accounts aggregator, authorization is required for any included source account regions including external account regions or Organization member account regions\.  
+For the organization aggregator, authorization is not required for Organization member account regions since authorization is integrated with the Organizations service\.  
+**Aggregators do not automatically enable AWS Config on your behalf**  
+AWS Config needs to be enabled in the source account region for either type of aggregator, in order for AWS Config data to be generated in the source account region\.
 
 1. For **Aggregator account**, type the 12\-digit account ID of an aggregator account\.
 

@@ -1,6 +1,6 @@
 # elasticsearch\-node\-to\-node\-encryption\-check<a name="elasticsearch-node-to-node-encryption-check"></a>
 
-Check that Amazon ElasticSearch Service nodes are encrypted end to end\. The rule is NON\_COMPLIANT if the node\-to\-node encryption is disabled on the domain\. 
+Check that Amazon Elasticsearch Service nodes are encrypted end to end\. The rule is NON\_COMPLIANT if the node\-to\-node encryption is disabled on the domain\. 
 
 **Identifier:** ELASTICSEARCH\_NODE\_TO\_NODE\_ENCRYPTION\_CHECK
 

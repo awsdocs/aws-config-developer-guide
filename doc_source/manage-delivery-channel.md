@@ -7,6 +7,8 @@ You can have only one delivery channel per region per AWS account, and the deliv
 When AWS Config detects a configuration change for a resource and the notification exceeds the maximum size allowed by Amazon SNS, the notification includes a brief summary of the configuration item\. You can view the complete notification in the Amazon S3 bucket location specified in the `s3BucketLocation` field\. For more information, see [Example Oversized Configuration Item Change Notification](https://docs.aws.amazon.com/config/latest/developerguide/oversized-notification-example.html)\.
 
 **Note**  
+**AWS Config supports AWS KMS encryption for Amazon S3 buckets used by AWS Config**  
+You can provide an AWS Key Management Service \(AWS KMS\) key or alias Amazon Resource Name \(ARN\) to encrypt the data delivered to your Amazon Simple Storage Service \(Amazon S3\) bucket\. By default, AWS Config delivers configuration history and snapshot files to your Amazon S3 bucket and encrypts the data at rest using S3 AES\-256 server\-side encryption, SSE\-S3\. However, if you provide AWS Config with your KMS key or alias ARN, AWS Config uses that KMS key instead of AES\-256 encryption\.  
 AWS Config does not support the delivery channel to an Amazon S3 bucket where object lock is enabled\. For more information, see [How S3 Object Lock works](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock-overview.html)\.
 
 ## Updating the Delivery Channel<a name="update-dc-console"></a>

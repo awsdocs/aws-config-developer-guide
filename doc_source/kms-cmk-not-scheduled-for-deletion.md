@@ -1,6 +1,6 @@
 # kms\-cmk\-not\-scheduled\-for\-deletion<a name="kms-cmk-not-scheduled-for-deletion"></a>
 
-Checks whether customer master keys \(CMKs\) are not scheduled for deletion in AWS Key Management Service \(KMS\)\. The rule is NON\_COMPLAINT if CMKs are scheduled for deletion\. 
+Checks if AWS KMS keys \(KMS keys\) are not scheduled for deletion in AWS Key Management Service \(AWS KMS\)\. The rule is NON\_COMPLAINT if KMS keys are scheduled for deletion\. 
 
 **Identifier:** KMS\_CMK\_NOT\_SCHEDULED\_FOR\_DELETION
 
