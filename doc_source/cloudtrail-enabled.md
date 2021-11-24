@@ -1,6 +1,6 @@
 # cloudtrail\-enabled<a name="cloudtrail-enabled"></a>
 
-Checks if AWS CloudTrail is enabled in your AWS account\. Optionally, you can specify which S3 bucket, SNS topic, and AWS CloudTrail ARN to use\.
+Checks if AWS CloudTrail is enabled in your AWS account\. Optionally, you can specify which S3 bucket, SNS topic, and AWS CloudTrail ARN to use\. The rule is NON\_COMPLIANT if AWS CloudTrail is not enabled\.
 
 **Identifier:** CLOUD\_TRAIL\_ENABLED
 

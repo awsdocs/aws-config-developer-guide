@@ -54,4 +54,4 @@ The Amazon SNS topic must exist in the same region as the region in which you se
 
 For information about looking up the existing resources in your account and understanding the configurations of your resources, see [Viewing AWS Resource Configurations and History](view-manage-resource.md)\.
 
-You can also use Amazon Simple Queue Service to monitor AWS resources programmatically\. For more information, see [Monitoring AWS Resource Changes with Amazon SQS](monitor-resource-changes.md)\.
+You can also use Amazon Simple Queue Service to monitor AWS resources programmatically\. For more information, see [Monitoring AWS Resource Changes with Amazon SQS](security-logging-and-monitoring.md#monitor-resource-changes)\.

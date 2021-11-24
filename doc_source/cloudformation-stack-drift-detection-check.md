@@ -1,6 +1,6 @@
 # cloudformation\-stack\-drift\-detection\-check<a name="cloudformation-stack-drift-detection-check"></a>
 
-Checks whether your CloudFormation stacks' actual configuration differs, or has drifted, from its expected configuration\. 
+Checks if the actual configuration of a Cloud Formation stack differs, or has drifted, from the expected configuration\. A stack is considered to have drifted if one or more of its resources differ from their expected configuration\. The rule and the stack are COMPLIANT when the stack drift status is IN\_SYNC\. The rule and the stack are NON\_COMPLIANT when the stack drift status is DRIFTED\.
 
 **Identifier:** CLOUDFORMATION\_STACK\_DRIFT\_DETECTION\_CHECK
 

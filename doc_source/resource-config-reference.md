@@ -91,7 +91,7 @@ New \(supported\): `arn:aws:ecs:region:aws_account_id:service/cluster-name/servi
 | --- | --- | --- | --- | 
 | Amazon Elastic Kubernetes Service | AWS::EKS::Cluster | NA | NA | 
 
-## Amazon Elasticsearch Service<a name="amazonelasticsearchservice"></a>
+## Amazon Elasticsearch Service<a name="amazonopensearchservice"></a>
 
 
 ****  

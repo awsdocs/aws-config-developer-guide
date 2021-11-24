@@ -1,6 +1,6 @@
 # iam\-user\-unused\-credentials\-check<a name="iam-user-unused-credentials-check"></a>
 
-Checks if your AWS Identity and Access Management \(IAM\) users have passwords or active access keys that have not been used within the specified number of days you provided\.
+Checks if your AWS Identity and Access Management \(IAM\) users have passwords or active access keys that have not been used within the specified number of days you provided\. The rule is NON\_COMPLIANT if there are inactive accounts not recently used\.
 
 **Note**  
 Re\-evaluating this rule within 4 hours of the first evaluation will have no effect on the results\.

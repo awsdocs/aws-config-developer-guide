@@ -12,7 +12,8 @@ SELECT
     availabilityZone
 WHERE
     resourceType = 'AWS::EC2::Instance'
-    AND configuration.imageId = 'ami-12345'
+AND
+    configuration.imageId = 'ami-12345'
 ```
 
 Results
@@ -171,7 +172,7 @@ SELECT
 WHERE
    resourceType = 'AWS::EC2::Volume' 
 AND 
-    configuration.state.value <> 'in-use'
+    configuration.state.value = 'in-use'
 ```
 
 Result

@@ -74,4 +74,4 @@ Advanced queries is supported in the following Regions:
 
 \*Saved queries is not available in Africa \(Cape Town\) and Europe \(Milan\) Regions\. 
 
-\*Advanced queries for multi\-account multi\-regions is not available in Africa \(Cape Town\) and Europe \(Milan\) Regions\.
+\*Advanced queries for multi\-account multi\-regions is not available in Africa \(Cape Town\), Europe \(Milan\), China \(Beijing\), and China \(Ningxia\) Regions\.

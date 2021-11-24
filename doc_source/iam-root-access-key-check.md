@@ -1,6 +1,6 @@
 # iam\-root\-access\-key\-check<a name="iam-root-access-key-check"></a>
 
-Checks whether the root user access key is available\. The rule is compliant if the user access key does not exist\. 
+Checks if the root user access key is available\. The rule is COMPLIANT if the user access key does not exist\. Otherwise, NON\_COMPLIANT\.
 
 **Identifier:** IAM\_ROOT\_ACCESS\_KEY\_CHECK
 

@@ -16,7 +16,7 @@ For examples of the CloudTrail log entries, see the following topics\.
 
 ### DeleteDeliveryChannel<a name="log-delete-delivery-channel"></a>
 
-The following is an example CloudTrail log file for the operation\.
+The following is an example CloudTrail log file for the [DeleteDeliveryChannel](https://docs.aws.amazon.com/config/latest/APIReference/API_DeleteDeliveryChannel.html) operation\.
 
 ```
 {
@@ -48,7 +48,7 @@ The following is an example CloudTrail log file for the operation\.
 
 ### DeliverConfigSnapshot<a name="log-deliver-config-snapshot"></a>
 
-The following is an example CloudTrail log file for the operation\.
+The following is an example CloudTrail log file for the [DeliverConfigSnapshot](https://docs.aws.amazon.com/config/latest/APIReference/API_DeliverConfigSnapshot.html) operation\.
 
 ```
 {
@@ -94,7 +94,7 @@ The following is an example CloudTrail log file for the operation\.
 
 ### DescribeConfigurationRecorderStatus<a name="log-describe-config-recorder-status"></a>
 
-The following is an example CloudTrail log file for the operation\.
+The following is an example CloudTrail log file for the [DescribeConfigurationRecorderStatus](https://docs.aws.amazon.com/config/latest/APIReference/API_DescribeConfigurationRecorderStatus.html) operation\.
 
 ```
 {
@@ -124,7 +124,7 @@ The following is an example CloudTrail log file for the operation\.
 
 ### DescribeConfigurationRecorders<a name="log-describe-config-recorders"></a>
 
-The following is an example CloudTrail log file for the operation\.
+The following is an example CloudTrail log file for the [DescribeConfigurationRecorders](https://docs.aws.amazon.com/config/latest/APIReference/API_DescribeConfigurationRecorders.html) operation\.
 
 ```
 {
@@ -154,7 +154,7 @@ The following is an example CloudTrail log file for the operation\.
 
 ### DescribeDeliveryChannels<a name="log-describe-delivery-channels"></a>
 
-Following is an example CloudTrail log file for the operation\.
+Following is an example CloudTrail log file for the [DescribeDeliveryChannels](https://docs.aws.amazon.com/config/latest/APIReference/API_DescribeDeliveryChannels.html) operation\.
 
 ```
 {
@@ -184,7 +184,7 @@ Following is an example CloudTrail log file for the operation\.
 
 ### GetResourceConfigHistory<a name="log-get-config-history"></a>
 
-The following is an example CloudTrail log file for the operation\.
+The following is an example CloudTrail log file for the [GetResourceConfigHistory](https://docs.aws.amazon.com/config/latest/APIReference/API_GetResourceConfigHistory.html) operation\.
 
 ```
 {
@@ -232,7 +232,7 @@ The following is an example CloudTrail log file for the operation\.
 
 ### PutConfigurationRecorder<a name="log-put-config-recorder"></a>
 
-The following is an example CloudTrail log file for the operation\.
+The following is an example CloudTrail log file for the [PutConfigurationRecorder](https://docs.aws.amazon.com/config/latest/APIReference/API_PutConfigurationRecorder.html) operation\.
 
 ```
 {
@@ -267,7 +267,7 @@ The following is an example CloudTrail log file for the operation\.
 
 ### PutDeliveryChannel<a name="log-put-delivery-channel"></a>
 
-The following is an example CloudTrail log file for the operation\.
+The following is an example CloudTrail log file for the [PutDeliveryChannel](https://docs.aws.amazon.com/config/latest/APIReference/API_PutDeliveryChannel.html) operation\.
 
 ```
 {
@@ -303,7 +303,7 @@ The following is an example CloudTrail log file for the operation\.
 
 ### StartConfigurationRecorder<a name="log-start-config-recorder"></a>
 
-The following is an example CloudTrail log file for the operation\.
+The following is an example CloudTrail log file for the [StartConfigurationRecorder](https://docs.aws.amazon.com/config/latest/APIReference/API_StartConfigurationRecorder.html) operation\.
 
 ```
 {
@@ -335,7 +335,7 @@ The following is an example CloudTrail log file for the operation\.
 
 ### StopConfigurationRecorder<a name="log-stop-config-recorder"></a>
 
-The following is an example CloudTrail log file for the operation\.
+The following is an example CloudTrail log file for the [StopConfigurationRecorder](https://docs.aws.amazon.com/config/latest/APIReference/API_StopConfigurationRecorder.html) operation\.
 
 ```
 {

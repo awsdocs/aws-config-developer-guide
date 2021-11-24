@@ -23,6 +23,7 @@ The following example shows a AWS managed policy, `AWSConfigUserAccess` that gra
         "config:Describe*",
         "config:Deliver*",
         "config:List*",
+        "config:Select*",
         "tag:GetResources",
         "tag:GetTagKeys",
         "cloudtrail:DescribeTrails",
@@ -100,7 +101,6 @@ This policy grants broad permissions\. Before granting full access, consider sta
                 "iam:GetRolePolicy",
                 "iam:ListRolePolicies",
                 "iam:ListRoles",
-                "iam:PassRole",
                 "iam:PutRolePolicy",
                 "iam:AttachRolePolicy",
                 "iam:CreatePolicy",
@@ -109,6 +109,18 @@ This policy grants broad permissions\. Before granting full access, consider sta
                 "iam:CreateServiceLinkedRole"
             ],
             "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "iam:PassRole"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "StringEquals": {
+                    "iam:PassedToService": "config.amazonaws.com"
+                }
+            }
         },
         {
             "Effect": "Allow",

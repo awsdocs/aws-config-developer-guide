@@ -10,9 +10,9 @@ The AWS Config console shows the compliance status of your rules and resources\.
 
 By using AWS Config to evaluate your resource configurations, you can assess how well your resource configurations comply with internal practices, industry guidelines, and regulations\.
 
-For regions that support AWS Config rules, see [AWS Config Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html#awsconfig_region) in the *Amazon Web Services General Reference*\.
+For regions that support AWS Config rules, see [AWS Config Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/awsconfig.html) in the *Amazon Web Services General Reference*\.
 
-You can create up to 150 AWS Config rules per region in your account\. For more information, see [AWS Config Limits](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_config) in the *Amazon Web Services General Reference*\.
+You can create up to 250 AWS Config rules per region in your account\. For more information, see [AWS Config Limits](https://docs.aws.amazon.com/config/latest/developerguide/configlimits.html)\.
 
 You can also create custom rules to evaluate additional resources that AWS Config doesn't yet record\. For more information, see [Evaluating Additional Resource Types](evaluate-config_develop-rules_nodejs.md#creating-custom-rules-for-additional-resource-types)\.
 

@@ -8,7 +8,7 @@ A configuration item consists of the following components\.
 | Component | Description | Contains | 
 | --- | --- | --- | 
 | Metadata | Information about this configuration item | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/config-item-table.html) | 
-| Attributes1 | Resource attributes | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/config-item-table.html) | 
+| Attributes | Resource attributes | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/config-item-table.html) | 
 | Relationships | How the resource is related to other resources associated with the account | Description of the relationship, such as Amazon EBS volume vol\-1234567 is attached to an Amazon EC2 instance i\-a1b2c3d4 | 
 | Current configuration | Information returned through a call to the Describe or List API of the resource | For example, DescribeVolumes API returns the following information about the volume: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/config-item-table.html) | 
 

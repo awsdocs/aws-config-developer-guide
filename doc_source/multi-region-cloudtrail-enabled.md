@@ -1,6 +1,6 @@
 # multi\-region\-cloudtrail\-enabled<a name="multi-region-cloudtrail-enabled"></a>
 
-Checks that there is at least one multi\-region AWS CloudTrail\. The rule is non\-compliant if the trails do not match input parameters 
+Checks if there is at least one multi\-region AWS CloudTrail\. The rule is NON\_COMPLIANT if the trails do not match input parameters\. The rule is NON\_COMPLIANT if the `ExcludeManagementEventSources` field is not empty or if AWS CloudTrail is configured to exclude management events such as AWS KMS events or Amazon RDS Data API events\.
 
 **Identifier:** MULTI\_REGION\_CLOUD\_TRAIL\_ENABLED
 

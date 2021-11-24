@@ -1,22 +1,24 @@
 # Turning on AWS Config<a name="gs-cli-subscribe"></a>
 
-You can use the AWS CLI to turn on AWS Config with the [put\-configuration\-recorder](https://docs.aws.amazon.com/cli/latest/reference/configservice/put-configuration-recorder.html) and [put\-delivery\-channel](https://docs.aws.amazon.com/cli/latest/reference/configservice/put-delivery-channel.html) commands and a few parameters\.
+You can use the AWS CLI to turn on AWS Config with the [put\-configuration\-recorder](https://docs.aws.amazon.com/cli/latest/reference/configservice/put-configuration-recorder.html), [put\-delivery\-channel](https://docs.aws.amazon.com/cli/latest/reference/configservice/put-delivery-channel.html), and [start\-configuration\-recorder](https://docs.aws.amazon.com/cli/latest/reference/configservice/start-configuration-recorder.html) commands and a few parameters\.
 
-You can use the `put-configuration-recorder` command to create a new configuration recorder to record selected resource configurations\. The `put-delivery-channel` command creates a delivery channel object to deliver configuration information to an Amazon S3 bucket and Amazon SNS topic\. You can have one configuration recorder and one delivery channel per region in your account\.
+The `put-configuration-recorder` command to creates a new configuration recorder to record selected resource configurations\. The `put-delivery-channel` command creates a delivery channel object to deliver configuration information to an Amazon S3 bucket and Amazon SNS topic\. You can have one configuration recorder and one delivery channel per region in your account\. Once a delivery channel is created, the `start-configuration-recorder` starts recording your selected resource configurations which you can see in your AWS account\.
 
-You can specify the name of the recorder and the Amazon Resource Name \(ARN\) of the IAM role used to describe the AWS resources associated with the account\. By default, AWS Config automatically assigns the name "default" when creating the configuration recorder\. You cannot change the assigned name\. The `put-configuration-recorder` command uses the following options for the `--recording-group` parameter:
+You can specify the name of the recorder and the Amazon Resource Name \(ARN\) of the IAM role used to describe the AWS resources associated with the account\. By default, AWS Config automatically assigns the name "default" when creating the configuration recorder\. You cannot change the assigned name\.
+
+Your [http://docs.aws.amazon.com/cli/latest/reference/configservice/put-configuration-recorder.html](http://docs.aws.amazon.com/cli/latest/reference/configservice/put-configuration-recorder.html) command should look like the following example:
+
+```
+$ aws configservice put-configuration-recorder --configuration-recorder name=default,roleARN=arn:aws:iam::123456789012:role/config-role --recording-group allSupported=true,includeGlobalResourceTypes=true
+```
+
+This command uses the following options for the `--recording-group` parameter:
 + `allSupported=true` – AWS Config records configuration changes for every supported type of *regional resource*\. When AWS Config adds support for a new type of regional resource, it automatically starts recording resources of that type\.
 + `includeGlobalResourceTypes=true` – AWS Config includes supported types of global resources with the resources that it records\. When AWS Config adds support for a new type of global resource, it automatically starts recording resources of that type\.
 
   Before you can set this option to `true`, you must set the `allSupported` option to `true`\.
 
   If you do not want to include global resources, set this option to `false`, or omit it\.
-
-Your command should look like the following example:
-
-```
-$ aws configservice put-configuration-recorder --configuration-recorder name=default,roleARN=arn:aws:iam::123456789012:role/config-role --recording-group allSupported=true,includeGlobalResourceTypes=true
-```
 
 To setup the delivery channel, use the [http://docs.aws.amazon.com/cli/latest/reference/configservice/put-delivery-channel.html](http://docs.aws.amazon.com/cli/latest/reference/configservice/put-delivery-channel.html) command:
 
@@ -48,3 +50,9 @@ This example sets the following attributes:
 
   If you choose a topic from another account, that topic must have policies that grant access permissions to AWS Config\. For more information, see [Permissions for the Amazon SNS Topic](sns-topic-policy.md)\.
 + `configSnapshotDeliveryProperties` – Contains the `deliveryFrequency` attribute, which sets how often AWS Config delivers configuration snapshots\.
+
+To finish turning on AWS Config, use the [http://docs.aws.amazon.com/cli/latest/reference/configservice/start-configuration-recorder.html](http://docs.aws.amazon.com/cli/latest/reference/configservice/start-configuration-recorder.html) command:
+
+```
+$ aws configservice start-configuration-recorder --configuration-recorder-name configRecorderName
+```

@@ -59,7 +59,9 @@ You can use the AWS CLI to select the types of resources that you want AWS Confi
 
    This command uses the following options for the `--recording-group` parameter:
    + `allSupported=true` – AWS Config records configuration changes for every supported type of *regional resource*\. When AWS Config adds support for a new type of regional resource, it automatically starts recording resources of that type\.
-   + `includeGlobalResourceTypes=true` – AWS Config includes supported types of global resources with the resources that it records\. When AWS Config adds support for a new type of global resource, it automatically starts recording resources of that type\.
+   + 
+
+     `includeGlobalResourceTypes=true` – AWS Config includes supported types of global resources with the resources that it records\. When AWS Config adds support for a new type of global resource, it automatically starts recording resources of that type\.
 
      Before you can set this option to `true`, you must set the `allSupported` option to `true`\.
 

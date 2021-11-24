@@ -1,6 +1,6 @@
 # Delivering Configuration Snapshot to an Amazon S3 Bucket<a name="deliver-snapshot-cli"></a>
 
-AWS Config delivers configuration items of the AWS resources that AWS Config is recording to the Amazon S3 bucket that you specified when you configured your delivery channel\.
+AWS Config delivers configuration snapshots of the AWS resources that AWS Config is recording to the Amazon S3 bucket that you specified when you configured your delivery channel\.
 
 **Topics**
 + [Delivering Configuration Snapshot](#deliver-snapshot-cli)

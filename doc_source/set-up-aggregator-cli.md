@@ -157,7 +157,7 @@ Delegated administrators are accounts within a given AWS Organization that are g
        "DelegatedAdministrators": [
            {
                "Id": "MemberAccountID",
-               "Arn": "arn:aws:organizations::MemeberAccountID:account/o-c7esubdi38/DelegatedAdministratorAccountID",
+               "Arn": "arn:aws:organizations::MemeberAccountID:account/o-c7esubdi38/MemeberAccountID",
                "Email": "name@amazon.com",
                "Name": "name",
                "Status": "ACTIVE",

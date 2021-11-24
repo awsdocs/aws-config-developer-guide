@@ -20,7 +20,7 @@ Before AWS Config can deliver logs to your Amazon S3 bucket AWS Config checks wh
 
 ## Required Permissions for the Amazon S3 Bucket When Using Service\-Linked Roles<a name="required-permissions-using-servicelinkedrole"></a>
 
-If you set up AWS Config using a service\-linked role, you need to attach an access policy, mentioned in step 6 below to the Amazon S3 bucket in your own account or another account to grant AWS Config access to the Amazon S3 bucket\. To follow the standard security advice of granting least privilege, it is not recommended to use service\-linked roles for AWS Config cross\-account setup \(doing so opens that resource to be invoked by AWS Config of any cross\-account if the account can guess the name for Amazon SNS topic/Amazon S3 Bucket\)\.
+The AWS Config service\-linked role does not have permission to put objects to Amazon S3 buckets\. So, if you set up AWS Config using a service\-linked role, AWS Config will send configuration items as the AWS Config service principal instead\. You will need to attach an access policy, mentioned in step 6 below, to the Amazon S3 bucket in your own account or another account to grant AWS Config access to the Amazon S3 bucket\.
 
 ## Granting AWS Config access to the Amazon S3 Bucket<a name="granting-access-in-another-account"></a>
 
@@ -46,37 +46,42 @@ Follow these steps to add an access policy to the Amazon S3 bucket in your own a
          "Sid": "AWSConfigBucketPermissionsCheck",
          "Effect": "Allow",
          "Principal": {
-           "Service": [
-            "config.amazonaws.com"
-           ]
+           "Service": "config.amazonaws.com"
          },
          "Action": "s3:GetBucketAcl",
-         "Resource": "arn:aws:s3:::targetBucketName"
+         "Resource": "arn:aws:s3:::targetBucketName",
+         "Condition": { 
+           "StringEquals": {
+             "AWS:SourceAccount": "sourceAccountID"
+           }
+         }
        },
        {
          "Sid": "AWSConfigBucketExistenceCheck",
          "Effect": "Allow",
          "Principal": {
-           "Service": [
-             "config.amazonaws.com"
-           ]
+           "Service": "config.amazonaws.com"
          },
          "Action": "s3:ListBucket",
-         "Resource": "arn:aws:s3:::targetBucketName"
+         "Resource": "arn:aws:s3:::targetBucketName",
+         "Condition": { 
+           "StringEquals": {
+             "AWS:SourceAccount": "sourceAccountID"
+           }
+         }
        },
        {
          "Sid": "AWSConfigBucketDelivery",
          "Effect": "Allow",
          "Principal": {
-           "Service": [
-            "config.amazonaws.com"    
-           ]
+           "Service": "config.amazonaws.com"
          },
          "Action": "s3:PutObject",
-         "Resource": "arn:aws:s3:::targetBucketName/[optional] prefix/AWSLogs/sourceAccountID-WithoutHyphens/Config/*",
+         "Resource": "arn:aws:s3:::targetBucketName/[optional] prefix/AWSLogs/sourceAccountID/Config/*",
          "Condition": { 
            "StringEquals": { 
-             "s3:x-amz-acl": "bucket-owner-full-control"
+             "s3:x-amz-acl": "bucket-owner-full-control",
+             "AWS:SourceAccount": "sourceAccountID"
            }
          }
        }
@@ -84,13 +89,17 @@ Follow these steps to add an access policy to the Amazon S3 bucket in your own a
    }
    ```
 **Note**  
-AWS Config is owned by AWS and does not belong specifically to one of your AWS accounts or linked accounts within your AWS Organization\. This means that the service won't work with organization ID or organization units based conditions\.
+AWS Config is owned by AWS and does not belong specifically to one of your AWS accounts or linked accounts within your AWS Organization\. This means that when AWS Config is sending configuration items as the AWS Config service principal \(such as when the IAM role that you assigned when you set up AWS Config doesn’t have `WRITE` access to the bucket or when you setup AWS Config to use a service\-linked role\), the service won't work with organization ID or organization units based conditions\.
 **Note**  
 When granting permissions to your IAM role instead of AWS Config service principal name \(SPN\), ensure that your IAM role has `PutObjectACL` permission on cross\-account bucket to avoid insufficient permission error\.  See sample IAM role policy at [ IAM Role Policy for Amazon S3 Bucket](iamrole-permissions.md#iam-role-policies-S3-bucket)\.
 
 1. Substitute the following values in the bucket policy:
    + *targetBucketName* – The name of the Amazon S3 bucket to which AWS Config will deliver configuration items\.
    + *\[optional\] prefix* – An optional addition to the Amazon S3 object key that helps create a folder\-like organization in the bucket\.
-   + *sourceAccountID\-WithoutHyphens* – The ID of the account for which AWS Config will deliver configuration items to the target bucket\.
+   + *sourceAccountID* – The ID of the account for which AWS Config will deliver configuration items to the target bucket\.
 
 1. Choose **Save** and then **Close**\.
+
+You can use the `AWS:SourceAccount` condition in the Amazon S3 bucket policy above to restrict the Config service principal to only interact with the Amazon S3 bucket when performing operations on behalf of specific accounts\. If you plan to set up AWS Config in many accounts from the same organization to deliver configuration items to a single Amazon S3 bucket, we recommend using IAM roles instead of service\-linked roles so you can use AWS Organizations conditions keys such as `AWS:PrincipalOrgID`\. For more information on managing access permissions for an IAM role to use with AWS Config, see [Permissions for the IAM Role Assigned to AWS Config](https://docs.aws.amazon.com/config/latest/developerguide/iamrole-permissions.html)\. For more information about managing access permissions for AWS Organizations, see [Managing access permissions for your AWS organization](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_permissions_overview.html)\.
+
+AWS Config also supports the `AWS:SourceArn` condition which restricts the Config service principal to only interact with the Amazon S3 bucket when performing operations on behalf of specific AWS Config delivery channels\. When using the AWS Config service principal, the `AWS:SourceArn` property will always be set to `arn:aws:config:sourceRegion:sourceAccountID:*` where `sourceRegion` is the region of the delivery channel and `sourceAccountID` is the ID of the account containing the delivery channel\. For more information on AWS Config delivery channels, see [Managing the Delivery Channel](https://docs.aws.amazon.com/config/latest/developerguide/manage-delivery-channel.html)\. For example, add the following condition to restrict the Config service principal to interact with your Amazon S3 bucket only on behalf of a delivery channel in the `us-east-1` region in the account `123456789012`: `"ArnLike": {"AWS:SourceArn": "arn:aws:config:us-east-1:123456789012:*"}`\.

@@ -99,6 +99,7 @@ The **AWSServiceRoleForConfig** SLR contains the managed policy `AWSConfigServic
 				   "elasticache:DescribeCacheParameterGroups",
 				   "elasticache:DescribeCacheSubnetGroups",
 				   "elasticache:DescribeReplicationGroups",
+				   "elasticache:DescribeSnapshots",
 				   "elasticache:ListTagsForResource",
 				   "elasticfilesystem:DescribeAccessPoints",
 				   "elasticfilesystem:DescribeBackupPolicy",
@@ -128,9 +129,11 @@ The **AWSServiceRoleForConfig** SLR contains the managed policy `AWSConfigServic
 				   "es:DescribeElasticsearchDomains",
 				   "es:ListDomainNames",
 				   "es:ListTags",
-				   "Firehose:DescribeDeliveryStream",
-				   "Firehose:ListDeliveryStreams",
-				   "Firehose:ListTagsForDeliveryStream",
+				   "es:DescribeDomain",
+				   "es:DescribeDomains",
+				   "firehose:DescribeDeliveryStream",
+				   "firehose:ListDeliveryStreams",
+				   "firehose:ListTagsForDeliveryStream",
 				   "fsx:DescribeFileSystems",
 				   "globalaccelerator:DescribeAccelerator",
 				   "globalaccelerator:DescribeEndpointGroup",
@@ -204,6 +207,7 @@ The **AWSServiceRoleForConfig** SLR contains the managed policy `AWSConfigServic
 				   "rds:DescribeDBSubnetGroups",
 				   "rds:DescribeEventSubscriptions",
 				   "rds:ListTagsForResource",
+				   "rds:DescribeDBParameters",
 				   "redshift:DescribeClusterParameterGroups",
 				   "redshift:DescribeClusterParameters",
 				   "redshift:DescribeClusters",
@@ -403,6 +407,7 @@ This IAM policy is updated each time AWS Config adds support for an AWS resource
 				   "elasticache:DescribeCacheParameterGroups",
 				   "elasticache:DescribeCacheSubnetGroups",
 				   "elasticache:DescribeReplicationGroups",
+				   "elasticache:DescribeSnapshots",
 				   "elasticache:ListTagsForResource",
 				   "elasticfilesystem:DescribeAccessPoints",
 				   "elasticfilesystem:DescribeBackupPolicy",
@@ -432,9 +437,11 @@ This IAM policy is updated each time AWS Config adds support for an AWS resource
 				   "es:DescribeElasticsearchDomains",
 				   "es:ListDomainNames",
 				   "es:ListTags",
-				   "Firehose:DescribeDeliveryStream",
-				   "Firehose:ListDeliveryStreams",
-				   "Firehose:ListTagsForDeliveryStream",
+				   "es:DescribeDomain",
+				   "es:DescribeDomains",
+				   "firehose:DescribeDeliveryStream",
+				   "firehose:ListDeliveryStreams",
+				   "firehose:ListTagsForDeliveryStream",
 				   "fsx:DescribeFileSystems",
 				   "globalaccelerator:DescribeAccelerator",
 				   "globalaccelerator:DescribeEndpointGroup",
@@ -508,6 +515,7 @@ This IAM policy is updated each time AWS Config adds support for an AWS resource
 				   "rds:DescribeDBSubnetGroups",
 				   "rds:DescribeEventSubscriptions",
 				   "rds:ListTagsForResource",
+				   "rds:DescribeDBParameters",
 				   "redshift:DescribeClusterParameterGroups",
 				   "redshift:DescribeClusterParameters",
 				   "redshift:DescribeClusters",
@@ -621,8 +629,10 @@ View details about updates to AWS managed policies for AWS Config since this ser
 
 | Change | Description | Date | 
 | --- | --- | --- | 
-|  [AWSConfigServiceRolePolicy](#security-iam-awsmanpol-AWSConfigServiceRolePolicy) – Add logs:ListTagsLogGroup, states:ListTagsForResource, states:ListStateMachines, states:DescribeStateMachine, and additional permissions for AWS resource types  |  This policy now grants permissions to list tags for a log group, list tags for a state machine, and list all state machines\. This policy now grants permission to get details about a state machine\. This policy also now supports additional permissions for Amazon EC2 Systems Manager \(SSM\), Amazon Elastic Container Registry, Amazon FSx, Amazon Kinesis Data Firehose, Amazon Managed Streaming for Apache Kafka \(Amazon MSK\), Amazon Relational Database Service \(Amazon RDS\), Amazon Route 53 , Amazon SageMaker, Amazon Simple Notification Service, AWS Database Migration Service, AWS Global Accelerator, and AWS Storage Gateway\.  | July 28, 2021 | 
-|  [AWS\_ConfigRole](#security-iam-awsmanpol-AWS_ConfigRole) – Add logs:ListTagsLogGroup, states:ListTagsForResource, states:ListStateMachines, states:DescribeStateMachine, and additional permissions for AWS resource types  |  This policy now grants permissions to list tags for a log group, list tags for a state machine, and list all state machines\. This policy now grants permission to get details about a state machine\. This policy also now supports additional permissions for Amazon EC2 Systems Manager \(SSM\), Amazon Elastic Container Registry, Amazon FSx, Amazon Kinesis Data Firehose, Amazon Managed Streaming for Apache Kafka \(Amazon MSK\), Amazon Relational Database Service \(Amazon RDS\), Amazon Route 53 , Amazon SageMaker, Amazon Simple Notification Service, AWS Database Migration Service, AWS Global Accelerator, and AWS Storage Gateway\.  | July 28, 2021 | 
+|  [AWSConfigServiceRolePolicy](#security-iam-awsmanpol-AWSConfigServiceRolePolicy) – Add es:DescribeDomain, es:DescribeDomains, rds:DescribeDBParameters, and, elasticache:DescribeSnapshots  |  This policy now grants permission to get details about an Amazon Elasticsearch Service \(Amazon ES\) domain/domains and to get a detailed parameter list for a particular Amazon Relational Database Service \(Amazon RDS\) DB parameter group\. This policy also grants permission to get detais about Amazon ElastiCache snapshots\.  | September 8, 2021 | 
+|  [AWS\_ConfigRole](#security-iam-awsmanpol-AWS_ConfigRole) – Add es:DescribeDomain, es:DescribeDomains, rds:DescribeDBParameters, and, elasticache:DescribeSnapshots  |  This policy now grants permission to get details about an Amazon Elasticsearch Service \(Amazon ES\) domain/domains and to get a detailed parameter list for a particular Amazon Relational Database Service \(Amazon RDS\) DB parameter group\. This policy also grants permission to get detais about Amazon ElastiCache snapshots\.  | September 8, 2021 | 
+|  [AWSConfigServiceRolePolicy](#security-iam-awsmanpol-AWSConfigServiceRolePolicy) – Add logs:ListTagsLogGroup, states:ListTagsForResource, states:ListStateMachines, states:DescribeStateMachine, and additional permissions for AWS resource types  |  This policy now grants permission to list tags for a log group, list tags for a state machine, and list all state machines\. This policy now grants permission to get details about a state machine\. This policy also now supports additional permissions for Amazon EC2 Systems Manager \(SSM\), Amazon Elastic Container Registry, Amazon FSx, Amazon Kinesis Data Firehose, Amazon Managed Streaming for Apache Kafka \(Amazon MSK\), Amazon Relational Database Service \(Amazon RDS\), Amazon Route 53 , Amazon SageMaker, Amazon Simple Notification Service, AWS Database Migration Service, AWS Global Accelerator, and AWS Storage Gateway\.  | July 28, 2021 | 
+|  [AWS\_ConfigRole](#security-iam-awsmanpol-AWS_ConfigRole) – Add logs:ListTagsLogGroup, states:ListTagsForResource, states:ListStateMachines, states:DescribeStateMachine, and additional permissions for AWS resource types  |  This policy now grants permission to list tags for a log group, list tags for a state machine, and list all state machines\. This policy now grants permission to get details about a state machine\. This policy also now supports additional permissions for Amazon EC2 Systems Manager \(SSM\), Amazon Elastic Container Registry, Amazon FSx, Amazon Kinesis Data Firehose, Amazon Managed Streaming for Apache Kafka \(Amazon MSK\), Amazon Relational Database Service \(Amazon RDS\), Amazon Route 53 , Amazon SageMaker, Amazon Simple Notification Service, AWS Database Migration Service, AWS Global Accelerator, and AWS Storage Gateway\.  | July 28, 2021 | 
 |  [AWSConfigServiceRolePolicy](#security-iam-awsmanpol-AWSConfigServiceRolePolicy) – Add ssm:DescribeDocumentPermission and additional permissions for AWS resource types  |  This policy now grants permission to view the permissions of AWS Systems Manager documents and information about IAM Access Analyzer\. This policy now supports additional AWS resource types for Amazon Kinesis, Amazon ElastiCache, Amazon EMR, AWS Network Firewall, Amazon Route 53 , and Amazon Relational Database Service \(Amazon RDS\)\. These permission changes allow AWS Config to invoke the read\-only APIs required to support these resource types\. This policy also now support filtering Lambda@Edge functions for the [lambda\-inside\-vpc](https://docs.aws.amazon.com/config/latest/developerguide/lambda-inside-vpc.html) AWS Config managed rule\.  | June 8, 2021 | 
 |  [AWS\_ConfigRole](#security-iam-awsmanpol-AWS_ConfigRole) – Add ssm:DescribeDocumentPermission and additional permissions for AWS resource types  |  This policy now grants permission to view the permissions of AWS Systems Manager documents and information about IAM Access Analyzer\. This policy now supports additional AWS resource types for Amazon Kinesis, Amazon ElastiCache, Amazon EMR, AWS Network Firewall, Amazon Route 53 , and Amazon Relational Database Service \(Amazon RDS\)\. These permission changes allow AWS Config to invoke the read\-only APIs required to support these resource types\. This policy also now support filtering Lambda@Edge functions for the [lambda\-inside\-vpc](https://docs.aws.amazon.com/config/latest/developerguide/lambda-inside-vpc.html) AWS Config managed rule\.  | June 8, 2021 | 
 |  [AWSConfigServiceRolePolicy](#security-iam-awsmanpol-AWSConfigServiceRolePolicy) – Add apigateway:GET permission to make read\-only GET calls to API Gateway and s3:GetAccessPointPolicy permission and s3:GetAccessPointPolicyStatus permission to invoke Amazon S3 read\-only APIs  |  This policy now grants permissions that allow AWS Config to make read\-only GET calls to API Gateway to support a AWS Config Rule for API Gateway\. The policy also adds permissions that allow AWS Config to invoke Amazon Simple Storage Service \(Amazon S3\) read\-only APIs, which are required to support the new `AWS::S3::AccessPoint` resource type\.   | May 10, 2021 | 

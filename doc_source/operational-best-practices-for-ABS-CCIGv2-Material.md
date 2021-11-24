@@ -4,7 +4,7 @@ Conformance packs provide a general\-purpose compliance framework designed to en
 
 The following provides a sample mapping between the ABS Cloud Computing Implementation Guide 2\.0 \- Material Workloads and AWS managed Config rules\. Each Config rule applies to a specific AWS resource, and relates to one or more ABS Cloud Computing Implementation Guide controls\. An ABS Cloud Computing Implementation Guide control can be related to multiple Config rules\. Refer to the table below for more detail and guidance related to these mappings\.
 
-**AWS Region:** All supported AWS Regions except Asia Pacific \(Hong Kong\), Europe \(Stockholm\), and Middle East \(Bahrain\)
+**AWS Region:** All supported AWS Regions except Middle East \(Bahrain\)
 
 
 ****  

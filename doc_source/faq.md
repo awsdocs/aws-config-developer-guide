@@ -18,7 +18,7 @@
 
 ### What is the new change in the AWS Config Resource Relationships?<a name="faq"></a>
 
-To optimize the number of resource changes recorded, AWS Config will release an update to relationships modeled within ConfigurationItems \(CI\) for seven Amazon EC2 resource types on **September 15, 2021** This update optimized CI models for Amazon EC2 instance, security group, network interface, subnet, VPC, VPN gateway, and customer gateway resource types to record direct relationships and deprecate indirect relationships\.
+To optimize the number of resource changes recorded, AWS Config will release an update to relationships modeled within ConfigurationItems \(CI\) for seven Amazon EC2 resource types on **December 15, 2021** This update optimized CI models for Amazon EC2 instance, security group, network interface, subnet, VPC, VPN gateway, and customer gateway resource types to record direct relationships and deprecate indirect relationships\.
 
 ### What is a direct and an in\-direct relationship with respect to a resource?<a name="faq-0"></a>
 
@@ -39,6 +39,8 @@ The following resource relationships will be deprecated\.
 ### How are the AWS Config managed rules affected?<a name="faq-2"></a>
 
 AWS Config managed rules that trigger on one of the resources listed above, will be updated by the AWS Config team\. If you have not defined tags for these rules, no action is needed on your part\. If tags are defined, you might need to make updates to the tags of your managed rules\. 
+
+Specifically, the AWS Config managed rule [ec2\-security\-group\-attached\-to\-eni](ec2-security-group-attached-to-eni.md) is impacted as configuration items triggering this rule will no longer be created once indirect relationships are deprecated\. If you use this rule, please remove it from evaluating the configuration of AWS resources prior to the deprecation of indirect relationships\.
 
 ### What is the exact impact for custom AWS Config rules that use configuration trigger for these resource types?<a name="faq-3"></a>
 
