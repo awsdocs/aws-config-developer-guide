@@ -31,7 +31,7 @@ If you are using AWS Config for the first time or configuring AWS Config for a n
 1. For **Delivery method**, choose the Amazon S3 bucket to which AWS Config sends configuration history and configuration snapshot files:
    + **Create a bucket** – For **S3 bucket name**, type a name for your Amazon S3 bucket\. 
 
-     The name that you type must be unique across all existing bucket names in Amazon S3\. One way to help ensure uniqueness is to include a prefix; for example, the name of your organization\. You can't change the bucket name after it is created\. For more information, see [Bucket Restrictions and Limitations](https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html) in the *Amazon Simple Storage Service Developer Guide*\. 
+     The name that you type must be unique across all existing bucket names in Amazon S3\. One way to help ensure uniqueness is to include a prefix; for example, the name of your organization\. You can't change the bucket name after it is created\. For more information, see [Bucket Restrictions and Limitations](https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html) in the *Amazon Simple Storage Service User Guide*\. 
    + **Choose a bucket from your account** – For **S3 bucket name**, choose your preferred bucket\.
    + **Choose a bucket from another account** – For **S3 bucket name**, type the bucket name\.
 **Note**  

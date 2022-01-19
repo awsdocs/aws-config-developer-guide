@@ -53,7 +53,7 @@ To learn more about how AWS Config integrates with Amazon API Gateway, see [Moni
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
-\*AWS Config records the configuration details of Dedicated hosts and the instances that you launch on them\. As a result, you can use AWS Config as a data source when you report compliance with your server\-bound software licenses\. For example, you can view the configuration history of an instance and determine which Amazon Machine Image \(AMI\) it is based on\. Then, you can look up the configuration history of the host, which includes details such as the numbers of sockets and cores, to verify that the host complies with the license requirements of the AMI\. For more information, see [Tracking Configuration Changes with AWS Config ](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-aws-config.html) in the *Amazon EC2 User Guide for Linux Instances*\. 
+\*AWS Config records the configuration details of Dedicated hosts and the instances that you launch on them\. As a result, you can use AWS Config as a data source when you report compliance with your server\-bound software licenses\. For example, you can view the configuration history of an instance and determine which Amazon Machine Image \(AMI\) it is based on\. Then, you can look up the configuration history of the host, which includes details such as the numbers of sockets and cores, to verify that the host complies with the license requirements of the AMI\. For more information, see [Tracking Configuration Changes with AWS Config](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-aws-config.html) in the *Amazon EC2 User Guide for Linux Instances*\. 
 
 ## Amazon Elastic Container Registry<a name="amazonelasticcontainerregistry"></a>
 
@@ -91,7 +91,7 @@ New \(supported\): `arn:aws:ecs:region:aws_account_id:service/cluster-name/servi
 | --- | --- | --- | --- | 
 | Amazon Elastic Kubernetes Service | AWS::EKS::Cluster | NA | NA | 
 
-## Amazon Elasticsearch Service<a name="amazonopensearchservice"></a>
+## Amazon OpenSearch Service<a name="amazonopensearchservice"></a>
 
 
 ****  
@@ -146,7 +146,16 @@ AWS Config also records the following attributes for the Amazon S3 bucket resour
 | WebsiteConfiguration | Static website hosting is enabled for the bucket\. | 
 | VersioningConfiguration | Versioning is enabled for objects in the bucket\.  | 
 
-For more information about the attributes, see [Bucket Configuration Options](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html#bucket-config-options-intro) in the *Amazon Simple Storage Service Developer Guide*\.
+For more information about the attributes, see [Bucket Configuration Options](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html#bucket-config-options-intro) in the *Amazon Simple Storage Service User Guide*\.
+
+## Amazon SageMaker<a name="amazonsagemaker"></a>
+
+
+****  
+
+| AWS Service | Resource Type Value | Relationship | Related Resource | 
+| --- | --- | --- | --- | 
+| Amazon SageMaker | AWS::SageMaker::CodeRepository | NA | NA | 
 
 ## Amazon Simple Notification Service<a name="amazonsimplenotificationservice"></a>
 
@@ -235,6 +244,12 @@ For more information, see [Managing backups using backup plans](https://docs.aws
 
 \*To learn more about how AWS Config integrates with AWS CodeBuild, see [Use AWS Config with AWS CodeBuild Sample](https://docs.aws.amazon.com/codebuild/latest/userguide/how-to-integrate-config.html)\.
 
+## AWS CodeDeploy<a name="awscodedeploy"></a>
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
+
 ## AWS CodePipeline<a name="awscodepipeline"></a>
 
 
@@ -290,8 +305,6 @@ AWS Config includes inline policies with the configuration details that it recor
 
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
-
-AWS Config support for Network Firewall is available only in the US East \(N\. Virginia\), Europe \(Ireland\) and US West \(Oregon\) regions\.
 
 ## AWS Secrets Manager<a name="awssecretsmanager"></a>
 

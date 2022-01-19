@@ -15,7 +15,7 @@ On the **Rules** page, you can view the rules for the region in your account\. Y
 
 1. Sign in to the AWS Management Console and open the AWS Config console at [https://console\.aws\.amazon\.com/config/](https://console.aws.amazon.com/config/)\.
 
-1. In the AWS Management Console, verify that the region selector is set to a region that supports AWS Config rules\. For the list of supported regions, see [AWS Config Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html#awsconfig_region) in the *Amazon Web Services General Reference*\.
+1. In the AWS Management Console, verify that the region selector is set to a region that supports AWS Config rules\. For the list of supported regions, see [AWS Config Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/awsconfig.html) in the *Amazon Web Services General Reference*\.
 
 1. Choose **Rules**\. The **Rules** page shows all the rule that are currently in your AWS account\. It lists the name, associated remediation action, and compliance status of each rule\.
    + Choose **Add rule** to get started with creating a rule\.

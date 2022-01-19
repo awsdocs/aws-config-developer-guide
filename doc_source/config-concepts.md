@@ -142,4 +142,4 @@ AWS Identity and Access Management is a web service that enables Amazon Web Serv
 
 ## Partner Solutions<a name="config-concepts-partner-solutions"></a>
 
-AWS partners with third\-party specialists in logging and analysis to provide solutions that use AWS Config output\. For more information, visit the AWS Config detail page at [ AWS Config](https://aws.amazon.com/config)\.
+AWS partners with third\-party specialists in logging and analysis to provide solutions that use AWS Config output\. For more information, visit the AWS Config detail page at [AWS Config](https://aws.amazon.com/config)\.

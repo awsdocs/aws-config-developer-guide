@@ -13,6 +13,9 @@ Checks that the inline policies attached to your IAM users, roles, and groups do
 blockedActionsPatternsType: CSV  
 Comma\-separated list of blocked KMS action patterns, for example, kms:\*, kms:Decrypt, kms:ReEncrypt\*\.
 
+excludeRoleByManagementAccount \(Optional\)Type: boolean  
+Exclude a role if it is only assumable by organization management account\.
+
 ## AWS CloudFormation template<a name="w29aac11c33c17b7d229c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

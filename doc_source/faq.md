@@ -18,7 +18,7 @@
 
 ### What is the new change in the AWS Config Resource Relationships?<a name="faq"></a>
 
-To optimize the number of resource changes recorded, AWS Config will release an update to relationships modeled within ConfigurationItems \(CI\) for seven Amazon EC2 resource types on **December 15, 2021** This update optimized CI models for Amazon EC2 instance, security group, network interface, subnet, VPC, VPN gateway, and customer gateway resource types to record direct relationships and deprecate indirect relationships\.
+To optimize the number of resource changes recorded, AWS Config will release an update to relationships modeled within Configuration Items \(CI\) for seven Amazon EC2 resource types on **February 16, 2022**\. This update optimized CI models for Amazon EC2 instance, security group, network interface, subnet, VPC, VPN gateway, and customer gateway resource types to record direct relationships and deprecate indirect relationships\.
 
 ### What is a direct and an in\-direct relationship with respect to a resource?<a name="faq-0"></a>
 
@@ -30,7 +30,7 @@ By deprecating indirect relationships, there are fewer configuration items relat
 
 ### Which resource relationships are being removed?<a name="faq-2"></a>
 
-The following resource relationships will be deprecated\.
+The following resource relationships will be deprecated on February 16, 2022\.
 
 
 ****  

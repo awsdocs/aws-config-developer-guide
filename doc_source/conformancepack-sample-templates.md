@@ -42,6 +42,7 @@ Here are the conformance pack YAML templates that you see in AWS Config console\
 + [Operational Best Practices for DevOps](operational-best-practices-for-DevOps.md)
 + [Operational Best Practices for EC2](operational-best-practices-for-EC2.md)
 + [Operational Best Practices for Encryption and Key Management](operational-best-practices-for-Encryption-and-Keys.md)
++ [Operational Best Practices for ENISA Cybersecurity guide for SMEs](operational-best-practices-for-enisa-cybersecurity-guide-for-smes.md)
 + [Operational Best Practices for Esquema Nacional de Seguridad \(ENS\) Low](operational-best-practices-for-ens-low.md)
 + [Operational Best Practices for Esquema Nacional de Seguridad \(ENS\) Medium](operational-best-practices-for-ens-medium.md)
 + [Operational Best Practices for Esquema Nacional de Seguridad \(ENS\) High](operational-best-practices-for-ens_high.md)

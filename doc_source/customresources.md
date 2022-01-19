@@ -14,7 +14,7 @@ If you have configured AWS Config to record all resource types, then third\-part
 + [Step 3: Generate Artifacts](#generateartifactsforcfnsubmit)
 + [Step 4: Register Your Resource](#customresources-registerresource)
 + [Step 5: Publish Resource Configuration](#customresources-publishresourceconfiguration)
-+ [Record and Delete a Configuration State for Third\-Party Resources Using AWS AWS CLI](customresources-cli.md)
++ [Record and Delete a Configuration State for Third\-Party Resources Using AWSAWS CLI](customresources-cli.md)
 + [Managing a Configuration State for Third\-Party Resources Type Using APIs](customresources-api.md)
 + [Region Support](#custom-resources-regions)
 

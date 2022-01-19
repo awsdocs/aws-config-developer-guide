@@ -21,7 +21,7 @@ You can attach a permission policy to the Amazon SNS topic owned by a different 
     {
       "Sid": "AWSConfigSNSPolicy20150201",
       "Action": [
-        "SNS:Publish"
+        "sns:Publish"
       ],
       "Effect": "Allow",
       "Resource": "arn:aws:sns:region:account-id:myTopic",
@@ -39,7 +39,7 @@ You can attach a permission policy to the Amazon SNS topic owned by a different 
 
 For the `Resource` key, *account\-id* is the AWS account number of the topic owner\. For *account\-id1*, *account\-id2*, and *account\-id3*, use the AWS accounts that will send data to an Amazon SNS topic\. You must substitute appropriate values for *region* and *myTopic*\.
 
-When AWS Config sends a notification to an Amazon SNS topic, it first attempts to use the IAM role, but this attempt fails if the role or AWS account does not have permission to publish to the topic\. In this event, AWS Config sends the notification again, this time as AWS Config service principal\. Before the publication can succeed, the access policy for the topic must grant `sns:publish` access to the `config.amazonaws.com` principal name\. You must attach an access policy, mentioned below, to the Amazon SNS topic to grant AWS Config access to the Amazon SNS topic in the event that the IAM role does not have permission to publish to the topic\.
+When AWS Config sends a notification to an Amazon SNS topic, it first attempts to use the IAM role, but this attempt fails if the role or AWS account does not have permission to publish to the topic\. In this event, AWS Config sends the notification again, this time as AWS Config service principal\. Before the publication can succeed, the access policy for the topic must grant `sns:Publish` access to the `config.amazonaws.com` principal name\. You must attach an access policy, mentioned below, to the Amazon SNS topic to grant AWS Config access to the Amazon SNS topic in the event that the IAM role does not have permission to publish to the topic\.
 
 ## Required Permissions for the Amazon SNS Topic When Using Service\-Linked Roles<a name="required-permissions-snstopic-using-servicelinkedrole"></a>
 
@@ -55,7 +55,7 @@ The AWS Config service\-linked role does not have permission to publish messages
     "Principal": {
       "Service": "config.amazonaws.com"
     },
-    "Action": "SNS:Publish",
+    "Action": "sns:Publish",
       "Resource": "arn:aws:sns:region:account-id:myTopic",
         "Condition" : {
         "StringEquals": {
@@ -79,4 +79,4 @@ AWS Config also supports the `AWS:SourceArn` condition which restricts the Confi
 
 ## Troubleshooting for the Amazon SNS Topic<a name="troubleshooting-for-snstopic-using-servicelinkedrole"></a>
 
-AWS Config must have permissions to send notifications to an Amazon SNS topic\. If an Amazon SNS topic cannot receive notifications, verify that the IAM role that AWS Config was assuming must have `sns:publish` permissions\. 
+AWS Config must have permissions to send notifications to an Amazon SNS topic\. If an Amazon SNS topic cannot receive notifications, verify that the IAM role that AWS Config was assuming must have `sns:Publish` permissions\. 

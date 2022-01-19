@@ -1,8 +1,8 @@
-# Record and Delete a Configuration State for Third\-Party Resources Using AWS AWS CLI<a name="customresources-cli"></a>
+# Record and Delete a Configuration State for Third\-Party Resources Using AWSAWS CLI<a name="customresources-cli"></a>
 
 The AWS CLI is a unified tool to manage your AWS services\. With just one tool to download and configure, you can control multiple AWS services from the command line and use scripts to automate them\.
 
-To install the AWS CLI on your local machine, see [Installing the AWS AWS CLI](http://docs.aws.amazon.com/cli/latest/userguide/installing.html) in the *AWS CLI User Guide*\.
+To install the AWS CLI on your local machine, see [Installing the AWSAWS CLI](http://docs.aws.amazon.com/cli/latest/userguide/installing.html) in the *AWS CLI User Guide*\.
 
 If necessary, type `AWS Configure` to configure the AWS CLI\.
 

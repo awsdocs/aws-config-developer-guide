@@ -13,7 +13,7 @@ The following is an example payload of an Amazon SNS notification that is genera
         "MessageVersion": "1.0",
         "NotificationCreateTime": "2014-03-18T10:11:00Z",
         "messageType": "ConfigurationItemChangeNotification",
-        "configurationItems": [
+        "configurationItem": [
             {
                 "configurationItemVersion": "1.0",
                 "configurationItemCaptureTime": "2014-03-07T23:47:08.918Z",

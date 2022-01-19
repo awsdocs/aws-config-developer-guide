@@ -12,7 +12,7 @@ By using AWS Config to evaluate your resource configurations, you can assess how
 
 For regions that support AWS Config rules, see [AWS Config Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/awsconfig.html) in the *Amazon Web Services General Reference*\.
 
-You can create up to 250 AWS Config rules per region in your account\. For more information, see [AWS Config Limits](https://docs.aws.amazon.com/config/latest/developerguide/configlimits.html)\.
+You can create up to 400 AWS Config rules per region in your account\. For more information, see [AWS Config Limits](https://docs.aws.amazon.com/config/latest/developerguide/configlimits.html)\.
 
 You can also create custom rules to evaluate additional resources that AWS Config doesn't yet record\. For more information, see [Evaluating Additional Resource Types](evaluate-config_develop-rules_nodejs.md#creating-custom-rules-for-additional-resource-types)\.
 

@@ -21,7 +21,7 @@ To create an Amazon S3 bucket with the AWS CLI, use the [create\-bucket](https:/
 
 1. For the **Bucket Name:**, type a name for your Amazon S3 bucket, such as *my\-config\-bucket*\. 
 **Note**  
-Make sure the bucket name you choose is unique across all existing bucket names in Amazon S3\. You cannot change the name of a bucket after it is created\. For more information on bucket naming rules and conventions, see [Bucket restrictions and Limitations](https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html) in the *Amazon Simple Storage Service Developer Guide*\.
+Make sure the bucket name you choose is unique across all existing bucket names in Amazon S3\. You cannot change the name of a bucket after it is created\. For more information on bucket naming rules and conventions, see [Bucket restrictions and Limitations](https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html) in the *Amazon Simple Storage Service User Guide*\.
 
 1. Choose **Create**\.
 

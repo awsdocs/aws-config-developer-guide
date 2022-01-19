@@ -1,6 +1,6 @@
 # Query Using the SQL Query Editor \(AWS CLI\)<a name="query-using-sql-editor-cli"></a>
 
-To install the AWS Command Line Interface \(AWS CLI\) on your local computer, see [Installing the AWS AWS CLI](http://docs.aws.amazon.com/cli/latest/userguide/installing.html) in the *AWS CLI User Guide*\.
+To install the AWS Command Line Interface \(AWS CLI\) on your local computer, see [Installing the AWSAWS CLI](http://docs.aws.amazon.com/cli/latest/userguide/installing.html) in the *AWS CLI User Guide*\.
 
 ## Query Resource Configuration Data<a name="query-resource-configuration-data"></a>
 
