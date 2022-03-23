@@ -16,7 +16,7 @@ A configuration item consists of the following components\.
 
 1. A configuration item relationship does not include network flow or data flow dependencies\. Configuration items cannot be customized to represent your application architecture\. 
 
-1. AWS Config does not record key–value tags for CloudTrail trail, CloudFront distribution, and CloudFront streaming distribution\.
+1. AWS Config does not record key–value tags for CloudTrail trail, and CloudFront streaming distribution\.
 
 1. As of Version 1\.3, the relatedEvents field is empty\. You can access the [LookupEvents API](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_LookupEvents.html) in the *AWS CloudTrail API Reference* to retrieve the events for the resource\.
 
