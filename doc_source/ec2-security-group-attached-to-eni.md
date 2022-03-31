@@ -1,17 +1,20 @@
 # ec2\-security\-group\-attached\-to\-eni<a name="ec2-security-group-attached-to-eni"></a>
 
-Checks that non\-default security groups are attached to Amazon Elastic Compute Cloud \(EC2\) instances or an elastic network interfaces \(ENIs\)\. The rule returns NON\_COMPLIANT if the security group is not associated with an EC2 instance or an ENI\. 
+Checks if non\-default security groups are attached to Elastic network interfaces \(ENIs\)\. The rule is NON\_COMPLIANT if the security group is not associated with an elastic network interface \(ENI\)\. 
+
+**Important**  
+This rule is being deprecated due to [Indirect Relationship Deprecation](https://docs.aws.amazon.com/config/latest/developerguide/faq.html#faq) as configuration items triggering this rule will not longer be created once indirect relationships are deprecated\. If you use this rule, please remove it from evaluating the configuration of AWS resources and replace it with the new [ec2\-security\-group\-attached\-to\-eni\-periodic](https://docs.aws.amazon.com/config/latest/developerguide/ec2-security-group-attached-to-eni-periodic.html) rule\. The [ec2\-security\-group\-attached\-to\-eni\-periodic](https://docs.aws.amazon.com/config/latest/developerguide/ec2-security-group-attached-to-eni-periodic.html) rule will not be impacted by this deprecation as it is triggered on a periodic basis rather than on configuration changes\.
 
 **Identifier:** EC2\_SECURITY\_GROUP\_ATTACHED\_TO\_ENI
 
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS regions except Asia Pacific \(Osaka\) Region
+**AWS Region:** All supported AWS regions except Asia Pacific \(Jakarta\), Asia Pacific \(Osaka\) Region
 
 **Parameters:**
 
 None  
 
-## AWS CloudFormation template<a name="w29aac11c33c17b7d159c15"></a>
+## AWS CloudFormation template<a name="w76aac11c31c17b7d187c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

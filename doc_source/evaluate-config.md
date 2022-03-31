@@ -18,7 +18,6 @@ You can also create custom rules to evaluate additional resources that AWS Confi
 
 **Topics**
 + [Region Support](#region-support-config-rules)
-+ [Viewing Configuration Compliance](evaluate-config_view-compliance.md)
 + [Specifying Triggers for AWS Config Rules](evaluate-config-rules.md)
 + [AWS Config Managed Rules](evaluate-config_use-managed-rules.md)
 + [AWS Config Custom Rules](evaluate-config_develop-rules.md)
@@ -27,7 +26,6 @@ You can also create custom rules to evaluate additional resources that AWS Confi
 + [Deleting Evaluation Results](deleting-evaluations-results.md)
 + [Enabling AWS Config Rules Across all Accounts in Your Organization](config-rule-multi-account-deployment.md)
 + [Remediating Noncompliant AWS Resources by AWS Config Rules](remediation.md)
-+ [Tagging Your AWS Config Resources](tagging.md)
 
 ## Region Support<a name="region-support-config-rules"></a>
 

@@ -6,13 +6,13 @@ Checks if log types exported to Amazon CloudWatch for an Amazon Relational Datab
 
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS regions except China \(Ningxia\), Asia Pacific \(Osaka\), Europe \(Milan\), Africa \(Cape Town\) Region
+**AWS Region:** All supported AWS regions except China \(Ningxia\), Asia Pacific \(Jakarta\), Asia Pacific \(Osaka\), Europe \(Milan\), Africa \(Cape Town\) Region
 
 **Parameters:**
 
 additionalLogs \(Optional\)Type: StringMap  
 Comma\-separated list of engine names and log type names\. For example, "additionalLogs": "oracle: general, slowquery ; aurora: alert, slowquery"
 
-## AWS CloudFormation template<a name="w29aac11c33c17b7d297c15"></a>
+## AWS CloudFormation template<a name="w76aac11c31c17b7d389c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

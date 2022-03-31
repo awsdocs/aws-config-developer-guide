@@ -48,7 +48,7 @@ The Amazon SNS topic must exist in the same region as the region in which you se
 
 1. 
 
-   If you are setting up AWS Config in a region that supports rules, choose **Next**\. See [Setting Up AWS Config Rules with the Console](setting-up-aws-config-rules-with-console.md)\. 
+   If you are setting up AWS Config in a region that supports rules, choose **Next**\. See [Using AWS Config Rules with the Console](setting-up-aws-config-rules-with-console.md)\. 
 
    Otherwise, choose **Confirm**\.
 

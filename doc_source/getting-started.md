@@ -28,5 +28,5 @@ For more information about using the AWS SDKs, see [AWS Software Development Kit
 **Topics**
 + [Setting Up AWS Config with the Console](gs-console.md)
 + [Setting Up AWS Config with the AWS CLI](gs-cli.md)
-+ [Setting Up AWS Config Rules with the Console](setting-up-aws-config-rules-with-console.md)
-+ [Viewing the AWS Config Dashboard](viewing-the-aws-config-dashboard.md)
++ [Using AWS Config with an AWS SDK](sdk-general-information-section.md)
++ [Using AWS Config Rules with the Console](setting-up-aws-config-rules-with-console.md)

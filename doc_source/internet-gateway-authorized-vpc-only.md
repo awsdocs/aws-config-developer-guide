@@ -6,13 +6,13 @@ Checks that Internet gateways \(IGWs\) are only attached to an authorized Amazon
 
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS regions except Asia Pacific \(Osaka\) Region
+**AWS Region:** All supported AWS regions except Asia Pacific \(Jakarta\), Asia Pacific \(Osaka\) Region
 
 **Parameters:**
 
 AuthorizedVpcIds \(Optional\)Type: String  
 Comma\-separated list of the authorized VPC IDs with attached IGWs\. If parameter is not provided all attached IGWs will be NON\_COMPLIANT\.
 
-## AWS CloudFormation template<a name="w29aac11c33c17b7d259c15"></a>
+## AWS CloudFormation template<a name="w76aac11c31c17b7d321c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

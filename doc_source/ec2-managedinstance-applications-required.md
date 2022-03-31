@@ -20,6 +20,6 @@ The application names must be an exact match\. For example, use **firefox** on L
 platformType \(Optional\)Type: String  
 Platform type \(for example, 'Linux' or 'Windows'\)\.
 
-## AWS CloudFormation template<a name="w29aac11c33c17b7d147c17"></a>
+## AWS CloudFormation template<a name="w76aac11c31c17b7d171c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

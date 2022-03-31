@@ -6,13 +6,13 @@ Checks if there are instances stopped for more than the allowed number of days\.
 
 **Trigger type:** Periodic
 
-**AWS Region:** All supported AWS regions except Asia Pacific \(Osaka\), Europe \(Milan\), Africa \(Cape Town\) Region
+**AWS Region:** All supported AWS regions except Asia Pacific \(Jakarta\), Asia Pacific \(Osaka\), Europe \(Milan\), Africa \(Cape Town\) Region
 
 **Parameters:**
 
 AllowedDays \(Optional\)Type: intDefault: 30  
 The number of days an ec2 instance can be stopped before it is NON\_COMPLIANT\. The default number of days is 30\.
 
-## AWS CloudFormation template<a name="w29aac11c33c17b7d161c15"></a>
+## AWS CloudFormation template<a name="w76aac11c31c17b7d191c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

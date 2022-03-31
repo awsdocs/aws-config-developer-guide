@@ -18,7 +18,7 @@
 
 ### What is the new change in the AWS Config Resource Relationships?<a name="faq"></a>
 
-To optimize the number of resource changes recorded, AWS Config will release an update to relationships modeled within Configuration Items \(CI\) for seven Amazon EC2 resource types on **February 16, 2022**\. This update optimized CI models for Amazon EC2 instance, security group, network interface, subnet, VPC, VPN gateway, and customer gateway resource types to record direct relationships and deprecate indirect relationships\.
+To optimize the number of resource changes recorded, AWS Config will release an update to relationships modeled within Configuration Items \(CI\) for seven Amazon EC2 resource types\. This update optimized CI models for Amazon EC2 instance, security group, network interface, subnet, VPC, VPN gateway, and customer gateway resource types to record direct relationships and deprecate indirect relationships\.
 
 ### What is a direct and an in\-direct relationship with respect to a resource?<a name="faq-0"></a>
 
@@ -30,7 +30,7 @@ By deprecating indirect relationships, there are fewer configuration items relat
 
 ### Which resource relationships are being removed?<a name="faq-2"></a>
 
-The following resource relationships will be deprecated on February 16, 2022\.
+The following resource relationships will be deprecated\.
 
 
 ****  
@@ -40,7 +40,7 @@ The following resource relationships will be deprecated on February 16, 2022\.
 
 AWS Config managed rules that trigger on one of the resources listed above, will be updated by the AWS Config team\. If you have not defined tags for these rules, no action is needed on your part\. If tags are defined, you might need to make updates to the tags of your managed rules\. 
 
-Specifically, the AWS Config managed rule [ec2\-security\-group\-attached\-to\-eni](ec2-security-group-attached-to-eni.md) is impacted as configuration items triggering this rule will no longer be created once indirect relationships are deprecated\. If you use this rule, please remove it from evaluating the configuration of AWS resources prior to the deprecation of indirect relationships\.
+Specifically, the AWS Config managed rule [ec2\-security\-group\-attached\-to\-eni](ec2-security-group-attached-to-eni.md) is impacted as configuration items triggering this rule will no longer be created once indirect relationships are deprecated\. If you use this rule, please remove it from evaluating the configuration of AWS resources and replace it with the new [ec2\-security\-group\-attached\-to\-eni\-periodic](https://docs.aws.amazon.com/config/latest/developerguide/ec2-security-group-attached-to-eni-periodic.html) rule\. The [ec2\-security\-group\-attached\-to\-eni\-periodic](https://docs.aws.amazon.com/config/latest/developerguide/ec2-security-group-attached-to-eni-periodic.html) rule will not be impacted by this deprecation as it is triggered on a periodic basis rather than on configuration changes\.
 
 ### What is the exact impact for custom AWS Config rules that use configuration trigger for these resource types?<a name="faq-3"></a>
 

@@ -98,7 +98,7 @@ Ensure that the management account registers delegated administrator for AWS Con
            "ConfigurationAggregatorName": "MyAggregator",
            "OrganizationAggregationSource": {
                    "AllAwsRegions": true,
-                   "RoleArn": "arn:aws:config:Region:AccountID:config-aggregator/config-aggregator-floqpus3"
+                   "RoleArn": "arn:aws:iam::account-of-role-to-assume:role/name-of-role"
             },
            "LastUpdatedTime": 1517942461.442
        }
@@ -216,7 +216,7 @@ Delegated administrators are accounts within a given AWS Organization that are g
            "ConfigurationAggregatorName": "MyAggregator",
            "OrganizationAggregationSource": {
                    "AllAwsRegions": true,
-                   "RoleArn": "arn:aws:config:Region:AccountID:config-aggregator/config-aggregator-floqpus3"
+                   "RoleArn": "arn:aws:iam::account-of-role-to-assume:role/name-of-role"
             },
            "LastUpdatedTime": 1517942461.442
        }
@@ -271,7 +271,7 @@ Delegated administrators are accounts within a given AWS Organization that are g
            "ConfigurationAggregatorName": "MyAggregator",
            "OrganizationAggregationSource": {
                    "AllAwsRegions": true,
-                   "RoleArn": "arn:aws:config:Region:AccountID:config-aggregator/config-aggregator-floqpus3"
+                   "RoleArn": "arn:aws:iam::account-of-role-to-assume:role/name-of-role"
             },
            "LastUpdatedTime": 1517942461.442
        }

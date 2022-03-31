@@ -17,8 +17,8 @@ Conformance packs are only available in the redesigned AWS Config console\.
 + [Deploying a Conformance Pack Using the AWS Command Line Interface](conformance-pack-cli.md)
 + [Managing Conformance Packs \(API\)](conformance-pack-apis.md)
 + [Managing Conformance Packs Across all Accounts in Your Organization](conformance-pack-organization-apis.md)
-+ [Viewing Compliance History Timeline for Conformance Packs](compliance-history-conformance-pack.md)
-+ [Troubleshooting](#w29aac13c34)
++ [Viewing the Compliance History Timeline for Conformance Packs](compliance-history-conformance-pack.md)
++ [Troubleshooting](#w76aac13c34)
 
 ## Region Support<a name="conformance-packs-regions"></a>
 
@@ -34,7 +34,7 @@ Deploying conformance packs across member accounts in an AWS Organization is sup
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/conformance-packs.html)
 
-## Troubleshooting<a name="w29aac13c34"></a>
+## Troubleshooting<a name="w76aac13c34"></a>
 
 If you get an error indicating that the conformance pack failed while creating, updating, or deleting it, you can check the status of your conformance pack\.
 

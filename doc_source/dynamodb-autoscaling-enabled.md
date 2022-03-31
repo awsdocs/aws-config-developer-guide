@@ -28,6 +28,6 @@ The target utilization percentage for read capacity\. Target utilization is expr
 targetWriteUtilization \(Optional\)Type: double  
 The target utilization percentage for write capacity\. Target utilization is expressed in terms of the ratio of consumed capacity to provisioned capacity\.
 
-## AWS CloudFormation template<a name="w29aac11c33c17b7d109c15"></a>
+## AWS CloudFormation template<a name="w76aac11c31c17b7d133c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

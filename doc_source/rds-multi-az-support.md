@@ -17,6 +17,6 @@ This rule does not evaluate Amazon Aurora DB and Amazon DocumentDB instances\.
 
 None  
 
-## AWS CloudFormation template<a name="w29aac11c33c17b7d299c19"></a>
+## AWS CloudFormation template<a name="w76aac11c31c17b7d391c19"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

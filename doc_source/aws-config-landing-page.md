@@ -12,10 +12,12 @@ Use AWS Config for the following:
 
 **Topics**
 + [Region Support](#region-support-config)
-+ [Components of a Configuration Item](config-item-table.md)
-+ [Record Configurations for Third\-Party Resources](customresources.md)
++ [Viewing the AWS Config Dashboard](viewing-the-aws-config-dashboard.md)
 + [Viewing AWS Resource Configurations and History](view-manage-resource.md)
-+ [Managing AWS Config](manage-config.md)
++ [Managing AWS Resource Configurations and History](manage-config.md)
++ [Record Configurations for Third\-Party Resources](customresources.md)
++ [Querying the Current Configuration State of AWS Resources](querying-AWS-resources.md)
++ [Tagging Your AWS Config Resources](tagging.md)
 + [Notifications that AWS Config Sends to an Amazon SNS topic](notifications-for-AWS-Config.md)
 
 ## Region Support<a name="region-support-config"></a>

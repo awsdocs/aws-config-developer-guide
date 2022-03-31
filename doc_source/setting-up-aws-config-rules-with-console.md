@@ -1,4 +1,4 @@
-# Setting Up AWS Config Rules with the Console<a name="setting-up-aws-config-rules-with-console"></a>
+# Using AWS Config Rules with the Console<a name="setting-up-aws-config-rules-with-console"></a>
 
 The **Rules** page provides initial AWS managed rules that you can add to your account\. After set up, AWS Config evaluates your AWS resources against the rules that you choose\. You can update the rules and create additional managed rules after set up\. 
 

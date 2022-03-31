@@ -1,8 +1,11 @@
 # Supported Resource Types<a name="resource-config-reference"></a>
 
-AWS Config supports the following AWS resources types and resource relationships\.
+AWS Config supports the following AWS resources types and resource relationships\. Some regions support a subset of these resource types\. What is available in the AWS Config Console in a given region is the source of truth regarding what is, or is not, supported in a given region\.
 
 Advanced Queries for AWS Config supports a subset of these resource types\. For a list of those supported resource types, see [Support Resource Types for Advanced Queries](https://github.com/awslabs/aws-config-resource-schema/tree/master/config/properties/resource-types)\.
+
+**Note**  
+Periodic rules can run on resources that AWS Config recording does not support and can be run without the configuration recorder being enabled\. Periodic rules do not depend on configuration items\. For more information on the difference between change–triggered rules and periodic rules, see [Specifying Triggers for AWS Config Rules](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config-rules.html)\.
 
 ## Amazon API Gateway<a name="amazonapigateway"></a>
 
@@ -55,6 +58,8 @@ To learn more about how AWS Config integrates with Amazon API Gateway, see [Moni
 
 \*AWS Config records the configuration details of Dedicated hosts and the instances that you launch on them\. As a result, you can use AWS Config as a data source when you report compliance with your server\-bound software licenses\. For example, you can view the configuration history of an instance and determine which Amazon Machine Image \(AMI\) it is based on\. Then, you can look up the configuration history of the host, which includes details such as the numbers of sockets and cores, to verify that the host complies with the license requirements of the AMI\. For more information, see [Tracking Configuration Changes with AWS Config](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-aws-config.html) in the *Amazon EC2 User Guide for Linux Instances*\. 
 
+\*The EC2 SecurityGroup Properties definition contains IP CIDR blocks, which are converted to IP ranges internally, and may return unexpected results when trying to find a specific IP range\. For workarounds to search for specific IP ranges, see [Limitations for Advanced Queries](https://docs.aws.amazon.com/config/latest/developerguide/querying-AWS-resources.html#query-limitations)\.
+
 ## Amazon Elastic Container Registry<a name="amazonelasticcontainerregistry"></a>
 
 
@@ -63,6 +68,17 @@ To learn more about how AWS Config integrates with Amazon API Gateway, see [Moni
 | AWS Service | Resource Type Value | Relationship | Related Resource | 
 | --- | --- | --- | --- | 
 | Amazon Elastic Container Registry | AWS::ECR::Repository | NA | NA | 
+
+## Amazon Elastic Container Registry Public<a name="amazonelasticcontainerregistrypublic"></a>
+
+
+****  
+
+| AWS Service | Resource Type Value | Relationship | Related Resource | 
+| --- | --- | --- | --- | 
+| Amazon Elastic Container Registry Public\* | AWS::ECR::PublicRepository | NA | NA | 
+
+\*AWS Config support for Amazon Elastic Container Registry Public is available only in the US East \(N\. Virginia\) region\.
 
 ## Amazon Elastic Container Service<a name="amazonelasticcontainerservice"></a>
 
@@ -90,6 +106,17 @@ New \(supported\): `arn:aws:ecs:region:aws_account_id:service/cluster-name/servi
 | AWS Service | Resource Type Value | Relationship | Related Resource | 
 | --- | --- | --- | --- | 
 | Amazon Elastic Kubernetes Service | AWS::EKS::Cluster | NA | NA | 
+
+## Amazon GuardDuty<a name="amazonguardduty"></a>
+
+
+****  
+
+| AWS Service | Resource Type Value | Relationship | Related Resource | 
+| --- | --- | --- | --- | 
+| Amazon GuardDuty | AWS::GuardDuty::Detector\* | NA | NA | 
+
+\*This resource is available in all the regions except Jakarta, Beijing, and Ningxia regions\.
 
 ## Amazon OpenSearch Service<a name="amazonopensearchservice"></a>
 
@@ -281,9 +308,7 @@ Recording for the `AWS::Config::ConformancePackCompliance` resource type is avai
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
-\*AWS Identity and Access Management \(IAM\) resources are *global resources*\. Global resources are not tied to an individual region and can be used in all regions\. The configuration details for a global resource are the same in all regions\. For more information, see [Selecting Which Resources AWS Config Records](select-resources.md)\.
-
-AWS Config includes inline policies with the configuration details that it records\.
+AWS Config includes inline policies with the configuration details that it records\. For more information on inline policies, see [Managed policies and inline policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html#inline-policies) in the IAM User Guide\.
 
 ## AWS Key Management Service<a name="awskeymanagementservice"></a>
 

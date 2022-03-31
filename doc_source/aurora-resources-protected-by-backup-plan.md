@@ -6,7 +6,7 @@ Checks if Amazon Aurora DB clusters are protected by a backup plan\. The rule is
 
 **Trigger type:** Periodic
 
-**AWS Region:** All supported AWS regions except China \(Beijing\), Africa \(Cape Town\), Asia Pacific \(Osaka\), Europe \(Milan\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), US West \(Oregon\), and China \(Ningxia\) Region
+**AWS Region:** All supported AWS regions except Asia Pacific \(Osaka\), Europe \(Milan\), Africa \(Cape Town\) Region
 
 **Parameters:**
 
@@ -16,6 +16,21 @@ Tags of Aurora DB clusters for the rule to check, in JSON format\.
 resourceId \(Optional\)Type: String  
 ID of Aurora DB cluster for the rule to check\.
 
-## AWS CloudFormation template<a name="w29aac11c33c17b7c31c15"></a>
+crossRegionList \(Optional\)Type: String  
+Comma\-separated list of destination regions for the cross\-region backup copy to be kept
+
+crossAccountList \(Optional\)Type: String  
+Comma\-separated list of destination accounts for cross\-account backup copy to be kept
+
+maxRetentionDays \(Optional\)Type: int  
+The maximum retention period in days for the Backup Vault Lock
+
+minRetentionDays \(Optional\)Type: int  
+The minimum retention period in days for the Backup Vault Lock
+
+backupVaultLockCheck \(Optional\)Type: String  
+Accepted values: 'True' or 'False'\. Enter 'True' for the rule to check if the resource is backed up in a locked vault
+
+## AWS CloudFormation template<a name="w76aac11c31c17b7c31c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

@@ -6,13 +6,13 @@ Checks if an Amazon Elastic Compute Cloud \(Amazon EC2\) instance has an Identit
 
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS regions except China \(Beijing\), China \(Ningxia\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), Asia Pacific \(Osaka\) Region
+**AWS Region:** All supported AWS regions except China \(Beijing\), China \(Ningxia\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), Asia Pacific \(Jakarta\), Asia Pacific \(Osaka\) Region
 
 **Parameters:**
 
 IamInstanceProfileArnList \(Optional\)Type: CSV  
 Comma\-separated list of IAM profile Amazon Resource Names \(ARNs\) that can be attached to Amazon EC2 instances\.
 
-## AWS CloudFormation template<a name="w29aac11c33c17b7d143c15"></a>
+## AWS CloudFormation template<a name="w76aac11c31c17b7d167c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

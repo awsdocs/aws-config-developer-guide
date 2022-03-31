@@ -6,12 +6,12 @@ Checks if Elastic Load Balancing has deletion protection enabled\. The rule is N
 
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS regions except Asia Pacific \(Osaka\) Region
+**AWS Region:** All supported AWS regions except Asia Pacific \(Jakarta\), Asia Pacific \(Osaka\) Region
 
 **Parameters:**
 
 None  
 
-## AWS CloudFormation template<a name="w29aac11c33c17b7d199c15"></a>
+## AWS CloudFormation template<a name="w76aac11c31c17b7d261c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

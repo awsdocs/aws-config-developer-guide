@@ -1,4 +1,4 @@
-# Viewing Compliance History Timeline for Conformance Packs<a name="compliance-history-conformance-pack"></a>
+# Viewing the Compliance History Timeline for Conformance Packs<a name="compliance-history-conformance-pack"></a>
 
 AWS Config supports storing compliance state changes to your conformance packs\. This allows you to view the history of compliance state changes and adjust remediation actions to meet compliance goals\. These compliance state changes are presented as a timeline\. The timeline captures changes as `ConfigurationItems` over a period of time\. You can also use this feature to find specific rules within a conformance pack that are non\-compliant\.
 

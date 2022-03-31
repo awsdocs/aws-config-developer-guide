@@ -35,11 +35,20 @@ The following is an example trust policy for AWS Config roles:
       "Principal": {
         "Service": "config.amazonaws.com"
       },
-      "Action": "sts:AssumeRole"
+      "Action": "sts:AssumeRole",
+      "Condition": { 
+        "StringEquals": {
+          "AWS:SourceAccount": "sourceAccountID"
+        }
+      }
     }
   ]
 }
 ```
+
+You can use the `AWS:SourceAccount` condition in the IAM Role Trust relationship above to restrict the Config service principal to only interact with the AWS IAM Role when performing operations on behalf of specific accounts\.
+
+AWS Config also supports the `AWS:SourceArn` condition which restricts the Config service principal to only assume the IAM Role when performing operations on behalf of the owning account\. When using the AWS Config service principal, the `AWS:SourceArn` property will always be set to `arn:aws:config:sourceRegion:sourceAccountID:*` where `sourceRegion` is the region of the configuration recorder and `sourceAccountID` is the ID of the account containing the configuration recorder\. For more information on the AWS Config Configuration Recorder see [Managing the Configuration Recorder](https://docs.aws.amazon.com/config/latest/developerguide/stop-start-recorder.html)\. For example, add the following condition restrict the Config service principal to only assume the IAM Role only on behalf of a configuration recorder in the `us-east-1` region in the account `123456789012`: `"ArnLike": {"AWS:SourceArn": "arn:aws:config:us-east-1:123456789012:*"}`\.
 
 ### IAM Role Policy for Amazon S3 Bucket<a name="iam-role-policies-S3-bucket"></a>
 

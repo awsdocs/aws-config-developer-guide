@@ -6,6 +6,11 @@ You must complete the following steps to record software configuration changes:
 + Turn on recording for the managed instance inventory resource type in AWS Config\.
 + Configure EC2 and on\-premises servers as *managed instances* in AWS Systems Manager\. A managed instance is a machine that has been configured for use with Systems Manager\.
 + Initiate collection of software inventory from your managed instances using the Systems Manager Inventory capability\.
+**Note**  
+**Systems Manager now supports creating configuration items for *unmanaged instances***  
+Configuration item for unmanaged instances will have supplementary configuration with `Key: “InstanceStatus”` and `Value: “Unmanaged”`\.  
+**Configuration items for unmanaged instances won’t receive additional updates**  
+To receive additional updates, the configuraiton item must be a managed instance\.
 
 You can also use AWS Config rules to monitor software configuration changes and be notified whether the changes are compliant or noncompliant against your rules\. For example, if you create a rule that checks whether your managed instances have a specified application, and an instance doesn't have that application installed, AWS Config flags that instance as noncompliant against your rule\. For a list of AWS Config managed rules, see [List of AWS Config Managed Rules](managed-rules-by-aws-config.md)\.
 

@@ -9,10 +9,10 @@ We consider it a best practice not to use root account credentials to perform ev
 
 **Topics**
 + [Granting Permissions for AWS Config Administration](grant-permissions-for-config-administration.md)
-+ [Granting Custom Permissions for AWS Config Users](recommended-iam-permissions-using-aws-config-console-cli.md)
-+ [Supported Resource\-Level Permissions for AWS Config Rules APIs Actions](supported-resource-level-permissions.md)
 + [Permissions for the IAM Role Assigned to AWS Config](iamrole-permissions.md)
 + [Permissions for the Amazon S3 Bucket](s3-bucket-policy.md)
 + [Permissions for the KMS Key](s3-kms-key-policy.md)
 + [Permissions for the Amazon SNS Topic](sns-topic-policy.md)
++ [Granting Custom Permissions for AWS Config Users](recommended-iam-permissions-using-aws-config-console-cli.md)
++ [Supported Resource\-Level Permissions for AWS Config Rules APIs Actions](supported-resource-level-permissions.md)
 + [Service\-Linked AWS Config Rules](service-linked-awsconfig-rules.md)

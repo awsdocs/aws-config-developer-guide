@@ -2,7 +2,14 @@
 
 You can use the AWS Config console, AWS CLI, or AWS Config API to view the compliance state of your rules and resources\.
 
-**To view compliance \(console\)**
+**Contents**
++ [Viewing compliance \(console\)](#evaluate-config_view-compliance-console)
++ [Viewing compliance \(CLI\)](#evaluate-config_view-compliance-cli)
++ [Viewing compliance \(API\)](#evaluate-config_view-compliance-api)
+
+## Viewing compliance \(console\)<a name="evaluate-config_view-compliance-console"></a>
+
+**To view compliance**
 
 1. Sign in to the AWS Management Console and open the AWS Config console at [https://console\.aws\.amazon\.com/config/](https://console.aws.amazon.com/config/)\.
 
@@ -18,7 +25,9 @@ Alternatively, on the Resource inventory page, you can directly choose the resou
 
 You can also view the compliance of your resources by looking them up on the **Resource inventory** page\. For more information, see [Looking Up Resources That Are Discovered by AWS Config](looking-up-discovered-resources.md)\.
 
-**Example To view compliance \(AWS CLI\)**  
+## Viewing compliance \(CLI\)<a name="evaluate-config_view-compliance-cli"></a>
+
+**Example to view compliance**  
 To view compliance, use any of the following CLI commands:  
 + To see the compliance state of each of your rules, use the [http://docs.aws.amazon.com/cli/latest/reference/configservice/describe-compliance-by-config-rule.html](http://docs.aws.amazon.com/cli/latest/reference/configservice/describe-compliance-by-config-rule.html) command, as shown in the following example:
 
@@ -128,7 +137,9 @@ To view compliance, use any of the following CLI commands:
   }
   ```
 
-**Example To view compliance \(AWS Config API\)**  
+## Viewing compliance \(API\)<a name="evaluate-config_view-compliance-api"></a>
+
+**Example to view compliance**  
 To view compliance, use any of the following API actions:  
 + To see the compliance state of each of your rules, use the [DescribeComplianceByConfigRule](https://docs.aws.amazon.com/config/latest/APIReference/API_DescribeComplianceByConfigRule.html) action\.
 + To see the compliance state of each resource that AWS Config evaluates for a specific rule, use the [GetComplianceDetailsByConfigRule](https://docs.aws.amazon.com/config/latest/APIReference/API_GetComplianceDetailsByConfigRule.html) action\.

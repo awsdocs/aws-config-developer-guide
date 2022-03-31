@@ -16,6 +16,6 @@ Comma\-separated list of IAM policy arns which should not be attached to any IAM
 exceptionList \(Optional\)Type: CSV  
 Comma\-separated list IAM users, groups, or roles that are exempt from this rule\. For example, users:\[user1;user2\], groups:\[group1;group2\], roles:\[role1;role2;role3\]\.
 
-## AWS CloudFormation template<a name="w29aac11c33c17b7d235c15"></a>
+## AWS CloudFormation template<a name="w76aac11c31c17b7d297c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

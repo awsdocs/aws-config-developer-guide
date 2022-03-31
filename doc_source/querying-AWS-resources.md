@@ -30,14 +30,36 @@ As a subset of SQL `SELECT`, the query syntax has following limitations:
 + No support for `ALL`, `AS`, `DISTINCT`, `FROM`, `HAVING`, `JOIN`, and `UNION` keywords in a query\. `NULL` value queries are not supported\.
 + No support for querying on third\-party resources\. Third\-party resources retrieved using advanced queries will have the configuration field set as `NULL`\.
 + No support for nested structures \(such as tags\) to be unpacked with SQL queries\.
++ CIDR notation is converted to IP ranges for search\. This means that `"="` and `"BETWEEN"` search for any range that includes the provided IP, instead of for an exact one\. To search for an exact IP range, you need to add in additional conditions to exclude IPs outside of the range\. For example, to search for 10\.0\.0\.0/24 and only that IP block, you can do:
+
+  ```
+  SELECT * WHERE resourceType = 'AWS::EC2::SecurityGroup'
+    AND configuration.ipPermissions.ipRanges BETWEEN '10.0.0.0'
+    AND '10.0.0.255'
+    AND NOT configuration.ipPermissions.ipRanges < '10.0.0.0'
+    AND NOT configuration.ipPermissions.ipRanges > '10.0.0.255'
+  ```
+
+  For 192\.168\.0\.2/32, you can search in a similar fashion:
+
+  ```
+  SELECT * WHERE resourceType = 'AWS::EC2::SecurityGroup'
+    AND configuration.ipPermissions.ipRanges = '192.168.0.2'
+    AND NOT configuration.ipPermissions.ipRanges > '192.168.0.2'
+    AND NOT configuration.ipPermissions.ipRanges < '192.168.0.2'
+  ```
 + When querying against multiple properties within an array of objects, matches are computed against all the array elements\. For example, for a resource R with rules A and B, the resource is compliant to rule A but noncompliant to rule B\. The resource R is stored as: 
 
   ```
   { 
-  configRuleList: [ 
-  { configRuleName: 'A', complianceType: 'compliant' }, 
-  { configRuleName: 'B', complianceType: 'non_compliant' } 
-  ]
+      configRuleList: [ 
+          {
+              configRuleName: 'A', complianceType: 'compliant'
+          }, 
+          {   
+              configRuleName: 'B', complianceType: 'non_compliant'
+          } 
+      ]
   }
   ```
 

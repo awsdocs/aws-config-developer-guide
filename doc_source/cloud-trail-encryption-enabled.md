@@ -12,6 +12,6 @@ Checks if AWS CloudTrail is configured to use the server side encryption \(SSE\)
 
 None  
 
-## AWS CloudFormation template<a name="w29aac11c33c17b7c83c15"></a>
+## AWS CloudFormation template<a name="w76aac11c31c17b7c93c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

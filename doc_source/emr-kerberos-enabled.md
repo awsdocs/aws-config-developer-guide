@@ -6,7 +6,7 @@ Checks if Amazon EMR clusters have Kerberos enabled\. The rule is NON\_COMPLIANT
 
 **Trigger type:** Periodic
 
-**AWS Region:** All supported AWS regions except Asia Pacific \(Osaka\) Region
+**AWS Region:** All supported AWS regions except Asia Pacific \(Jakarta\), Asia Pacific \(Osaka\) Region
 
 **Parameters:**
 
@@ -25,6 +25,6 @@ Fully qualified domain of the admin server in the other realm of the trust relat
 KdcServer \(Optional\)Type: String  
 Fully qualified domain of the KDC server in the other realm of the trust relationship\.
 
-## AWS CloudFormation template<a name="w29aac11c33c17b7d207c15"></a>
+## AWS CloudFormation template<a name="w76aac11c31c17b7d269c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

@@ -6,13 +6,13 @@ Checks whether Amazon S3 bucket has lock enabled, by default\. The rule is NON\_
 
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS regions except Asia Pacific \(Osaka\) Region
+**AWS Region:** All supported AWS regions except Asia Pacific \(Jakarta\), Asia Pacific \(Osaka\) Region
 
 **Parameters:**
 
 mode \(Optional\)Type: String  
 mode: \(optional\): A mode parameter with valid values of GOVERNANCE or COMPLIANCE\.
 
-## AWS CloudFormation template<a name="w29aac11c33c17b7d337c15"></a>
+## AWS CloudFormation template<a name="w76aac11c31c17b7d435c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

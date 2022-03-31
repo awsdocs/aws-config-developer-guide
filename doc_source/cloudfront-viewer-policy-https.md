@@ -12,6 +12,6 @@ Checks whether your Amazon CloudFront distributions use HTTPS \(directly or via 
 
 None  
 
-## AWS CloudFormation template<a name="w29aac11c33c17b7c65c15"></a>
+## AWS CloudFormation template<a name="w76aac11c31c17b7c73c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.
