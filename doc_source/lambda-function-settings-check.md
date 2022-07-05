@@ -1,6 +1,6 @@
 # lambda\-function\-settings\-check<a name="lambda-function-settings-check"></a>
 
-Checks that the AWS Lambda function settings for runtime, role, timeout, and memory size match the expected values\. The rule ignores functions with the 'Image' package type\.
+Checks if the AWS Lambda function settings for runtime, role, timeout, and memory size match the expected values\. The rule ignores functions with the 'Image' package type\. The rule is NON\_COMPLIANT if the Lambda function settings do not match the expected values\.
 
 **Identifier:** LAMBDA\_FUNCTION\_SETTINGS\_CHECK
 
@@ -22,6 +22,6 @@ AWS Lambda function timeout in seconds
 memorySize \(Optional\)Type: intDefault: 128  
 AWS Lambda function size in megabytes
 
-## AWS CloudFormation template<a name="w76aac11c31c17b7d333c15"></a>
+## AWS CloudFormation template<a name="w79aac11c32c17b7d367c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

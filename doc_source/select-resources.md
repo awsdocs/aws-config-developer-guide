@@ -2,17 +2,21 @@
 
 AWS Config continuously detects when any resource of a supported type is created, changed, or deleted\. AWS Config records these events as configuration items\. You can customize AWS Config to record changes for all supported types of resources or for only those types that are relevant to you\. To learn which types of resources AWS Config can record, see [Supported Resource Types](resource-config-reference.md)\.
 
-## Recording All Supported Resource Types<a name="w76aab9c18b9b5"></a>
+## Recording All Supported Resource Types<a name="w79aab9c18b9b5"></a>
 
 By default, AWS Config records the configuration changes for all supported types of *regional resources* that AWS Config discovers in the region in which it is running\. Regional resources are tied to a region and can be used only in that region\. Examples of regional resources are EC2 instances and EBS volumes\.
 
 You can also have AWS Config record supported types of *global resources*\. Global resources are not tied to a specific region and can be used in all regions\. The global resource types that AWS Config supports are IAM users, groups, roles, and customer managed policies\.
 
 **Important**  
-Global resource types onboarded to AWS Config recording after February 2022 will only be recorded in US East \(N\. Virginia\) for the commercial partition and AWS GovCloud \(US\-West\) for the GovCloud partition\. You can view the Configuration Items for these new global resource types only in US East \(N\. Virginia\) and AWS GovCloud \(US\-West\)\.  
+Global resource types onboarded to AWS Config recording after February 2022 will only be recorded in the service's home region for the commercial partition and AWS GovCloud \(US\-West\) for the GovCloud partition\. You can view the Configuration Items for these new global resource types only in their home region and AWS GovCloud \(US\-West\)\.  
 Supported global resource types onboarded before February 2022 such as `AWS::IAM::Group`, `AWS::IAM::Policy`, `AWS::IAM::Role`, `AWS::IAM::User` remain unchanged, and they will continue to deliver Configuration Items in all regions enabled in AWS Config\. The change will only affect new global resource types onboarded after February 2022\.
 
-## Recording Specific Resource Types<a name="w76aab9c18b9b7"></a>
+
+**Home Regions for Global Resource Types Onboarded after February 2022**  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/select-resources.html)
+
+## Recording Specific Resource Types<a name="w79aab9c18b9b7"></a>
 
 If you don't want AWS Config to record the changes for all supported resources, you can customize it to record changes for only specific types\. AWS Config records configuration changes for the types of resources that you specify, including the creation and deletion of such resources\.
 

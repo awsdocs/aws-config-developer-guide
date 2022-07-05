@@ -170,9 +170,9 @@ SELECT
     configuration.availabilityZone,
     configuration.state.value 
 WHERE
-   resourceType = 'AWS::EC2::Volume' 
+    resourceType = 'AWS::EC2::Volume' 
 AND 
-    configuration.state.value = 'in-use'
+    configuration.state.value = 'available''
 ```
 
 Result

@@ -16,7 +16,7 @@ For more information about working with AWS CloudFormation templates, see [Getti
    + You can also choose **Amazon S3 URL**, and enter the template URL `http://s3.amazonaws.com/aws-configservice-us-east-1/cloudformation-templates-for-managed-rules/THE_RULE_IDENTIFIER.template`\. 
 **Note**  
 The rule identifier should be written in ALL\_CAPS\_WITH\_UNDERSCORES\. For example, CLOUDWATCH\_LOG\_GROUP\_ENCRYPTED instead of cloudwatch\-log\-group\-encrypted\.  
-For some rules, the rule identifier is **different** from the rule name\. Make sure to use the rule identifier\. For example, the rule identifier for restricted\-ssh is INCOMING\_SSH\_DISABLED\.
+For some rules, the rule identifier is different from the rule name\. Make sure to use the rule identifier\. For example, the rule identifier for restricted\-ssh is INCOMING\_SSH\_DISABLED\.
 
 1. Choose **Next**\. 
 

@@ -97,6 +97,9 @@ A source region is the AWS Region from which you want to aggregate AWS Config co
 
 An aggregator is a new resource type in AWS Config that collects AWS Config configuration and compliance data from multiple source accounts and regions\. Create an aggregator in the region where you want to see the aggregated AWS Config configuration and compliance data\. 
 
+**Note**  
+Aggregators provide a *read\-only view* into the source accounts and regions that the aggregator is authorized to view\. Aggregators do not provide mutating access into the source account or region\. For example, this means that you cannot deploy rules through an aggregator or pull snapshot files from the source account or region through an aggregator\.
+
 ### Aggregator Account<a name="aggregator-accounts"></a>
 
 An aggregator account is an account where you create an aggregator\.

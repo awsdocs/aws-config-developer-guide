@@ -13,6 +13,6 @@ Checks if your EC2 instances belong to a virtual private cloud \(VPC\)\. Optiona
 vpcId \(Optional\)Type: String  
 VPC ID that contains these EC2 instances\.
 
-## AWS CloudFormation template<a name="w76aac11c31c17b7d319c15"></a>
+## AWS CloudFormation template<a name="w79aac11c32c17b7d353c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

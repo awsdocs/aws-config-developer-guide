@@ -18,6 +18,7 @@ You can also create custom rules to evaluate additional resources that AWS Confi
 
 **Topics**
 + [Region Support](#region-support-config-rules)
++ [Components of an AWS Config Rule](evaluate-config_components.md)
 + [Specifying Triggers for AWS Config Rules](evaluate-config-rules.md)
 + [AWS Config Managed Rules](evaluate-config_use-managed-rules.md)
 + [AWS Config Custom Rules](evaluate-config_develop-rules.md)

@@ -13,6 +13,6 @@ Checks if Amazon Elastic File System \(Amazon EFS\) is configured to encrypt the
 KmsKeyId \(Optional\)Type: String  
 Amazon Resource Name \(ARN\) of the KMS key that is used to encrypt the EFS file system\.
 
-## AWS CloudFormation template<a name="w76aac11c31c17b7d223c15"></a>
+## AWS CloudFormation template<a name="w79aac11c32c17b7d253c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

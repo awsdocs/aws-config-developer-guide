@@ -1,6 +1,6 @@
 # Prerequisites<a name="gs-cli-prereq"></a>
 
-Follow this procedure to create an Amazon S3 bucket, an Amazon SNS topic, and an IAM role with attached policies\. You can then use the AWS CLI to specify the bucket, topic, and role for AWS Config\.
+Before setting up AWS with the AWS CLI, you need to create an Amazon S3 bucket, an Amazon SNS topic, and an IAM role with attached policies as prerequisites\. You can then use the AWS CLI to specify the bucket, topic, and role for AWS Config\. Follow this procedure to set up your prerequisites for AWS Config\.
 
 **Contents**
 + [Creating an Amazon S3 Bucket](#gs-cli-create-s3bucket)
@@ -369,9 +369,32 @@ The following code examples show how to create an Amazon SNS topic\.
 #### [ \.NET ]
 
 **AWS SDK for \.NET**  
+ To learn how to set up and run this example, see [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/dotnetv3/SNS#code-examples)\. 
   
 
 ```
+    using System;
+    using System.Threading.Tasks;
+    using Amazon.SimpleNotificationService;
+    using Amazon.SimpleNotificationService.Model;
+
+    /// <summary>
+    /// This example shows how to use Amazon Simple Notification Service
+    /// (Amazon SNS) to add a new Amazon SNS topic. The example was created
+    /// using the AWS SDK for .NET version 3.7 and .NET Core 5.0.
+    /// </summary>
+    public class CreateSNSTopic
+    {
+        public static async Task Main()
+        {
+            string topicName = "ExampleSNSTopic";
+
+            IAmazonSimpleNotificationService client = new AmazonSimpleNotificationServiceClient();
+
+            var topicArn = await CreateSNSTopicAsync(client, topicName);
+            Console.WriteLine($"New topic ARN: {topicArn}");
+        }
+
         /// <summary>
         /// Creates a new SNS topic using the supplied topic name.
         /// </summary>
@@ -390,14 +413,16 @@ The following code examples show how to create an Amazon SNS topic\.
 
             return response.TopicArn;
         }
+
+    }
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/dotnetv3/SNS#code-examples)\. 
 +  For API details, see [CreateTopic](https://docs.aws.amazon.com/goto/DotNetSDKV3/sns-2010-03-31/CreateTopic) in *AWS SDK for \.NET API Reference*\. 
 
 ------
 #### [ C\+\+ ]
 
 **SDK for C\+\+**  
+ To learn how to set up and run this example, see [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/cpp/example_code/sns#code-examples)\. 
   
 
 ```
@@ -425,20 +450,20 @@ The following code examples show how to create an Amazon SNS topic\.
 
   Aws::ShutdownAPI(options);
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/cpp/example_code/sns#code-examples)\. 
 +  For API details, see [CreateTopic](https://docs.aws.amazon.com/goto/SdkForCpp/sns-2010-03-31/CreateTopic) in *AWS SDK for C\+\+ API Reference*\. 
 
 ------
 #### [ Go ]
 
 **SDK for Go V2**  
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/gov2/sns/CreateTopic#code-examples)\. 
+ To learn how to set up and run this example, see [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/gov2/sns/CreateTopic#code-examples)\. 
 +  For API details, see [CreateTopic](https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/service/sns#Client.CreateTopic) in *AWS SDK for Go API Reference*\. 
 
 ------
 #### [ Java ]
 
 **SDK for Java 2\.x**  
+ To learn how to set up and run this example, see [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/javav2/example_code/sns#readme)\. 
   
 
 ```
@@ -460,13 +485,13 @@ The following code examples show how to create an Amazon SNS topic\.
         return "";
     }
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/javav2/example_code/sns#readme)\. 
 +  For API details, see [CreateTopic](https://docs.aws.amazon.com/goto/SdkForJavaV2/sns-2010-03-31/CreateTopic) in *AWS SDK for Java 2\.x API Reference*\. 
 
 ------
 #### [ JavaScript ]
 
 **SDK for JavaScript V3**  
+ To learn how to set up and run this example, see [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/javascriptv3/example_code/sns#code-examples)\. 
 Create the client in a separate module and export it\.  
 
 ```
@@ -498,7 +523,6 @@ const run = async () => {
 };
 run();
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/javascriptv3/example_code/sns#code-examples)\. 
 +  For more information, see [AWS SDK for JavaScript Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/sns-examples-managing-topics.html#sns-examples-managing-topics-createtopic)\. 
 +  For API details, see [CreateTopic](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-sns/classes/createtopiccommand.html) in *AWS SDK for JavaScript API Reference*\. 
 
@@ -507,6 +531,7 @@ run();
 
 **SDK for Kotlin**  
 This is prerelease documentation for a feature in preview release\. It is subject to change\.
+ To learn how to set up and run this example, see [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/kotlin/services/sns#code-examples)\. 
   
 
 ```
@@ -522,13 +547,13 @@ suspend fun createSNSTopic(topicName: String): String {
        }
  }
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/kotlin/services/sns#code-examples)\. 
 +  For API details, see [CreateTopic](https://github.com/awslabs/aws-sdk-kotlin#generating-api-documentation) in *AWS SDK for Kotlin API reference*\. 
 
 ------
 #### [ PHP ]
 
 **SDK for PHP**  
+ To learn how to set up and run this example, see [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/sns#code-examples)\. 
   
 
 ```
@@ -562,7 +587,6 @@ try {
     error_log($e->getMessage());
 }
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/sns#code-examples)\. 
 +  For more information, see [AWS SDK for PHP Developer Guide](https://docs.aws.amazon.com/sdk-for-php/v3/developer-guide/sns-examples-managing-topics.html#create-a-topic)\. 
 +  For API details, see [CreateTopic](https://docs.aws.amazon.com/goto/SdkForPHPV3/sns-2010-03-31/CreateTopic) in *AWS SDK for PHP API Reference*\. 
 
@@ -570,6 +594,7 @@ try {
 #### [ Python ]
 
 **SDK for Python \(Boto3\)**  
+ To learn how to set up and run this example, see [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/python/example_code/sns#code-examples)\. 
   
 
 ```
@@ -597,13 +622,13 @@ class SnsWrapper:
         else:
             return topic
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/python/example_code/sns#code-examples)\. 
 +  For API details, see [CreateTopic](https://docs.aws.amazon.com/goto/boto3/sns-2010-03-31/CreateTopic) in *AWS SDK for Python \(Boto3\) API Reference*\. 
 
 ------
 #### [ Ruby ]
 
 **SDK for Ruby**  
+ To learn how to set up and run this example, see [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/ruby/example_code/sns#code-examples)\. 
   
 
 ```
@@ -635,7 +660,6 @@ end
 
 run_me if $PROGRAM_NAME == __FILE__
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/ruby/example_code/sns#code-examples)\. 
 +  For more information, see [AWS SDK for Ruby Developer Guide](https://docs.aws.amazon.com/sdk-for-ruby/v3/developer-guide/sns-example-create-topic.html)\. 
 +  For API details, see [CreateTopic](https://docs.aws.amazon.com/goto/SdkForRubyV3/sns-2010-03-31/CreateTopic) in *AWS SDK for Ruby API Reference*\. 
 
@@ -644,6 +668,7 @@ run_me if $PROGRAM_NAME == __FILE__
 
 **SDK for Rust**  
 This documentation is for an SDK in preview release\. The SDK is subject to change and should not be used in production\.
+ To learn how to set up and run this example, see [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/rust_dev_preview/sns#code-examples)\. 
   
 
 ```
@@ -658,7 +683,6 @@ async fn make_topic(client: &Client, topic_name: &str) -> Result<(), Error> {
     Ok(())
 }
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/rust_dev_preview/sns#code-examples)\. 
 +  For API details, see [CreateTopic](https://docs.rs/releases/search?query=aws-sdk) in *AWS SDK for Rust API reference*\. 
 
 ------
@@ -697,18 +721,85 @@ To use an AWS SDK, you must configure it with your credentials\. For more inform
 The following code examples show how to create an IAM role\.
 
 ------
-#### [ Java ]
+#### [ \.NET ]
 
-**SDK for Java 2\.x**  
+**AWS SDK for \.NET**  
+ To learn how to set up and run this example, see [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/dotnetv3/IAM#code-examples)\. 
   
 
 ```
-    public static String createIAMRole(IamClient iam, String rolename, String fileLocation ) {
+        /// <summary>
+        /// Create a new IAM role which we can attach to a user.
+        /// </summary>
+        /// <param name="client">The initialized IAM client object.</param>
+        /// <param name="roleName">The name of the IAM role to create.</param>
+        /// <param name="rolePermissions">The permissions which the role will have.</param>
+        /// <returns>A Role object representing the newly created role.</returns>
+        public static async Task<Role> CreateRoleAsync(
+            AmazonIdentityManagementServiceClient client,
+            string roleName,
+            string rolePermissions)
+        {
+            var request = new CreateRoleRequest
+            {
+                RoleName = roleName,
+                AssumeRolePolicyDocument = rolePermissions,
+            };
+
+            var response = await client.CreateRoleAsync(request);
+
+            return response.Role;
+        }
+```
++  For API details, see [CreateRole](https://docs.aws.amazon.com/goto/DotNetSDKV3/iam-2010-05-08/CreateRole) in *AWS SDK for \.NET API Reference*\. 
+
+------
+#### [ Go ]
+
+**SDK for Go V2**  
+ To learn how to set up and run this example, see [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/gov2/iam#code-examples)\. 
+  
+
+```
+	// CreateRole
+	myRole, err := service.CreateRole(context.Background(), &iam.CreateRoleInput{
+		RoleName:    aws.String(ExampleRoleName),
+		Description: aws.String("My super awesome example role"),
+		AssumeRolePolicyDocument: aws.String(`{
+			"Version": "2012-10-17",
+			"Statement": [
+			  {
+				"Effect": "Allow",
+				"Principal": {
+				  "Service": "ec2.amazonaws.com"
+				},
+				"Action": "sts:AssumeRole"
+			  }
+			]
+		  }`),
+	})
+
+	if err != nil {
+		panic("Couldn't create role: " + err.Error())
+	}
+
+	fmt.Println("☑️ Create Role")
+	fmt.Printf("The new role's ARN is %s \n", *myRole.Role.Arn)
+```
++  For API details, see [CreateRole](https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/service/iam#Client.CreateRole) in *AWS SDK for Go API Reference*\. 
+
+------
+#### [ Java ]
+
+**SDK for Java 2\.x**  
+ To learn how to set up and run this example, see [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/javav2/example_code/iam#readme)\. 
+  
+
+```
+    public static String createIAMRole(IamClient iam, String rolename, String fileLocation ) throws Exception {
 
         try {
-
             JSONObject jsonObject = (JSONObject) readJsonSimpleDemo(fileLocation);
-
             CreateRoleRequest request = CreateRoleRequest.builder()
                     .roleName(rolename)
                     .assumeRolePolicyDocument(jsonObject.toJSONString())
@@ -721,8 +812,6 @@ The following code examples show how to create an IAM role\.
         } catch (IamException e) {
             System.err.println(e.awsErrorDetails().errorMessage());
             System.exit(1);
-        } catch (Exception e) {
-            e.printStackTrace();
         }
         return "";
     }
@@ -733,13 +822,13 @@ The following code examples show how to create an IAM role\.
         return jsonParser.parse(reader);
     }
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/javav2/example_code/iam#readme)\. 
 +  For API details, see [CreateRole](https://docs.aws.amazon.com/goto/SdkForJavaV2/iam-2010-05-08/CreateRole) in *AWS SDK for Java 2\.x API Reference*\. 
 
 ------
 #### [ JavaScript ]
 
 **SDK for JavaScript V3**  
+ To learn how to set up and run this example, see [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/javascriptv3/example_code/iam#code-examples)\. 
 Create the client\.  
 
 ```
@@ -790,13 +879,13 @@ const run = async () => {
 };
 run();
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/javascriptv3/example_code/iam#code-examples)\. 
 +  For API details, see [CreateRole](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-iam/classes/createrolecommand.html) in *AWS SDK for JavaScript API Reference*\. 
 
 ------
 #### [ PHP ]
 
 **SDK for PHP**  
+ To learn how to set up and run this example, see [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/iam/iam_basics#code-examples)\. 
   
 
 ```
@@ -831,13 +920,13 @@ echo "Created role: {$assumeRoleRole['RoleName']}\n";
         return $result['Role'];
     }
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/iam/iam_basics#code-examples)\. 
 +  For API details, see [CreateRole](https://docs.aws.amazon.com/goto/SdkForPHPV3/iam-2010-05-08/CreateRole) in *AWS SDK for PHP API Reference*\. 
 
 ------
 #### [ Python ]
 
 **SDK for Python \(Boto3\)**  
+ To learn how to set up and run this example, see [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/python/example_code/iam/iam_basics#code-examples)\. 
   
 
 ```
@@ -870,13 +959,13 @@ def create_role(role_name, allowed_services):
     else:
         return role
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/python/example_code/iam/iam_basics#code-examples)\. 
 +  For API details, see [CreateRole](https://docs.aws.amazon.com/goto/boto3/iam-2010-05-08/CreateRole) in *AWS SDK for Python \(Boto3\) API Reference*\. 
 
 ------
 #### [ Ruby ]
 
 **SDK for Ruby**  
+ To learn how to set up and run this example, see [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/ruby/example_code/iam#code-examples)\. 
   
 
 ```
@@ -905,7 +994,6 @@ def create_role(role_name, allowed_services):
     role
   end
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/ruby/example_code/iam#code-examples)\. 
 +  For API details, see [CreateRole](https://docs.aws.amazon.com/goto/SdkForRubyV3/iam-2010-05-08/CreateRole) in *AWS SDK for Ruby API Reference*\. 
 
 ------
@@ -913,29 +1001,30 @@ def create_role(role_name, allowed_services):
 
 **SDK for Rust**  
 This documentation is for an SDK in preview release\. The SDK is subject to change and should not be used in production\.
+ To learn how to set up and run this example, see [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/rust_dev_preview/iam#code-examples)\. 
   
 
 ```
-async fn make_role(client: &Client, policy_file: &str, name: &str) -> Result<(), Error> {
-    // Read policy doc from file as a string
-    let doc = fs::read_to_string(policy_file).expect("Unable to read file");
+pub async fn create_role(
+    client: &iamClient,
+    role_name: &str,
+    role_policy_document: &str,
+) -> Result<Role, iamError> {
+    let response: CreateRoleOutput = loop {
+        if let Ok(response) = client
+            .create_role()
+            .role_name(role_name)
+            .assume_role_policy_document(role_policy_document)
+            .send()
+            .await
+        {
+            break response;
+        }
+    };
 
-    let resp = client
-        .create_role()
-        .assume_role_policy_document(doc)
-        .role_name(name)
-        .send()
-        .await?;
-
-    println!(
-        "Created role with ARN {}",
-        resp.role().unwrap().arn().unwrap()
-    );
-
-    Ok(())
+    Ok(response.role.unwrap())
 }
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/rust_dev_preview/iam#code-examples)\. 
 +  For API details, see [CreateRole](https://docs.rs/releases/search?query=aws-sdk) in *AWS SDK for Rust API reference*\. 
 
 ------

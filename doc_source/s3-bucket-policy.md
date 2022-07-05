@@ -37,6 +37,8 @@ Follow these steps to add an access policy to the Amazon S3 bucket in your own a
 1. Choose **Edit Bucket Policy**\.
 
 1. Copy the following policy into the **Bucket Policy Editor** window:
+**Important**  
+As a security best practice when allowing AWS Config access to an Amazon S3 bucket, we strongly recommend that you restrict access in the bucket policy with the `AWS:SourceAccount` condition\. If your existing bucket policy does not follow this security best practice, we strongly recommened you edit that bucket policy to include this protection\. This makes sure that AWS Config is granted access on behalf of expected users only\.
 
    ```
    {

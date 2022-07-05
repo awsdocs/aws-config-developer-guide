@@ -1,6 +1,6 @@
-# Developing a Custom Rule for AWS Config<a name="evaluate-config_develop-rules_nodejs"></a>
+# Custom Lambda Rules \(General Example\)<a name="evaluate-config_develop-rules_nodejs"></a>
 
-Complete the following procedure to create a custom rule\. To create a custom rule, you first create an AWS Lambda function, which contains the evaluation logic for the rule\. Then you associate the function with a custom rule that you create in AWS Config\.
+Complete the following procedure to create a Custom Lambda rule\. To create a Custom Lambda rule, you first create an AWS Lambda function, which contains the evaluation logic for the rule\. Then you associate the function with a Custom Lambda rule that you create in AWS Config\.
 
 **Important**  
 As a security best practice when allowing AWS Config permission to invoke your Lambda function, we strongly recommend that you restrict access in the resource\-based policy for Lambda with `sourceARN` and/or `sourceAccountId` in the invoke request\. For more information, see [Security best practice for AWS Lambda resource\-based policy](#restricted-lambda-policy)\.
@@ -15,7 +15,7 @@ As a security best practice when allowing AWS Config permission to invoke your L
 
 A *Lambda function* is custom code that you upload to AWS Lambda, and it is invoked by events that are published to it by an event source\. If the Lambda function is associated with a Config rule, AWS Config invokes it when the rule's trigger occurs\. The Lambda function then evaluates the configuration information that is sent by AWS Config, and it returns the evaluation results\. For more information about Lambda functions, see [Function and Event Sources](https://docs.aws.amazon.com/lambda/latest/dg/intro-core-components.html) in the *AWS Lambda Developer Guide*\.
 
-You can use a programming language that is supported by AWS Lambda to create a Lambda function for a custom rule\. To make this task easier, you can customize an AWS Lambda blueprint or reuse a sample function from the AWS Config Rules GitHub repository\.
+You can use a programming language that is supported by AWS Lambda to create a Lambda function for a Custom Lambda rule\. To make this task easier, you can customize an AWS Lambda blueprint or reuse a sample function from the AWS Config Rules GitHub repository\.
 
 ****AWS Lambda** blueprints**  
 The AWS Lambda console provides sample functions, or *blueprints*, which you can customize by adding your own evaluation logic\. When you create a function, you can choose one of the following blueprints:
@@ -23,7 +23,7 @@ The AWS Lambda console provides sample functions, or *blueprints*, which you can
 + **config\-rule\-periodic** – Triggered at a frequency that you choose \(for example, every 24 hours\)\.
 
 **AWS Config Rules GitHub repository**  
-A public repository of sample functions for custom rules is available on GitHub, a web\-based code hosting and sharing service\. The sample functions are developed and contributed by the AWS community\. If you want to use a sample, you can copy its code into a new AWS Lambda function\. To view the repository, see [https://github.com/awslabs/aws-config-rules/](https://github.com/awslabs/aws-config-rules/)\.
+A public repository of sample functions for Custom Lambda rules is available on GitHub, a web\-based code hosting and sharing service\. The sample functions are developed and contributed by the AWS community\. If you want to use a sample, you can copy its code into a new AWS Lambda function\. To view the repository, see [https://github.com/awslabs/aws-config-rules/](https://github.com/awslabs/aws-config-rules/)\.
 
 **To create the function for your custom rule**
 
@@ -46,7 +46,7 @@ A public repository of sample functions for custom rules is available on GitHub,
 1. Provide your code using the method required by the code entry type that you selected\. If you are using a blueprint, the function code is provided in the code editor, and you can customize it to include your own evaluation logic\. Your code can evaluate the event data that AWS Config provides when it invokes your function:
    + For functions based on the **config\-rule\-change\-triggered** blueprint, or for functions triggered by configuration changes, the event data is the configuration item or an oversized configuration item object for the AWS resource that changed\.
    + For functions based on the **config\-rule\-periodic** blueprint, or for functions triggered at a frequency that you choose, the event data is a JSON object that includes information about when the evaluation was triggered\.
-   + For both types of functions, AWS Config passes rule parameters in JSON format\. You can define which rule parameters are passed when you create the custom rule in AWS Config\.
+   + For both types of functions, AWS Config passes rule parameters in JSON format\. You can define which rule parameters are passed when you create the Custom Lambda rule in AWS Config\.
    + For example events that AWS Config publishes when it invokes your function, see [Example Events for AWS Config Rules](evaluate-config_develop-rules_example-events.md)\.
 
 1. For **Execution role**, choose **Create new role from AWS Policy templates**\.
@@ -59,13 +59,13 @@ A public repository of sample functions for custom rules is available on GitHub,
 
 ## Creating a Custom Rule in AWS Config<a name="creating-a-custom-rule-with-the-AWS-Config-console"></a>
 
-Use AWS Config to create a custom rule and associate the rule with a Lambda function\.
+Use AWS Config to create a Custom Lambda rule and associate the rule with a Lambda function\.
 
 **To create a custom rule**
 
 1. Open the AWS Config console at [https://console\.aws\.amazon\.com/config/](https://console.aws.amazon.com/config/)\.
 
-1. In the AWS Management Console menu, verify that the region selector is set to the same region in which you created the AWS Lambda function for your custom rule\.
+1. In the AWS Management Console menu, verify that the region selector is set to the same region in which you created the AWS Lambda function for your Custom Lambda rule\.
 
 1. On the **Rules** page, choose **Add rule**\.
 
@@ -102,7 +102,7 @@ The ARN that you specify in this step must not include the `$LATEST` qualifier\.
    + **Evaluations failed** \- For information that can help you determine the problem, choose the rule name to open its details page and see the error message\.
 
 **Note**  
-When you create a custom rule with the AWS Config console, the appropriate permissions are automatically created for you\. If you create a custom rule with the AWS CLI, you need to give AWS Config permission to invoke your Lambda function, using the `aws lambda add-permission` command\. For more information, see [Using Resource\-Based Policies for AWS Lambda \(Lambda Function Policies\)](https://docs.aws.amazon.com/lambda/latest/dg/access-control-resource-based.html) in the *AWS Lambda Developer Guide*\.  
+When you create a Custom Lambda rule with the AWS Config console, the appropriate permissions are automatically created for you\. If you create a Custom Lambda rule with the AWS CLI, you need to give AWS Config permission to invoke your Lambda function, using the `aws lambda add-permission` command\. For more information, see [Using Resource\-Based Policies for AWS Lambda \(Lambda Function Policies\)](https://docs.aws.amazon.com/lambda/latest/dg/access-control-resource-based.html) in the *AWS Lambda Developer Guide*\.  
 Before giving AWS Config permission to invoke your Lambda function, see the following section [Security best practice for AWS Lambda resource\-based policy](#restricted-lambda-policy)\.
 
 ## Security best practice for AWS Lambda resource\-based policy<a name="restricted-lambda-policy"></a>
@@ -129,7 +129,7 @@ Before the rule is created, you can add `sourceAccountId` based permission to th
 aws lambda add-permission --function-name rule lambda function name --action lambda:InvokeFunction --statement-id config --principal config.amazonaws.com --source-account your account ID
 ```
 
-**To add both SourceArn and SourceAccountId based permissionn**
+**To add both SourceArn and SourceAccountId based permission**
 
 After the rule is created, you can add `sourceARN` based permission to resource\-based policy with the following CLI\. This allows only a specific rule ARN to invoke the Lambda function\.
 
@@ -139,10 +139,10 @@ aws lambda add-permission --function-name rule lambda function name --action lam
 
 ## Evaluating Additional Resource Types<a name="creating-custom-rules-for-additional-resource-types"></a>
 
-You can create custom rules to run evaluations for resource types not yet recorded by AWS Config\. This is useful if you want to evaluate compliance for additional resource types that AWS Config doesn't currently record\. For a list of additional resource types that you can evaluate with custom rules, see [AWS Resource Types Reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)\.
+You can create Custom Lambda rules to run evaluations for resource types not yet recorded by AWS Config\. This is useful if you want to evaluate compliance for additional resource types that AWS Config doesn't currently record\. For a list of additional resource types that you can evaluate with Custom Lambda rules, see [AWS Resource Types Reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)\.
 
 **Note**  
-The list in the AWS CloudFormation User Guide may contain recently added resource types that are not yet available for creating custom rules in AWS Config\. AWS Config adds resource types support at regular intervals\.
+The list in the AWS CloudFormation User Guide may contain recently added resource types that are not yet available for creating Custom Lambda rules in AWS Config\. AWS Config adds resource types support at regular intervals\.
 
 **Example**
 
@@ -150,7 +150,7 @@ The list in the AWS CloudFormation User Guide may contain recently added resourc
 
 1. You create an AWS Lambda function that evaluates whether your Amazon S3 Glacier vaults comply with your account requirements\.
 
-1. You create a custom rule named **evaluate\-glacier\-vaults ** and then assign your AWS Lambda function to the rule\.
+1. You create a Custom Lambda rule named **evaluate\-glacier\-vaults ** and then assign your AWS Lambda function to the rule\.
 
 1. AWS Config invokes your Lambda function and then evaluates the Amazon S3 Glacier vaults against your rule\.
 

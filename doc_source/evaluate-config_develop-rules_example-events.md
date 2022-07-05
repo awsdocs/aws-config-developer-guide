@@ -59,7 +59,7 @@ AWS Config publishes an event when it evaluates your resources at a frequency th
 }
 ```
 
-## Event Attributes<a name="w76aac11c33c25c13c11"></a>
+## Event Attributes<a name="w79aac11c34c14c16c13c11"></a>
 
 The JSON object for an AWS Config event contains the following attributes:
 
@@ -73,7 +73,7 @@ var invokingEvent = JSON.parse(event.invokingEvent);
 ```
 
 `ruleParameters`  
-Key/value pairs that the function processes as part of its evaluation logic\. You define parameters when you use the AWS Config console to create a custom rule\. You can also define parameters with the `InputParameters` attribute in the `PutConfigRule` AWS Config API request or the `put-config-rule` AWS CLI command\.  
+Key/value pairs that the function processes as part of its evaluation logic\. You define parameters when you use the AWS Config console to create a Custom Lambda rule\. You can also define parameters with the `InputParameters` attribute in the `PutConfigRule` AWS Config API request or the `put-config-rule` AWS CLI command\.  
 The JSON code for the parameters is contained within a string, so a function must parse the string with a JSON parser to be able to evaluate its contents, as shown in the following Node\.js example:  
 
 ```

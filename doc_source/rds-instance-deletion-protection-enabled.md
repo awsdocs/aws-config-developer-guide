@@ -16,6 +16,6 @@ Some RDS DB instances within a Cluster \(Aurora/DocumentDB\) will show as non\-c
 databaseEngines \(Optional\)Type: CSV  
 Comma\-separated list of RDS database engines to include in the evaluation of the rule\. For example, 'mysql, postgres, mariadb'\.
 
-## AWS CloudFormation template<a name="w76aac11c31c17b7d381c17"></a>
+## AWS CloudFormation template<a name="w79aac11c32c17b7d423c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

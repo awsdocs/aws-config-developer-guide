@@ -13,6 +13,6 @@ Checks if an Amazon API Gateway API stage is using an AWS WAF Web ACL\. This rul
 WebAclArns \(Optional\)Type: CSV  
 Comma\-separated list of web ACL Amazon Resource Names \(ARNs\)\.
 
-## AWS CloudFormation template<a name="w76aac11c31c17b7c13c15"></a>
+## AWS CloudFormation template<a name="w79aac11c32c17b7c15c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

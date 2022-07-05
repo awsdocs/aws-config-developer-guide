@@ -5,7 +5,8 @@ AWS Config supports the following AWS resources types and resource relationships
 Advanced Queries for AWS Config supports a subset of these resource types\. For a list of those supported resource types, see [Support Resource Types for Advanced Queries](https://github.com/awslabs/aws-config-resource-schema/tree/master/config/properties/resource-types)\.
 
 **Note**  
-Periodic rules can run on resources that AWS Config recording does not support and can be run without the configuration recorder being enabled\. Periodic rules do not depend on configuration items\. For more information on the difference between change–triggered rules and periodic rules, see [Specifying Triggers for AWS Config Rules](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config-rules.html)\.
+Periodic rules can run on resources that AWS Config recording does not support and can be run without the configuration recorder being enabled\. Periodic rules do not depend on configuration items\. For more information on the difference between change–triggered rules and periodic rules, see [Specifying Triggers for AWS Config Rules](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config-rules.html)\.  
+When AWS Config onboards new resource types, the default resources for the new resource types will be discovered during the account baselining process\. If you have the configuration recorder set up to record all supported resource types, you may receive notifications for default resources while a new resource type is in the process of onboarding\. The public documentation will be updated once the onboarding process is complete\.
 
 ## Amazon API Gateway<a name="amazonapigateway"></a>
 
@@ -78,7 +79,7 @@ To learn more about how AWS Config integrates with Amazon API Gateway, see [Moni
 | --- | --- | --- | --- | 
 | Amazon Elastic Container Registry Public\* | AWS::ECR::PublicRepository | NA | NA | 
 
-\*AWS Config support for Amazon Elastic Container Registry Public is available only in the US East \(N\. Virginia\) region\.
+\*AWS Config support for Amazon Elastic Container Registry Public is available only in the US East \(N\. Virginia\) Region\.
 
 ## Amazon Elastic Container Service<a name="amazonelasticcontainerservice"></a>
 
@@ -107,6 +108,15 @@ New \(supported\): `arn:aws:ecs:region:aws_account_id:service/cluster-name/servi
 | --- | --- | --- | --- | 
 | Amazon Elastic Kubernetes Service | AWS::EKS::Cluster | NA | NA | 
 
+## Amazon EMR<a name="amazonemr"></a>
+
+
+****  
+
+| AWS Service | Resource Type Value | Relationship | Related Resource | 
+| --- | --- | --- | --- | 
+| Amazon EMR | AWS::EMR::SecurityConfiguration | NA | NA | 
+
 ## Amazon GuardDuty<a name="amazonguardduty"></a>
 
 
@@ -114,9 +124,7 @@ New \(supported\): `arn:aws:ecs:region:aws_account_id:service/cluster-name/servi
 
 | AWS Service | Resource Type Value | Relationship | Related Resource | 
 | --- | --- | --- | --- | 
-| Amazon GuardDuty | AWS::GuardDuty::Detector\* | NA | NA | 
-
-\*This resource is available in all the regions except Jakarta, Beijing, and Ningxia regions\.
+| Amazon GuardDuty | AWS::GuardDuty::Detector | NA | NA | 
 
 ## Amazon OpenSearch Service<a name="amazonopensearchservice"></a>
 
@@ -139,6 +147,15 @@ New \(supported\): `arn:aws:ecs:region:aws_account_id:service/cluster-name/servi
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
+## Amazon Managed Streaming for Apache Kafka<a name="amazonmsk"></a>
+
+
+****  
+
+| AWS Service | Resource Type Value | Relationship | Related Resource | 
+| --- | --- | --- | --- | 
+| Amazon Managed Streaming for Apache Kafka | AWS::MSK::Cluster | NA | NA | 
+
 ## Amazon Redshift<a name="amazonredshift"></a>
 
 
@@ -146,6 +163,12 @@ New \(supported\): `arn:aws:ecs:region:aws_account_id:service/cluster-name/servi
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
 ## Amazon Relational Database Service<a name="amazonrelationaldatabaseservice"></a>
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
+
+## Amazon Route 53<a name="amazonroute53"></a>
 
 
 ****  
@@ -179,10 +202,7 @@ For more information about the attributes, see [Bucket Configuration Options](ht
 
 
 ****  
-
-| AWS Service | Resource Type Value | Relationship | Related Resource | 
-| --- | --- | --- | --- | 
-| Amazon SageMaker | AWS::SageMaker::CodeRepository | NA | NA | 
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
 ## Amazon Simple Notification Service<a name="amazonsimplenotificationservice"></a>
 
@@ -222,6 +242,12 @@ For more information about the attributes, see [Bucket Configuration Options](ht
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
+## Amazon WorkSpaces<a name="amazonworkspaces"></a>
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
+
 ## AWS Backup<a name="awsbackup"></a>
 
 
@@ -233,6 +259,12 @@ Due to how AWS Backup works, some of these resource types relate to the other AW
 `AWS::Backup::BackupPlan` is related to `AWS::Backup::BackupSelection` where a Backup Plan has many selections, and `AWS::Backup::BackupVault` is related to `AWS::Backup::RecoveryPoint` where an AWS Backup Vault has multiple recovery points\.
 
 For more information, see [Managing backups using backup plans](https://docs.aws.amazon.com/aws-backup/latest/devguide/about-backup-plans.html) and [Working with backup vaults](https://docs.aws.amazon.com/aws-backup/latest/devguide/vaults.html)\.
+
+## AWS Batch<a name="awsbatch"></a>
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
 ## AWS Certificate Manager<a name="awscertificatemanager"></a>
 
@@ -296,11 +328,25 @@ For more information, see [Managing backups using backup plans](https://docs.aws
 **Note**  
 Recording for the `AWS::Config::ConformancePackCompliance` resource type is available at no additional charge\.
 
+## AWS Database Migration Service<a name="awsdms"></a>
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
+
 ## AWS Elastic Beanstalk<a name="awselasticbeanstalk"></a>
 
 
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
+
+## AWS Global Accelerator<a name="awsglobalaccelerator"></a>
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
+
+\*This resource is only available in US West \(Oregon\) Region\.
 
 ## AWS Identity and Access Management<a name="awsiam"></a>
 
@@ -350,6 +396,12 @@ AWS Config includes inline policies with the configuration details that it recor
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
 \*AWS Config support for `AWS::Shield::Protection` is available only in the US East \(N\. Virginia\) region\. The `AWS::ShieldRegional::Protection` is available in all regions where AWS Shield is supported\. 
+
+## AWS Step Functions<a name="awsstepfunctions"></a>
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
 ## AWS Systems Manager<a name="awssystemsmanager"></a>
 

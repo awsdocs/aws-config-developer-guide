@@ -6,7 +6,7 @@ Checks if Amazon Relational Database Service \(Amazon RDS\) instances are protec
 
 **Trigger type:** Periodic
 
-**AWS Region:** All supported AWS regions except Asia Pacific \(Osaka\), Europe \(Milan\), Africa \(Cape Town\) Region
+**AWS Region:** All supported AWS regions except China \(Beijing\), China \(Ningxia\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), Asia Pacific \(Jakarta\), Asia Pacific \(Osaka\), Europe \(Milan\), Africa \(Cape Town\) Region
 
 **Parameters:**
 
@@ -31,6 +31,6 @@ The minimum retention period in days for the Backup Vault Lock
 backupVaultLockCheck \(Optional\)Type: String  
 Accepted values: 'True' or 'False'\. Enter 'True' for the rule to check if the resource is backed up in a locked vault
 
-## AWS CloudFormation template<a name="w76aac11c31c17b7d393c15"></a>
+## AWS CloudFormation template<a name="w79aac11c32c17b7d437c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

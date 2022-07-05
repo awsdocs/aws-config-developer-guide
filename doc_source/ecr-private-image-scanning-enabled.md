@@ -6,12 +6,12 @@ Checks if a private Amazon Elastic Container Registry \(ECR\) repository has ima
 
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS regions except Asia Pacific \(Osaka\) Region
+**AWS Region:** All supported AWS regions except China \(Beijing\), China \(Ningxia\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), Asia Pacific \(Jakarta\), Asia Pacific \(Osaka\) Region
 
 **Parameters:**
 
 None  
 
-## AWS CloudFormation template<a name="w76aac11c31c17b7d199c15"></a>
+## AWS CloudFormation template<a name="w79aac11c32c17b7d221c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

@@ -70,7 +70,7 @@ You can edit the group name, but you will need to choose the policy again\.
 
 1. In the list of policies, select the policy that you created\. You can use the **Filter** menu and the **Search** box to find the policy\.
 
-1. Select the radio button next to the policy you created, and then select **Actions** in the top right hand side\. In this drop down menu select **Attach**\.
+1. Select the radio button next to the policy you created, and then select **Actions** in the top right hand side\. In this dropdown list select **Attach**\.
 
 1. Select the users, groups, or roles, and then choose **Attach Policy**\. You can use the **Filter** menu and the **Search** box to filter the list\.
 

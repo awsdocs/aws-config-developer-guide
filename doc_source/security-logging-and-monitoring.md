@@ -172,7 +172,7 @@ Use the following steps to create an EventBridge rule that triggers on an event 
      As described in these support articles, you can use EventBridge to receive custom email notifications when a resource is created or deleted, [How can I receive custom email notifications when a resource is created in my AWS account using AWS Config service?](https://aws.amazon.com/premiumsupport/knowledge-center/config-email-resource-created/) and [How can I receive custom email notifications when a resource is deleted in my AWS account using AWS Config service?](https://aws.amazon.com/premiumsupport/knowledge-center/config-email-resource-deleted/)\.
    + Choose **Config Rules Compliance Change** to get notifications when a compliance check to your rules fails\.
 
-     As described in this support article, you can use EventBridge to receive custom email notifications when a resource is non\-compliant, [How can I be notified when an AWS resource is non\-compliant using AWS Config?](https://aws.amazon.com/premiumsupport/knowledge-center/config-email-resource-created/)\.
+     As described in this support article, you can use EventBridge to receive custom email notifications when a resource is non\-compliant, [How can I be notified when an AWS resource is non\-compliant using AWS Config?](https://aws.amazon.com/premiumsupport/knowledge-center/config-resource-non-compliant/)\.
    + Choose **Config Rules Re\-evaluation Status** to get reevaluation status notifications\. 
    + Choose **Config Configuration Snapshot Delivery Status** to get configuration snapshot delivery status notifications\.
    + Choose **Config Configuration History Delivery Status** to get configuration history delivery status notifications\.
@@ -186,15 +186,15 @@ Use the following steps to create an EventBridge rule that triggers on an event 
    + If you choose **ConfigurationSnapshotDeliveryStarted**, you receive messages when AWS Config starts delivering the configuration snapshot to your Amazon S3 bucket\.
    + If you choose **ConfigurationHistoryDeliveryCompleted**, you receive messages when AWS Config successfully delivers the configuration history to your Amazon S3 bucket\.
 
-1. If you chose a specific event type from the **Event Type** drop\-down list, choose **Any resource type** to make a rule that applies to all AWS Config supported resource types\.
+1. If you chose a specific event type from the **Event Type** dropdown list, choose **Any resource type** to make a rule that applies to all AWS Config supported resource types\.
 
    Or choose **Specific resource type\(s\)**, and then type the AWS Config supported resource type \(for example, `AWS::EC2::Instance`\)\.
 
-1. If you chose a specific event type from the **Event Type** drop\-down list, choose **Any resource ID** to include any AWS Config supported resource ID\.
+1. If you chose a specific event type from the **Event Type** dropdown list, choose **Any resource ID** to include any AWS Config supported resource ID\.
 
    Or choose **Specific resource ID\(s\)**, and then type the AWS Config supported resource ID \(for example, `i-04606de676e635647`\)\.
 
-1. If you chose a specific event type from the **Event Type** drop\-down list, choose **Any rule name** to include any AWS Config supported rule\.
+1. If you chose a specific event type from the **Event Type** dropdown list, choose **Any rule name** to include any AWS Config supported rule\.
 
    Or choose **Specific rule name\(s\)**, and then type the AWS Config supported rule \(for example, **required\-tags**\)\.
 
@@ -214,7 +214,7 @@ Use the following steps to create an EventBridge rule that triggers on an event 
 
 1. For **Dead\-letter queue**, choose whether to use a standard Amazon SQS queue as a dead\-letter queue\. EventBridge sends events that match this rule to the dead\-letter queue if they are not successfully delivered to the target\. Do one of the following:
    + Choose **None** to not use a dead\-letter queue\.
-   + Choose **Select an Amazon SQS queue in the current AWS account to use as the dead\-letter queue** and then select the queue to use from the drop\-down list\.
+   + Choose **Select an Amazon SQS queue in the current AWS account to use as the dead\-letter queue** and then select the queue to use from the dropdown list\.
    + Choose **Select an Amazon SQS queue in an other AWS account as a dead\-letter queue** and then enter the ARN of the queue to use\. You must attach a resource\-based policy to the queue that grants EventBridge permission to send messages to it\. For more information, see [Event retry policy and using dead\-letter queues](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-rule-dlq.html)\.
 
 1. \(Optional\) Choose **Add target** to add another target for this rule\.

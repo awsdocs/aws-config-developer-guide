@@ -43,7 +43,7 @@ On the **Rules** page, you can view the rules for the region in your account\. Y
 
 If you choose **Add rule**, you can see the available AWS managed rules on the **Add rule** page\. You can also create your own custom rule\.
 
-1. If you want to create your own rule, choose **Add custom rule** and follow the procedure in [Developing a Custom Rule for AWS Config](evaluate-config_develop-rules_nodejs.md)\.
+1. If you want to create your own rule, choose **Add custom rule** and follow the procedure in [Custom Lambda Rules \(General Example\)](evaluate-config_develop-rules_nodejs.md)\.
 
 1. To add a managed rule, choose a rule on the page and follow the procedure in [Working with AWS Config Managed Rules](managing-aws-managed-rules.md)\.
 

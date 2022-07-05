@@ -1,6 +1,6 @@
 # Example AWS Lambda Functions for AWS Config Rules \(Python\)<a name="evaluate-config_develop-rules_python-sample"></a>
 
-AWS Lambda executes functions in response to events that are published by AWS services\. The function for a custom Config rule receives an event that is published by AWS Config, and the function then uses data that it receives from the event and that it retrieves from the AWS Config API to evaluate the compliance of the rule\. The operations in a function for a Config rule differ depending on whether it performs an evaluation that is triggered by configuration changes or triggered periodically\.
+AWS Lambda executes functions in response to events that are published by AWS services\. The function for an AWS Config Custom Lambda rule receives an event that is published by AWS Config, and the function then uses data that it receives from the event and that it retrieves from the AWS Config API to evaluate the compliance of the rule\. The operations in a function for a Config rule differ depending on whether it performs an evaluation that is triggered by configuration changes or triggered periodically\.
 
 For information about common patterns within AWS Lambda functions, see [Programming Model](https://docs.aws.amazon.com/lambda/latest/dg/programming-model-v2.html) in the *AWS Lambda Developer Guide*\.
 
@@ -155,6 +155,26 @@ def lambda_handler(event, context):
        ResultToken=event['resultToken'])
 ```
 
+**Function Operations**
+
+The function performs the following operations at runtime:
+
+1. The function runs when AWS Lambda passes the `event` object to the `handler` function\. In this example, the function accepts the optional `callback` parameter, which it uses to return information to the caller\. AWS Lambda also passes a `context` object, which contains information and methods that the function can use while it runs\. Note that in newer versions of Lambda, context is no longer used\.
+
+1. The function checks whether the `messageType` for the event is a configuration item or an oversized configuration item, and then returns the configuration item\. 
+
+1. The handler calls the `isApplicable` function to determine whether the resource was deleted\.
+
+1. The handler calls the `evaluateChangeNotificationCompliance` function and passes the `configurationItem` and `ruleParameters` objects that AWS Config published in the event\.
+
+   The function first evaluates whether the resource is an EC2 instance\. If the resource is not an EC2 instance, the function returns a compliance value of `NOT_APPLICABLE`\. 
+
+   The function then evaluates whether the `instanceType` attribute in the configuration item is equal to the `desiredInstanceType` parameter value\. If the values are equal, the function returns `COMPLIANT`\. If the values are not equal, the function returns `NON_COMPLIANT`\.
+
+1. The handler prepares to send the evaluation results to AWS Config by initializing the `putEvaluationsRequest` object\. This object includes the `Evaluations` parameter, which identifies the compliance result, the resource type, and the ID of the resource that was evaluated\. The `putEvaluationsRequest` object also includes the result token from the event, which identifies the rule and the event for AWS Config\. 
+
+1. The handler sends the evaluation results to AWS Config by passing the object to the `putEvaluations` method of the `config` client\.
+
 ## Example Function for Periodic Evaluations<a name="periodic-example-rule"></a>
 
 AWS Config will invoke a function like the following example for periodic evaluations\. Periodic evaluations occur at the frequency that you specify when you define the rule in AWS Config\.
@@ -266,3 +286,17 @@ def lambda_handler(event, context):
     evaluations.append(build_evaluation(event['accountId'], compliance_value, event, resource_type=DEFAULT_RESOURCE_TYPE))
     response = AWS_CONFIG_CLIENT.put_evaluations(Evaluations=evaluations, ResultToken=event['resultToken'])
 ```
+
+**Function Operations**
+
+The function performs the following operations at runtime:
+
+1. The function runs when AWS Lambda passes the `event` object to the `handler` function\. In this example, the function accepts the optional `callback` parameter, which it uses to return information to the caller\. AWS Lambda also passes a `context` object, which contains information and methods that the function can use while it runs\. Note that in newer versions of Lambda, context is no longer used\.
+
+1. To count the resources of the specified type, the handler calls the `countResourceTypes` function, and it passes the `applicableResourceType` parameter that it received from the event\. The `countResourceTypes` function calls the `listDiscoveredResources` method of the `config` client, which returns a list of identifiers for the applicable resources\. The function uses the length of this list to determine the number of applicable resources, and it returns this count to the handler\.
+
+1. The handler prepares to send the evaluation results to AWS Config by initializing the `putEvaluationsRequest` object\. This object includes the `Evaluations` parameter, which identifies the compliance result and the AWS account that was published in the event\. You can use the `Evaluations` parameter to apply the result to any resource type that is supported by AWS Config\. The `putEvaluationsRequest` object also includes the result token from the event, which identifies the rule and the event for AWS Config\.
+
+1. Within the `putEvaluationsRequest` object, the handler calls the `evaluateCompliance` function\. This function tests whether the number of applicable resources exceeds the maximum assigned to the `maxCount` parameter, which was provided by the event\. If the number of resources exceeds the maximum, the function returns `NON_COMPLIANT`\. If the number of resources does not exceed the maximum, the function returns `COMPLIANT`\.
+
+1. The handler sends the evaluation results to AWS Config by passing the object to the `putEvaluations` method of the `config` client\.

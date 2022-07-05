@@ -23,17 +23,19 @@ Before you begin to apply remediation on noncompliant resources, you must select
 
 1. Sign in to the AWS Management Console and open the AWS Config console at [https://console\.aws\.amazon\.com/config/](https://console.aws.amazon.com/config/)\.
 
-1. Choose **Rules** on the left and then on the **Rules** page, choose **Add Rule** to add new rules to the rule list\. 
+1. Choose **Rules** on the left and then on the **Rules** page, choose **Add Rule** to add new rules to the rule list 
 
    For existing rules, select the noncompliant rule from the rule list and choose the **Actions** dropdown list\.
 
 1. From the **Actions** dropdown list, choose **Manage remediation**\. Select "Manual remediation" and then choose the appropriate remediation action from the recommended list\.
+**Note**  
+You can only manage remediations for non\-service linked AWS Config rules\. For more information, see [ Service\-Linked AWS Rules](https://docs.aws.amazon.com/config/latest/developerguide/service-linked-awsconfig-rules.html)\.
 
    Depending on the selected remediation action, you see specific parameters or no parameters\.
 
 1. \(Optional\): If you want to pass the resource ID of noncompliant resources to the remediation action, choose **Resource ID parameter**\. If selected, at runtime that parameter is substituted with the ID of the resource to be remediated\.
 
-   Each parameter has either a static value or a dynamic value\. If you do not choose a specific resource ID parameter from the drop\-down list, you can enter values for each key\. If you choose a resource ID parameter from the drop\-down list, you can enter values for all the other keys except the selected resource ID parameter\. 
+   Each parameter has either a static value or a dynamic value\. If you do not choose a specific resource ID parameter from the dropdown list, you can enter values for each key\. If you choose a resource ID parameter from the dropdown list, you can enter values for all the other keys except the selected resource ID parameter\. 
 
 1. Choose **Save**\. The **Rules** page is displayed\.
 
@@ -49,6 +51,8 @@ For troubleshooting failed remediation actions, you can run the AWS Command Line
    For existing rules, select the noncompliant rule from the rule list and choose the **Actions** dropdown list\.
 
 1. From the **Actions** dropdown list, choose **Manage remediation**\. Select "Automatic remediation" and then choose the appropriate remediation action from the recommended list\.
+**Note**  
+You can only manage remediations for non\-service linked AWS Config rules\. For more information, see [ Service\-Linked AWS Rules](https://docs.aws.amazon.com/config/latest/developerguide/service-linked-awsconfig-rules.html)\.
 
    Depending on the selected remediation action, you see specific parameters or no parameters\.
 
@@ -60,7 +64,7 @@ There are costs associated with running a remediation script multiple times\.
 
 1. \(Optional\): If you want to pass the resource ID of noncompliant resources to the remediation action, choose **Resource ID parameter**\. If selected, at runtime that parameter is substituted with the ID of the resource to be remediated\.
 
-   Each parameter has either a static value or a dynamic value\. If you do not choose a specific resource ID parameter from the drop\-down list, you can enter values for each key\. If you choose a resource ID parameter from the drop\-down list, you can enter values for all the other keys except the selected resource ID parameter\. 
+   Each parameter has either a static value or a dynamic value\. If you do not choose a specific resource ID parameter from the dropdown list, you can enter values for each key\. If you choose a resource ID parameter from the dropdown list, you can enter values for all the other keys except the selected resource ID parameter\. 
 
 1. Choose **Save**\. The **Rules** page is displayed\.
 

@@ -6,13 +6,13 @@ Checks if Amazon Elastic File System \(Amazon EFS\) access points are configured
 
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS regions
+**AWS Region:** All supported AWS regions except China \(Beijing\), China \(Ningxia\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), Asia Pacific \(Jakarta\) Region
 
 **Parameters:**
 
 approvedDirectories \(Optional\)Type: CSV  
 Comma\-separated list of subdirectory paths that are approved for Amazon EFS access point root directory enforcement\.
 
-## AWS CloudFormation template<a name="w76aac11c31c17b7d219c15"></a>
+## AWS CloudFormation template<a name="w79aac11c32c17b7d249c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

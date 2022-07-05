@@ -6,13 +6,13 @@ Checks if an Amazon Elastic Compute Cloud \(EC2\) instance metadata has a specif
 
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS regions
+**AWS Region:** All supported AWS regions except China \(Beijing\), China \(Ningxia\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), Asia Pacific \(Jakarta\) Region
 
 **Parameters:**
 
 tokenHopLimit \(Optional\)Type: int  
 The desired token hop limit\. Valid values are between 1 and 64, both inclusive\. Default value is 1 if parameter is not specified\.
 
-## AWS CloudFormation template<a name="w76aac11c31c17b7d193c15"></a>
+## AWS CloudFormation template<a name="w79aac11c32c17b7d215c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

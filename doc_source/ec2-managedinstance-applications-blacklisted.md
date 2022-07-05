@@ -1,6 +1,6 @@
 # ec2\-managedinstance\-applications\-blacklisted<a name="ec2-managedinstance-applications-blacklisted"></a>
 
-Checks that none of the specified applications are installed on the instance\. Optionally, specify the version\. Newer versions will not be blacklisted\. Optionally, specify the platform to apply the rule only to instances running that platform\. 
+Checks if none of the specified applications are installed on the instance\. Optionally, specify the version\. Newer versions will not be denylisted\. Optionally, specify the platform to apply the rule only to instances running that platform\. 
 
 **Identifier:** EC2\_MANAGEDINSTANCE\_APPLICATIONS\_BLACKLISTED
 
@@ -17,6 +17,6 @@ The application names must be an exact match\. For example, use **firefox** on L
 platformType \(Optional\)Type: String  
 Platform type \(for example, 'Linux' or 'Windows'\)\.
 
-## AWS CloudFormation template<a name="w76aac11c31c17b7d169c15"></a>
+## AWS CloudFormation template<a name="w79aac11c32c17b7d191c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

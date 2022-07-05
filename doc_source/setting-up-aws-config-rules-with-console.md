@@ -27,3 +27,13 @@ On the **Rules** page, you can do the following:
 AWS Config evaluates only the resource types that it is recording\. For example, if you add the **cloudtrail\-enabled** rule but don't record the CloudTrail trail resource type, AWS Config can't evaluate whether the trails in your account are compliant or noncompliant\. For more information, see [Selecting Which Resources AWS Config Records](select-resources.md)\.
 
 You can view, edit, and delete your existing rules\. You can also create additional AWS managed rules or create your own\. For more information, see [Managing your AWS Config Rules](evaluate-config_manage-rules.md)\.
+
+## Sending Rule Evaluations to Security Hub<a name="setting-up-aws-config-rules-with-console-integration"></a>
+
+After adding an AWS Config rule, you can also send rule evaluations to AWS Security Hub\. The integration between AWS Config and Security Hub allows you to triage and remediate rule evaluations alongside other misconfigurations and security issues\.
+
+### Send Rule Evaluations to Security Hub<a name="w79aab7c29c19b5"></a>
+
+To send rule evaluations to Security Hub, you must first set up AWS Security Hub and AWS Config, and then add at least one AWS Config managed or custom rule\. After this, AWS Config immediately starts sending rule evaluations to Security Hub\. Security Hub enriches the rule evaluations and transforms them into Security Hub findings\.
+
+For more information about this integration, see [Available AWS Service Integrations](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-internal-providers.html#integration-config) in the AWS Security Hub User Guide\.

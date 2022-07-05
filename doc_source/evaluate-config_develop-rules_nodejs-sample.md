@@ -1,6 +1,6 @@
 # Example AWS Lambda Functions for AWS Config Rules \(Node\.js\)<a name="evaluate-config_develop-rules_nodejs-sample"></a>
 
-AWS Lambda executes functions in response to events that are published by AWS services\. The function for a custom Config rule receives an event that is published by AWS Config, and the function then uses data that it receives from the event and that it retrieves from the AWS Config API to evaluate the compliance of the rule\. The operations in a function for a Config rule differ depending on whether it performs an evaluation that is triggered by configuration changes or triggered periodically\.
+AWS Lambda executes functions in response to events that are published by AWS services\. The function for an AWS Config Custom Lambda rule receives an event that is published by AWS Config, and the function then uses data that it receives from the event and that it retrieves from the AWS Config API to evaluate the compliance of the rule\. The operations in a function for a Config rule differ depending on whether it performs an evaluation that is triggered by configuration changes or triggered periodically\.
 
 For information about common patterns within AWS Lambda functions, see [Programming Model](https://docs.aws.amazon.com/lambda/latest/dg/programming-model-v2.html) in the *AWS Lambda Developer Guide*\.
 

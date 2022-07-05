@@ -9,6 +9,9 @@ Use an aggregator to view the resource configuration and compliance data recorde
 
 ![\[An aggregator collects AWS Config data from multiple accounts and regions.\]](http://docs.aws.amazon.com/config/latest/developerguide/images/Aggregate_Data_Landing_Page_Diagram.png)
 
+**Note**  
+Aggregators provide a *read\-only view* into the source accounts and regions that the aggregator is authorized to view\. Aggregators do not provide mutating access into the source account or region\. For example, this means that you cannot deploy rules through an aggregator or pull snapshot files from the source account or region through an aggregator\.
+
 For more information about concepts, see [Multi\-Account Multi\-Region Data Aggregation](config-concepts.md#multi-account-multi-region-data-aggregation) section in the Concepts topic\.
 
 To collect your AWS Config data from source accounts and regions, start with:

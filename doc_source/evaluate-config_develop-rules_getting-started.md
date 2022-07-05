@@ -1,14 +1,14 @@
-# Getting Started with Custom Rules for AWS Config<a name="evaluate-config_develop-rules_getting-started"></a>
+# Custom Lambda Rules \(Amazon EC2 Example\)<a name="evaluate-config_develop-rules_getting-started"></a>
 
-This procedure guides you through the process of creating a custom rule that evaluates whether each of your EC2 instances is the t2\.micro type\. AWS Config will run event\-based evaluations for this rule, meaning it will check your instance configurations each time AWS Config detects a configuration change in an instance\. AWS Config will flag t2\.micro instances as compliant and all other instances as noncompliant\. The compliance status will appear in the AWS Config console\.
+This procedure guides you through the process of creating a Custom Lambda rule that evaluates whether each of your EC2 instances is the t2\.micro type\. AWS Config will run event\-based evaluations for this rule, meaning it will check your instance configurations each time AWS Config detects a configuration change in an instance\. AWS Config will flag t2\.micro instances as compliant and all other instances as noncompliant\. The compliance status will appear in the AWS Config console\.
 
 To have the best outcome with this procedure, you should have one or more EC2 instances in your AWS account\. Your instances should include a combination of at least one t2\.micro instance and other types\.
 
-To create this rule, first, you will create an AWS Lambda function by customizing a blueprint in the AWS Lambda console\. Then, you will create a custom rule in AWS Config, and you will associate the rule with the function\.
+To create this rule, first, you will create an AWS Lambda function by customizing a blueprint in the AWS Lambda console\. Then, you will create a Custom Lambda rule in AWS Config, and you will associate the rule with the function\.
 
 **Topics**
 + [Creating an AWS Lambda Function for a Custom Config Rule](#gs-create-lambda-function-for-custom-config-rule)
-+ [Creating a Custom Rule](#gs-creating-a-custom-rule-with-the-AWS-Config-console)
++ [Creating a Custom Lambda Rule to Evaluate Amazon EC2 Instances](#gs-creating-a-custom-rule-with-the-AWS-Config-console)
 
 ## Creating an AWS Lambda Function for a Custom Config Rule<a name="gs-create-lambda-function-for-custom-config-rule"></a>
 
@@ -57,11 +57,11 @@ To create this rule, first, you will create an AWS Lambda function by customizin
 
       The `InvalidResultTokenException` is expected because your function runs successfully only when it receives a *result token* from AWS Config\. The result token identifies the AWS Config rule and the event that caused the evaluation, and the result token associates an evaluation with a rule\. This exception indicates that your function has the permission it needs to send results to AWS Config\. Otherwise, the following error message appears: `not authorized to perform: config:PutEvaluations`\. If this error occurs, update the role that you assigned to your function to allow the `config:PutEvaluations` action, and test your function again\.
 
-## Creating a Custom Rule<a name="gs-creating-a-custom-rule-with-the-AWS-Config-console"></a>
+## Creating a Custom Lambda Rule to Evaluate Amazon EC2 Instances<a name="gs-creating-a-custom-rule-with-the-AWS-Config-console"></a>
 
 1. Open the AWS Config console at [https://console\.aws\.amazon\.com/config/](https://console.aws.amazon.com/config/)\.
 
-1. In the AWS Management Console menu, verify that the region selector is set to the same region in which you created the AWS Lambda function for your custom rule\.
+1. In the AWS Management Console menu, verify that the region selector is set to the same region in which you created the AWS Lambda function for your Custom Lambda rule\.
 
 1. On the **Rules** page, choose **Add rule**\.
 

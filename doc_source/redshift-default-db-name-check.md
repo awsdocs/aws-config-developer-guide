@@ -6,13 +6,13 @@ Checks if a Redshift cluster has changed its database name from the default valu
 
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS regions
+**AWS Region:** All supported AWS regions except China \(Beijing\), China \(Ningxia\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), Asia Pacific \(Jakarta\) Region
 
 **Parameters:**
 
 validDatabaseNames \(Optional\)Type: CSV  
 Comma\-separated list of database name\(s\) for Redshift clusters\.
 
-## AWS CloudFormation template<a name="w76aac11c31c17b7d413c15"></a>
+## AWS CloudFormation template<a name="w79aac11c32c17b7d459c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

@@ -15,6 +15,6 @@ Results might take up to 6 hours to become available after an evaluation occurs\
 
 None  
 
-## AWS CloudFormation template<a name="w76aac11c31c17b7d229c17"></a>
+## AWS CloudFormation template<a name="w79aac11c32c17b7d261c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

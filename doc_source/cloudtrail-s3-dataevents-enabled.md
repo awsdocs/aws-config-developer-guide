@@ -13,6 +13,6 @@ Checks whether at least one AWS CloudTrail trail is logging Amazon S3 data event
 S3BucketNames \(Optional\)Type: String  
 Comma\-separated list of S3 bucket names for which data events logging should be enabled\. Default behavior checks for all S3 buckets\.
 
-## AWS CloudFormation template<a name="w76aac11c31c17b7c75c15"></a>
+## AWS CloudFormation template<a name="w79aac11c32c17b7c91c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

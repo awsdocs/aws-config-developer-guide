@@ -41,7 +41,7 @@ Authorization is required when using **Add individual account IDs** to select so
    + If you choose **Add my organization**, you can add all accounts in your organization to an aggregator account\.
 **Note**  
 You must be signed in to the management account or a registered delegated administrator and all the features must be enabled in your organization\. If the caller is a management account, AWS Config calls `EnableAwsServiceAccess` API to [enable integration](https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnableAWSServiceAccess.html) between AWS Config and AWS Organizations\. If the caller is a registered delegated administrator, AWS Config calls `ListDelegatedAdministrators` API to verify whether the caller is a valid delegated administrator\.   
-Ensure that the management account registers delegated administrator for AWS Config service principle name \(config\.amazonaws\.com\) before the delegated administrator creates an aggregator\. To register a delegated administrator, see [Register a Delegated Administrator](set-up-aggregator-cli.md#register-a-delegated-administrator-cli)\.
+Ensure that the management account registers delegated administrator for AWS Config service principal name \(config\.amazonaws\.com\) before the delegated administrator creates an aggregator\. To register a delegated administrator, see [Register a Delegated Administrator](set-up-aggregator-cli.md#register-a-delegated-administrator-cli)\.
 
      1. Choose **Choose IAM role** to create an IAM role or choose an existing IAM role from your account\.
 
