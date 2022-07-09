@@ -172,7 +172,7 @@ SELECT
 WHERE
     resourceType = 'AWS::EC2::Volume' 
 AND 
-    configuration.state.value = 'available''
+    configuration.state.value = 'available'
 ```
 
 Result
