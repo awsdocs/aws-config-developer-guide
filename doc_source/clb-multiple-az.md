@@ -13,6 +13,6 @@ Checks if a Classic Load Balancer spans multiple Availability Zones \(AZs\)\. Th
 minAvailabilityZones \(Optional\)Type: int  
 Desired minimum number of expected AZs\. Valid values are between 2 and 10, both inclusive\. Default value is 2 if parameter is not specified\.
 
-## AWS CloudFormation template<a name="w79aac11c32c17b7c65c15"></a>
+## AWS CloudFormation template<a name="w79aac11c32c17b9c65c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

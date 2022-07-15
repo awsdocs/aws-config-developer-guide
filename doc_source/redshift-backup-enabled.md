@@ -16,6 +16,6 @@ Minimum value for the retention period\. Minimum value is 1\.
 MaxRetentionPeriod \(Optional\)Type: int  
 Maximum value for the retention period\. Maximum value is 35\.
 
-## AWS CloudFormation template<a name="w79aac11c32c17b7d447c15"></a>
+## AWS CloudFormation template<a name="w79aac11c32c17b9d447c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

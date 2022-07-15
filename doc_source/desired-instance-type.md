@@ -15,6 +15,6 @@ For a list of supported Amazon EC2 instance types, see [Instance Types](https://
 instanceTypeType: CSV  
  Comma\-separated list of EC2 instance types \(for example, "t2\.small, m4\.large, i2\.xlarge"\)\.
 
-## AWS CloudFormation template<a name="w79aac11c32c17b7d145c17"></a>
+## AWS CloudFormation template<a name="w79aac11c32c17b9d145c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

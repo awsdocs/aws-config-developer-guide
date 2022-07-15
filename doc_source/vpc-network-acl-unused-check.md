@@ -12,6 +12,6 @@ Checks if there are unused network access control lists \(network ACLs\)\. The r
 
 None  
 
-## AWS CloudFormation template<a name="w79aac11c32c17b7d557c15"></a>
+## AWS CloudFormation template<a name="w79aac11c32c17b9d557c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

@@ -1,6 +1,9 @@
 # List of AWS Config Managed Rules<a name="managed-rules-by-aws-config"></a>
 
-AWS Config currently supports the following managed rules in the analytics; compute; cryptography and PKI; database; machine learning; management and governance; migration and transfer; network and content delivery; security; identity and compliance; and storage categories\. 
+AWS Config currently supports the following managed rules\.
+
+**Note**  
+The default values specified for managed rules are pre\-populated only when using the AWS console\. Default vaules are not supplied for the API, CLI, or SDK\.
 
 **Topics**
 + [access\-keys\-rotated](access-keys-rotated.md)

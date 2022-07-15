@@ -12,6 +12,6 @@ Checks if HTTP to HTTPS redirection is configured on all HTTP listeners of Appli
 
 None  
 
-## AWS CloudFormation template<a name="w79aac11c32c17b7c11c15"></a>
+## AWS CloudFormation template<a name="w79aac11c32c17b9c11c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

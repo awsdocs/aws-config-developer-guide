@@ -16,6 +16,6 @@ Comma\-separated list of blocked KMS action patterns, for example, kms:\*, kms:D
 excludeRoleByManagementAccount \(Optional\)Type: boolean  
 Exclude a role if it is only assumable by organization management account\.
 
-## AWS CloudFormation template<a name="w79aac11c32c17b7d325c15"></a>
+## AWS CloudFormation template<a name="w79aac11c32c17b9d325c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

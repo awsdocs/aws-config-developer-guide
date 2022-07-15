@@ -13,6 +13,6 @@ Checks if an AWS CodeBuild project environment has privileged mode enabled\. The
 exemptedProjects \(Optional\)Type: CSV  
 Comma\-separated list of CodeBuild project names that are allowed to have ‘privilegedMode’ with value ‘true’\.
 
-## AWS CloudFormation template<a name="w79aac11c32c17b7d117c15"></a>
+## AWS CloudFormation template<a name="w79aac11c32c17b9d117c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

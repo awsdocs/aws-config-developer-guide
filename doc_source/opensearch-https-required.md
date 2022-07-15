@@ -13,6 +13,6 @@ Checks whether connections to OpenSearch domains are using HTTPS\. The rule is N
 tlsPolicies \(Optional\)Type: CSV  
 Comma\-separated list of TLS security policies to check against the Amazon OpensSearch domain\.
 
-## AWS CloudFormation template<a name="w79aac11c32c17b7d399c15"></a>
+## AWS CloudFormation template<a name="w79aac11c32c17b9d399c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

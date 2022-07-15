@@ -28,6 +28,6 @@ BlockPublicAcls is enforced or not, default True
 RestrictPublicBuckets \(Optional\)Type: StringDefault: True  
 RestrictPublicBuckets is enforced or not, default True
 
-## AWS CloudFormation template<a name="w79aac11c32c17b7d473c19"></a>
+## AWS CloudFormation template<a name="w79aac11c32c17b9d473c19"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

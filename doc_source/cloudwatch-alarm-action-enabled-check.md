@@ -12,6 +12,6 @@ Checks if Amazon CloudWatch alarms actions are in enabled state\. The rule is NO
 
 None  
 
-## AWS CloudFormation template<a name="w79aac11c32c17b7c97c15"></a>
+## AWS CloudFormation template<a name="w79aac11c32c17b9c97c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

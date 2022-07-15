@@ -11,4 +11,4 @@ See the following topics to set up AWS Config with the AWS CLI\. After you set u
 **Topics**
 + [Prerequisites](gs-cli-prereq.md)
 + [Turning on AWS Config](gs-cli-subscribe.md)
-+ [Verify that AWS Config Is On](gs-cli-verify-subscribe.md)
++ [Check that AWS Config Is On](gs-cli-verify-subscribe.md)

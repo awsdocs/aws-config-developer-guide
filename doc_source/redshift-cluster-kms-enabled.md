@@ -13,6 +13,6 @@ Checks if Amazon Redshift clusters are using a specified AWS Key Management Serv
 kmsKeyArns \(Optional\)Type: CSV  
 Comma\-separated list of AWS KMS key Amazon Resource Names \(ARNs\) used in Amazon Redshift clusters for encryption\.
 
-## AWS CloudFormation template<a name="w79aac11c32c17b7d451c15"></a>
+## AWS CloudFormation template<a name="w79aac11c32c17b9d451c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

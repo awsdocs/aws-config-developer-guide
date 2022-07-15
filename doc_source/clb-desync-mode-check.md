@@ -13,6 +13,6 @@ Checks if Classic Load Balancers \(CLB\) are configured with a user defined Desy
 desyncModeType: CSV  
 Comma\-separated list of values\. You can select a max of two\. Valid values include 'Defensive', 'Strictest', and 'Monitor'\.
 
-## AWS CloudFormation template<a name="w79aac11c32c17b7c63c15"></a>
+## AWS CloudFormation template<a name="w79aac11c32c17b9c63c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

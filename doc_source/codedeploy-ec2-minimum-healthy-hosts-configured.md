@@ -16,6 +16,6 @@ Minimum percentage of healthy hosts fleet during deployment\. Default value is s
 minimumHealthyHostsHostCount \(Optional\)Type: intDefault: 1  
 Minimum number of healthy hosts in fleet during deployment\. Default value is set to 1\.
 
-## AWS CloudFormation template<a name="w79aac11c32c17b7d129c15"></a>
+## AWS CloudFormation template<a name="w79aac11c32c17b9d129c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

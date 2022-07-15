@@ -13,6 +13,6 @@ Checks whether an AWS Lambda function is configured with a dead\-letter queue\. 
 dlqArns \(Optional\)Type: String  
 Comma\-separated list of Amazon SQS and Amazon SNS ARNs that must be configured as the Lambda function dead\-letter queue target\.
 
-## AWS CloudFormation template<a name="w79aac11c32c17b7d363c15"></a>
+## AWS CloudFormation template<a name="w79aac11c32c17b9d363c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

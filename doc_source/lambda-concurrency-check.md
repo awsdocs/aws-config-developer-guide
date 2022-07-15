@@ -16,6 +16,6 @@ Minimum concurrency execution limit
 ConcurrencyLimitHigh \(Optional\)Type: String  
 Maximum concurrency execution limit
 
-## AWS CloudFormation template<a name="w79aac11c32c17b7d361c15"></a>
+## AWS CloudFormation template<a name="w79aac11c32c17b9d361c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

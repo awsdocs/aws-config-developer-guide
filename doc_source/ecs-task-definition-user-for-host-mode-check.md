@@ -13,6 +13,6 @@ Checks if an Amazon Elastic Container Service \(Amazon ECS\) task definition wit
 SkipInactiveTaskDefinitions \(Optional\)Type: boolean  
 This rule will evaluate all Amazon ECS Task Definitions if the value is 'false'\. The rule does not evaluate INACTIVE ECS Task Definitions if the value is 'true'\.
 
-## AWS CloudFormation template<a name="w79aac11c32c17b7d247c15"></a>
+## AWS CloudFormation template<a name="w79aac11c32c17b9d247c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

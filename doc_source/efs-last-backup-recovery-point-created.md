@@ -6,7 +6,7 @@ Checks if a recovery point was created for Amazon Elastic File System \(Amazon E
 
 **Trigger type:** Periodic
 
-**AWS Region:** All supported AWS regions except China \(Beijing\), China \(Ningxia\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), Asia Pacific \(Jakarta\), Asia Pacific \(Osaka\), Europe \(Milan\), Africa \(Cape Town\) Region
+**AWS Region:** All supported AWS regions except China \(Beijing\), China \(Ningxia\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), Asia Pacific \(Jakarta\), Asia Pacific \(Osaka\) Region
 
 **Parameters:**
 
@@ -22,6 +22,6 @@ Numerical value for maximum allowed age\. No more than 744 for hours, 31 for day
 recoveryPointAgeUnit \(Optional\)Type: StringDefault: days  
 Unit of time for maximum allowed age\. Accepted values: 'hours', 'days'\.
 
-## AWS CloudFormation template<a name="w79aac11c32c17b7d257c15"></a>
+## AWS CloudFormation template<a name="w79aac11c32c17b9d257c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

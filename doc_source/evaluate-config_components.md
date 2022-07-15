@@ -176,13 +176,13 @@ To use the RDKLib, the runtime of the rule must be set to `python3.6-lib`\.
            valid_rule_parameters = rule_parameters
            return valid_rule_parameters
                                                            
-        ################################
-        # DO NOT MODIFY ANYTHING BELOW #
-        ################################
-        def lambda_handler(event, context):
-           my_rule = MFA_ENABLED_RULE()
-           evaluator = Evaluator(my_rule, APPLICABLE_RESOURCES)
-           return evaluator.handle(event, context)
+   ################################
+   # DO NOT MODIFY ANYTHING BELOW #
+   ################################
+   def lambda_handler(event, context):
+       my_rule = MFA_ENABLED_RULE()
+       evaluator = Evaluator(my_rule, APPLICABLE_RESOURCES)
+       return evaluator.handle(event, context)
    ```
 
    The following example is an edited version of the MFA\_ENABLED\_RULE template with the rule logic\. The rule checks if IAM users have multi\-factor authentication \(MFA\) enabled\. The rule is NON\_COMPLIANT if an IAM user does not have MFA not enabled\. For more information on rule logic and the methods provided in the template, see [Rule logic](#evaluate-config_rule-logic)\.
@@ -214,13 +214,13 @@ To use the RDKLib, the runtime of the rule must be set to `python3.6-lib`\.
            valid_rule_parameters = rule_parameters
            return valid_rule_parameters
    
-       ################################
-       # DO NOT MODIFY ANYTHING BELOW #
-       ################################
-       def lambda_handler(event, context):
-           my_rule = MFA_ENABLED_RULE()
-           evaluator = Evaluator(my_rule, APPLICABLE_RESOURCES)
-           return evaluator.handle(event, context)
+   ################################
+   # DO NOT MODIFY ANYTHING BELOW #
+   ################################
+   def lambda_handler(event, context):
+       my_rule = MFA_ENABLED_RULE()
+       evaluator = Evaluator(my_rule, APPLICABLE_RESOURCES)
+       return evaluator.handle(event, context)
    ```
 
 1. The next step is installing the RDKlib layer in AWS with either the AWS Console or AWS CLI\. RDKLib is designed to work as an AWS Lambda Layer\. It allows you to use the library without needing to include it in your deployment package\.
@@ -406,13 +406,13 @@ To use the RDKLib, the runtime of the rule must be set to `python3.6-lib`\.
            valid_rule_parameters = rule_parameters
            return valid_rule_parameters
                                                            
-        ################################
-        # DO NOT MODIFY ANYTHING BELOW #
-        ################################
-        def lambda_handler(event, context):
-           my_rule = MFA_ENABLED_RULE()
-           evaluator = Evaluator(my_rule, APPLICABLE_RESOURCES)
-           return evaluator.handle(event, context)
+   ################################
+   # DO NOT MODIFY ANYTHING BELOW #
+   ################################
+   def lambda_handler(event, context):
+       my_rule = MFA_ENABLED_RULE()
+       evaluator = Evaluator(my_rule, APPLICABLE_RESOURCES)
+       return evaluator.handle(event, context)
    ```
 
    The template defaults to change\-triggered rules\. Instead, add your logic to the `evaluate_periodic` method\. The following example is an edited version of the MFA\_ENABLED\_RULE template with the rule logic\. The rule checks if IAM users have multi\-factor authentication \(MFA\) enabled\. The rule is NON\_COMPLIANT if an IAM user does not have MFA not enabled\. For more information on rule logic and the methods provided in the template, see [Rule logic](#evaluate-config_rule-logic)\.
@@ -453,13 +453,13 @@ To use the RDKLib, the runtime of the rule must be set to `python3.6-lib`\.
            valid_rule_parameters = rule_parameters
            return valid_rule_parameters
    
-       ################################
-       # DO NOT MODIFY ANYTHING BELOW #
-       ################################
-       def lambda_handler(event, context):
-           my_rule = MFA_ENABLED_RULE()
-           evaluator = Evaluator(my_rule, APPLICABLE_RESOURCES)
-           return evaluator.handle(event, context)
+   ################################
+   # DO NOT MODIFY ANYTHING BELOW #
+   ################################
+   def lambda_handler(event, context):
+       my_rule = MFA_ENABLED_RULE()
+       evaluator = Evaluator(my_rule, APPLICABLE_RESOURCES)
+       return evaluator.handle(event, context)
    ```
 
 1. The next step is installing the RDKlib layer in AWS with either the AWS Console or AWS CLI\. RDKLib is designed to work as an AWS Lambda Layer\. It allows you to use the library without needing to include it in your deployment package\.
@@ -616,13 +616,13 @@ class ConfigRule (ConfigRule):
         # Add your custom logic here. #
         ###############################
     
-    ################################
-    # DO NOT MODIFY ANYTHING BELOW #
-    ################################    
-    def lambda_handler(event, context):
-        my_rule = ConfigRule()
-        evaluator = Evaluator(my_rule, APPLICABLE_RESOURCES)
-        return evaluator.handle(event, context)
+################################
+# DO NOT MODIFY ANYTHING BELOW #
+################################    
+def lambda_handler(event, context):
+    my_rule = ConfigRule()
+    evaluator = Evaluator(my_rule, APPLICABLE_RESOURCES)
+    return evaluator.handle(event, context)
 ```
 
 **APPLICABLE\_RESOURCES**  

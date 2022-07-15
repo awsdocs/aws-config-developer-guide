@@ -12,6 +12,6 @@ Checks if cross\-zone load balancing is enabled for the Classic Load Balancers \
 
 None  
 
-## AWS CloudFormation template<a name="w79aac11c32c17b7d289c15"></a>
+## AWS CloudFormation template<a name="w79aac11c32c17b9d289c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

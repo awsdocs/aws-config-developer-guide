@@ -13,6 +13,6 @@ Checks if Amazon OpenSearch Service domains are configured to send logs to Amazo
 logTypes \(Optional\)Type: CSV  
 Comma\-separated list of logs that are enabled\. Valid values are 'search', 'index', 'error'\.
 
-## AWS CloudFormation template<a name="w79aac11c32c17b7d403c15"></a>
+## AWS CloudFormation template<a name="w79aac11c32c17b9d403c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

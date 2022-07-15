@@ -13,6 +13,6 @@ Checks if the Auto Scaling group spans multiple Availability Zones\. The rule is
 minAvailabilityZones \(Optional\)Type: int  
 Minimum number of expected Availability zones\.
 
-## AWS CloudFormation template<a name="w79aac11c32c17b7c49c15"></a>
+## AWS CloudFormation template<a name="w79aac11c32c17b9c49c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

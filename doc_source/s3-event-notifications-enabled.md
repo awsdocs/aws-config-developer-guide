@@ -16,6 +16,6 @@ The Amazon Resource Name \(ARN\) of the destination for the event notification \
 eventTypes \(Optional\)Type: CSV  
 Comma\-separated list of the preferred Amazon S3 event types
 
-## AWS CloudFormation template<a name="w79aac11c32c17b7d505c15"></a>
+## AWS CloudFormation template<a name="w79aac11c32c17b9d505c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

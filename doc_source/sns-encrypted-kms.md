@@ -13,6 +13,6 @@ Checks if Amazon SNS topic is encrypted with AWS Key Management Service \(AWS KM
 kmsKeyIds \(Optional\)Type: CSV  
 Comma separated list of AWS KMS key ARNs allowed for encrypting Amazon SNS Topic\.
 
-## AWS CloudFormation template<a name="w79aac11c32c17b7d539c15"></a>
+## AWS CloudFormation template<a name="w79aac11c32c17b9d539c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

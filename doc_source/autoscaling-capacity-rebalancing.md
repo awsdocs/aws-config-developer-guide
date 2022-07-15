@@ -12,6 +12,6 @@ Checks if Capacity Rebalancing is enabled for Amazon EC2 Auto Scaling groups tha
 
 None  
 
-## AWS CloudFormation template<a name="w79aac11c32c17b7c37c15"></a>
+## AWS CloudFormation template<a name="w79aac11c32c17b9c37c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

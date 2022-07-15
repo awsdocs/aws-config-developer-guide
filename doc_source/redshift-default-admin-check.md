@@ -13,6 +13,6 @@ Checks if an Amazon Redshift cluster has changed the admin username from its def
 validAdminUserNames \(Optional\)Type: CSV  
 Comma\-separated list of admin username\(s\) for Redshift clusters to use\. Note: 'awsuser' is the default and not accepted\.
 
-## AWS CloudFormation template<a name="w79aac11c32c17b7d457c15"></a>
+## AWS CloudFormation template<a name="w79aac11c32c17b9d457c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

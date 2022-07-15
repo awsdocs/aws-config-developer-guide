@@ -13,6 +13,6 @@ Checks if Amazon API Gateway APIs are of the type specified in the rule paramete
 endpointConfigurationTypesType: String  
 Comma\-separated list of allowed endpointConfigurationTypes\. Allowed values are REGIONAL, PRIVATE and EDGE\.
 
-## AWS CloudFormation template<a name="w79aac11c32c17b7c19c15"></a>
+## AWS CloudFormation template<a name="w79aac11c32c17b9c19c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.
