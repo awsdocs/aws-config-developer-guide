@@ -109,6 +109,9 @@ The **AWSServiceRoleForConfig** SLR contains the managed policy `AWSConfigServic
 				"datasync:DescribeLocationSmb",
 				"datasync:DescribeTask",
 				"datasync:ListTagsForResource",
+				"datasync:ListLocations",
+				"datasync:ListTasks",
+				"datasync:ListAgents",
 				"dax:DescribeClusters",
 				"dax:DescribeParameterGroups",
 				"dax:DescribeParameters",
@@ -144,9 +147,9 @@ The **AWSServiceRoleForConfig** SLR contains the managed policy `AWSConfigServic
 				"ecr-public:GetRepositoryCatalogData",
 				"ecr-public:GetRepositoryPolicy",
 				"ecr-public:ListTagsForResource",
-				"ecr:DescribeRepositories",
 				"ecr:DescribePullThroughCacheRules",
 				"ecr:DescribeRegistry",
+				"ecr:DescribeRepositories",
 				"ecr:GetLifecyclePolicy",
 				"ecr:GetRegistryPolicy",
 				"ecr:GetRepositoryPolicy",
@@ -349,6 +352,7 @@ The **AWSServiceRoleForConfig** SLR contains the managed policy `AWSConfigServic
 				"rds:DescribeDBEngineVersions",
 				"rds:DescribeDBInstances",
 				"rds:DescribeDBParameterGroups",
+				"rds:DescribeDBParameterGroups",
 				"rds:DescribeDBParameters",
 				"rds:DescribeDBSecurityGroups",
 				"rds:DescribeDBSnapshotAttributes",
@@ -405,11 +409,11 @@ The **AWSServiceRoleForConfig** SLR contains the managed policy `AWSConfigServic
 				"s3:GetEncryptionConfiguration",
 				"s3:GetLifecycleConfiguration",
 				"s3:GetReplicationConfiguration",
-				"s3:GetStorageLensConfiguration",
-				"s3:GetStorageLensConfigurationTagging",
 				"s3:ListAccessPoints",
 				"s3:ListAllMyBuckets",
 				"s3:ListBucket",
+				"s3:GetStorageLensConfiguration",
+				"s3:GetStorageLensConfigurationTagging",
 				"sagemaker:DescribeCodeRepository",
 				"sagemaker:DescribeEndpoint",
 				"sagemaker:DescribeEndpointConfig",
@@ -434,6 +438,8 @@ The **AWSServiceRoleForConfig** SLR contains the managed policy `AWSConfigServic
 				"servicediscovery:GetNamespace",
 				"servicediscovery:GetService",
 				"servicediscovery:ListTagsForResource",
+				"servicediscovery:ListServices",
+				"servicediscovery:ListNamespaces",
 				"ses:DescribeReceiptRule",
 				"ses:DescribeReceiptRuleSet",
 				"ses:GetConfigurationSet",
@@ -442,6 +448,7 @@ The **AWSServiceRoleForConfig** SLR contains the managed policy `AWSConfigServic
 				"ses:GetEmailTemplate",
 				"ses:GetTemplate",
 				"ses:ListConfigurationSets",
+				"ses:ListContactLists",
 				"shield:DescribeDRTAccess",
 				"shield:DescribeProtection",
 				"shield:DescribeSubscription",
@@ -611,6 +618,9 @@ This IAM policy is updated each time AWS Config adds support for an AWS resource
 				"datasync:DescribeLocationSmb",
 				"datasync:DescribeTask",
 				"datasync:ListTagsForResource",
+				"datasync:ListLocations",
+				"datasync:ListTasks",
+				"datasync:ListAgents",
 				"dax:DescribeClusters",
 				"dax:DescribeParameterGroups",
 				"dax:DescribeParameters",
@@ -646,9 +656,9 @@ This IAM policy is updated each time AWS Config adds support for an AWS resource
 				"ecr-public:GetRepositoryCatalogData",
 				"ecr-public:GetRepositoryPolicy",
 				"ecr-public:ListTagsForResource",
-				"ecr:DescribeRepositories",
 				"ecr:DescribePullThroughCacheRules",
 				"ecr:DescribeRegistry",
+				"ecr:DescribeRepositories",
 				"ecr:GetLifecyclePolicy",
 				"ecr:GetRegistryPolicy",
 				"ecr:GetRepositoryPolicy",
@@ -851,6 +861,7 @@ This IAM policy is updated each time AWS Config adds support for an AWS resource
 				"rds:DescribeDBEngineVersions",
 				"rds:DescribeDBInstances",
 				"rds:DescribeDBParameterGroups",
+				"rds:DescribeDBParameterGroups",
 				"rds:DescribeDBParameters",
 				"rds:DescribeDBSecurityGroups",
 				"rds:DescribeDBSnapshotAttributes",
@@ -907,11 +918,11 @@ This IAM policy is updated each time AWS Config adds support for an AWS resource
 				"s3:GetEncryptionConfiguration",
 				"s3:GetLifecycleConfiguration",
 				"s3:GetReplicationConfiguration",
-				"s3:GetStorageLensConfiguration",
-				"s3:GetStorageLensConfigurationTagging",
 				"s3:ListAccessPoints",
 				"s3:ListAllMyBuckets",
 				"s3:ListBucket",
+				"s3:GetStorageLensConfiguration",
+				"s3:GetStorageLensConfigurationTagging",
 				"sagemaker:DescribeCodeRepository",
 				"sagemaker:DescribeEndpoint",
 				"sagemaker:DescribeEndpointConfig",
@@ -936,6 +947,8 @@ This IAM policy is updated each time AWS Config adds support for an AWS resource
 				"servicediscovery:GetNamespace",
 				"servicediscovery:GetService",
 				"servicediscovery:ListTagsForResource",
+				"servicediscovery:ListServices",
+				"servicediscovery:ListNamespaces",
 				"ses:DescribeReceiptRule",
 				"ses:DescribeReceiptRuleSet",
 				"ses:GetConfigurationSet",
@@ -944,6 +957,7 @@ This IAM policy is updated each time AWS Config adds support for an AWS resource
 				"ses:GetEmailTemplate",
 				"ses:GetTemplate",
 				"ses:ListConfigurationSets",
+				"ses:ListContactLists",
 				"shield:DescribeDRTAccess",
 				"shield:DescribeProtection",
 				"shield:DescribeSubscription",
@@ -1010,6 +1024,118 @@ This IAM policy is updated each time AWS Config adds support for an AWS resource
 }
 ```
 
+## AWS managed policy: ConfigConformsServiceRolePolicy<a name="security-iam-awsmanpol-ConfigConformsServiceRolePolicy"></a>
+
+To deploy and manage conformance packs, AWS Config requires IAM permissions and certain permissions from other AWS services\. These allow you to deploy and manage conformance packs with full functionality and are updated each time AWS Config adds new functionality for conformance packs\. For more information on conformance packs, see [Conformance packs](https://docs.aws.amazon.com/config/latest/developerguide/conformance-packs.html)\.
+
+```
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Effect": "Allow",
+			"Action": [
+				"config:PutConfigRule",
+				"config:DeleteConfigRule",
+				"config:DescribeConfigRules"
+			],
+			"Resource": "arn:aws:config:*:*:config-rule/aws-service-rule/config-conforms.aws.internal*"
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"config:DescribeRemediationConfigurations",
+				"config:DeleteRemediationConfiguration",
+				"config:PutRemediationConfigurations"
+			],
+			"Resource": "arn:aws:config:*:*:remediation-configuration/aws-service-remediation-configuration/config-conforms.aws.internal*"
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"iam:GetRole"
+			],
+			"Resource": "arn:aws:iam::*:role/aws-service-role/config-conforms.aws.internal/*"
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"iam:GetRole"
+			],
+			"Resource": "arn:aws:iam::*:role/aws-service-role/remediation.config.amazonaws.com/AWSServiceRoleForConfigRemediation"
+		},
+		{
+			"Effect": "Allow",
+			"Action": "iam:CreateServiceLinkedRole",
+			"Resource": "arn:aws:iam::*:role/aws-service-role/remediation.config.amazonaws.com/AWSServiceRoleForConfigRemediation",
+			"Condition": {
+				"StringLike": {
+					"iam:AWSServiceName": "remediation.config.amazonaws.com"
+				}
+			}
+		},
+		{
+			"Effect": "Allow",
+			"Action": "iam:PassRole",
+			"Resource": "*",
+			"Condition": {
+				"StringEquals": {
+					"iam:PassedToService": "ssm.amazonaws.com"
+				}
+			}
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"ssm:DescribeDocument",
+				"ssm:GetDocument"
+			],
+			"Resource": "*"
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"s3:PutObject",
+				"s3:PutObjectAcl",
+				"s3:GetObject",
+				"s3:GetBucketAcl"
+			],
+			"Resource": "arn:aws:s3:::awsconfigconforms*"
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"cloudformation:CreateStack",
+				"cloudformation:DeleteStack",
+				"cloudformation:DescribeStackEvents",
+				"cloudformation:DescribeStackResource",
+				"cloudformation:DescribeStackResources",
+				"cloudformation:DescribeStacks",
+				"cloudformation:GetStackPolicy",
+				"cloudformation:SetStackPolicy",
+				"cloudformation:UpdateStack",
+				"cloudformation:UpdateTerminationProtection",
+				"cloudformation:ValidateTemplate",
+				"cloudformation:ListStackResources"
+			],
+			"Resource": "arn:aws:cloudformation:*:*:stack/awsconfigconforms-*"
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"cloudwatch:PutMetricData"
+			],
+			"Resource": "*",
+			"Condition": {
+				"StringEquals": {
+					"cloudwatch:namespace": "AWS/Config"
+				}
+			}
+		}
+	]
+}
+```
+
 ## AWS Config updates to AWS managed policies<a name="security-iam-awsmanpol-updates"></a>
 
 View details about updates to AWS managed policies for AWS Config since this service began tracking these changes\. For automatic alerts about changes to this page, subscribe to the RSS feed on the AWS Config [Document history](https://docs.aws.amazon.com/config/latest/developerguide/DocumentHistory.html) page\.
@@ -1017,10 +1143,13 @@ View details about updates to AWS managed policies for AWS Config since this ser
 
 | Change | Description | Date | 
 | --- | --- | --- | 
-|  [AWSConfigServiceRolePolicy](#security-iam-awsmanpol-AWSConfigServiceRolePolicy) – Add amplifyuibuilder:ExportThemes, amplifyuibuilder:GetTheme, appconfig:GetApplication, appconfig:GetApplication, appconfig:GetConfigurationProfile, appconfig:GetConfigurationProfile, appconfig:GetDeployment, appconfig:GetDeploymentStrategy, appconfig:GetEnvironment, appconfig:GetHostedConfigurationVersion, appconfig:ListTagsForResource, appsync:GetGraphqlApi, appsync:ListGraphqlApis, billingconductor: ListPricingRulesAssociatedToPricingPlan, billingconductor:ListAccountAssociations, billingconductor:ListBillingGroups, billingconductor:ListCustomLineItems, billingconductor:ListPricingPlans, billingconductor:ListPricingRules, billingconductor:ListTagsForResource, datasync:DescribeAgent, datasync:DescribeLocationEfs, datasync:DescribeLocationFsxLustre, datasync:DescribeLocationHdfs, datasync:DescribeLocationNfs, datasync:DescribeLocationObjectStorage, datasync:DescribeLocationS3, datasync:DescribeLocationSmb, datasync:DescribeTask, datasync:ListTagsForResource, ecr:DescribePullThroughCacheRules, ecr:DescribeRegistry, ecr:GetRegistryPolicy, elasticache:DescribeCacheParameters, elasticloadbalancing:DescribeListenerCertificates, elasticloadbalancing:DescribeTargetGroupAttributes, elasticloadbalancing:DescribeTargetGroups, elasticloadbalancing:DescribeTargetHealth, events:DescribeApiDestination, events:DescribeArchive, fms:GetNotificationChannel, fms:GetPolicy, fms:ListPolicies, fms:ListTagsForResource, fsx:DescribeVolumes, geo:DescribeGeofenceCollection, geo:DescribeMap, geo:DescribePlaceIndex, geo:DescribeRouteCalculator, geo:DescribeTracker, geo:ListTrackerConsumers, glue:BatchGetJobs, glue:BatchGetWorkflows, glue:GetCrawler, glue:GetCrawlers, glue:GetJob, glue:GetJobs, glue:GetWorkflow, imagebuilder: GetComponent, imagebuilder: ListComponentBuildVersions, imagebuilder: ListComponents, imagebuilder:GetDistributionConfiguration, imagebuilder:GetInfrastructureConfiguration, imagebuilder:ListDistributionConfigurations, imagebuilder:ListInfrastructureConfigurations, kafka:DescribeClusterV2, kafka:ListClustersV2, kinesisanalytics:DescribeApplication, kinesisanalytics:ListTagsForResource, quicksight:DescribeDataSource, quicksight:DescribeDataSourcePermissions, quicksight:ListTagsForResource, rekognition:DescribeStreamProcessor, rekognition:ListTagsForResource, robomaker:DescribeRobotApplication, robomaker:DescribeSimulationApplication, s3:GetStorageLensConfiguration, s3:GetStorageLensConfigurationTagging, servicediscovery:GetInstance, servicediscovery:GetNamespace, servicediscovery:GetService, servicediscovery:ListTagsForResource, ses:DescribeReceiptRule, ses:DescribeReceiptRuleSet, ses:GetContactList, ses:GetEmailTemplate, ses:GetTemplate, and sso:GetInlinePolicyForPermissionSet   |  This policy now supports additional permissions for AWS Amplify, AWS AppConfig, AWS AppSync, AWS Billing Conductor, AWS DataSync, AWS Firewall Manager, AWS Glue, AWS Single Sign\-On \(AWS SSO\), Amazon Elastic Container Service \(Amazon ECS\), Amazon ElastiCache, Amazon EventBridge, Amazon FSx, Amazon Kinesis Data Analytics, Amazon Location Service, Amazon Managed Streaming for Apache Kafka, Amazon QuickSight, Amazon Rekognition, Amazon RoboMaker, Amazon Simple Storage Service \(Amazon S3\), Amazon Simple Email Service \(Amazon SES\), EC2 Image Builder, and Elastic Load Balancing\.   | July 15, 2022 | 
-|  [AWS\_ConfigRole](#security-iam-awsmanpol-AWS_ConfigRole) – Add amplifyuibuilder:ExportThemes, amplifyuibuilder:GetTheme, appconfig:GetApplication, appconfig:GetApplication, appconfig:GetConfigurationProfile, appconfig:GetConfigurationProfile, appconfig:GetDeployment, appconfig:GetDeploymentStrategy, appconfig:GetEnvironment, appconfig:GetHostedConfigurationVersion, appconfig:ListTagsForResource, appsync:GetGraphqlApi, appsync:ListGraphqlApis, billingconductor: ListPricingRulesAssociatedToPricingPlan, billingconductor:ListAccountAssociations, billingconductor:ListBillingGroups, billingconductor:ListCustomLineItems, billingconductor:ListPricingPlans, billingconductor:ListPricingRules, billingconductor:ListTagsForResource, datasync:DescribeAgent, datasync:DescribeLocationEfs, datasync:DescribeLocationFsxLustre, datasync:DescribeLocationHdfs, datasync:DescribeLocationNfs, datasync:DescribeLocationObjectStorage, datasync:DescribeLocationS3, datasync:DescribeLocationSmb, datasync:DescribeTask, datasync:ListTagsForResource, ecr:DescribePullThroughCacheRules, ecr:DescribeRegistry, ecr:GetRegistryPolicy, elasticache:DescribeCacheParameters, elasticloadbalancing:DescribeListenerCertificates, elasticloadbalancing:DescribeTargetGroupAttributes, elasticloadbalancing:DescribeTargetGroups, elasticloadbalancing:DescribeTargetHealth, events:DescribeApiDestination, events:DescribeArchive, fms:GetNotificationChannel, fms:GetPolicy, fms:ListPolicies, fms:ListTagsForResource, fsx:DescribeVolumes, geo:DescribeGeofenceCollection, geo:DescribeMap, geo:DescribePlaceIndex, geo:DescribeRouteCalculator, geo:DescribeTracker, geo:ListTrackerConsumers, glue:BatchGetJobs, glue:BatchGetWorkflows, glue:GetCrawler, glue:GetCrawlers, glue:GetJob, glue:GetJobs, glue:GetWorkflow, imagebuilder: GetComponent, imagebuilder: ListComponentBuildVersions, imagebuilder: ListComponents, imagebuilder:GetDistributionConfiguration, imagebuilder:GetInfrastructureConfiguration, imagebuilder:ListDistributionConfigurations, imagebuilder:ListInfrastructureConfigurations, kafka:DescribeClusterV2, kafka:ListClustersV2, kinesisanalytics:DescribeApplication, kinesisanalytics:ListTagsForResource, quicksight:DescribeDataSource, quicksight:DescribeDataSourcePermissions, quicksight:ListTagsForResource, rekognition:DescribeStreamProcessor, rekognition:ListTagsForResource, robomaker:DescribeRobotApplication, robomaker:DescribeSimulationApplication, s3:GetStorageLensConfiguration, s3:GetStorageLensConfigurationTagging, servicediscovery:GetInstance, servicediscovery:GetNamespace, servicediscovery:GetService, servicediscovery:ListTagsForResource, ses:DescribeReceiptRule, ses:DescribeReceiptRuleSet, ses:GetContactList, ses:GetEmailTemplate, ses:GetTemplate, and sso:GetInlinePolicyForPermissionSet  |  This policy now supports additional permissions for AWS Amplify, AWS AppConfig, AWS AppSync, AWS Billing Conductor, AWS DataSync, AWS Firewall Manager, AWS Glue, AWS Single Sign\-On \(AWS SSO\), Amazon Elastic Container Service \(Amazon ECS\), Amazon ElastiCache, Amazon EventBridge, Amazon FSx, Amazon Kinesis Data Analytics, Amazon Location Service, Amazon Managed Streaming for Apache Kafka, Amazon QuickSight, Amazon Rekognition, Amazon RoboMaker, Amazon Simple Storage Service \(Amazon S3\), Amazon Simple Email Service \(Amazon SES\), EC2 Image Builder, and Elastic Load Balancing\.  | July 15, 2022 | 
-|  [AWSConfigServiceRolePolicy](#security-iam-awsmanpol-AWSConfigServiceRolePolicy) – Add athena:GetDataCatalog, athena:ListDataCatalogs, athena:ListTagsForResource, detective:ListGraphs, detective:ListTagsForResource, glue:BatchGetDevEndpoints, glue:GetDevEndpoint, glue:GetDevEndpoints, glue:GetSecurityConfiguration, glue:GetSecurityConfigurations, glue:GetTags glue:GetWorkGroup, glue:ListCrawlers, glue:ListDevEndpoints, glue:ListJobs, glue:ListMembers, glue:ListWorkflows, glue:ListWorkGroups, guardduty:GetFilter, guardduty:GetIPSet, guardduty:GetThreatIntelSet, guardduty:GetMembers, guardduty:ListFilters, guardduty:ListIPSets, guardduty:ListTagsForResource, guardduty:ListThreatIntelSets, macie:GetMacieSession, ram:GetResourceShareAssociations, ram:GetResourceShares, ses:GetConfigurationSet, ses:GetConfigurationSetEventDestinations, ses:ListConfigurationSets, sso:DescribeInstanceAccessControlAttributeConfiguration, sso:DescribePermissionSet, sso:ListManagedPoliciesInPermissionSet, sso:ListPermissionSets, and sso:ListTagsForResource  |  This policy now grants permission to get a specified Amazon Athena data catalog, list the Athena data catalogs in an AWS account, and list tags associated with an Athena workgroup or data catalog resource; to get a list of Amazon Detective behavior graphs and list tags for a Detective behavior graph; get a list of resource metadata for a given list of AWS Glue development endpoint names, get information about a specified AWS Glue development endpoint, get all the AWS Glue development endpoints in an AWS account, retrieve a specified AWS Glue security configuration, get all AWS Glue security configurations, get a list of tags associated with an AWS Glue resource, get information about an AWS Glue workgroup with the specified name, retrieve the names of all AWS Glue crawler resources in an AWS account, get the names of all AWS Glue `DevEndpoint` resources in an AWS account, list the names of all AWS Glue job resources in an AWS account, get details about AWS Glue member accounts, list names of AWS Glue workflows created in an account, and list available AWS Glue workgroups for an account; to retrieve details about an Amazon GuardDuty filter, retrieve a GuardDuty IPSet, retrieve a GuardDuty ThreatIntelSet, retrieve GuardDuty member accounts, get a list of GuardDuty filters, get the IPSets of the GuardDuty service, retrieve tags for the GuardDuty Service, and get the ThreatIntelSets of the GuardDuty service; to get the current status and configuration settings for an Amazon Macie account; to retrieve the resource and principal associations for AWS Resource Access Manager \(AWS RAM\) resource shares and retrieve details about AWS RAM resource shares; to get information about an Amazon Simple Email Service \(Amazon SES\) existing configuration set, get a list of event destinations that are associated with an Amazon SES configuration set, and list all of the configuration sets associated with an Amazon SES account; and to get a list of Identity Center directory attributes, get the details of an AWS Single Sign\-On permission set, get the IAM managed policy that is attached to a specified AWS SSO permission set, get the permissions set for an AWS SSO instance, and get tags for AWS SSO resources\.  | May 31, 2022 | 
-|  [AWS\_ConfigRole](#security-iam-awsmanpol-AWS_ConfigRole) – Add athena:GetDataCatalog, athena:ListDataCatalogs, athena:ListTagsForResource, detective:ListGraphs, detective:ListTagsForResource, glue:BatchGetDevEndpoints, glue:GetDevEndpoint, glue:GetDevEndpoints, glue:GetSecurityConfiguration, glue:GetSecurityConfigurations, glue:GetTags glue:GetWorkGroup, glue:ListCrawlers, glue:ListDevEndpoints, glue:ListJobs, glue:ListMembers, glue:ListWorkflows, glue:ListWorkGroups, guardduty:GetFilter, guardduty:GetIPSet, guardduty:GetThreatIntelSet, guardduty:GetMembers, guardduty:ListFilters, guardduty:ListIPSets, guardduty:ListTagsForResource, guardduty:ListThreatIntelSets, macie:GetMacieSession, ram:GetResourceShareAssociations, ram:GetResourceShares, ses:GetConfigurationSet, ses:GetConfigurationSetEventDestinations, ses:ListConfigurationSets, sso:DescribeInstanceAccessControlAttributeConfiguration, sso:DescribePermissionSet, sso:ListManagedPoliciesInPermissionSet, sso:ListPermissionSets, and sso:ListTagsForResource  |  This policy now grants permission to get a specified Amazon Athena data catalog, list the Athena data catalogs in an AWS account, and list tags associated with an Athena workgroup or data catalog resource; to get a list of Amazon Detective behavior graphs and list tags for a Detective behavior graph; get a list of resource metadata for a given list of AWS Glue development endpoint names, get information about a specified AWS Glue development endpoint, get all the AWS Glue development endpoints in an AWS account, retrieve a specified AWS Glue security configuration, get all AWS Glue security configurations, get a list of tags associated with an AWS Glue resource, get information about an AWS Glue workgroup with the specified name, retrieve the names of all AWS Glue crawler resources in an AWS account, get the names of all AWS Glue `DevEndpoint` resources in an AWS account, list the names of all AWS Glue job resources in an AWS account, get details about AWS Glue member accounts, list names of AWS Glue workflows created in an account, and list available AWS Glue workgroups for an account; to retrieve details about an Amazon GuardDuty filter, retrieve a GuardDuty IPSet, retrieve a GuardDuty ThreatIntelSet, retrieve GuardDuty member accounts, get a list of GuardDuty filters, get the IPSets of the GuardDuty service, retrieve tags for the GuardDuty Service, and get the ThreatIntelSets of the GuardDuty service; to get the current status and configuration settings for an Amazon Macie account; to retrieve the resource and principal associations for AWS Resource Access Manager \(AWS RAM\) resource shares and retrieve details about AWS RAM resource shares; to get information about an Amazon Simple Email Service \(Amazon SES\) existing configuration set, get a list of event destinations that are associated with an Amazon SES configuration set, and list all of the configuration sets associated with an Amazon SES account; and to get a list of Identity Center directory attributes, get the details of an AWS Single Sign\-On permission set, get the IAM managed policy that is attached to a specified AWS SSO permission set, get the permissions set for an AWS SSO instance, and get tags for AWS SSO resources\.  | May 31, 2022 | 
+|  [AWSConfigServiceRolePolicy](#security-iam-awsmanpol-AWSConfigServiceRolePolicy) – Add datasync:ListAgents, datasync:ListLocations, datasync:ListTasks, servicediscovery:ListNamespaces, servicediscovery:ListServices, and ses:ListContactLists  |  This policy now grants permission to return a list of AWS DataSync agents, DataSync source and destination locations, and DataSync tasks in an AWS account; list summary information about the AWS Cloud Map namespaces and services that are associated with one or more specified namespaces in an AWS account; and list all the Amazon Simple Email Service \(Amazon SES\) contact lists available in AWS account\.  | August 22, 2022 | 
+|  [AWS\_ConfigRole](#security-iam-awsmanpol-AWS_ConfigRole) – Add datasync:ListAgents, datasync:ListLocations, datasync:ListTasks, servicediscovery:ListNamespaces, servicediscovery:ListServices, and ses:ListContactLists  |  This policy now grants permission to return a list of AWS DataSync agents, DataSync source and destination locations, and DataSync tasks in an AWS account; list summary information about the AWS Cloud Map namespaces and services that are associated with one or more specified namespaces in an AWS account; and list all the Amazon Simple Email Service \(Amazon SES\) contact lists available in AWS account\.  | August 22, 2022 | 
+|  [ConfigConformsServiceRolePolicy](#security-iam-awsmanpol-ConfigConformsServiceRolePolicy) – Add cloudwatch:PutMetricData  |  This policy now grants permission to publish metric data points to Amazon CloudWatch\.  | July 25, 2022 | 
+|  [AWSConfigServiceRolePolicy](#security-iam-awsmanpol-AWSConfigServiceRolePolicy) – Add amplifyuibuilder:ExportThemes, amplifyuibuilder:GetTheme, appconfig:GetApplication, appconfig:GetApplication, appconfig:GetConfigurationProfile, appconfig:GetConfigurationProfile, appconfig:GetDeployment, appconfig:GetDeploymentStrategy, appconfig:GetEnvironment, appconfig:GetHostedConfigurationVersion, appconfig:ListTagsForResource, appsync:GetGraphqlApi, appsync:ListGraphqlApis, billingconductor: ListPricingRulesAssociatedToPricingPlan, billingconductor:ListAccountAssociations, billingconductor:ListBillingGroups, billingconductor:ListCustomLineItems, billingconductor:ListPricingPlans, billingconductor:ListPricingRules, billingconductor:ListTagsForResource, datasync:DescribeAgent, datasync:DescribeLocationEfs, datasync:DescribeLocationFsxLustre, datasync:DescribeLocationHdfs, datasync:DescribeLocationNfs, datasync:DescribeLocationObjectStorage, datasync:DescribeLocationS3, datasync:DescribeLocationSmb, datasync:DescribeTask, datasync:ListTagsForResource, ecr:DescribePullThroughCacheRules, ecr:DescribeRegistry, ecr:GetRegistryPolicy, elasticache:DescribeCacheParameters, elasticloadbalancing:DescribeListenerCertificates, elasticloadbalancing:DescribeTargetGroupAttributes, elasticloadbalancing:DescribeTargetGroups, elasticloadbalancing:DescribeTargetHealth, events:DescribeApiDestination, events:DescribeArchive, fms:GetNotificationChannel, fms:GetPolicy, fms:ListPolicies, fms:ListTagsForResource, fsx:DescribeVolumes, geo:DescribeGeofenceCollection, geo:DescribeMap, geo:DescribePlaceIndex, geo:DescribeRouteCalculator, geo:DescribeTracker, geo:ListTrackerConsumers, glue:BatchGetJobs, glue:BatchGetWorkflows, glue:GetCrawler, glue:GetCrawlers, glue:GetJob, glue:GetJobs, glue:GetWorkflow, imagebuilder: GetComponent, imagebuilder: ListComponentBuildVersions, imagebuilder: ListComponents, imagebuilder:GetDistributionConfiguration, imagebuilder:GetInfrastructureConfiguration, imagebuilder:ListDistributionConfigurations, imagebuilder:ListInfrastructureConfigurations, kafka:DescribeClusterV2, kafka:ListClustersV2, kinesisanalytics:DescribeApplication, kinesisanalytics:ListTagsForResource, quicksight:DescribeDataSource, quicksight:DescribeDataSourcePermissions, quicksight:ListTagsForResource, rekognition:DescribeStreamProcessor, rekognition:ListTagsForResource, robomaker:DescribeRobotApplication, robomaker:DescribeSimulationApplication, s3:GetStorageLensConfiguration, s3:GetStorageLensConfigurationTagging, servicediscovery:GetInstance, servicediscovery:GetNamespace, servicediscovery:GetService, servicediscovery:ListTagsForResource, ses:DescribeReceiptRule, ses:DescribeReceiptRuleSet, ses:GetContactList, ses:GetEmailTemplate, ses:GetTemplate, and sso:GetInlinePolicyForPermissionSet   |  This policy now supports additional permissions for AWS Amplify, AWS AppConfig, AWS AppSync, AWS Billing Conductor, AWS DataSync, AWS Firewall Manager, AWS Glue, AWS IAM Identity Center \(successor to AWS Single Sign\-On\) \(IAM Identity Center\), Amazon Elastic Container Service \(Amazon ECS\), Amazon ElastiCache, Amazon EventBridge, Amazon FSx, Amazon Kinesis Data Analytics, Amazon Location Service, Amazon Managed Streaming for Apache Kafka, Amazon QuickSight, Amazon Rekognition, AWS RoboMaker, Amazon Simple Storage Service \(Amazon S3\), Amazon Simple Email Service \(Amazon SES\), EC2 Image Builder, and Elastic Load Balancing\.   | July 15, 2022 | 
+|  [AWS\_ConfigRole](#security-iam-awsmanpol-AWS_ConfigRole) – Add amplifyuibuilder:ExportThemes, amplifyuibuilder:GetTheme, appconfig:GetApplication, appconfig:GetApplication, appconfig:GetConfigurationProfile, appconfig:GetConfigurationProfile, appconfig:GetDeployment, appconfig:GetDeploymentStrategy, appconfig:GetEnvironment, appconfig:GetHostedConfigurationVersion, appconfig:ListTagsForResource, appsync:GetGraphqlApi, appsync:ListGraphqlApis, billingconductor: ListPricingRulesAssociatedToPricingPlan, billingconductor:ListAccountAssociations, billingconductor:ListBillingGroups, billingconductor:ListCustomLineItems, billingconductor:ListPricingPlans, billingconductor:ListPricingRules, billingconductor:ListTagsForResource, datasync:DescribeAgent, datasync:DescribeLocationEfs, datasync:DescribeLocationFsxLustre, datasync:DescribeLocationHdfs, datasync:DescribeLocationNfs, datasync:DescribeLocationObjectStorage, datasync:DescribeLocationS3, datasync:DescribeLocationSmb, datasync:DescribeTask, datasync:ListTagsForResource, ecr:DescribePullThroughCacheRules, ecr:DescribeRegistry, ecr:GetRegistryPolicy, elasticache:DescribeCacheParameters, elasticloadbalancing:DescribeListenerCertificates, elasticloadbalancing:DescribeTargetGroupAttributes, elasticloadbalancing:DescribeTargetGroups, elasticloadbalancing:DescribeTargetHealth, events:DescribeApiDestination, events:DescribeArchive, fms:GetNotificationChannel, fms:GetPolicy, fms:ListPolicies, fms:ListTagsForResource, fsx:DescribeVolumes, geo:DescribeGeofenceCollection, geo:DescribeMap, geo:DescribePlaceIndex, geo:DescribeRouteCalculator, geo:DescribeTracker, geo:ListTrackerConsumers, glue:BatchGetJobs, glue:BatchGetWorkflows, glue:GetCrawler, glue:GetCrawlers, glue:GetJob, glue:GetJobs, glue:GetWorkflow, imagebuilder: GetComponent, imagebuilder: ListComponentBuildVersions, imagebuilder: ListComponents, imagebuilder:GetDistributionConfiguration, imagebuilder:GetInfrastructureConfiguration, imagebuilder:ListDistributionConfigurations, imagebuilder:ListInfrastructureConfigurations, kafka:DescribeClusterV2, kafka:ListClustersV2, kinesisanalytics:DescribeApplication, kinesisanalytics:ListTagsForResource, quicksight:DescribeDataSource, quicksight:DescribeDataSourcePermissions, quicksight:ListTagsForResource, rekognition:DescribeStreamProcessor, rekognition:ListTagsForResource, robomaker:DescribeRobotApplication, robomaker:DescribeSimulationApplication, s3:GetStorageLensConfiguration, s3:GetStorageLensConfigurationTagging, servicediscovery:GetInstance, servicediscovery:GetNamespace, servicediscovery:GetService, servicediscovery:ListTagsForResource, ses:DescribeReceiptRule, ses:DescribeReceiptRuleSet, ses:GetContactList, ses:GetEmailTemplate, ses:GetTemplate, and sso:GetInlinePolicyForPermissionSet  |  This policy now supports additional permissions for AWS Amplify, AWS AppConfig, AWS AppSync, AWS Billing Conductor, AWS DataSync, AWS Firewall Manager, AWS Glue, AWS IAM Identity Center \(successor to AWS Single Sign\-On\) \(IAM Identity Center\), Amazon Elastic Container Service \(Amazon ECS\), Amazon ElastiCache, Amazon EventBridge, Amazon FSx, Amazon Kinesis Data Analytics, Amazon Location Service, Amazon Managed Streaming for Apache Kafka, Amazon QuickSight, Amazon Rekognition, AWS RoboMaker, Amazon Simple Storage Service \(Amazon S3\), Amazon Simple Email Service \(Amazon SES\), EC2 Image Builder, and Elastic Load Balancing\.  | July 15, 2022 | 
+|  [AWSConfigServiceRolePolicy](#security-iam-awsmanpol-AWSConfigServiceRolePolicy) – Add athena:GetDataCatalog, athena:ListDataCatalogs, athena:ListTagsForResource, detective:ListGraphs, detective:ListTagsForResource, glue:BatchGetDevEndpoints, glue:GetDevEndpoint, glue:GetDevEndpoints, glue:GetSecurityConfiguration, glue:GetSecurityConfigurations, glue:GetTags glue:GetWorkGroup, glue:ListCrawlers, glue:ListDevEndpoints, glue:ListJobs, glue:ListMembers, glue:ListWorkflows, glue:ListWorkGroups, guardduty:GetFilter, guardduty:GetIPSet, guardduty:GetThreatIntelSet, guardduty:GetMembers, guardduty:ListFilters, guardduty:ListIPSets, guardduty:ListTagsForResource, guardduty:ListThreatIntelSets, macie:GetMacieSession, ram:GetResourceShareAssociations, ram:GetResourceShares, ses:GetConfigurationSet, ses:GetConfigurationSetEventDestinations, ses:ListConfigurationSets, sso:DescribeInstanceAccessControlAttributeConfiguration, sso:DescribePermissionSet, sso:ListManagedPoliciesInPermissionSet, sso:ListPermissionSets, and sso:ListTagsForResource  |  This policy now grants permission to get a specified Amazon Athena data catalog, list the Athena data catalogs in an AWS account, and list tags associated with an Athena workgroup or data catalog resource; to get a list of Amazon Detective behavior graphs and list tags for a Detective behavior graph; get a list of resource metadata for a given list of AWS Glue development endpoint names, get information about a specified AWS Glue development endpoint, get all the AWS Glue development endpoints in an AWS account, retrieve a specified AWS Glue security configuration, get all AWS Glue security configurations, get a list of tags associated with an AWS Glue resource, get information about an AWS Glue workgroup with the specified name, retrieve the names of all AWS Glue crawler resources in an AWS account, get the names of all AWS Glue `DevEndpoint` resources in an AWS account, list the names of all AWS Glue job resources in an AWS account, get details about AWS Glue member accounts, list names of AWS Glue workflows created in an account, and list available AWS Glue workgroups for an account; to retrieve details about an Amazon GuardDuty filter, retrieve a GuardDuty IPSet, retrieve a GuardDuty ThreatIntelSet, retrieve GuardDuty member accounts, get a list of GuardDuty filters, get the IPSets of the GuardDuty service, retrieve tags for the GuardDuty Service, and get the ThreatIntelSets of the GuardDuty service; to get the current status and configuration settings for an Amazon Macie account; to retrieve the resource and principal associations for AWS Resource Access Manager \(AWS RAM\) resource shares and retrieve details about AWS RAM resource shares; to get information about an Amazon Simple Email Service \(Amazon SES\) existing configuration set, get a list of event destinations that are associated with an Amazon SES configuration set, and list all of the configuration sets associated with an Amazon SES account; and to get a list of Identity Center directory attributes, get the details of an AWS IAM Identity Center \(successor to AWS Single Sign\-On\) permission set, get the IAM managed policy that is attached to a specified IAM Identity Center permission set, get the permissions set for an IAM Identity Center instance, and get tags for IAM Identity Center resources\.  | May 31, 2022 | 
+|  [AWS\_ConfigRole](#security-iam-awsmanpol-AWS_ConfigRole) – Add athena:GetDataCatalog, athena:ListDataCatalogs, athena:ListTagsForResource, detective:ListGraphs, detective:ListTagsForResource, glue:BatchGetDevEndpoints, glue:GetDevEndpoint, glue:GetDevEndpoints, glue:GetSecurityConfiguration, glue:GetSecurityConfigurations, glue:GetTags glue:GetWorkGroup, glue:ListCrawlers, glue:ListDevEndpoints, glue:ListJobs, glue:ListMembers, glue:ListWorkflows, glue:ListWorkGroups, guardduty:GetFilter, guardduty:GetIPSet, guardduty:GetThreatIntelSet, guardduty:GetMembers, guardduty:ListFilters, guardduty:ListIPSets, guardduty:ListTagsForResource, guardduty:ListThreatIntelSets, macie:GetMacieSession, ram:GetResourceShareAssociations, ram:GetResourceShares, ses:GetConfigurationSet, ses:GetConfigurationSetEventDestinations, ses:ListConfigurationSets, sso:DescribeInstanceAccessControlAttributeConfiguration, sso:DescribePermissionSet, sso:ListManagedPoliciesInPermissionSet, sso:ListPermissionSets, and sso:ListTagsForResource  |  This policy now grants permission to get a specified Amazon Athena data catalog, list the Athena data catalogs in an AWS account, and list tags associated with an Athena workgroup or data catalog resource; to get a list of Amazon Detective behavior graphs and list tags for a Detective behavior graph; get a list of resource metadata for a given list of AWS Glue development endpoint names, get information about a specified AWS Glue development endpoint, get all the AWS Glue development endpoints in an AWS account, retrieve a specified AWS Glue security configuration, get all AWS Glue security configurations, get a list of tags associated with an AWS Glue resource, get information about an AWS Glue workgroup with the specified name, retrieve the names of all AWS Glue crawler resources in an AWS account, get the names of all AWS Glue `DevEndpoint` resources in an AWS account, list the names of all AWS Glue job resources in an AWS account, get details about AWS Glue member accounts, list names of AWS Glue workflows created in an account, and list available AWS Glue workgroups for an account; to retrieve details about an Amazon GuardDuty filter, retrieve a GuardDuty IPSet, retrieve a GuardDuty ThreatIntelSet, retrieve GuardDuty member accounts, get a list of GuardDuty filters, get the IPSets of the GuardDuty service, retrieve tags for the GuardDuty Service, and get the ThreatIntelSets of the GuardDuty service; to get the current status and configuration settings for an Amazon Macie account; to retrieve the resource and principal associations for AWS Resource Access Manager \(AWS RAM\) resource shares and retrieve details about AWS RAM resource shares; to get information about an Amazon Simple Email Service \(Amazon SES\) existing configuration set, get a list of event destinations that are associated with an Amazon SES configuration set, and list all of the configuration sets associated with an Amazon SES account; and to get a list of Identity Center directory attributes, get the details of an AWS IAM Identity Center \(successor to AWS Single Sign\-On\) permission set, get the IAM managed policy that is attached to a specified IAM Identity Center permission set, get the permissions set for an IAM Identity Center instance, and get tags for IAM Identity Center resources\.  | May 31, 2022 | 
 |  [AWSConfigServiceRolePolicy](#security-iam-awsmanpol-AWSConfigServiceRolePolicy) – Add cloudformation:GetResource, cloudformation:ListResources, cloudtrail:GetEventDataStore, cloudtrail:ListEventDataStores, dax:DescribeParameterGroups, dax:DescribeParameters, dax:DescribeSubnetGroups, DMS:DescribeReplicationTasks, and organizations:ListPolicies  |  This policy now grants permission to get information about all or a specified AWS CloudTrail event data store \(EDS\), get information about all or a specified AWS CloudFormation resource, get a list of a DynamoDB Accelerator \(DAX\) parameter group or subnet group, get information about AWS Database Migration Service \(AWS DMS\) replication tasks for your account in the current region being accessed, and get a list all policies in an AWS Organizations of a specified type\.  | April 7, 2022 | 
 |  [AWS\_ConfigRole](#security-iam-awsmanpol-AWS_ConfigRole) – Add cloudformation:GetResource, cloudformation:ListResources, cloudtrail:GetEventDataStore, cloudtrail:ListEventDataStores, dax:DescribeParameterGroups, dax:DescribeParameters, dax:DescribeSubnetGroups, DMS:DescribeReplicationTasks, and organizations:ListPolicies  |  This policy now grants permission to get information about all or a specified AWS CloudTrail event data store \(EDS\), get information about all or a specified AWS CloudFormation resource, get a list of a DynamoDB Accelerator \(DAX\) parameter group or subnet group, get information about AWS Database Migration Service \(AWS DMS\) replication tasks for your account in the current region being accessed, and get a list all policies in an AWS Organizations of a specified type\.  | April 7, 2022 | 
 |  [AWSConfigServiceRolePolicy](#security-iam-awsmanpol-AWSConfigServiceRolePolicy) – Add backup\-gateway:ListTagsForResource, backup\-gateway:ListVirtualMachines, batch:DescribeComputeEnvironments, batch:DescribeJobQueues, batch:ListTagsForResource, dax:ListTags, dms:DescribeCertificates, dynamodb:DescribeGlobalTable, dynamodb:DescribeGlobalTableSettings, ec2:DescribeClientVpnAuthorizationRules, ec2:DescribeClientVpnEndpoints, ec2:DescribeDhcpOptions, ec2:DescribeFleets, ec2:DescribeNetworkAcls, ec2:DescribePlacementGroups, ec2:DescribeSpotFleetRequests, ec2:DescribeVolumeAttribute, ec2:DescribeVolumes, eks:DescribeFargateProfile, eks:ListFargateProfiles, eks:ListTagsForResource, fsx:ListTagsForResource, guardduty:ListOrganizationAdminAccounts, kms:ListAliases, opsworks:DescribeLayers, opsworks:DescribeStacks, opsworks:ListTags, rds:DescribeDBClusterParameterGroups, rds:DescribeDBClusterParameters, states:DescribeActivity, states:ListActivities, wafv2:GetRuleGroup, wafv2:ListRuleGroups, wafv2:ListTagsForResource, workspaces:DescribeConnectionAliases, workspaces:DescribeTags, and workspaces:DescribeWorkspaces  |  This policy now supports additional permissions for AWS Backup, AWS Batch, DynamoDB Accelerator, AWS Database Migration Service, Amazon DynamoDB, Amazon Elastic Compute Cloud \(Amazon EC2\), Amazon Elastic Kubernetes Service, Amazon FSx, Amazon GuardDuty, AWS Key Management Service, AWS OpsWorks, Amazon Relational Database Service, AWS WAFV2, and Amazon WorkSpaces\.  | March 14, 2022 | 

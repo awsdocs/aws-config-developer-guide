@@ -1,6 +1,6 @@
 # Viewing the AWS Config Dashboard<a name="viewing-the-aws-config-dashboard"></a>
 
-Use the **Dashboard** to see an overview of your resources, rules, and their compliance state and to visualize your AWS Config usage and success metrics with Amazon CloudWatch\. This page helps you quickly identify the top resources in your AWS account, what rules or resources are noncompliant, what traffic is driving your AWS Config usage, and key metrics for failures that have occured in your workflows\.
+Use the **Dashboard** to see an overview of your resources, rules, conformance packs, and their compliance states and to visualize your AWS Config usage and success metrics with Amazon CloudWatch\. This page helps you quickly identify the top resources in your AWS account, the conformance packs with the lowest level of compliance in your AWS account, what rules or resources are noncompliant in your AWS account, what traffic is driving your AWS Config usage, and key metrics for success and failure that have occured in your workflows\.
 
 **To use the AWS Config Dashboard**
 
@@ -14,14 +14,19 @@ Use the **Dashboard** to see an overview of your resources, rules, and their com
 
 ## Compliance and Resource Inventory<a name="aws-config-dashboard-compliance"></a>
 
-After setup, AWS Config starts recording your specified resources and then evaluates them against your rules\. It may take a few minutes for AWS Config to display your resources, rules, and their compliance states\.
+After setup, AWS Config starts recording your specified resources and evaluating them against your rules\. It may take a few minutes for AWS Config to display your resources, rules, conformance packs, and their compliance states\.
+
+**Conformance packs by compliance score**  
+*Conformance packs by compliance score* displays up to 10 of your conformance packs with the lowest compliance score\. A compliance score is the percentage of the number of compliant rule\-resource combinations in a conformance pack compared to the number of total possible rule\-resource combinations in the conformance pack\.  
+This metric provides you with a high\-level view of the compliance state of your conformance packs, and can be used to identify, investigate, and understand the level of compliance in your conformance packs\. You can use the compliance score to track remediation progress, perform comparisons across different sets of requirements, and see the impact a specific change or deployment has on a conformance pack\.  
+To view the deployment status, compliance score, compliance score timeline, and rules for a conformance pack in a detailed view, choose the name of the conformance pack under **Conformance pack**\.
 
 **Compliance status**  
-*Compliance status* displays your number of compliant and noncompliant rules and compliant and noncompliant resources\. Resources are compliant or noncompliant based on an evaluation of the rule associated with it\. If a resource does not follow the rule's specifications, the resource and the rule are flagged as noncompliant\.  
+*Compliance status* displays the number of your compliant and noncompliant rules and compliant and noncompliant resources\. Resources are compliant or noncompliant based on an evaluation of the rule associated with it\. If a resource does not follow the rule's specifications, the resource and the rule are flagged as noncompliant\.  
 To view the list of noncompliant rules and resources, choose **Noncompliant rule\(s\)** or **Noncompliant resource\(s\)**\.
 
-**Noncompliant rules by noncompliant resource count**  
-*Noncompliant rules by noncompliant resource count* displays your top noncompliant rules in descending order by the number of resources\. Choose a rule to view its details, parameters, and the resources in scope for that specific rule\.  
+**Rules by noncompliant resources**  
+*Rules by noncompliant resources* displays your top noncompliant rules in descending order by the number of resources\. Choose a rule to view its details, parameters, and the resources in scope for that specific rule\.  
 For a comprehensive list of noncompliant rules, choose **View all noncompliant rules**\.
 
 **Resource inventory**  

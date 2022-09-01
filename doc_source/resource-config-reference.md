@@ -2,7 +2,7 @@
 
 AWS Config supports the following AWS resources types and resource relationships\. Some regions support a subset of these resource types\. What is available in the AWS Config Console in a given region is the source of truth regarding what is, or is not, supported in a given region\.
 
-Advanced Queries for AWS Config supports a subset of these resource types\. For a list of those supported resource types, see [Support Resource Types for Advanced Queries](https://github.com/awslabs/aws-config-resource-schema/tree/master/config/properties/resource-types)\.
+Advanced Queries for AWS Config supports a subset of these resource types\. For a list of those supported resource types, see [Supported Resource Types for Advanced Queries](https://github.com/awslabs/aws-config-resource-schema/tree/master/config/properties/resource-types)\.
 
 **Note**  
 Periodic rules can run on resources that AWS Config recording does not support and can be run without the configuration recorder being enabled\. Periodic rules do not depend on configuration items\. For more information on the difference between change–triggered rules and periodic rules, see [Specifying Triggers for AWS Config Rules](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config-rules.html)\.  
@@ -15,6 +15,12 @@ When AWS Config onboards new resource types, the default resources for the new r
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
 To learn more about how AWS Config integrates with Amazon API Gateway, see [Monitoring API Gateway API Configuration with AWS Config](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-config.html)\.
+
+## Amazon Athena<a name="amazonathena"></a>
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
 ## Amazon CloudFront<a name="amazoncloudfront"></a>
 
@@ -33,6 +39,15 @@ To learn more about how AWS Config integrates with Amazon API Gateway, see [Moni
 | --- | --- | --- | --- | 
 | Amazon CloudWatch | AWS::CloudWatch::Alarm | NA | NA | 
 
+## Amazon Detective<a name="amazondetective"></a>
+
+
+****  
+
+| AWS Service | Resource Type Value | Relationship | Related Resource | 
+| --- | --- | --- | --- | 
+| Amazon Detective | AWS::Detective::Graph | NA | NA | 
+
 ## Amazon DynamoDB<a name="amazondynamodb"></a>
 
 
@@ -42,22 +57,13 @@ To learn more about how AWS Config integrates with Amazon API Gateway, see [Moni
 | --- | --- | --- | --- | 
 | Amazon DynamoDB | AWS::DynamoDB::Table | NA | NA | 
 
-## Amazon Elastic Block Store<a name="amazonelasticblockstore"></a>
-
-
-****  
-
-| AWS Service | Resource Type Value | Relationship | Related Resource | 
-| --- | --- | --- | --- | 
-| Amazon Elastic Block Store | AWS::EC2::Volume | is attached to | EC2 instance | 
-
 ## Amazon Elastic Compute Cloud<a name="amazonelasticcomputecloud"></a>
 
 
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
-\*AWS Config records the configuration details of Dedicated hosts and the instances that you launch on them\. As a result, you can use AWS Config as a data source when you report compliance with your server\-bound software licenses\. For example, you can view the configuration history of an instance and determine which Amazon Machine Image \(AMI\) it is based on\. Then, you can look up the configuration history of the host, which includes details such as the numbers of sockets and cores, to verify that the host complies with the license requirements of the AMI\. For more information, see [Tracking Configuration Changes with AWS Config](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-aws-config.html) in the *Amazon EC2 User Guide for Linux Instances*\. 
+\*AWS Config records the configuration details of Dedicated hosts and the instances that you launch on them\. As a result, you can use AWS Config as a data source when you report compliance with your server\-bound software licenses\. For example, you can view the configuration history of an instance and determine which Amazon Machine Image \(AMI\) it is based on\. Then, you can look up the configuration history of the host, which includes details such as the numbers of sockets and cores, to check that the host complies with the license requirements of the AMI\. For more information, see [Tracking Configuration Changes with AWS Config](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-aws-config.html) in the *Amazon EC2 User Guide for Linux Instances*\. 
 
 \*The EC2 SecurityGroup Properties definition contains IP CIDR blocks, which are converted to IP ranges internally, and may return unexpected results when trying to find a specific IP range\. For workarounds to search for specific IP ranges, see [Limitations for Advanced Queries](https://docs.aws.amazon.com/config/latest/developerguide/querying-AWS-resources.html#query-limitations)\.
 
@@ -103,10 +109,7 @@ New \(supported\): `arn:aws:ecs:region:aws_account_id:service/cluster-name/servi
 
 
 ****  
-
-| AWS Service | Resource Type Value | Relationship | Related Resource | 
-| --- | --- | --- | --- | 
-| Amazon Elastic Kubernetes Service | AWS::EKS::Cluster | NA | NA | 
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
 ## Amazon EMR<a name="amazonemr"></a>
 
@@ -174,35 +177,22 @@ New \(supported\): `arn:aws:ecs:region:aws_account_id:service/cluster-name/servi
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
-## Amazon S3 Bucket Attributes<a name="s3-attributes"></a>
-
-AWS Config also records the following attributes for the Amazon S3 bucket resource type\.
-
-
-****  
-
-| Attributes | Description | 
-| --- | --- | 
-| AccelerateConfiguration | Transfer acceleration for data over long distances between your client and a bucket\. | 
-| BucketAcl | Access control list used to manage access to buckets and objects\.  | 
-| BucketPolicy | Policy that defines the permissions to the bucket\.  | 
-| CrossOriginConfiguration | Allow cross\-origin requests to the bucket\.  | 
-| LifecycleConfiguration | Rules that define the lifecycle for objects in your bucket\.  | 
-| LoggingConfiguration | Logging used to track requests for access to the bucket\.  | 
-| NotificationConfiguration | Event notifications used to send alerts or trigger workflows for specified bucket events\.  | 
-| ReplicationConfiguration | Automatic, asynchronous copying of objects across buckets in different AWS Regions\.  | 
-| RequestPaymentConfiguration | Requester pays is enabled\.  | 
-| TaggingConfiguration | Tags added to the bucket to categorize\. You can also use tagging to track billing\.  | 
-| WebsiteConfiguration | Static website hosting is enabled for the bucket\. | 
-| VersioningConfiguration | Versioning is enabled for objects in the bucket\.  | 
-
-For more information about the attributes, see [Bucket Configuration Options](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html#bucket-config-options-intro) in the *Amazon Simple Storage Service User Guide*\.
+\*AWS Config support for these Amazon Route 53 resource types are available only in the  US East \(N\. Virginia\) Region\.
 
 ## Amazon SageMaker<a name="amazonsagemaker"></a>
 
 
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
+
+## Amazon Simple Email Service<a name="amazonsimpleemailservice"></a>
+
+
+****  
+
+| AWS Service | Resource Type Value | Relationship | Related Resource | 
+| --- | --- | --- | --- | 
+| Amazon Simple Email Service | AWS::SES::ConfigurationSet | NA | NA | 
 
 ## Amazon Simple Notification Service<a name="amazonsimplenotificationservice"></a>
 
@@ -228,7 +218,31 @@ For more information about the attributes, see [Bucket Configuration Options](ht
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
-\*If you configured AWS Config to record your S3 buckets, and are not receiving configuration change notifications, verify your S3 bucket policies have the required permissions\. For more information, see [Managing Permissions for S3 Bucket Recording](iamrole-permissions.md#troubleshooting-recording-s3-bucket-policy)\. 
+\*If you configured AWS Config to record your S3 buckets, and are not receiving configuration change notifications, check that your S3 bucket policies have the required permissions\. For more information, see [Managing Permissions for S3 Bucket Recording](iamrole-permissions.md#troubleshooting-recording-s3-bucket-policy)\. 
+
+**Amazon S3 Bucket Attributes**
+
+AWS Config also records the following attributes for the Amazon S3 bucket resource type\.
+
+
+****  
+
+| Attributes | Description | 
+| --- | --- | 
+| AccelerateConfiguration | Transfer acceleration for data over long distances between your client and a bucket\. | 
+| BucketAcl | Access control list used to manage access to buckets and objects\.  | 
+| BucketPolicy | Policy that defines the permissions to the bucket\.  | 
+| CrossOriginConfiguration | Allow cross\-origin requests to the bucket\.  | 
+| LifecycleConfiguration | Rules that define the lifecycle for objects in your bucket\.  | 
+| LoggingConfiguration | Logging used to track requests for access to the bucket\.  | 
+| NotificationConfiguration | Event notifications used to send alerts or trigger workflows for specified bucket events\.  | 
+| ReplicationConfiguration | Automatic, asynchronous copying of objects across buckets in different AWS Regions\.  | 
+| RequestPaymentConfiguration | Requester pays is enabled\.  | 
+| TaggingConfiguration | Tags added to the bucket to categorize\. You can also use tagging to track billing\.  | 
+| WebsiteConfiguration | Static website hosting is enabled for the bucket\. | 
+| VersioningConfiguration | Versioning is enabled for objects in the bucket\.  | 
+
+For more information about the attributes, see [Bucket Configuration Options](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html#bucket-config-options-intro) in the *Amazon Simple Storage Service User Guide*\.
 
 ## Amazon Virtual Private Cloud<a name="amazonvirtualprivatecloud"></a>
 
@@ -236,13 +250,13 @@ For more information about the attributes, see [Bucket Configuration Options](ht
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
-## AWS Auto Scaling<a name="autoscaling"></a>
+## Amazon WorkSpaces<a name="amazonworkspaces"></a>
 
 
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
-## Amazon WorkSpaces<a name="amazonworkspaces"></a>
+## AWS Auto Scaling<a name="autoscaling"></a>
 
 
 ****  
@@ -348,6 +362,15 @@ Recording for the `AWS::Config::ConformancePackCompliance` resource type is avai
 
 \*This resource is only available in US West \(Oregon\) Region\.
 
+## AWS Glue<a name="awsglue"></a>
+
+
+****  
+
+| AWS Service | Resource Type Value | Relationship | Related Resource | 
+| --- | --- | --- | --- | 
+| AWS Glue | AWS::Glue::Job | NA | NA | 
+
 ## AWS Identity and Access Management<a name="awsiam"></a>
 
 
@@ -360,10 +383,7 @@ AWS Config includes inline policies with the configuration details that it recor
 
 
 ****  
-
-| AWS Service | Resource Type Value | Relationship | Related Resource | 
-| --- | --- | --- | --- | 
-| AWS Key Management Service | AWS::KMS::Key | NA | NA | 
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
 ## AWS Lambda Function<a name="awslambdafunction"></a>
 
@@ -395,7 +415,7 @@ AWS Config includes inline policies with the configuration details that it recor
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
-\*AWS Config support for `AWS::Shield::Protection` is available only in the US East \(N\. Virginia\) region\. The `AWS::ShieldRegional::Protection` is available in all regions where AWS Shield is supported\. 
+\*AWS Config support for `AWS::Shield::Protection` is available only in the US East \(N\. Virginia\) Region\. The `AWS::ShieldRegional::Protection` is available in all regions where AWS Shield is supported\. 
 
 ## AWS Step Functions<a name="awsstepfunctions"></a>
 
@@ -417,7 +437,7 @@ AWS Config includes inline policies with the configuration details that it recor
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
-\*The AWS WAF resource type values are available only in the US East \(N\. Virginia\) Region\. The `AWS::WAFRegional::RateBasedRule`, `AWS::WAFRegional::Rule`, `AWS::WAFRegional::WebACL`, and `AWS::WAFRegional::RuleGroup` are available in all regions where AWS WAF is supported\. 
+\*AWS Config support for the AWS WAF resource types are available only in the US East \(N\. Virginia\) Region\. The `AWS::WAFRegional::RateBasedRule`, `AWS::WAFRegional::Rule`, `AWS::WAFRegional::WebACL`, and `AWS::WAFRegional::RuleGroup` are available in all regions where AWS WAF is supported\. 
 
 
 ****  

@@ -19,6 +19,6 @@ Comma\-separated list of blocked KMS action patterns, for example, kms:\*, kms:D
 excludePermissionBoundaryPolicy \(Optional\)Type: boolean  
 Boolean flag to exclude the evaluation of IAM policies used as permissions boundaries\. If set to 'true', the rule will not include permissions boundaries in the evaluation\. Otherwise, all IAM policies in scope are evaluated when value is set to 'false\.' Default value is 'false'\.
 
-## AWS CloudFormation template<a name="w79aac11c32c17b9d321c17"></a>
+## AWS CloudFormation template<a name="w85aac12c32c17b9d321c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

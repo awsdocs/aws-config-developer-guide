@@ -1,12 +1,12 @@
 # Setting Up an Aggregator Using the AWS Command Line Interface<a name="set-up-aggregator-cli"></a>
 
-You can create, view, update, and delete AWS Config aggregator data using the AWS Command Line Interface \(AWS CLI\)\. To use the AWS Management Console, see [Setting Up an Aggregator Using the Console](setup-aggregator-console.md)\.
+You can create, view, update, and delete AWS Config aggregator data using the AWS Command Line Interface \(AWS CLI\)\.
 
-The AWS CLI is a unified tool to manage your AWS services\. With just one tool to download and configure, you can control multiple AWS services from the command line and use scripts to automate them\.
+The AWS CLI is a unified tool to manage your AWS services\. With just one tool to download and configure, you can control multiple AWS services from the command line and use scripts to automate them\. For more information about the AWS CLI and for instructions on installing the AWS CLI tools, see the following in the *AWS Command Line Interface User Guide*\.
++ [AWS Command Line Interface User Guide](https://docs.aws.amazon.com/cli/latest/userguide/)
++ [Getting Set Up with the AWS Command Line Interface](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-set-up.html) 
 
-To install the AWS CLI on your local machine, see [Installing the AWS CLI](http://docs.aws.amazon.com/cli/latest/userguide/installing.html) in the *AWS CLI User Guide*\.
-
-If necessary, type `AWS Configure` to configure the AWS CLI to use an AWS Region where AWS Config aggregators are available\.
+If necessary, type `aws configure` to configure the AWS CLI to use an AWS Region where AWS Config conformance packs are available\.
 
 **Topics**
 + [Add an Aggregator Using Individual Accounts](#add-an-aggregator-cli)
@@ -76,9 +76,17 @@ If necessary, type `AWS Configure` to configure the AWS CLI to use an AWS Region
 Before you begin this procedure, you must be signed in to the management account or a registered delegated administrator and all the features must be enabled in your organization\. 
 
 **Note**  
-Ensure that the management account registers delegated administrator for AWS Config service principal name \(config\.amazonaws\.com\) before the delegated administrator creates an aggregator\. To register a delegated administrator, see [Register a Delegated Administrator](#register-a-delegated-administrator-cli)\.
+Ensure that the management account registers a delegated administrator with both of the following AWS Config service principal names \(`config.amazonaws.com` and`config-multiaccountsetup.amazonaws.com`\) before the delegated administrator creates an aggregator\. To register a delegated administrator, see [Register a Delegated Administrator](#register-a-delegated-administrator-cli)\.
 
 1. Open a command prompt or a terminal window\.
+
+1. If have not created an IAM role for your AWS Config aggregator, type the following command: 
+
+   ```
+   aws iam create-role --role-name OrgConfigRole --assume-role-policy-document "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Sid\":\"\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"config.amazonaws.com\"},\"Action\":\"sts:AssumeRole\"}]}" --description "Role for organizational AWS Config aggregator"
+   ```
+**Note**  
+Copy the Amazon Resource Name \(ARN\) from this IAM role for use when you create your AWS Config aggregator\. You can find the ARNallows on the response object\.
 
 1. Type the following command to create an aggregator named **MyAggregator**\.
 
@@ -113,13 +121,19 @@ Delegated administrators are accounts within a given AWS Organization that are g
 
 1. Open a command prompt or a terminal window\.
 
-1. Type the following command to enable service access:
+1. Type the following command to enable service access as a delegated administrator for your organization to deploy and manage AWS Config rules and conformance packs across your organization:
 
    ```
-   aws organizations enable-aws-service-access --service-principal config.amazonaws.com
+   aws organizations enable-aws-service-access --service-principal=config-multiaccountsetup.amazonaws.com
    ```
 
-1. To verify if the enable service access is complete, type the following command and press Enter to execute the command\.
+1. Type the following command to enable service access as a delegated administrator for your organization to aggregate AWS Config data across your organization:
+
+   ```
+   aws organizations enable-aws-service-access --service-principal=config.amazonaws.com
+   ```
+
+1. To check if the enable service access is complete, type the following command and press Enter to execute the command\.
 
    ```
    aws organizations list-aws-service-access-for-organization
@@ -131,7 +145,10 @@ Delegated administrators are accounts within a given AWS Organization that are g
    {
        "EnabledServicePrincipals": [
            {
-               "ServicePrincipal": "config.amazonaws.com",
+               "ServicePrincipal": [
+                   "config.amazonaws.com",
+                   "config-multiaccountsetup.amazonaws.com"
+           ],
                "DateEnabled": 1607020860.881
            }
        ]
@@ -141,13 +158,25 @@ Delegated administrators are accounts within a given AWS Organization that are g
 1. Next, type the following command to register a member account as a delegated administrator for AWS Config\.
 
    ```
-   aws organizations register-delegated-administrator --service-principal config.amazonaws.com --account-id MemberAccountID
+   aws organizations register-delegated-administrator --service-principal=config-multiaccountsetup.amazonaws.com --account-id MemberAccountID
    ```
 
-1. To verify if the registration of delegated administrator is complete, type the following command and press Enter to execute the command\.
+   and
 
    ```
-   aws organizations list-delegated-administrators --service-principal config.amazonaws.com 
+   aws organizations register-delegated-administrator --service-principal=config.amazonaws.com --account-id MemberAccountID
+   ```
+
+1. To check if the registration of delegated administrator is complete, type the following command from the management account and press Enter to execute the command\.
+
+   ```
+   aws organizations list-delegated-administrators --service-principal=config-multiaccountsetup.amazonaws.com
+   ```
+
+   and
+
+   ```
+   aws organizations list-delegated-administrators --service-principal=config.amazonaws.com
    ```
 
    You should see output similar to the following:

@@ -32,7 +32,7 @@ You can view, edit, and delete your existing rules\. You can also create additio
 
 After adding an AWS Config rule, you can also send rule evaluations to AWS Security Hub\. The integration between AWS Config and Security Hub allows you to triage and remediate rule evaluations alongside other misconfigurations and security issues\.
 
-### Send Rule Evaluations to Security Hub<a name="w79aab7c29c19b5"></a>
+### Send Rule Evaluations to Security Hub<a name="w85aab7c16c19b5"></a>
 
 To send rule evaluations to Security Hub, you must first set up AWS Security Hub and AWS Config, and then add at least one AWS Config managed or custom rule\. After this, AWS Config immediately starts sending rule evaluations to Security Hub\. Security Hub enriches the rule evaluations and transforms them into Security Hub findings\.
 

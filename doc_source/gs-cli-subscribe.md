@@ -31,6 +31,10 @@ This command uses the following options for the `--recording-group` parameter:
   Before you can set this option to `true`, you must set the `allSupported` option to `true`\.
 
   If you do not want to include global resources, set this option to `false`, or omit it\.
+**Note**  
+If you have used an AWS service that uses AWS Config \(such as AWS Security Hub or AWS Control Tower\) and an AWS Config role has already been created, you should make sure that the IAM role you use when setting up AWS Config keeps the same minimum privileges as the already created AWS Config role in order for the other AWS service to continue to run as expected\.   
+For example, if AWS Control Tower has an IAM role that allows AWS Config to read Amazon S3 objects, you should guarantee the same permissions are granted within the IAM role you use when setting up AWS Config\. Otherwise, it may interfere with AWS Control Tower's operations\.  
+For more information about IAM roles for AWS Config, see [AWS Identity and Access Management](https://docs.aws.amazon.com/config/latest/developerguide/security-iam.html)\. 
 
 ## put\-delivery\-channel<a name="gs-cli-subscribe-put-delivery-channel"></a>
 

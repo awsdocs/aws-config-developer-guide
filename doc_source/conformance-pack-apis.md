@@ -7,4 +7,5 @@ Use the following AWS Config API actions to manage conformance packs:
 + [DescribeConformancePackStatus](https://docs.aws.amazon.com/config/latest/APIReference/API_DescribeConformancePackStatus.html)
 + [GetConformancePackComplianceDetails](https://docs.aws.amazon.com/config/latest/APIReference/API_GetConformancePackComplianceDetails.html)
 + [GetConformancePackComplianceSummary](https://docs.aws.amazon.com/config/latest/APIReference/API_GetConformancePackComplianceSummary.html)
++ [ListConformancePackComplianceScores](https://docs.aws.amazon.com/config/latest/APIReference/API_ListConformancePackComplianceScores.html)
 + [PutConformancePack](https://docs.aws.amazon.com/config/latest/APIReference/API_PutConformancePack.html)

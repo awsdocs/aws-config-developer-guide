@@ -2,7 +2,9 @@
 
 You can deploy, view, update, view compliance status, and delete an AWS Config conformance pack using the AWS Command Line Interface \(AWS CLI\)\.
 
-To install the AWS CLI on your local machine see, [AWS Config Conforms Amazon S3 bucket\.](https://s3.console.aws.amazon.com/s3/buckets/aws-config-conforms-docs)
+The AWS CLI is a unified tool to manage your AWS services\. With just one tool to download and configure, you can control multiple AWS services from the command line and use scripts to automate them\. For more information about the AWS CLI and for instructions on installing the AWS CLI tools, see the following in the *AWS Command Line Interface User Guide*\.
++ [AWS Command Line Interface User Guide](https://docs.aws.amazon.com/cli/latest/userguide/)
++ [Getting Set Up with the AWS Command Line Interface](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-set-up.html) 
 
 If necessary, type `aws configure` to configure the AWS CLI to use an AWS Region where AWS Config conformance packs are available\.
 
@@ -18,18 +20,33 @@ If necessary, type `aws configure` to configure the AWS CLI to use an AWS Region
 
 1. Open a command prompt or a terminal window\.
 
-1. Type the following command to deploy a conformance pack named **MyConformancePack1**\.
+1. Type one of the following commands to deploy a conformance pack named **MyConformancePack**\. The template source is either an Amazon S3 URI, a template that you upload, or an AWS Systems Manager document \(SSM document\)\.
+
+   **Amazon S3 URI**
 
    ```
-   aws configservice put-conformance-pack --conformance-pack-name="MyConformancePack1" --template-s3-uri="s3://AmazonS3bucketname/template name.yaml" --delivery-s3-bucket=AmazonS3bucketname
+   aws configservice put-conformance-pack
+   --conformance-pack-name MyConformancePack
+   --template-s3-uri "s3://AmazonS3bucketname/template name.yaml"
+   --delivery-s3-bucket AmazonS3bucketname
    ```
 
-   OR
-
-   You can also upload a YAML template from your local directory\.
+   **YAML template from your local directory**
 
    ```
-   aws configservice put-conformance-pack --conformance-pack-name="MyConformancePack1" --template-body=template body --delivery-s3-bucket=AmazonS3bucketname
+   aws configservice put-conformance-pack
+   --conformance-pack-name MyConformancePack
+   --template-body template body
+   --delivery-s3-bucket AmazonS3bucketname
+   ```
+
+   **AWS Systems Manager Document \(Systems Manager Document\)**
+
+   ```
+   aws config put-conformance-pack
+   --conformance-pack-name MyConformancePack
+   --template-ssm-document MyConformancePackDocument
+   --conformance-pack-input-parameters params
    ```
 
 1. Press Enter to run the command\.
@@ -41,6 +58,9 @@ If necessary, type `aws configure` to configure the AWS CLI to use an AWS Region
        "conformancePackArn": "arn:aws:config:us-west-2:AccountID:conformance-pack/MyConformancePack1/conformance-pack-ID"
    }
    ```
+
+**Note**  
+For more information on creating a YAML template for a conformance pack, see [Custom Conformance Pack](https://docs.aws.amazon.com/config/latest/developerguide/custom-conformance-pack.html)\.
 
 ## View a Conformance Pack<a name="view-a-conformance-pack"></a>
 
@@ -169,3 +189,5 @@ If necessary, type `aws configure` to configure the AWS CLI to use an AWS Region
   ```
 
   If successful, the command runs with no additional output\.
+**Important**  
+You cannot revert this action\. When you delete a conformance pack, you delete all of the AWS Config rules and remediation actions in that conformance pack\.

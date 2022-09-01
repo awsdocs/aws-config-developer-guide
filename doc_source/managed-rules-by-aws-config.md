@@ -3,7 +3,7 @@
 AWS Config currently supports the following managed rules\.
 
 **Note**  
-The default values specified for managed rules are pre\-populated only when using the AWS console\. Default vaules are not supplied for the API, CLI, or SDK\.
+The default values specified for managed rules are pre\-populated only when using the AWS console\. Default values are not supplied for the API, CLI, or SDK\.
 
 **Topics**
 + [access\-keys\-rotated](access-keys-rotated.md)

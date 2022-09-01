@@ -1,6 +1,6 @@
 # Components of an AWS Config Rule<a name="evaluate-config_components"></a>
 
-AWS Config rules evaluate the configuration settings of your AWS resources\. There are two types of rules: AWS Config Managed Rules and AWS Config Custom Rules\. Managed rules are predefined, customizable rules created by AWS Config\. For a list of managed rules, see [List of AWS Config Managed Rules](https://docs.aws.amazon.com/config/latest/developerguide/codedeploy-ec2-minimum-healthy-hosts-configured.html)\.
+AWS Config rules evaluate the configuration settings of your AWS resources\. There are two types of rules: AWS Config Managed Rules and AWS Config Custom Rules\. Managed rules are predefined, customizable rules created by AWS Config\. For a list of managed rules, see [List of AWS Config Managed Rules](https://docs.aws.amazon.com/config/latest/developerguide/managed-rules-by-aws-config.html)\.
 
 Custom rules are rules that you can create using either Guard or AWS Lambda functions\. Guard \([Guard GitHub Repository](https://github.com/aws-cloudformation/cloudformation-guard)\) is a policy\-as\-code language that allows you to write policies that are enforced by AWS Config Custom Policy rules\. AWS Lambda uses custom code that you upload to evaluate a custom rule\. It is invoked by events that are published to it by an event source, which AWS Config invokes when the custom rule is initiated\.
 
@@ -10,7 +10,7 @@ This page discusses the structure of rule definitions and best practices on how 
 + [Rule definitions](#evaluate-config_components_structure)
 + [Rule metadata](#evaluate-config_components_definitions)
 + [Rule structure](#evaluate-config_components_logic)
-  + [Writing rules](#w79aac11c27c17b4)
+  + [Writing rules](#w85aac12c27c17b5)
   + [Rule logic](#evaluate-config_rule-logic)
 
 ## Rule definitions<a name="evaluate-config_components_structure"></a>
@@ -79,7 +79,7 @@ The defaultName is the name that instances of a rule will get by default\.
 The rule description provides context for what the rule evaluates\. The AWS Config Console has a limit of 256 characters\. As a best practice, the rule description should be with “Checks if” and include a description of the NON\_COMPLIANT scenario\. Service Names should be written in full beginning with AWS or Amazon when first mentioned in the rule description\. For example, AWS CloudTrail or Amazon CloudWatch instead of CloudTrail or CloudWatch for first use\. Services names can be abbreviated after subsequent reference\. 
 
 **scope**  
-The scope determines which resource types the rule targets\. This is required if the rule is change\-triggered or is both change\-triggered and periodic, , and is optional for periodic rules\. For a list of supported resource types, see [Supported Resource Types](https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources.html)\.
+The scope determines which resource types the rule targets\. This is required if the rule is change\-triggered or is both change\-triggered and periodic\. It is optional for periodic rules\. For a list of supported resource types, see [Supported Resource Types](https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources.html)\.
 
 **sourceDetails**  
 The sourceDetails determine the rule's trigger type\. `ConfigurationItemChangeNotification` and `OversizedConfigurationItemChangeNotification` are used for change\-triggered rules\. When AWS Config detects a configuration change for a resource, it sends a configuration item notification\. If the notification exceeds the maximum size allowed by Amazon Simple Notification Service \(Amazon SNS\), the notification includes a brief summary of the configuration item\. You can view the complete notification in the S3 bucket location specified in the s3BucketLocation field\.  
@@ -98,7 +98,7 @@ Labels can be used to tag rules\. For example, the `codedeploy-auto-rollback-mon
 
 This section contains information on using the AWS Config Rules Development Kit \(RDK\) and AWS Config Rules Development Kit Library \(RDKlib\)\. For more information on the RDK or RDKlib, see the [aws\-config\-rdk ](https://github.com/awslabs/aws-config-rdk) and [aws\-config\-rdklib](https://github.com/awslabs/aws-config-rdklib) GitHub Repositories\.
 
-### Writing rules<a name="w79aac11c27c17b4"></a>
+### Writing rules<a name="w85aac12c27c17b5"></a>
 
 #### Prerequisites<a name="rule-logic-prereqs"></a>
 

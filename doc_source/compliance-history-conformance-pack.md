@@ -1,6 +1,6 @@
 # Viewing the Compliance History Timeline for Conformance Packs<a name="compliance-history-conformance-pack"></a>
 
-AWS Config supports storing compliance state changes to your conformance packs\. This allows you to view the history of compliance state changes and adjust remediation actions to meet compliance goals\. These compliance state changes are presented as a timeline\. The timeline captures changes as `ConfigurationItems` over a period of time\. You can also use this feature to find specific rules within a conformance pack that are non\-compliant\.
+AWS Config supports storing compliance state changes to your conformance packs\. This allows you to view the history of compliance state changes\. These compliance state changes are presented as a timeline\. The timeline captures changes as `ConfigurationItems` over a period of time\. You can also use this feature to find specific rules within a conformance pack that are non\-compliant\.
 
 You can opt in or out to record all resource types in AWS Config\. If you have opted to record all resource types, AWS Config automatically begins recording the conformance pack compliance history as evaluated by AWS Config Rules\. By default, AWS Config records the configuration changes for all supported resources\. You can also select only the specific conformance pack compliance history resource type: `AWS::Config::ConformancePackCompliance`\. Recording for the `AWS::Config::ConformancePackCompliance` resource type is available at no additional charge\. For more information, see [Selecting Which Resources AWS Config Records](https://docs.aws.amazon.com/config/latest/developerguide/select-resources.html#select-resources-console)\.
 
@@ -21,8 +21,6 @@ Access the compliance timeline by selecting a specific conformance pack from the
 Alternatively, you can use the compliance timeline from the conformance pack's details page\. Choose a conformance pack and choose **View details** in the **Actions** dropdown\. From this page, choose **Conformance pack timeline**\.
 
 The timeline shows you the history of compliance state changes for a conformance pack\. You can do the following:
-
-1. Adjust remediation actions to meet compliance goals\.
 
 1. Expand a compliance change to view the line\-by\-line compliance status of each rule within a conformance pack\.
 

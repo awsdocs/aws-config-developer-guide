@@ -10,9 +10,6 @@ The rule is noncompliant when:
 + If the Block Public Access setting does not restrict public policies, AWS Config evaluates whether the policy allows public read access\. If the policy allows public read access, the rule is noncompliant\.
 + If the Block Public Access setting does not restrict public bucket ACLs, AWS Config evaluates whether the bucket ACL allows public read access\. If the bucket ACL allows public read access, the rule is noncompliant\.
 
-**Note**  
-This rule does not evaluate changes to account level public block access\. To check if the required public access block settings are configured from the account level, see [s3\-account\-level\-public\-access\-blocks](https://docs.aws.amazon.com/config/latest/developerguide/s3-account-level-public-access-blocks.html) and [s3\-account\-level\-public\-access\-blocks\-periodic](https://docs.aws.amazon.com/config/latest/developerguide/s3-account-level-public-access-blocks-periodic.html)\.
-
 **Identifier:** S3\_BUCKET\_PUBLIC\_READ\_PROHIBITED
 
 **Trigger type:** Configuration changes and Periodic
@@ -23,6 +20,6 @@ This rule does not evaluate changes to account level public block access\. To ch
 
 None  
 
-## AWS CloudFormation template<a name="w79aac11c32c17b9d491c25"></a>
+## AWS CloudFormation template<a name="w85aac12c32c17b9d491c23"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

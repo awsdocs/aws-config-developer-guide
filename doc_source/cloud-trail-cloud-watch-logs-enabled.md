@@ -13,6 +13,6 @@ Checks whether AWS CloudTrail trails are configured to send logs to Amazon Cloud
 expectedDeliveryWindowAge \(Optional\)Type: int  
 Maximum age in hours of the most recent delivery to CloudWatch logs that satisfies compliance\.
 
-## AWS CloudFormation template<a name="w79aac11c32c17b9d105c15"></a>
+## AWS CloudFormation template<a name="w85aac12c32c17b9d105c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

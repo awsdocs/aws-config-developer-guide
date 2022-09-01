@@ -31,8 +31,11 @@ For information about other limits in AWS, see [AWS Service Limits](https://docs
 | Description | Limit Value | Can be increased | 
 | --- | --- | --- | 
 | Maximum number of conformance packs per organization | 50 | No | 
-| Maximum AWS Config Rules per organization conformance pack | 130 | No | 
+| Maximum number of AWS Config Rules per organization conformance pack | 130 | No | 
 | Maximum number of AWS Config Rules per account across all organization conformance packs | 180 | No | 
+
+**Note**  
+Deploying at the organization level automatically uses up the limit for child accounts\.
 
 
 **Organization Config Rules**  
@@ -40,3 +43,6 @@ For information about other limits in AWS, see [AWS Service Limits](https://docs
 | Description | Limit Value | Can be increased | 
 | --- | --- | --- | 
 | Maximum number of organization AWS Config rules per organization | 150 | No | 
+
+**Note**  
+Deploying at the organization level automatically uses up the limit for child accounts\.

@@ -2,23 +2,21 @@
 
 A conformance pack is a collection of AWS Config rules and remediation actions that can be easily deployed as a single entity in an account and a Region or across an organization in AWS Organizations\.
 
-Conformance packs are created by authoring a YAML template that contains the list of AWS Config managed or custom rules and remediation actions\. You can deploy the template by using the AWS Config console or the AWS CLI\. To quickly get started and to evaluate your AWS environment, use one of the sample conformance pack templates\.
-
-**Note**  
-Conformance packs are only available in the redesigned AWS Config console\.
+Conformance packs are created by authoring a YAML template that contains the list of AWS Config managed or custom rules and remediation actions\. You can deploy the template by using the AWS Config console or the AWS CLI\. To quickly get started and to evaluate your AWS environment, use one of the [sample conformance pack templates](https://docs.aws.amazon.com/config/latest/developerguide/conformancepack-sample-templates.html)\. You can also create a conformance pack YAML file from scratch based on [Custom Conformance Pack](https://docs.aws.amazon.com/config/latest/developerguide/custom-conformance-pack.html)\.
 
 **Topics**
 + [Prerequisites](cpack-prerequisites.md)
 + [Region Support](#conformance-packs-regions)
 + [AWS Config Process Checks Within a Conformance Pack](process-checks.md)
 + [Conformance Pack Sample Templates](conformancepack-sample-templates.md)
++ [Custom Conformance Pack](custom-conformance-pack.md)
 + [Viewing Compliance Data in the Conformance Packs Dashboard](conformance-pack-dashboard.md)
 + [Deploying a Conformance Pack Using the AWS Config Console](conformance-pack-console.md)
 + [Deploying a Conformance Pack Using the AWS Command Line Interface](conformance-pack-cli.md)
 + [Managing Conformance Packs \(API\)](conformance-pack-apis.md)
 + [Managing Conformance Packs Across all Accounts in Your Organization](conformance-pack-organization-apis.md)
 + [Viewing the Compliance History Timeline for Conformance Packs](compliance-history-conformance-pack.md)
-+ [Troubleshooting](#w79aac13c34)
++ [Troubleshooting](#w85aac14c35)
 
 ## Region Support<a name="conformance-packs-regions"></a>
 
@@ -34,7 +32,7 @@ Deploying conformance packs across member accounts in an AWS Organization is sup
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/conformance-packs.html)
 
-## Troubleshooting<a name="w79aac13c34"></a>
+## Troubleshooting<a name="w85aac14c35"></a>
 
 If you get an error indicating that the conformance pack failed while creating, updating, or deleting it, you can check the status of your conformance pack\.
 

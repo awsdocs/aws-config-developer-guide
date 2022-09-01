@@ -13,6 +13,7 @@ Here are the conformance pack YAML templates that you see in AWS Config console\
 + [Operational Best Practices for ACSC ISM](operational-best-practices-for-acsc-ism.md)
 + [Operational Best Practices for AI and ML](operational-best-practices-for-AI-and-ML.md)
 + [Operational Best Practices for Amazon API Gateway](operational-best-practices-for-amazon-API-gateway.md)
++ [Operational Best Practices for Amazon CloudWatch](operational-best-practices-for-amazon-cloudwatch.md)
 + [Operational Best Practices for Amazon DynamoDB](operational-best-practices-for-amazon-dynamodb.md)
 + [Operational Best Practices for Amazon S3](operational-best-practices-for-amazon-s3.md)
 + [Operational Best Practices for APRA CPG 234](operational-best-practices-for-apra_cpg_234.md)
@@ -51,9 +52,11 @@ Here are the conformance pack YAML templates that you see in AWS Config console\
 + [Operational Best Practices for FedRAMP\(Low\)](operational-best-practices-for-fedramp-low.md)
 + [Operational Best Practices for FedRAMP\(Moderate\)](operational-best-practices-for-fedramp-moderate.md)
 + [Operational Best Practices for FFIEC](operational-best-practices-for-ffiec.md)
++ [Operational Best Practices for Germany Cloud Computing Compliance Controls Catalog \(C5\)](operational-best-practices-for-germany-c5.md)
 + [Operational Best Practices for Gramm Leach Bliley Act \(GLBA\)](operational-best-practices-for-gramm-leach-bliley-act.md)
 + [Operational Best Practices for GxP EU Annex 11](operational-best-practices-for-gxp-eu-annex-11.md)
 + [Operational Best Practices for HIPAA Security](operational-best-practices-for-hipaa_security.md)
++ [Operational Best Practices for IRS 1075](operational-best-practices-for-irs-1075.md)
 + [Operational Best Practices for K\-ISMS](operational-best-practices-for-k-isms.md)
 + [Operational Best Practices for Load Balancing](operational-best-practices-for-load-balancing.md)
 + [Operational Best Practices for Logging](operational-best-practices-for-logging.md)
@@ -98,6 +101,5 @@ Here are the conformance pack YAML templates that you see in AWS Config console\
 + [Security Best Practices for AWS Secrets Manager](security-best-practices-for-Secrets-Manager.md)
 + [Security Best Practices for AWS WAF](security-best-practices-for-aws-waf.md)
 + [Example Templates with Remediation Action](templateswithremediation.md)
-+ [Custom Conformance Pack](custom-conformance-pack.md)
 
 For more information about template structure, see [Template Anatomy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html) in the AWS CloudFormation User Guide\.

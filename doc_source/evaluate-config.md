@@ -14,7 +14,7 @@ For regions that support AWS Config rules, see [AWS Config Regions and Endpoints
 
 You can create up to 400 AWS Config rules per region in your account\. For more information, see [AWS Config Limits](https://docs.aws.amazon.com/config/latest/developerguide/configlimits.html)\.
 
-You can also create custom rules to evaluate additional resources that AWS Config doesn't yet record\. For more information, see [Evaluating Additional Resource Types](evaluate-config_develop-rules_nodejs.md#creating-custom-rules-for-additional-resource-types)\.
+You can also create custom rules to evaluate additional resources that AWS Config doesn't yet record\. For more information, see [AWS Config Custom Rules ](evaluate-config_develop-rules.md) and [Evaluating Additional Resource Types](evaluate-config_develop-rules_nodejs.md#creating-custom-rules-for-additional-resource-types)\.
 
 **Topics**
 + [Region Support](#region-support-config-rules)

@@ -7,7 +7,7 @@ The examples are divided into the following categories:
 **Actions**  
 Code excerpts that show you how to call individual service functions\.
 
-For a complete list of AWS SDK developer guides and code examples, see [Using AWS Config with an AWS SDK](sdk-general-information-section.md)\. This topic also includes information about getting started and details about previous SDK versions\.
+For a complete list of AWS SDK developer guides and code examples, see [Using this service with an AWS SDK](sdk-general-information-section.md)\. This topic also includes information about getting started and details about previous SDK versions\.
 
 **Contents**
 + [Actions](service_code_examples_actions.md)

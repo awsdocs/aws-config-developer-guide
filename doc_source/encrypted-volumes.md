@@ -13,6 +13,6 @@ Checks if the EBS volumes that are in an attached state are encrypted\. If you s
 kmsId \(Optional\)Type: String  
 ID or ARN of the KMS key that is used to encrypt the volume\.
 
-## AWS CloudFormation template<a name="w79aac11c32c17b9d305c15"></a>
+## AWS CloudFormation template<a name="w85aac12c32c17b9d305c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

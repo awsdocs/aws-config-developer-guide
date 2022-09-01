@@ -4,13 +4,13 @@
 *****Copyright &copy; Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
-Amazon's trademarks and trade dress may not be used in 
-     connection with any product or service that is not Amazon's, 
-     in any manner that is likely to cause confusion among customers, 
-     or in any manner that disparages or discredits Amazon. All other 
-     trademarks not owned by Amazon are the property of their respective
-     owners, who may or may not be affiliated with, connected to, or 
-     sponsored by Amazon.
+Amazon's trademarks and trade dress may not be used in
+connection with any product or service that is not Amazon's,
+in any manner that is likely to cause confusion among customers,
+or in any manner that disparages or discredits Amazon. All other
+trademarks not owned by Amazon are the property of their respective
+owners, who may or may not be affiliated with, connected to, or
+sponsored by Amazon.
 
 -----
 ## Contents
@@ -22,11 +22,13 @@ Amazon's trademarks and trade dress may not be used in
    + [Service Limits](configlimits.md)
 + [Getting Started with AWS Config](getting-started.md)
    + [Setting Up AWS Config with the Console](gs-console.md)
+      + [1-click setup](1-click-setup.md)
+      + [Manual setup](manual-setup.title.md)
    + [Setting Up AWS Config with the AWS CLI](gs-cli.md)
       + [Prerequisites](gs-cli-prereq.md)
       + [Turning on AWS Config](gs-cli-subscribe.md)
       + [Check that AWS Config Is On](gs-cli-verify-subscribe.md)
-   + [Using AWS Config with an AWS SDK](sdk-general-information-section.md)
+   + [Using this service with an AWS SDK](sdk-general-information-section.md)
    + [Using AWS Config Rules with the Console](setting-up-aws-config-rules-with-console.md)
 + [Viewing AWS Resource Configurations and Managing AWS Config](aws-config-landing-page.md)
    + [Viewing the AWS Config Dashboard](viewing-the-aws-config-dashboard.md)
@@ -384,6 +386,7 @@ Amazon's trademarks and trade dress may not be used in
       + [Operational Best Practices for ACSC ISM](operational-best-practices-for-acsc-ism.md)
       + [Operational Best Practices for AI and ML](operational-best-practices-for-AI-and-ML.md)
       + [Operational Best Practices for Amazon API Gateway](operational-best-practices-for-amazon-API-gateway.md)
+      + [Operational Best Practices for Amazon CloudWatch](operational-best-practices-for-amazon-cloudwatch.md)
       + [Operational Best Practices for Amazon DynamoDB](operational-best-practices-for-amazon-dynamodb.md)
       + [Operational Best Practices for Amazon S3](operational-best-practices-for-amazon-s3.md)
       + [Operational Best Practices for APRA CPG 234](operational-best-practices-for-apra_cpg_234.md)
@@ -422,9 +425,11 @@ Amazon's trademarks and trade dress may not be used in
       + [Operational Best Practices for FedRAMP(Low)](operational-best-practices-for-fedramp-low.md)
       + [Operational Best Practices for FedRAMP(Moderate)](operational-best-practices-for-fedramp-moderate.md)
       + [Operational Best Practices for FFIEC](operational-best-practices-for-ffiec.md)
+      + [Operational Best Practices for Germany Cloud Computing Compliance Controls Catalog (C5)](operational-best-practices-for-germany-c5.md)
       + [Operational Best Practices for Gramm Leach Bliley Act (GLBA)](operational-best-practices-for-gramm-leach-bliley-act.md)
       + [Operational Best Practices for GxP EU Annex 11](operational-best-practices-for-gxp-eu-annex-11.md)
       + [Operational Best Practices for HIPAA Security](operational-best-practices-for-hipaa_security.md)
+      + [Operational Best Practices for IRS 1075](operational-best-practices-for-irs-1075.md)
       + [Operational Best Practices for K-ISMS](operational-best-practices-for-k-isms.md)
       + [Operational Best Practices for Load Balancing](operational-best-practices-for-load-balancing.md)
       + [Operational Best Practices for Logging](operational-best-practices-for-logging.md)
@@ -469,7 +474,7 @@ Amazon's trademarks and trade dress may not be used in
       + [Security Best Practices for AWS Secrets Manager](security-best-practices-for-Secrets-Manager.md)
       + [Security Best Practices for AWS WAF](security-best-practices-for-aws-waf.md)
       + [Example Templates with Remediation Action](templateswithremediation.md)
-      + [Custom Conformance Pack](custom-conformance-pack.md)
+   + [Custom Conformance Pack](custom-conformance-pack.md)
    + [Viewing Compliance Data in the Conformance Packs Dashboard](conformance-pack-dashboard.md)
    + [Deploying a Conformance Pack Using the AWS Config Console](conformance-pack-console.md)
    + [Deploying a Conformance Pack Using the AWS Command Line Interface](conformance-pack-cli.md)
@@ -497,6 +502,11 @@ Amazon's trademarks and trade dress may not be used in
          + [Using Service-Linked Roles for AWS Config](using-service-linked-roles.md)
    + [AWS managed policies for AWS Config](security-iam-awsmanpol.md)
    + [Logging and Monitoring in AWS Config](security-logging-and-monitoring.md)
+      + [Logging AWS Config API Calls with AWS CloudTrail](log-api-calls.md)
+         + [Example Log Files](cloudtrail-log-files-for-aws-config.md)
+      + [Monitoring](monitoring.md)
+         + [Monitoring AWS Resource Changes with Amazon SQS](monitor-resource-changes.md)
+         + [Monitoring AWS Config with Amazon EventBridge](monitor-config-with-cloudwatchevents.md)
    + [Using AWS Config with Interface Amazon VPC Endpoints](config-VPC-endpoints.md)
    + [Incident Response in AWS Config](incident-response.md)
    + [Compliance Validation for AWS Config](config-compliance.md)

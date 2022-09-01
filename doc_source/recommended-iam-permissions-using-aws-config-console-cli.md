@@ -118,7 +118,10 @@ This policy grants broad permissions\. Before granting full access, consider sta
             "Resource": "*",
             "Condition": {
                 "StringEquals": {
-                    "iam:PassedToService": "config.amazonaws.com"
+                    "iam:PassedToService": [
+                        "config.amazonaws.com",
+                        "ssm.amazonaws.com"
+                    ]
                 }
             }
         },
@@ -158,71 +161,98 @@ This policy grants broad permissions\. Before granting full access, consider sta
 
 ## Controlling User Permissions for Actions on Multi\-Account Multi\-Region Data Aggregation<a name="resource-level-permission"></a>
 
-You can use resource\-level permissions to control a user's ability to perform specific actions on multi\-account multi\-region data aggregation\. AWS Config multi\-account multi\-region data aggregation APIs support resource level permissions\. With resource level permission can restrict to access/modify the resource data to specific users\.
+You can use resource\-level permissions to control a user's ability to perform specific actions on multi\-account multi\-region data aggregation\. The following AWS Config `Aggregator` APIs support resource level permissions:
++ [BatchGetAggregateResourceConfig](https://docs.aws.amazon.com/config/latest/APIReference/API_BatchGetAggregateResourceConfig.html)
++ [DeleteConfigurationAggregator](https://docs.aws.amazon.com/config/latest/APIReference/API_DeleteConfigurationAggregator.html)
++ [DescribeAggregateComplianceByConfigRules](https://docs.aws.amazon.com/config/latest/APIReference/API_DescribeAggregateComplianceByConfigRules.html)
++ [DescribeAggregateComplianceByConformancePacks](https://docs.aws.amazon.com/config/latest/APIReference/API_DescribeAggregateComplianceByConformancePacks.html)
++ [DescribeConfigurationAggregatorSourcesStatus](https://docs.aws.amazon.com/config/latest/APIReference/API_DescribeConfigurationAggregatorSourcesStatus.html)
++ [GetAggregateComplianceDetailsByConfigRule](https://docs.aws.amazon.com/config/latest/APIReference/API_GetAggregateComplianceDetailsByConfigRule.html)
++ [GetAggregateConfigRuleComplianceSummary](https://docs.aws.amazon.com/config/latest/APIReference/API_GetAggregateConfigRuleComplianceSummary.html)
++ [GetAggregateConformancePackComplianceSummary](https://docs.aws.amazon.com/config/latest/APIReference/API_GetAggregateConformancePackComplianceSummary.html)
++ [GetAggregateDiscoveredResourceCounts](https://docs.aws.amazon.com/config/latest/APIReference/API_GetAggregateDiscoveredResourceCounts.html)
++ [GetAggregateResourceConfig](https://docs.aws.amazon.com/config/latest/APIReference/API_GetAggregateResourceConfig.html)
++ [ListAggregateDiscoveredResources](https://docs.aws.amazon.com/config/latest/APIReference/API_ListAggregateDiscoveredResources.html)
++ [PutConfigurationAggregator](https://docs.aws.amazon.com/config/latest/APIReference/API_PutConfigurationAggregator.html)
++ [SelectAggregateResourceConfig](https://docs.aws.amazon.com/config/latest/APIReference/API_SelectAggregateResourceConfig.html)
 
-For example, you want to restrict access to resource data to specific users\.  You can create two aggregators `AccessibleAggregator` and `InAccessibleAggregator`\. Then attach an IAM policy that allows access to the `AccessibleAggregator`\. 
+For example, you can restrict access to resource data from specific users by creating two aggregators `AccessibleAggregator` and `InAccessibleAggregator` and attaching an IAM policy that allows access to `AccessibleAggregator` but denies access to `InAccessibleAggregator`\.
 
-In the first policy, you allow the aggregator actions such as `DescribeConfigurationAggregators` and `DeleteConfigurationAggregator` actions for the config ARN that you specify\. In the following example, the config ARN is `arn:aws:config:ap-northeast-1:AccountID:config-aggregator/config-aggregator-mocpsqhs`\.
+**IAM Policy for AccessibleAggregator**
+
+In this policy, you allow access to the supported aggregator actions for the AWS Config Amazon Resource Name \(ARN\) that you specify\. In this example, the AWS Config ARN is `arn:aws:config:ap-northeast-1:AccountID:config-aggregator/config-aggregator-mocpsqhs`\.
 
 ```
 {
-        "Version": "2012-10-17",
-        "Statement": [
+    "Version": "2012-10-17",
+    "Statement": [
         {
-        "Sid": "ConfigReadOnly",
-        "Effect": "Allow",
-        "Action": [
-            "config:PutConfigurationAggregator",
-            "config:DescribePendingAggregationRequests",
-            "config:DeletePendingAggregationRequest",
-            "config:GetAggregateConfigRuleComplianceSummary",
-            "config:DescribeAggregateComplianceByConfigRules",
-            "config:GetAggregateComplianceDetailsByConfigRule",
-            "config:DescribeConfigurationAggregators",
-            "config:DescribeConfigurationAggregatorSourcesStatus",
-            "config:DeleteConfigurationAggregator"
-        ],
-        "Resource": "arn:aws:config:ap-northeast-1:AccountID:config-aggregator/config-aggregator-mocpsqhs"
+            "Sid": "ConfigAllow",
+            "Effect": "Allow",
+            "Action": [
+                "config:BatchGetAggregateResourceConfig",
+                "config:DeleteConfigurationAggregator",
+                "config:DescribeAggregateComplianceByConfigRules",
+                "config:DescribeAggregateComplianceByConformancePacks",
+                "config:DescribeConfigurationAggregatorSourcesStatus",
+                "config:GetAggregateComplianceDetailsByConfigRule",
+                "config:GetAggregateConfigRuleComplianceSummary",
+                "config:GetAggregateConformancePackComplianceSummary",
+                "config:GetAggregateDiscoveredResourceCounts",
+                "config:GetAggregateResourceConfig",
+                "config:ListAggregateDiscoveredResources",
+                "config:PutConfigurationAggregator",
+                "config:SelectAggregateResourceConfig"
+            ],
+            "Resource": "arn:aws:config:ap-northeast-1:AccountID:config-aggregator/config-aggregator-mocpsqhs"
         }
     ]
 }
 ```
 
-In the second policy, you deny the aggregator actions for the config ARN that you specify\. In the following example, the config ARN is `arn:aws:config:ap-northeast-1:AccountID:config-aggregator/config-aggregator-pokxzldx`\.
+**IAM Policy for InAccessibleAggregator**
+
+In this policy, you deny access to the supported aggregator actions for the AWS Config ARN that you specify\. In this example, the AWS Config ARN is `arn:aws:config:ap-northeast-1:AccountID:config-aggregator/config-aggregator-pokxzldx`\.
 
 ```
 {
-        "Version": "2012-10-17",
-        "Statement": [
+    "Version": "2012-10-17",
+    "Statement": [
         {
-        "Sid": "ConfigReadOnly",
-        "Effect": "Deny",
-        "Action": [
-            "config:PutConfigurationAggregator",
-            "config:DescribePendingAggregationRequests",
-            "config:DeletePendingAggregationRequest",
-            "config:GetAggregateConfigRuleComplianceSummary",
-            "config:DescribeAggregateComplianceByConfigRules",
-            "config:GetAggregateComplianceDetailsByConfigRule",
-            "config:DescribeConfigurationAggregators",
-            "config:DescribeConfigurationAggregatorSourcesStatus",
-            "config:DeleteConfigurationAggregator"
-        ],
-        "Resource": "arn:aws:config:ap-northeast-1:AccountID:config-aggregator/config-aggregator-pokxzldx"
+            "Sid": "ConfigDeny",
+            "Effect": "Deny",
+            "Action": [
+                "config:BatchGetAggregateResourceConfig",
+                "config:DeleteConfigurationAggregator",
+                "config:DescribeAggregateComplianceByConfigRules",
+                "config:DescribeAggregateComplianceByConformancePacks",
+                "config:DescribeConfigurationAggregatorSourcesStatus",
+                "config:GetAggregateComplianceDetailsByConfigRule",
+                "config:GetAggregateConfigRuleComplianceSummary",
+                "config:GetAggregateConformancePackComplianceSummary",
+                "config:GetAggregateDiscoveredResourceCounts",
+                "config:GetAggregateResourceConfig",
+                "config:ListAggregateDiscoveredResources",
+                "config:PutConfigurationAggregator",
+                "config:SelectAggregateResourceConfig"
+            ],
+            "Resource": "arn:aws:config:ap-northeast-1:AccountID:config-aggregator/config-aggregator-pokxzldx"
         }
     ]
 }
 ```
 
-If a user of the developer group tries to describe or delete configuration aggregators on the config that you specified in the second policy, that user gets an access denied exception\. 
+If a user of the developer group tries to perform any of these actions on the AWS Config ARN that you specified, that user will get an access denied exception\.
 
-The following AWS CLI examples show that the user creates two aggregators, `AccessibleAggregator` and `InAccessibleAggregator`\.
+**Checking User Access Permissions**
+
+To show the aggregators that you have created, run the following AWS CLI command:
 
 ```
 aws configservice describe-configuration-aggregators
 ```
 
-The command complete successfully:
+When command has successfully completed, you will be able to see the details for all the aggregators associated with your account\. In this example, those are `AccessibleAggregator` and `InAccessibleAggregator`:
 
 ```
 {
@@ -242,14 +272,7 @@ The command complete successfully:
                 }
             ],
             "LastUpdatedTime": 1517942461.455
-        }
-    ]
-}
-```
-
-```
-{
-    "ConfigurationAggregators": [
+        },
         {
             "ConfigurationAggregatorArn": "arn:aws:config:ap-northeast-1:AccountID:config-aggregator/config-aggregator-pokxzldx",
             "CreationTime": 1517942461.442,
@@ -273,46 +296,48 @@ The command complete successfully:
 **Note**  
 For `account-aggregation-sources` enter a comma\-separated list of AWS account IDs for which you want to aggregate data\. Wrap the account IDs in square brackets, and be sure to escape quotation marks \(for example, `"[{\"AccountIds\": [\"AccountID1\",\"AccountID2\",\"AccountID3\"],\"AllAwsRegions\": true}]"`\)\.
 
-The user then creates an IAM policy that denies access to `InAccessibleAggregator`\.
+Attach the following IAM policy to deny access to `InAccessibleAggregator`, or the aggregator to which you want to deny access\.
 
 ```
 {
-        "Version": "2012-10-17",
-        "Statement": [
+    "Version": "2012-10-17",
+    "Statement": [
         {
-        "Sid": "ConfigReadOnly",
-        "Effect": "Deny",
-        "Action": [
-            "config:PutConfigurationAggregator",
-            "config:DescribePendingAggregationRequests",
-            "config:DeletePendingAggregationRequest",
-            "config:GetAggregateConfigRuleComplianceSummary",
-            "config:DescribeAggregateComplianceByConfigRules",
-            "config:GetAggregateComplianceDetailsByConfigRule",
-            "config:DescribeConfigurationAggregators",
-            "config:DescribeConfigurationAggregatorSourcesStatus",
-            "config:DeleteConfigurationAggregator"
-        ],
-        "Resource": "arn:aws:config:ap-northeast-1:AccountID:config-aggregator/config-aggregator-pokxzldx"
+            "Sid": "ConfigDeny",
+            "Effect": "Deny",
+            "Action": [
+                "config:BatchGetAggregateResourceConfig",
+                "config:DeleteConfigurationAggregator",
+                "config:DescribeAggregateComplianceByConfigRules",
+                "config:DescribeAggregateComplianceByConformancePacks",
+                "config:DescribeConfigurationAggregatorSourcesStatus",
+                "config:GetAggregateComplianceDetailsByConfigRule",
+                "config:GetAggregateConfigRuleComplianceSummary",
+                "config:GetAggregateConformancePackComplianceSummary",
+                "config:GetAggregateDiscoveredResourceCounts",
+                "config:GetAggregateResourceConfig",
+                "config:ListAggregateDiscoveredResources",
+                "config:PutConfigurationAggregator",
+                "config:SelectAggregateResourceConfig"
+            ],
+            "Resource": "arn:aws:config:ap-northeast-1:AccountID:config-aggregator/config-aggregator-pokxzldx"
         }
     ]
 }
 ```
 
-Next, the user confirms that IAM policy works for restricting access to specific aggregator and rules\.
+Next, you can confirm that the IAM policy works for restricting access to rules for a specific aggregator:
 
 ```
 aws configservice get-aggregate-compliance-details-by-config-rule --configuration-aggregator-name InAccessibleAggregator --config-rule-name rule name --account-id AccountID --aws-region AwsRegion
 ```
 
-The command returns an access denied exception:
+The command should return an access denied exception:
 
 ```
 An error occurred (AccessDeniedException) when calling the GetAggregateComplianceDetailsByConfigRule operation: User: arn:aws:iam::AccountID:user/ is not 
 authorized to perform: config:GetAggregateComplianceDetailsByConfigRule on resource: arn:aws:config:AwsRegion-1:AccountID:config-aggregator/config-aggregator-pokxzldx
 ```
-
-With resource\-level permissions, you can grant or deny access to perform specific actions on multi\-account multi\-region data aggregation\.
 
 ## Additional Information<a name="config-permissions-more-info"></a>
 

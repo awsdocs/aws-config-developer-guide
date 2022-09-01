@@ -2,21 +2,21 @@
 
 AWS Config continuously detects when any resource of a supported type is created, changed, or deleted\. AWS Config records these events as configuration items\. You can customize AWS Config to record changes for all supported types of resources or for only those types that are relevant to you\. To learn which types of resources AWS Config can record, see [Supported Resource Types](resource-config-reference.md)\.
 
-## Recording All Supported Resource Types<a name="w79aab9c18b9b5"></a>
+## Recording All Supported Resource Types<a name="select-resources-all"></a>
 
 By default, AWS Config records the configuration changes for all supported types of *regional resources* that AWS Config discovers in the region in which it is running\. Regional resources are tied to a region and can be used only in that region\. Examples of regional resources are EC2 instances and EBS volumes\.
 
-You can also have AWS Config record supported types of *global resources*\. Global resources are not tied to a specific region and can be used in all regions\. The global resource types that AWS Config supports are IAM users, groups, roles, and customer managed policies\.
+You can also have AWS Config record supported types of *global resources*\. Global resources are not tied to a specific region and can be used in all regions\. The global resource types that AWS Config supports include IAM users, groups, roles, and customer managed policies\.
 
 **Important**  
 Global resource types onboarded to AWS Config recording after February 2022 will only be recorded in the service's home region for the commercial partition and AWS GovCloud \(US\-West\) for the GovCloud partition\. You can view the Configuration Items for these new global resource types only in their home region and AWS GovCloud \(US\-West\)\.  
-Supported global resource types onboarded before February 2022 such as `AWS::IAM::Group`, `AWS::IAM::Policy`, `AWS::IAM::Role`, `AWS::IAM::User` remain unchanged, and they will continue to deliver Configuration Items in all regions enabled in AWS Config\. The change will only affect new global resource types onboarded after February 2022\.
+Supported global resource types onboarded before February 2022 such as `AWS::IAM::Group`, `AWS::IAM::Policy`, `AWS::IAM::Role`, `AWS::IAM::User` remain unchanged, and they will continue to deliver Configuration Items in all supported regions in AWS Config\. The change will only affect new global resource types onboarded after February 2022\.
 
 
 **Home Regions for Global Resource Types Onboarded after February 2022**  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/select-resources.html)
 
-## Recording Specific Resource Types<a name="w79aab9c18b9b7"></a>
+## Recording Specific Resource Types<a name="select-resources-specific"></a>
 
 If you don't want AWS Config to record the changes for all supported resources, you can customize it to record changes for only specific types\. AWS Config records configuration changes for the types of resources that you specify, including the creation and deletion of such resources\.
 
@@ -27,6 +27,31 @@ The relationship information that AWS Config provides for recorded resources is 
 You can stop AWS Config from recording a type of resource any time\. After AWS Config stops recording a resource, it retains the configuration information that was previously captured, and you can continue to access this information\.
 
 AWS Config rules can be used to evaluate compliance for only those resources that AWS Config records\.
+
+## AWS Config Rules and Global Resource Types<a name="select-resources-rules-and-global"></a>
+
+Global resource types onboarded before February 2022 \(`AWS::IAM::Group`, `AWS::IAM::Policy`, `AWS::IAM::Role`, and `AWS::IAM::User`\) are recorded by AWS Config in all supported regions\. This means that periodic rules that report compliance on these global resources will continue running evaluations in all supported regions, *even in* regions where you have not enabled the recording of global resources\.
+
+**Note**  
+Periodic rules can run on resources that AWS Config recording does not support and can be run without the configuration recorder being enabled\. Periodic rules do not depend on configuration items\. For more information on the difference between change–triggered rules and periodic rules, see [Specifying Triggers for AWS Config Rules](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config-rules.html)\.
+
+If you are not recording global resource types onboarded before February 2022, it is recommended that you do not enable the following periodic rules in order to avoid unnecessary costs:
++ [access\-keys\-rotated](https://docs.aws.amazon.com/config/latest/developerguide/access-keys-rotated.html)
++ [account\-part\-of\-organizations](https://docs.aws.amazon.com/config/latest/developerguide/account-part-of-organizations.html)
++ [iam\-password\-policy](https://docs.aws.amazon.com/config/latest/developerguide/iam-password-policy.html)
++ [iam\-policy\-in\-use](https://docs.aws.amazon.com/config/latest/developerguide/iam-policy-in-use.html)
++ [iam\-root\-access\-key\-check](https://docs.aws.amazon.com/config/latest/developerguide/iam-root-access-key-check.html)
++ [iam\-user\-mfa\-enabled](https://docs.aws.amazon.com/config/latest/developerguide/iam-user-mfa-enabled.html)
++ [iam\-user\-unused\-credentials\-check](https://docs.aws.amazon.com/config/latest/developerguide/iam-user-unused-credentials-check.html)
++ [mfa\-enabled\-for\-iam\-console\-access](https://docs.aws.amazon.com/config/latest/developerguide/mfa-enabled-for-iam-console-access.html)
++ [root\-account\-hardware\-mfa\-enabled](https://docs.aws.amazon.com/config/latest/developerguide/root-account-hardware-mfa-enabled.html)
++ [root\-account\-mfa\-enabled](https://docs.aws.amazon.com/config/latest/developerguide/root-account-mfa-enabled.html)
+
+**Best Practices for reporting compliance on global resources**
+
+If you are recording global resource types onboarded before February 2022 \(`AWS::IAM::Group`, `AWS::IAM::Policy`, `AWS::IAM::Role`, and `AWS::IAM::User`\), you should only deploy AWS Config rules and conformance packs that have these global resources in scope in one of the supported regions in order to avoid costs and API throttling\. This applies to regular AWS Config rules, organizational AWS Config rules, as well as rules created by other AWS services \(like Security Hub and Control Tower\)\.
+
+Global resource types onboarded to AWS Config recording after February 2022 will only be recorded in the service's home region for the commercial partition and AWS GovCloud \(US\-West\) for the GovCloud partition\. You should only deploy AWS Config rules and conformance packs that have these global resources in scope in the resource type's home region\. For more information, see [Home Regions for Global Resource Types Onboarded after February 2022](https://docs.aws.amazon.com/config/latest/developerguide/select-resources.html#select-resources-all)\.
 
 ## Selecting Resources \(Console\)<a name="select-resources-console"></a>
 

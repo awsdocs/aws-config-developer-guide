@@ -12,6 +12,6 @@ Checks that AWS Security Hub is enabled for an AWS Account\. The rule is NON\_CO
 
 None  
 
-## AWS CloudFormation template<a name="w79aac11c32c17b9d531c15"></a>
+## AWS CloudFormation template<a name="w85aac12c32c17b9d531c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

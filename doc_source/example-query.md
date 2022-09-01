@@ -1,5 +1,8 @@
 # Example Queries<a name="example-query"></a>
 
+**Note**  
+Advanced queries supports a subset of the resource types supported by AWS Config\. For a list of those supported resource types, see [Supported Resource Types for Advanced Queries](https://github.com/awslabs/aws-config-resource-schema/tree/master/config/properties/resource-types)\.
+
 **Query to list all EC2 instances with AMI ID `ami-12345`** 
 
 ```

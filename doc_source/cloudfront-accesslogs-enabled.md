@@ -13,6 +13,6 @@ Checks if Amazon CloudFront distributions are configured to capture information 
 S3BucketName \(Optional\)Type: String  
 The name of the Amazon S3 bucket for storing server access logs\.
 
-## AWS CloudFormation template<a name="w79aac11c32c17b9c71c15"></a>
+## AWS CloudFormation template<a name="w85aac12c32c17b9c71c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

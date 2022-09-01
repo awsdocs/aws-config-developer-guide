@@ -1,6 +1,8 @@
 # Querying the Current Configuration State of AWS Resources<a name="querying-AWS-resources"></a>
 
-You can use AWS Config to query the current configuration state of AWS resources based on configuration properties for a single account and Region or across multiple accounts and Regions\. You can perform ad hoc, property\-based queries against current AWS resource state metadata across all resources that AWS Config supports\. The **advanced query** feature provides a single query endpoint and a powerful query language to get current resource state metadata without performing service\-specific describe API calls\. You can use configuration aggregators to run the same queries from a central account across multiple accounts and AWS Regions\. 
+You can use AWS Config to query the current configuration state of AWS resources based on configuration properties for a single account and Region or across multiple accounts and Regions\. You can perform ad hoc, property\-based queries against current AWS resource state metadata across a list of resources that AWS Config supports\. For more information on the list of supported resource types, see [Supported Resource Types for Advanced Queries](https://github.com/awslabs/aws-config-resource-schema/tree/master/config/properties/resource-types)\.
+
+The **advanced query** feature provides a single query endpoint and a powerful query language to get current resource state metadata without performing service\-specific describe API calls\. You can use configuration aggregators to run the same queries from a central account across multiple accounts and AWS Regions\. 
 
 AWS Config uses a subset of structured query language \(SQL\) `SELECT` syntax to perform property\-based queries and aggregations on the current configuration item \(CI\) data\. The queries range in complexity from simple matches against tag and/or resource identifiers, to more complex queries, such as viewing all Amazon S3 buckets that have versioning disabled\. This allows you to query exactly the current resource state you need without performing AWS service\-specific API calls\.
 
@@ -23,6 +25,9 @@ You can use advanced query for:
 ## Features<a name="query-features"></a>
 
 The query language supports querying AWS resources based on CI properties of all AWS resource types supported by AWS Config, including configuration data, tags, and relationships\. It is a subset of SQL `SELECT` command with limitations, as mentioned in the following section\. It supports aggregation functions such as `AVG`, `COUNT`, `MAX`, `MIN`, and `SUM`\.
+
+**Note**  
+Advanced queries supports a subset of the resource types supported by AWS Config\. For a list of those supported resource types, see [Supported Resource Types for Advanced Queries](https://github.com/awslabs/aws-config-resource-schema/tree/master/config/properties/resource-types)\.
 
 ## Limitations<a name="query-limitations"></a>
 
@@ -94,6 +99,6 @@ Advanced queries is supported in the following Regions:
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/querying-AWS-resources.html)
 
-\*Saved queries is not available in Africa \(Cape Town\) and Europe \(Milan\) Regions\. 
+\*Saved queries is not available in China \(Beijing\), and China \(Ningxia\) Regions\.
 
-\*Advanced queries for multi\-account multi\-regions is not available in Africa \(Cape Town\), Europe \(Milan\), China \(Beijing\), and China \(Ningxia\) Regions\.
+\*Advanced queries for multi\-account multi\-regions is not available in China \(Beijing\), and China \(Ningxia\) Regions\.

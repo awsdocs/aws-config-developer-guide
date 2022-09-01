@@ -13,6 +13,6 @@ Checks if an Amazon Elastic Compute Cloud \(Amazon EC2\) instance has an Identit
 IamInstanceProfileArnList \(Optional\)Type: CSV  
 Comma\-separated list of IAM profile Amazon Resource Names \(ARNs\) that can be attached to Amazon EC2 instances\.
 
-## AWS CloudFormation template<a name="w79aac11c32c17b9d187c15"></a>
+## AWS CloudFormation template<a name="w85aac12c32c17b9d187c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

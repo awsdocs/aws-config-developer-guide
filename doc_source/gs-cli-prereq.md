@@ -472,13 +472,13 @@ The following code examples show how to create an Amazon SNS topic\.
         CreateTopicResponse result = null;
         try {
             CreateTopicRequest request = CreateTopicRequest.builder()
-                    .name(topicName)
-                    .build();
+                .name(topicName)
+                .build();
 
             result = snsClient.createTopic(request);
             return result.topicArn();
-        } catch (SnsException e) {
 
+        } catch (SnsException e) {
             System.err.println(e.awsErrorDetails().errorMessage());
             System.exit(1);
         }
@@ -537,15 +537,15 @@ This is prerelease documentation for a feature in preview release\. It is subjec
 ```
 suspend fun createSNSTopic(topicName: String): String {
 
-       val request = CreateTopicRequest {
-            name = topicName
-        }
+    val request = CreateTopicRequest {
+        name = topicName
+    }
 
-       SnsClient { region = "us-east-1" }.use { snsClient ->
+    SnsClient { region = "us-east-1" }.use { snsClient ->
         val result = snsClient.createTopic(request)
         return result.topicArn.toString()
-       }
- }
+    }
+}
 ```
 +  For API details, see [CreateTopic](https://github.com/awslabs/aws-sdk-kotlin#generating-api-documentation) in *AWS SDK for Kotlin API reference*\. 
 
@@ -702,6 +702,11 @@ You can also use an Amazon SNS topic in a different account, but in that case yo
 
 You can use the IAM console to create an IAM role that grants AWS Config permissions to access your Amazon S3 bucket, access your Amazon SNS topic, and get configuration details for supported AWS resources\. When you use the console to create an IAM role, AWS Config automatically attaches the required permissions to the role for you\. 
 
+**Note**  
+If you have used an AWS service that uses AWS Config \(such as AWS Security Hub or AWS Control Tower\) and an AWS Config role has already been created, you should make sure that the IAM role you use when setting up AWS Config keeps the same minimum privileges as the already created AWS Config role in order for the other AWS service to continue to run as expected\.   
+For example, if AWS Control Tower has an IAM role that allows AWS Config to read Amazon S3 objects, you should guarantee the same permissions are granted within the IAM role you use when setting up AWS Config\. Otherwise, it may interfere with AWS Control Tower's operations\.  
+For more information about IAM roles for AWS Config, see [AWS Identity and Access Management](https://docs.aws.amazon.com/config/latest/developerguide/security-iam.html)\. 
+
 **To create a role for an AWS service**
 
 1. Sign in to the AWS Management Console and open the IAM console at [https://console\.aws\.amazon\.com/iam/](https://console.aws.amazon.com/iam/)\.
@@ -801,10 +806,10 @@ The following code examples show how to create an IAM role\.
         try {
             JSONObject jsonObject = (JSONObject) readJsonSimpleDemo(fileLocation);
             CreateRoleRequest request = CreateRoleRequest.builder()
-                    .roleName(rolename)
-                    .assumeRolePolicyDocument(jsonObject.toJSONString())
-                    .description("Created using the AWS SDK for Java")
-                    .build();
+                .roleName(rolename)
+                .assumeRolePolicyDocument(jsonObject.toJSONString())
+                .description("Created using the AWS SDK for Java")
+                .build();
 
             CreateRoleResponse response = iam.createRole(request);
             System.out.println("The ARN of the role is "+response.role().arn());
@@ -1031,6 +1036,6 @@ pub async fn create_role(
 
 ### Using the AWS CLI<a name="creating-iamrole-cli"></a>
 
-You can also use the AWS Command Line Interface \(AWS CLI\) to create an an Amazon SNS topic\. For more information, see [create\-role](https://docs.aws.amazon.com/cli/latest/reference/iam/create-role.html) in the *AWS CLI Command Reference*\. You can then attach a policy to the role with the [attach\-role\-policy](https://docs.aws.amazon.com/cli/latest/reference/iam/attach-role-policy.html) command\.
+You can also use the AWS Command Line Interface \(AWS CLI\) to create an IAM role\. For more information, see [create\-role](https://docs.aws.amazon.com/cli/latest/reference/iam/create-role.html) in the *AWS CLI Command Reference*\. You can then attach a policy to the role with the [attach\-role\-policy](https://docs.aws.amazon.com/cli/latest/reference/iam/attach-role-policy.html) command\.
 
 For information about the AWS CLI, see [What is the AWS Command Line Interface?](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html) in the *AWS Command Line Interface User Guide*\. 
