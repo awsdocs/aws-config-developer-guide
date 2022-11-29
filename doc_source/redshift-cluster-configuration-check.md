@@ -6,7 +6,7 @@ Checks whether Amazon Redshift clusters have the specified settings\.
 
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS regions except Middle East \(Bahrain\) Region
+**AWS Region:** All supported AWS regions except Middle East \(Bahrain\), Middle East \(UAE\), Europe \(Spain\), Europe \(Zurich\) Region
 
 **Parameters:**
 
@@ -19,6 +19,6 @@ Audit logging is enabled\.
 nodeTypes \(Optional\)Type: CSVDefault: dc1\.large  
 Specify node type\.
 
-## AWS CloudFormation template<a name="w85aac12c32c17b9d449c15"></a>
+## AWS CloudFormation template<a name="w2aac12c31c27b9d449c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

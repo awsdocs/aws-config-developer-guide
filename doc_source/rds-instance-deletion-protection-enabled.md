@@ -9,13 +9,13 @@ Some RDS DB instances within a Cluster \(Aurora/DocumentDB\) will show as non\-c
 
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS regions except Asia Pacific \(Jakarta\), Asia Pacific \(Osaka\) Region
+**AWS Region:** All supported AWS regions except Asia Pacific \(Jakarta\), Middle East \(UAE\), Asia Pacific \(Osaka\), Europe \(Spain\), Europe \(Zurich\) Region
 
 **Parameters:**
 
 databaseEngines \(Optional\)Type: CSV  
 Comma\-separated list of RDS database engines to include in the evaluation of the rule\. For example, 'mysql, postgres, mariadb'\.
 
-## AWS CloudFormation template<a name="w85aac12c32c17b9d423c17"></a>
+## AWS CloudFormation template<a name="w2aac12c31c27b9d423c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

@@ -4,13 +4,33 @@ AWS Config provides a detailed view of the configuration of AWS resources in you
 
 An AWS *resource* is an entity you can work with in AWS, such as an Amazon Elastic Compute Cloud \(EC2\) instance, an Amazon Elastic Block Store \(EBS\) volume, a security group, or an Amazon Virtual Private Cloud \(VPC\)\. For a complete list of AWS resources supported by AWS Config, see [Supported Resource Types](resource-config-reference.md)\.
 
-With AWS Config, you can do the following:
-+ Evaluate your AWS resource configurations for desired settings\.
-+ Get a snapshot of the current configurations of the supported resources that are associated with your AWS account\.
-+ Retrieve configurations of one or more resources that exist in your account\.
-+ Retrieve historical configurations of one or more resources\.
-+ Receive a notification whenever a resource is created, modified, or deleted\.
-+ View relationships between resources\. For example, you might want to find all resources that use a particular security group\.
+## Features<a name="config-features"></a>
+
+When you set up AWS Config, you can complete the following:
+
+**Resource management**
++ Specify the resource types you want AWS Config to record\.
++ Set up an Amazon S3 bucket to receive a configuration snapshot on request and configuration history\.
++ Set up Amazon SNS to send configuration stream notifications\.
++ Grant AWS Config the permissions it needs to access the Amazon S3 bucket and the Amazon SNS topic\.
+
+  For more information, see [Viewing AWS Resource Configurations and History](https://docs.aws.amazon.com/config/latest/developerguide/view-manage-resource.html) and [Managing AWS Resource Configurations and History](https://docs.aws.amazon.com/config/latest/developerguide/manage-config.html)\.
+
+**Rules and conformance packs**
++ Specify the rules that you want AWS Config to use to evaluate compliance information for the recorded resource types\.
++ Use conformance packs, or a collection of AWS Config rules and remediation actions that can be deployed and monitored as a single entity in your AWS account\.
+
+  For more information, see [Evaluating Resources with AWS Config Rules](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config.html) and [Conformance Packs](https://docs.aws.amazon.com/config/latest/developerguide/conformance-packs.html)\.
+
+**Aggregators**
++ Use an aggregator to get a centralized view of your resource inventory and compliance\. An aggregator is an AWS Config resource type that collects AWS Config configuration and compliance data from multiple AWS accounts and AWS Regions into a single account and Region\.
+
+  For more information, see [Multi\-Account Multi\-Region Data Aggregation ](https://docs.aws.amazon.com/config/latest/developerguide/aggregate-data.html)\.
+
+**Advanced queries**
++ Use one of the sample queries or write your own query by referring to the configuration schema of the AWS resource\.
+
+  For more information, see [Querying the Current Configuration State of AWS Resources ](https://docs.aws.amazon.com/config/latest/developerguide/querying-AWS-resources.html)\. 
 
 ## Ways to Use AWS Config<a name="common-scenarios"></a>
 
@@ -32,7 +52,7 @@ When you use multiple AWS resources that depend on one another, a change in the 
 
 You can also use the historical configurations of your resources provided by AWS Config to troubleshoot issues and to access the last known good configuration of a problem resource\.
 
-### Security Analysis<a name="w85aab5c11c11"></a>
+### Security Analysis<a name="w2aab5b9c11"></a>
 
 To analyze potential security weaknesses, you need detailed historical information about your AWS resource configurations, such as the AWS Identity and Access Management \(IAM\) permissions that are granted to your users, or the Amazon EC2 security group rules that control access to your resources\.
 

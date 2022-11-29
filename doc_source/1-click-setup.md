@@ -27,7 +27,7 @@ After setting up, AWS Config will evaluate your AWS resources against the rules 
 
 Under **Resource types to record**, the option to **Record all resources supported in this region** is selected for you\. For more information, see [Supported Resource Types](https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)\.
 
-AWS Config records configuration changes for supported AWS resource types, and also third\-party resource types that are registered in the AWS CloudFormation registry\. AWS Config automatically starts recording new supported AWS resource types\. AWS Config also automatically starts recording third\-party resources and custom resource types are that managed through AWS CloudFormation\.
+AWS Config records configuration changes for supported AWS resource types, and also third\-party resource types that are registered in the AWS CloudFormation registry\. AWS Config automatically starts recording new supported AWS resource types\. AWS Config also automatically starts recording third\-party resources and custom resource types that are managed through AWS CloudFormation\.
 
 **Note**  
 By default, the **1\-click setup** workflow does not include the option to **Include global resources** \(for example, AWS Identity and Access Management \(IAM\) resources\)\.

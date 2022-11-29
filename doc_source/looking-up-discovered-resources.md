@@ -2,7 +2,7 @@
 
 You can use the AWS Config console, AWS CLI, and AWS Config API to look up the resources that AWS Config has taken an inventory of, or *discovered*, including deleted resources and resources that AWS Config is not currently recording\. AWS Config discovers supported resource types only\. For more information, see [Supported Resource Types](resource-config-reference.md)\.
 
-## Looking Up Resources \(AWS Config Console\)<a name="looking-up-resources"></a>
+## Looking Up Resources \(Console\)<a name="looking-up-resources"></a>
 
 You can use resource types or tag information to look up resources in the AWS Config console\.
 
@@ -44,7 +44,7 @@ You can use the AWS CLI to list resources that AWS Config has discovered\.
 
 To view the configuration details of a resource that is listed in the response, use the [http://docs.aws.amazon.com/cli/latest/reference/configservice/get-resource-config-history.html](http://docs.aws.amazon.com/cli/latest/reference/configservice/get-resource-config-history.html) command, and specify the resource type and ID\. For an example of this command and the response from AWS Config, see [Viewing Configuration History](view-manage-resource-console.md#get-config-history-cli)\.
 
-## Looking up Resources \(AWS Config API\)<a name="looking-up-resources-with-aws-config-api"></a>
+## Looking up Resources \(API\)<a name="looking-up-resources-with-aws-config-api"></a>
 
 You specify a resource type, and AWS Config returns a list of resource identifiers for resources of that type\. For more information, see [ResourceIdentifier](https://docs.aws.amazon.com/config/latest/APIReference/API_ResourceIdentifier.html) in the *AWS Config API Reference*\.
 

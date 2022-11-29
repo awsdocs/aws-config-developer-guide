@@ -18,7 +18,7 @@ If you have an existing automation role that you are using for remediation using
 
 AWS Config does not support AWS CloudFormation intrinsic functions for the automation execution role\. You must provide the exact ARN of the role as a string\. 
 
-For more information about how to pass the exact ARN, see [Conformance Pack Sample Templates](conformancepack-sample-templates.md)\. While using example templates, update your Account ID and master Account ID for organization\.
+For more information about how to pass the exact ARN, see [Conformance Pack Sample Templates](conformancepack-sample-templates.md)\. While using example templates, update your Account ID and management account ID for organization\.
 
 ## Prerequisites for Using a Conformance Pack With One or More AWS Config Rules<a name="cpack-prerequisites-oneormorerules"></a>
 
@@ -26,7 +26,7 @@ Before deploying a conformance pack with one or more custom AWS Config rules, cr
 
 If you have an existing custom AWS Config rule, you can directly provide the `ARN` of AWS Lambda function to create another instance of that custom rule as part of the pack\. 
 
-If you do not have an existing custom AWS Config rule, you can create a AWS Lambda function and use the ARN of the Lambda function\. For more information, see [AWS Config Custom Rules ](evaluate-config_develop-rules.md)\.
+If you do not have an existing custom AWS Config rule, you can create a AWS Lambda function and use the ARN of the Lambda function\. For more information, see [AWS Config Custom Rules](evaluate-config_develop-rules.md)\.
 
 If your AWS Lambda function is present in a different AWS account, you can create AWS Config rules with appropriate cross\-account AWS Lambda function authorization\. For more information, see [How to Centrally Manage AWS Config Rules across Multiple AWS accounts](https://aws.amazon.com/blogs/devops/how-to-centrally-manage-aws-config-rules-across-multiple-aws-accounts/) blog post\.
 

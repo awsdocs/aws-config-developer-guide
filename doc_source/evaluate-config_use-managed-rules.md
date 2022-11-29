@@ -4,13 +4,21 @@ AWS Config provides *AWS managed rules*, which are predefined, customizable rule
 
 You can customize the behavior of a managed rule to suit your needs\. For example, you can define the rule's scope to constrain which resources trigger an evaluation for the rule, such as EC2 instances or volumes\. You can customize the rule's parameters to define attributes that your resources must have to comply with the rule\. For example, you can customize a parameter to specify that your security group should block incoming traffic to a specific port number\.
 
-After you activate a rule, AWS Config compares your resources to the conditions of the rule\. After this initial evaluation, AWS Config continues to run evaluations each time one is triggered\. The evaluation triggers are defined as part of the rule, and they can include the following types:
-+ **Configuration changes** – AWS Config triggers the evaluation when any resource that matches the rule's scope changes in configuration\. The evaluation runs after AWS Config sends a configuration item change notification\.
+After you activate a rule, AWS Config compares your resources to the conditions of the rule\. There are two evaluation modes for AWS Config rules: **proactive evaluation** and **detective evaluation**\.
+
+Use *proactive evaluation* to evaluate resources prior to resource provising\. This allows you to evaluate the configuration settings of your resources before they are created or updated\. Use *detective evluation* to evaluate resources that have already been provisioned\. This allows you to evaluate the configuration settings of your existing resources\.
+
+For proactive evaluation, there is only one type of trigger:
++ **Configuration changes** – AWS Config initiates the evaluation when there are changes to the configuration of a pre\-provisioned resource\. The evaluation runs after AWS Config sends a configuration item change notification\.
+
+
+
+For detective evaluation, there are two trigger types:
++ **Configuration changes** – AWS Config triggers the evaluation when there are any changes to the configuration of a post\-provisioned resource that matches the rule's scope\. The evaluation runs after AWS Config sends a configuration item change notification\.
 + **Periodic** – AWS Config runs evaluations for the rule at a frequency that you choose \(for example, every 24 hours\)\.
 
 The AWS Config console shows which resources comply with the rule and which rules are being followed\. For more information, see [Viewing Configuration Compliance](evaluate-config_view-compliance.md)\.
 
 **Topics**
 + [List of AWS Config Managed Rules](managed-rules-by-aws-config.md)
-+ [Working with AWS Config Managed Rules](managing-aws-managed-rules.md)
 + [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)

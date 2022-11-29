@@ -6,13 +6,13 @@ Checks if the Auto Scaling group spans multiple Availability Zones\. The rule is
 
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS regions except China \(Beijing\), China \(Ningxia\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\) Region
+**AWS Region:** All supported AWS regions except China \(Beijing\), Middle East \(UAE\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), Europe \(Spain\), China \(Ningxia\), Europe \(Zurich\) Region
 
 **Parameters:**
 
 minAvailabilityZones \(Optional\)Type: int  
 Minimum number of expected Availability zones\.
 
-## AWS CloudFormation template<a name="w85aac12c32c17b9c49c15"></a>
+## AWS CloudFormation template<a name="w2aac12c31c27b9c49c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

@@ -3,11 +3,11 @@
 You can use the AWS Config console, AWS CLI, or AWS Config API to view the compliance state of your rules and resources\.
 
 **Contents**
-+ [Viewing compliance \(console\)](#evaluate-config_view-compliance-console)
++ [Viewing compliance \(Console\)](#evaluate-config_view-compliance-console)
 + [Viewing compliance \(CLI\)](#evaluate-config_view-compliance-cli)
 + [Viewing compliance \(API\)](#evaluate-config_view-compliance-api)
 
-## Viewing compliance \(console\)<a name="evaluate-config_view-compliance-console"></a>
+## Viewing compliance \(Console\)<a name="evaluate-config_view-compliance-console"></a>
 
 **To view compliance**
 

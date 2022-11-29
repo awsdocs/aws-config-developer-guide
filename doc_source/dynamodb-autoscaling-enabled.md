@@ -6,7 +6,7 @@ Checks if Auto Scaling or On\-Demand is enabled on your DynamoDB tables and/or g
 
 **Trigger type:** Periodic
 
-**AWS Region:** All supported AWS regions except AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\) Region
+**AWS Region:** All supported AWS regions except AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), Europe \(Spain\), Europe \(Zurich\) Region
 
 **Parameters:**
 
@@ -28,6 +28,6 @@ The target utilization percentage for read capacity\. Target utilization is expr
 targetWriteUtilization \(Optional\)Type: double  
 The target utilization percentage for write capacity\. Target utilization is expressed in terms of the ratio of consumed capacity to provisioned capacity\.
 
-## AWS CloudFormation template<a name="w85aac12c32c17b9d149c15"></a>
+## AWS CloudFormation template<a name="w2aac12c31c27b9d149c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

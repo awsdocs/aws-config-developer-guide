@@ -10,7 +10,8 @@ You can also have AWS Config record supported types of *global resources*\. Glob
 
 **Important**  
 Global resource types onboarded to AWS Config recording after February 2022 will only be recorded in the service's home region for the commercial partition and AWS GovCloud \(US\-West\) for the GovCloud partition\. You can view the Configuration Items for these new global resource types only in their home region and AWS GovCloud \(US\-West\)\.  
-Supported global resource types onboarded before February 2022 such as `AWS::IAM::Group`, `AWS::IAM::Policy`, `AWS::IAM::Role`, `AWS::IAM::User` remain unchanged, and they will continue to deliver Configuration Items in all supported regions in AWS Config\. The change will only affect new global resource types onboarded after February 2022\.
+Supported global resource types onboarded before February 2022 such as `AWS::IAM::Group`, `AWS::IAM::Policy`, `AWS::IAM::Role`, `AWS::IAM::User` remain unchanged, and they will continue to deliver Configuration Items in all supported regions in AWS Config\. The change will only affect new global resource types onboarded after February 2022\.  
+To record global resource types onboarded after February 2022, enable All Supported Resource Types in the home region of the global resource type you want to record\.
 
 
 **Home Regions for Global Resource Types Onboarded after February 2022**  

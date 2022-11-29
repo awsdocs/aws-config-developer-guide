@@ -1,4 +1,4 @@
-# Remediating Noncompliant AWS Resources by AWS Config Rules<a name="remediation"></a>
+# Remediating Noncompliant Resources with AWS Config Rules<a name="remediation"></a>
 
  AWS Config allows you to remediate noncompliant resources that are evaluated by AWS Config Rules\. AWS Config applies remediation using [AWS Systems Manager Automation documents](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-automation.html)\. These documents define the actions to be performed on noncompliant AWS resources evaluated by AWS Config Rules\. You can associate SSM documents by using AWS Management Console or by using APIs\.
 
@@ -14,6 +14,7 @@ In the AWS Management Console, you can either choose to **manually** or **automa
 + [Setting Up Auto Remediation \(Console\)](#setup-autoremediation)
 + [Delete Remediation Action \(Console\)](#delete-remediation-action)
 + [Managing Remediation \(API\)](#remediate-api)
++ [Region Support](#region-support-config-remediation)
 
 ## Prerequisite<a name="prerequisite"></a>
 
@@ -104,3 +105,11 @@ Use the following AWS Config API actions to manage auto remediation:
 + [PutRemediationExceptions](https://docs.aws.amazon.com/config/latest/APIReference/API_PutRemediationExceptions.html)
 + [DescribeRemediationExceptions](https://docs.aws.amazon.com/config/latest/APIReference/API_DescribeRemediationExceptions.html)
 + [DeleteRemediationExceptions](https://docs.aws.amazon.com/config/latest/APIReference/API_DeleteRemediationExceptions.html)
+
+## Region Support<a name="region-support-config-remediation"></a>
+
+Currently, remediation actions for AWS Config Rules is supported in the following regions:
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/remediation.html)

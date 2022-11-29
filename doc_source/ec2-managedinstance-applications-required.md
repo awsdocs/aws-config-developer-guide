@@ -9,7 +9,7 @@ Ensure that SSM agent is running on the EC2 instance and an association to gathe
 
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS regions except Asia Pacific \(Osaka\) Region
+**AWS Region:** All supported AWS regions except Middle East \(UAE\), Asia Pacific \(Osaka\), Europe \(Spain\), Europe \(Zurich\) Region
 
 **Parameters:**
 
@@ -20,6 +20,6 @@ The application names must be an exact match\. For example, use **firefox** on L
 platformType \(Optional\)Type: String  
 Platform type \(for example, 'Linux' or 'Windows'\)\.
 
-## AWS CloudFormation template<a name="w85aac12c32c17b9d193c17"></a>
+## AWS CloudFormation template<a name="w2aac12c31c27b9d193c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

@@ -6,12 +6,12 @@ Checks whether the root user of your AWS account requires multi\-factor authenti
 
 **Trigger type:** Periodic
 
-**AWS Region:** All supported AWS regions except China \(Beijing\), China \(Ningxia\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\) Region
+**AWS Region:** All supported AWS regions except China \(Beijing\), Middle East \(UAE\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), China \(Ningxia\) Region
 
 **Parameters:**
 
 None  
 
-## AWS CloudFormation template<a name="w85aac12c32c17b9d471c15"></a>
+## AWS CloudFormation template<a name="w2aac12c31c27b9d471c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

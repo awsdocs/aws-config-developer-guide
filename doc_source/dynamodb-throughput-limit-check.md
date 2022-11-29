@@ -6,16 +6,16 @@ Checks if provisioned DynamoDB throughput is approaching the maximum limit for y
 
 **Trigger type:** Periodic
 
-**AWS Region:** All supported AWS regions except Asia Pacific \(Jakarta\), Asia Pacific \(Osaka\), Europe \(Milan\), Africa \(Cape Town\) Region
+**AWS Region:** All supported AWS regions except Asia Pacific \(Jakarta\), Africa \(Cape Town\), Middle East \(UAE\), Asia Pacific \(Osaka\), Europe \(Milan\), Europe \(Spain\), Europe \(Zurich\) Region
 
 **Parameters:**
 
 accountRCUThresholdPercentage \(Optional\)Type: intDefault: 80  
-Percentage of provisioned read capacity units for your account\. When this value is reached, the rule is marked as NON\_COMPLIANT\.
+Percentage of provisioned read capacity units for your account\. When this value is reached, the rule is marked as noncompliant\.
 
 accountWCUThresholdPercentage \(Optional\)Type: intDefault: 80  
-Percentage of provisioned write capacity units for your account\. When this value is reached, the rule is marked as NON\_COMPLIANT\.
+Percentage of provisioned write capacity units for your account\. When this value is reached, the rule is marked as noncompliant\.
 
-## AWS CloudFormation template<a name="w85aac12c32c17b9d163c15"></a>
+## AWS CloudFormation template<a name="w2aac12c31c27b9d163c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

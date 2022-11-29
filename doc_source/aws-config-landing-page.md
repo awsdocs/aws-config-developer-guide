@@ -22,8 +22,4 @@ Use AWS Config for the following:
 
 ## Region Support<a name="region-support-config"></a>
 
-Currently, AWS Config is supported in the following regions:
-
-
-****  
-[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/aws-config-landing-page.html)
+For Regions that support AWS Config and for a list of service quotas for AWS Config, see [AWS Config endpoints and quotas](https://docs.aws.amazon.com/general/latest/gr/awsconfig.html) in the *Amazon Web Services General Reference*\.

@@ -5,7 +5,7 @@ AWS Config supports the following AWS resources types and resource relationships
 Advanced Queries for AWS Config supports a subset of these resource types\. For a list of those supported resource types, see [Supported Resource Types for Advanced Queries](https://github.com/awslabs/aws-config-resource-schema/tree/master/config/properties/resource-types)\.
 
 **Note**  
-Periodic rules can run on resources that AWS Config recording does not support and can be run without the configuration recorder being enabled\. Periodic rules do not depend on configuration items\. For more information on the difference between change–triggered rules and periodic rules, see [Specifying Triggers for AWS Config Rules](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config-rules.html)\.  
+Periodic rules can run on resources that AWS Config recording does not support and can be run without the configuration recorder being enabled\. Periodic rules do not depend on configuration items\. For more information on the difference between change–triggered rules and periodic rules, see [Evaluation Mode and Trigger Types for AWS Config Rules](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config-rules.html)\.  
 When AWS Config onboards new resource types, the default resources for the new resource types will be discovered during the account baselining process\. If you have the configuration recorder set up to record all supported resource types, you may receive notifications for default resources while a new resource type is in the process of onboarding\. The public documentation will be updated once the onboarding process is complete\.
 
 ## Amazon API Gateway<a name="amazonapigateway"></a>
@@ -71,10 +71,7 @@ To learn more about how AWS Config integrates with Amazon API Gateway, see [Moni
 
 
 ****  
-
-| AWS Service | Resource Type Value | Relationship | Related Resource | 
-| --- | --- | --- | --- | 
-| Amazon Elastic Container Registry | AWS::ECR::Repository | NA | NA | 
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
 ## Amazon Elastic Container Registry Public<a name="amazonelasticcontainerregistrypublic"></a>
 
@@ -120,20 +117,30 @@ New \(supported\): `arn:aws:ecs:region:aws_account_id:service/cluster-name/servi
 | --- | --- | --- | --- | 
 | Amazon EMR | AWS::EMR::SecurityConfiguration | NA | NA | 
 
-## Amazon GuardDuty<a name="amazonguardduty"></a>
+## Amazon EventBridge<a name="amazonemr"></a>
 
 
 ****  
 
 | AWS Service | Resource Type Value | Relationship | Related Resource | 
 | --- | --- | --- | --- | 
-| Amazon GuardDuty | AWS::GuardDuty::Detector | NA | NA | 
+| Amazon EventBridge | AWS::Events::EventBus | NA | NA | 
+
+## Amazon GuardDuty<a name="amazonguardduty"></a>
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
 ## Amazon OpenSearch Service<a name="amazonopensearchservice"></a>
 
 
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
+
+**Note**  
+On September 8, 2021, Amazon Elasticsearch Service was renamed to Amazon OpenSearch Service\. OpenSearch Service supports OpenSearch as well as legacy Elasticsearch OSS\. For more information, see [Amazon OpenSearch Service \- Summary of changes](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/rename.html)\.  
+You may continue to see your data for `AWS::OpenSearch::Domain` under the existing `AWS::Elasticsearch::Domain` resource type for several weeks, even if you upgrade one or more domains to OpenSearch\.
 
 ## Amazon Quantum Ledger Database \(Amazon QLDB\)<a name="amazonqldb"></a>
 
@@ -189,10 +196,7 @@ New \(supported\): `arn:aws:ecs:region:aws_account_id:service/cluster-name/servi
 
 
 ****  
-
-| AWS Service | Resource Type Value | Relationship | Related Resource | 
-| --- | --- | --- | --- | 
-| Amazon Simple Email Service | AWS::SES::ConfigurationSet | NA | NA | 
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
 ## Amazon Simple Notification Service<a name="amazonsimplenotificationservice"></a>
 
@@ -256,7 +260,25 @@ For more information about the attributes, see [Bucket Configuration Options](ht
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
-## AWS Auto Scaling<a name="autoscaling"></a>
+## AWS AppConfig<a name="awsappconfig"></a>
+
+
+****  
+
+| AWS Service | Resource Type Value | Relationship | Related Resource | 
+| --- | --- | --- | --- | 
+| AWS AppConfig | AWS::AppConfig::Application | NA | NA | 
+
+## AWS AppSync<a name="awsappsync"></a>
+
+
+****  
+
+| AWS Service | Resource Type Value | Relationship | Related Resource | 
+| --- | --- | --- | --- | 
+| AWS AppSync | AWS::AppSync::GraphQLApi | NA | NA | 
+
+## AWS Auto Scaling<a name="awsautoscaling"></a>
 
 
 ****  
@@ -309,6 +331,12 @@ For more information, see [Managing backups using backup plans](https://docs.aws
 | --- | --- | --- | --- | 
 | AWS CloudTrail | AWS::CloudTrail::Trail | NA | NA | 
 
+## AWS Cloud Map<a name="awscloudmap"></a>
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
+
 ## AWS CodeBuild<a name="awscodebuild"></a>
 
 
@@ -339,10 +367,18 @@ For more information, see [Managing backups using backup plans](https://docs.aws
 
 \*The relationship between `AWS::Config::ResourceCompliance` and a related resource depends on how `AWS::Config::ResourceCompliance` reports compliance for that specific resource type\.
 
+\*`AWS::Config::ConfigurationRecorder` is a system resource type of AWS Config and recording of this resource type is enabled by default\.
+
 **Note**  
-Recording for the `AWS::Config::ConformancePackCompliance` resource type is available at no additional charge\.
+Recording for the `AWS::Config::ConformancePackCompliance` and `AWS::Config::ConfigurationRecorder` resource types come with no additional charge\.
 
 ## AWS Database Migration Service<a name="awsdms"></a>
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
+
+## AWS DataSync<a name="awsdatasync"></a>
 
 
 ****  
@@ -366,10 +402,7 @@ Recording for the `AWS::Config::ConformancePackCompliance` resource type is avai
 
 
 ****  
-
-| AWS Service | Resource Type Value | Relationship | Related Resource | 
-| --- | --- | --- | --- | 
-| AWS Glue | AWS::Glue::Job | NA | NA | 
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
 ## AWS Identity and Access Management<a name="awsiam"></a>
 
@@ -378,6 +411,12 @@ Recording for the `AWS::Config::ConformancePackCompliance` resource type is avai
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
 AWS Config includes inline policies with the configuration details that it records\. For more information on inline policies, see [Managed policies and inline policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html#inline-policies) in the IAM User Guide\.
+
+## AWS IoT Events<a name="awsiotevents"></a>
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
 ## AWS Key Management Service<a name="awskeymanagementservice"></a>
 
@@ -437,13 +476,9 @@ AWS Config includes inline policies with the configuration details that it recor
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
-\*AWS Config support for the AWS WAF resource types are available only in the US East \(N\. Virginia\) Region\. The `AWS::WAFRegional::RateBasedRule`, `AWS::WAFRegional::Rule`, `AWS::WAFRegional::WebACL`, and `AWS::WAFRegional::RuleGroup` are available in all regions where AWS WAF is supported\. 
+AWS Config support for the AWS WAF resource types are available only in the US East \(N\. Virginia\) Region\.
 
-
-****  
-[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
-
-\*The AWS WAFv2 resource type values are available in all the AWS Regions where AWS WAFv2 is supported\. 
+AWS Config support for the AWS WAF Regional and AWS WAF V2 resource types are available in all the AWS Regions where AWS WAF and AWS WAF V2 are supported, respectively\.
 
 ## AWS X\-Ray<a name="awsxray"></a>
 

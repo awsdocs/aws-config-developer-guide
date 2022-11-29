@@ -6,7 +6,7 @@ Checks if a lifecycle rule is configured for an Amazon Simple Storage Service \(
 
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS regions except China \(Beijing\), China \(Ningxia\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), Asia Pacific \(Jakarta\) Region
+**AWS Region:** All supported AWS regions except China \(Beijing\), Asia Pacific \(Jakarta\), Middle East \(UAE\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), Europe \(Spain\), China \(Ningxia\), Europe \(Zurich\) Region
 
 **Parameters:**
 
@@ -25,6 +25,6 @@ Amazon S3 Object prefix to identify one or more objects\.
 bucketNames \(Optional\)Type: CSV  
 Comma\-separated list of Amazon S3 bucket names that have lifecycle policy enabled\.
 
-## AWS CloudFormation template<a name="w85aac12c32c17b9d509c15"></a>
+## AWS CloudFormation template<a name="w2aac12c31c27b9d509c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

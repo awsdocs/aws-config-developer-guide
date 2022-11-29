@@ -45,8 +45,8 @@ If necessary, type `aws configure` to configure the AWS CLI to use an AWS Region
    ```
    aws config put-conformance-pack
    --conformance-pack-name MyConformancePack
-   --template-ssm-document MyConformancePackDocument
-   --conformance-pack-input-parameters params
+   --template-ssm-document-details MyConformancePackDocument
+   --delivery-s3-bucket AmazonS3bucketname
    ```
 
 1. Press Enter to run the command\.

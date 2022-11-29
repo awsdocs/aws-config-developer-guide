@@ -6,7 +6,7 @@ Checks if there is at least one multi\-region AWS CloudTrail\. The rule is NON\_
 
 **Trigger type:** Periodic
 
-**AWS Region:** All supported AWS regions
+**AWS Region:** All supported AWS regions except Middle East \(UAE\) Region
 
 **Parameters:**
 
@@ -25,6 +25,6 @@ Event selector to include management events for the AWS CloudTrail\.
 readWriteType \(Optional\)Type: String  
 Type of events to record\. Valid values are ReadOnly, WriteOnly and ALL\.
 
-## AWS CloudFormation template<a name="w85aac12c32c17b9d375c15"></a>
+## AWS CloudFormation template<a name="w2aac12c31c27b9d375c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

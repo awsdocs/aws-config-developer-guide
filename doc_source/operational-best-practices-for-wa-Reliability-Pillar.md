@@ -4,8 +4,6 @@ Conformance packs provide a general\-purpose compliance framework designed to en
 
 The following provides a sample mapping between Amazon Web Services’ Well\-Architected Framework Reliability Pillar and AWS managed Config rules\. Each Config rule applies to a specific AWS resource, and relates to one or more of the pillar’s design principles\. A Well\-Architected Framework category can be related to multiple Config rules\. Refer to the table below for more detail and guidance related to these mappings\.
 
-This Conformance Pack was validated by AWS Security Assurance Services LLC \(AWS SAS\), which is a team of Payment Card Industry Qualified Security Assessors \(QSAs\), HITRUST Certified Common Security Framework Practitioners \(CCSFPs\), and compliance professionals certified to provide guidance and assessments for various industry frameworks\. AWS SAS professionals designed this Conformance Pack to enable a customer to align to a subset of the Well\-Architected Framework Reliability Pillar design principles\.
-
 **AWS Region:** All supported AWS Regions except Middle East \(Bahrain\)
 
 

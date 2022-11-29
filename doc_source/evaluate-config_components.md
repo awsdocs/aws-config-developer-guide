@@ -1,8 +1,10 @@
 # Components of an AWS Config Rule<a name="evaluate-config_components"></a>
 
-AWS Config rules evaluate the configuration settings of your AWS resources\. There are two types of rules: AWS Config Managed Rules and AWS Config Custom Rules\. Managed rules are predefined, customizable rules created by AWS Config\. For a list of managed rules, see [List of AWS Config Managed Rules](https://docs.aws.amazon.com/config/latest/developerguide/managed-rules-by-aws-config.html)\.
+AWS Config rules evaluate the configuration settings of your AWS resources\. There are two types of rules: **AWS Config Managed Rules** and ** AWS Config Custom Rules**\.
 
-Custom rules are rules that you can create using either Guard or AWS Lambda functions\. Guard \([Guard GitHub Repository](https://github.com/aws-cloudformation/cloudformation-guard)\) is a policy\-as\-code language that allows you to write policies that are enforced by AWS Config Custom Policy rules\. AWS Lambda uses custom code that you upload to evaluate a custom rule\. It is invoked by events that are published to it by an event source, which AWS Config invokes when the custom rule is initiated\.
+AWS Config Managed Rules are predefined, customizable rules created by AWS Config\. For a list of managed rules, see [List of AWS Config Managed Rules](https://docs.aws.amazon.com/config/latest/developerguide/managed-rules-by-aws-config.html)\.
+
+AWS Config Custom Rules are rules that you create from scratch\. There are two ways to create AWS Config custom rules: with Lambda functions \([AWS Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-concepts.html#gettingstarted-concepts-function)\) and with Guard \([Guard GitHub Repository](https://github.com/aws-cloudformation/cloudformation-guard)\), a policy\-as\-code language\. AWS Config custom rules created with AWS Lambda are called *AWS Config Custom Lambda Rules* and AWS Config custom rules created with Guard are called *AWS Config Custom Policy Rules*\.
 
 This page discusses the structure of rule definitions and best practices on how to write rules with Python using the AWS Config Rules Development Kit \(RDK\) and AWS Config Rules Development Kit Library \(RDKlib\)\. For a walkthrough showing how to create AWS Config Custom Policy Rules, see [Creating AWS Config Custom Policy Rules](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules_cfn-guard.html)\. For a walkthrough showing how to create AWS Config Custom Lambda Rules, see [Creating AWS Config Custom Lambda Rules](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules_lambda-functions.html)\.
 
@@ -10,12 +12,12 @@ This page discusses the structure of rule definitions and best practices on how 
 + [Rule definitions](#evaluate-config_components_structure)
 + [Rule metadata](#evaluate-config_components_definitions)
 + [Rule structure](#evaluate-config_components_logic)
-  + [Writing rules](#w85aac12c27c17b5)
+  + [Writing rules](#w2aac12c25c19b5)
   + [Rule logic](#evaluate-config_rule-logic)
 
 ## Rule definitions<a name="evaluate-config_components_structure"></a>
 
-AWS Config Rule definitions contains the following fields:
+AWS Config rule definitions contain the following fields:
 + **identifier**
 + **defaultName**
 + **description**
@@ -24,17 +26,18 @@ AWS Config Rule definitions contains the following fields:
 + **compulsoryInputParameterDetails**
 + **optionalInputParameterDetails**
 + **labels**
++ **supportedEvaluationModes**
 
-The following JSON example shows the rule definition for the [codedeploy\-ec2\-minimum\-healthy\-hosts\-configured](https://docs.aws.amazon.com/config/latest/developerguide/codedeploy-ec2-minimum-healthy-hosts-configured.html) managed rule\.
+The following JSON example shows the rule definition for the [elasticsearch\-logs\-to\-cloudwatch](https://docs.aws.amazon.com/config/latest/developerguide/elasticsearch-logs-to-cloudwatch.html) managed rule\.
 
 ```
 {
-  "identifier": "CODEDEPLOY_EC2_MINIMUM_HEALTHY_HOSTS_CONFIGURED",
-  "defaultName": "codedeploy-ec2-minimum-healthy-hosts-configured", 
-  "description": "Checks if the deployment group for EC2/On-Premises Compute Platform is configured with a minimum healthy hosts fleet percentage or host count greater than or equal to the input threshold. The rule is NON_COMPLIANT if either is below the threshold.",
+  "identifier": "ELASTICSEARCH_LOGS_TO_CLOUDWATCH",
+  "defaultName": "elasticsearch-logs-to-cloudwatch", 
+  "description": "Checks if Elasticsearch domains are configured to send logs to Amazon CloudWatch Logs. The rule is COMPLIANT if a log is enabled for an Elasticsearch domain. This rule is NON_COMPLIANT if logging is not configured.",
   "scope": {
     "resourceTypes": [
-      "AWS::CodeDeploy::DeploymentGroup"
+      "AWS::Elasticsearch::Domain"
     ]
   },
   "sourceDetails": [
@@ -49,27 +52,32 @@ The following JSON example shows the rule definition for the [codedeploy\-ec2\-m
   ],
   "compulsoryInputParameterDetails": {},
   "optionalInputParameterDetails": {
-    "minimumHealthyHostsFleetPercent": {
-      "type": "int",
-      "description": "Minimum percentage of healthy hosts fleet during deployment. Default value is set to 66 percent.",
-      "defaultValue": "66"
+        "logTypes": {
+            "type": "CSV",
+            "description": "Comma-separated list of logs that are enabled. Valid values are 'search', 'index', 'error'."
+        }
     },
-    "minimumHealthyHostsHostCount": {
-      "type": "int",
-      "description": "Minimum number of healthy hosts in fleet during deployment. Default value is set to 1.",
-      "defaultValue": "1"
-    }
-  },
   "labels": [
-    "CodeDeploy"
+        "Elasticsearch",
+        "CloudWatch",
+        "Logs"
+    ],
+  "supportedEvaluationModes": [
+    {
+      "evaluationMode": "DETECTIVE"
+    },
+    {
+      "evaluationMode": "PROACTIVE"
+    }
   ]
+  
 }
 ```
 
 ## Rule metadata<a name="evaluate-config_components_definitions"></a>
 
 **identifier**  
-The rule identifier functions as the ID for an AWS Config managed rule\. Rule identifiers are written in ALL\_CAPS\_WITH\_UNDERSCORES\. For example, `CODEDEPLOY_EC2_MINIMUM_HEALTHY_HOSTS_CONFIGURED` is the rule identifier and `codedeploy-ec2-minimum-healthy-hosts-configured` is the rule name\. The rule identifier is used to identify a rule when [Creating AWS Config Managed Rules With AWS CloudFormation Templates](https://docs.aws.amazon.com/config/latest/developerguide/aws-config-managed-rules-cloudformation-templates.html) or when calling the [PutConfigRule](https://docs.aws.amazon.com/config/latest/APIReference/API_PutConfigRule.html) API\.  
+The rule identifier functions as the ID for an AWS Config managed rule\. Rule identifiers are written in ALL\_CAPS\_WITH\_UNDERSCORES\. For example, `ELASTICSEARCH_LOGS_TO_CLOUDWATCH` is the rule identifier and `elasticsearch-logs-to-cloudwatch` is the rule name\. The rule identifier is used to identify a rule when [Creating AWS Config Managed Rules With AWS CloudFormation Templates](https://docs.aws.amazon.com/config/latest/developerguide/aws-config-managed-rules-cloudformation-templates.html) or when calling the [PutConfigRule](https://docs.aws.amazon.com/config/latest/APIReference/API_PutConfigRule.html) API\.  
 For some rules, the rule identifier is different from the rule name\. For example, the rule identifier for `restricted-ssh` is `INCOMING_SSH_DISABLED`\.
 
 **defaultName**  
@@ -82,23 +90,30 @@ The rule description provides context for what the rule evaluates\. The AWS Conf
 The scope determines which resource types the rule targets\. This is required if the rule is change\-triggered or is both change\-triggered and periodic\. It is optional for periodic rules\. For a list of supported resource types, see [Supported Resource Types](https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources.html)\.
 
 **sourceDetails**  
-The sourceDetails determine the rule's trigger type\. `ConfigurationItemChangeNotification` and `OversizedConfigurationItemChangeNotification` are used for change\-triggered rules\. When AWS Config detects a configuration change for a resource, it sends a configuration item notification\. If the notification exceeds the maximum size allowed by Amazon Simple Notification Service \(Amazon SNS\), the notification includes a brief summary of the configuration item\. You can view the complete notification in the S3 bucket location specified in the s3BucketLocation field\.  
-`ScheduleNotification` is used for periodic rules\. If a rule is evaluated both periodically and by configuration changes, all three types of notifications can be used\. For more information, see [Specifying Triggers for AWS Config Rules](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config-rules.html)
+The sourceDetails determine the rule's trigger type when detective evaluation occurs\. Use detective evaluation to evaluate the configuration settings of your existing resources with either change\-triggered or periodic rules\.  
+ `ConfigurationItemChangeNotification` and `OversizedConfigurationItemChangeNotification` are used for change\-triggered rules\. When AWS Config detects a configuration change for a resource, it sends a configuration item notification\. If the notification exceeds the maximum size allowed by Amazon Simple Notification Service \(Amazon SNS\), the notification includes a brief summary of the configuration item\. You can view the complete notification in the S3 bucket location specified in the s3BucketLocation field\.  
+`ScheduleNotification` is used for periodic rules\. If a rule is evaluated both periodically and by configuration changes, all three types of notifications can be used\.  
+Change\-triggered rules can also be initiated by proactive evaluation\. In the rule definition, this metadata is stored in **supportedEvaluationModes**\. Proactive evaluation allows you to evaluate the configuration settings of your resources before they are created or updated\. For more information, see [Evaluation Mode and Trigger Types for AWS Config Rules](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config-rules.html)\.
 
 **compulsoryInputParameterDetails**  
 The compulsoryInputParameterDetails are used for parameters that are required for a rule to do its evaluation\. For example, the `access-keys-rotated` managed rule includes `maxAccessKeyAge` as a required parameter\. If a parameter is required, it will not be marked as \(Optional\)\. For each parameter, a type must be specified\. Type can be one of "String", "int", "double", "CSV", "boolean" and "StringMap"\.
 
 **optionalInputParameterDetails**  
-The optionalInputParameterDetails are used for parameters that are optional for a rule to do its evaluation\. For example, the `codedeploy-ec2-minimum-healthy-hosts-configured` managed rule includes `minimumHealthyHostsFleetPercent` and `minimumHealthyHostsHostCount` as optional parameters\. For each parameter, a type must be specified\. Type can be one of "String", "int", "double", "CSV", "boolean" and "StringMap"\.
+The optionalInputParameterDetails are used for parameters that are optional for a rule to do its evaluation\. For example, the `elasticsearch-logs-to-cloudwatch` managed rule includes `logTypes` as an optional parameter\. For each parameter, a type must be specified\. Type can be one of "String", "int", "double", "CSV", "boolean" and "StringMap"\.
 
 **labels**  
-Labels can be used to tag rules\. For example, the `codedeploy-auto-rollback-monitor-enabled`, `codedeploy-ec2-minimum-healthy-hosts-configured`, and `codedeploy-lambda-allatonce-traffic-shift-disabled` managed rules all include the label `CodeDeploy`\.
+Labels can be used to tag rules\. For example, the `codedeploy-auto-rollback-monitor-enabled`, `codedeploy-ec2-minimum-healthy-hosts-configured`, and `codedeploy-lambda-allatonce-traffic-shift-disabled` managed rules all include the label `CodeDeploy`\. You can use labels to help manage, search for, and filter rules\.
+
+**supportedEvaluationModes**  
+The supportedEvaluationModes determines when resources will be evaluated, either prior to or after a resource has been provisioned\.  
+ `DETECTIVE` is used to evaluate resources which have already been provisioned\. This allows you to evaluate the configuration settings of your existing resources\. `PROACTIVE` is used to evaluate resources prior to resource provisioning\. This allows you to evaluate the configuration settings of your resources before they are created or updated\. Proactive evaluation is only available for change\-triggered rules\.  
+You can specify the supportedEvaluationModes to `DETECTIVE`, `PROACTIVE`, or both `DETECTIVE` and `PROACTIVE`\. You must specify an evaluation mode and this field cannot be remain empty\.
 
 ## Rule structure<a name="evaluate-config_components_logic"></a>
 
 This section contains information on using the AWS Config Rules Development Kit \(RDK\) and AWS Config Rules Development Kit Library \(RDKlib\)\. For more information on the RDK or RDKlib, see the [aws\-config\-rdk ](https://github.com/awslabs/aws-config-rdk) and [aws\-config\-rdklib](https://github.com/awslabs/aws-config-rdklib) GitHub Repositories\.
 
-### Writing rules<a name="w85aac12c27c17b5"></a>
+### Writing rules<a name="w2aac12c25c19b5"></a>
 
 #### Prerequisites<a name="rule-logic-prereqs"></a>
 

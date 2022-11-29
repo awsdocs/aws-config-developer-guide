@@ -1,4 +1,4 @@
-# Evaluating Your Resources<a name="evaluating-your-resources"></a>
+# Evaluating Your Resources with AWS Config Rules<a name="evaluating-your-resources"></a>
 
 When you create custom rules or use managed rules, AWS Config evaluates your resources against those rules\. You can run on\-demand evaluations for resources against your rules\. For example, this is helpful when you create a custom rule and want to verify that AWS Config is correctly evaluating your resources or to identify if there is an issue with the evaluation logic of your AWS Lambda function\. 
 

@@ -6,13 +6,13 @@ Checks if each stage in the AWS CodePipeline deploys to more than N times the nu
 
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS regions except China \(Beijing\), China \(Ningxia\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), Asia Pacific \(Hong Kong\), Asia Pacific \(Jakarta\), Asia Pacific \(Osaka\), Europe \(Milan\), Europe \(Stockholm\), Middle East \(Bahrain\), Africa \(Cape Town\) Region
+**AWS Region:** Only available in Asia Pacific \(Mumbai\), Europe \(Paris\), US East \(Ohio\), Europe \(Ireland\), Europe \(Frankfurt\), South America \(Sao Paulo\), US East \(N\. Virginia\), Asia Pacific \(Seoul\), Europe \(London\), Asia Pacific \(Tokyo\), US West \(Oregon\), US West \(N\. California\), Asia Pacific \(Singapore\), Asia Pacific \(Sydney\), Canada \(Central\) Region
 
 **Parameters:**
 
 regionFanoutFactor \(Optional\)Type: intDefault: 3  
 The number of regions the AWS CodePipeline has deployed to in all previous stages is the acceptable number of regions any stage can deploy to\.
 
-## AWS CloudFormation template<a name="w85aac12c32c17b9d135c15"></a>
+## AWS CloudFormation template<a name="w2aac12c31c27b9d135c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

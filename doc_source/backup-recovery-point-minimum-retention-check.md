@@ -6,13 +6,13 @@ Checks if a recovery point expires no earlier than after the specified period\. 
 
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS regions except China \(Beijing\), China \(Ningxia\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), Asia Pacific \(Jakarta\), Asia Pacific \(Osaka\) Region
+**AWS Region:** All supported AWS regions except China \(Beijing\), Asia Pacific \(Jakarta\), Middle East \(UAE\), Asia Pacific \(Osaka\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), Europe \(Spain\), China \(Ningxia\), Europe \(Zurich\) Region
 
 **Parameters:**
 
 requiredRetentionDays \(Optional\)Type: intDefault: 35  
 Required retention period in days\.
 
-## AWS CloudFormation template<a name="w85aac12c32c17b9c59c15"></a>
+## AWS CloudFormation template<a name="w2aac12c31c27b9c59c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

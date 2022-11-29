@@ -11,7 +11,8 @@ AWS Config provides a detailed view of the resources associated with your AWS ac
   + [Configuration Snapshot](#config-snapshot)
   + [Configuration Stream](#config-stream)
   + [Resource Relationship](#resource-relationship)
-+ [AWS Config Managed and Custom Rules](#aws-config-rules)
++ [AWS Config Rules](#aws-config-rules)
+  + [AWS Config Managed Rules](#aws-config-managed-rules)
   + [AWS Config Custom Rules](#aws-config-custom-rules)
 + [Multi\-Account Multi\-Region Data Aggregation](#multi-account-multi-region-data-aggregation)
   + [Source Account](#source-accounts)
@@ -38,6 +39,8 @@ Understanding the basic components of AWS Config will help you track resource in
 ### Configuration History<a name="config-history"></a>
 
 A configuration history is a collection of the configuration items for a given resource over any time period\. A configuration history can help you answer questions about, for example, when the resource was first created, how the resource has been configured over the last month, and what configuration changes were introduced yesterday at 9 AM\. The configuration history is available to you in multiple formats\. AWS Config automatically delivers a configuration history file for each resource type that is being recorded to an Amazon S3 bucket that you specify\. You can select a given resource in the AWS Config console and navigate to all previous configuration items for that resource using the timeline\. Additionally, you can access the historical configuration items for a resource from the API\.
+
+For more information, see [Viewing AWS Resource Configurations and History](https://docs.aws.amazon.com/config/latest/developerguide/view-manage-resource.html) and [Managing AWS Resource Configurations and History](https://docs.aws.amazon.com/config/latest/developerguide/manage-config.html)\.
 
 ### Configuration Items<a name="config-items"></a>
 
@@ -67,19 +70,25 @@ AWS Config discovers AWS resources in your account and then creates a map of rel
 
 For more information, see [Supported Resource Types](resource-config-reference.md)\.
 
-## AWS Config Managed and Custom Rules<a name="aws-config-rules"></a>
+## AWS Config Rules<a name="aws-config-rules"></a>
 
-An AWS Config rule represents your desired configuration settings for specific AWS resources or for an entire AWS account\. AWS Config provides customizable, predefined rules to help you get started\. If a resource violates a rule, AWS Config flags the resource and the rule as noncompliant, and AWS Config notifies you through Amazon SNS\.
-
-### AWS Config Custom Rules<a name="aws-config-custom-rules"></a>
-
-With AWS Config you can also create custom rules\. While AWS Config continuously tracks your resource configuration changes, it checks whether these changes violate any of the conditions in your rules\.
+An AWS Config rule represents your desired configuration settings for specific AWS resources or for an entire AWS account\. If a resource does not pass a rule check, AWS Config flags the resource and the rule as noncompliant, and AWS Config notifies you through Amazon SNS\.
 
 After you activate a rule, AWS Config compares your resources to the conditions of the rule\. After this initial evaluation, AWS Config continues to run evaluations each time one is triggered\. The evaluation triggers are defined as part of the rule, and they can include the following types:
 + Configuration changes – AWS Config triggers the evaluation when any resource that matches the rule's scope changes in configuration\. The evaluation runs after AWS Config sends a configuration item change notification\.
 + Periodic – AWS Config runs evaluations for the rule at a frequency that you choose \(for example, every 24 hours\)\.
 
-For more information, see [Evaluating Resources with AWS Config Rules](evaluate-config.md)\.
+There are two types of rules: AWS Config Managed Rules and AWS Config Custom Rules\. For more information about the structure of rule definitions and rule metadata, see [Components of an AWS Config Rule](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_components.html)\.
+
+### AWS Config Managed Rules<a name="aws-config-managed-rules"></a>
+
+Managed rules are predefined, customizable rules created by AWS Config\. For a list of managed rules, see [List of AWS Config Managed Rules](https://docs.aws.amazon.com/config/latest/developerguide/managed-rules-by-aws-config.html)\.
+
+### AWS Config Custom Rules<a name="aws-config-custom-rules"></a>
+
+Custom rules are rules that you can create using either Guard or AWS Lambda functions\. Guard \([Guard GitHub Repository](https://github.com/aws-cloudformation/cloudformation-guard)\) is a policy\-as\-code language that allows you to write policies that are enforced by AWS Config Custom Policy rules\. AWS Lambda uses custom code that you upload to evaluate a custom rule\. It is invoked by events that are published to it by an event source, which AWS Config invokes when the custom rule is initiated\.
+
+For a walkthrough showing how to create AWS Config Custom Policy Rules, see [Creating AWS Config Custom Policy Rules](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules_cfn-guard.html)\. For a walkthrough showing how to create AWS Config Custom Lambda Rules, see [Creating AWS Config Custom Lambda Rules](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules_lambda-functions.html)\.
 
 ## Multi\-Account Multi\-Region Data Aggregation<a name="multi-account-multi-region-data-aggregation"></a>
 

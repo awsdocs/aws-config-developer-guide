@@ -17,6 +17,7 @@ If you use the AWS Config console to create a rule that is associated with a fun
 ```
 import boto3
 import json
+import datetime
 
 # Set to True to get the lambda to assume the Role attached on the Config Service (useful for cross-account).
 ASSUME_ROLE_MODE = False
@@ -184,6 +185,7 @@ If you use the AWS Config console to create a rule that is associated with a fun
 ```
 import boto3
 import json
+import datetime
 
 # Set to True to get the lambda to assume the Role attached on the Config Service (useful for cross-account).
 ASSUME_ROLE_MODE = False

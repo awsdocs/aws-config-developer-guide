@@ -43,16 +43,24 @@ You can create AWS Config Custom Policy rules from the AWS Management Console, A
       }
       ```
 
-   1. For **Trigger**, AWS Config Custom Policy rules are initiated by **Configuration changes**\. This option will be pre\-selected\.
+   1. For **Evaluation mode**, choose when in the resource creation and management process you want AWS Config to evaluate your resources\. Depending on the rule, AWS Config can evaluate your resource configurations before a resource has been provisioned, after a resource has been provisoned, or both\.
 
-      Specify one of the following options for **Scope of changes**:
-      +  **Resources** – When a resource that matches the specified resource type, or the type plus identifier, is created, changed, or deleted\.
-      +  **Tags** – When a resource with the specified tag is created, changed, or deleted\.
-      +  **All changes** – When a resource recorded by AWS Config is created, changed, or deleted\.
+      1. Choose **Turn on proactive evaluation** to evaluate the configuration settings of your resources before they are created or updated\.
 
-   1. If your rule includes parameters, in the **Rule parameters** section you can customize the values for the provided keys\. A parameter is an attribute that your resources must have before they are considered COMPLIANT with the rule\.
+         For proactive evaluation, there is only one type of trigger: **When configuration changes**\. This option is pre\-selected and does not show up in the console\. AWS Config runs evaluations for the rule when there is a change to a pre\-provisioned resource\.
 
-1. After you finish editing your rule, choose **Next**\. On the **Review and create** page, you can review all your editing choices before adding the rule to your AWS account\.
+      1. Choose **Turn on detective evaluation** to evaluate the configuration settings of your existing resources\.
+
+         For detective evaluation, AWS Config Custom Policy rules are initiated by **Configuration changes**\. This option will be pre\-selected\.
+         +  **Resources** – When a resource that matches the specified resource type, or the type plus identifier, is created, changed, or deleted\.
+         +  **Tags** – When a resource with the specified tag is created, changed, or deleted\.
+         +  **All changes** – When a resource recorded by AWS Config is created, changed, or deleted\.
+
+         AWS Config runs the evaluation when it detects a change to a resource that matches the rule's scope\. You can use the scope to constrain which resources initiate evaluations\. Otherwise, evaluations are initiated when there is a change to a post\-provisioned resource\.
+
+   1. For **Parameters**, you can customize the values for the provided keys if your rule includes parameters\. A parameter is an attribute that your resources must adhere to before they are considered compliant with the rule\.
+
+1. On the **Review and create** page, review all your selections before adding the rule to your AWS account\.
 
 1. When you finish reviewing your rules, choose **Add rule**\.
 

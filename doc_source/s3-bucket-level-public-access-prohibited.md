@@ -6,13 +6,13 @@ Checks if Amazon Simple Storage Service \(Amazon S3\) buckets are publicly acces
 
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS regions except China \(Beijing\), China \(Ningxia\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), Asia Pacific \(Jakarta\), Asia Pacific \(Osaka\) Region
+**AWS Region:** All supported AWS regions except Asia Pacific \(Jakarta\), Asia Pacific \(Osaka\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), Europe \(Spain\), Europe \(Zurich\) Region
 
 **Parameters:**
 
 excludedPublicBuckets \(Optional\)Type: CSV  
 Comma\-separated list of known allowed public Amazon S3 bucket names\.
 
-## AWS CloudFormation template<a name="w85aac12c32c17b9d483c15"></a>
+## AWS CloudFormation template<a name="w2aac12c31c27b9d483c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

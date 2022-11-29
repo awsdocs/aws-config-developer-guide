@@ -43,19 +43,13 @@ Authorization is required when using **Add individual account IDs** to select so
 You must be signed in to the management account or a registered delegated administrator and all the features must be enabled in your organization\. If the caller is a management account, AWS Config calls `EnableAwsServiceAccess` API to [enable integration](https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnableAWSServiceAccess.html) between AWS Config and AWS Organizations\. If the caller is a registered delegated administrator, AWS Config calls `ListDelegatedAdministrators` API to verify whether the caller is a valid delegated administrator\.   
 Ensure that the management account registers delegated administrator for AWS Config service principal name \(config\.amazonaws\.com\) before the delegated administrator creates an aggregator\. To register a delegated administrator, see [Register a Delegated Administrator](set-up-aggregator-cli.md#register-a-delegated-administrator-cli)\.
 
-     1. Choose **Choose IAM role** to create an IAM role or choose an existing IAM role from your account\.
+     You must assign an IAM role to allow AWS Config to call read\-only APIs for your organization\.
 
-        You must assign an IAM role to allow AWS Config to call read\-only APIs for your organization\.
-
-     1. Choose **Create a role** and type the IAM role name to create IAM role\.
-
-        OR
-
-        Choose **Choose a role from your account** to select an existing IAM role\.
+     1. Choose **Choose a role from your account** to select an existing IAM role\.
 **Note**  
 In the IAM console, attach the `AWSConfigRoleForOrganizations` managed policy to your IAM role\. Attaching this policy allows AWS Config to call AWS Organizations `DescribeOrganization`, `ListAWSServiceAccessForOrganization`, and `ListAccounts` APIs\. By default `config.amazonaws.com` is automatically specified as a trusted entity\.
 
-     1. Choose **Choose IAM role** to confirm your selection\.
+     1. Or, choose **Create a role** and type a name for your IAM role name to create IAM role\.
 
 1. For **Regions**, choose the regions for which you want to aggregate data\.
    + Select one region or multiple regions or all the AWS Regions\.

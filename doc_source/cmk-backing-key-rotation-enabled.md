@@ -9,12 +9,12 @@ Automatic key rotation is not supported for asymmetric KMS keys, HMAC KMS keys, 
 
 **Trigger type:** Periodic
 
-**AWS Region:** All supported AWS regions
+**AWS Region:** All supported AWS regions except Middle East \(UAE\), Europe \(Spain\), Europe \(Zurich\) Region
 
 **Parameters:**
 
 None  
 
-## AWS CloudFormation template<a name="w85aac12c32c17b9d113c17"></a>
+## AWS CloudFormation template<a name="w2aac12c31c27b9d113c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

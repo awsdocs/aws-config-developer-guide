@@ -6,7 +6,7 @@ Checks that Amazon Redshift automated snapshots are enabled for clusters\. The r
 
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS regions except China \(Ningxia\), Asia Pacific \(Jakarta\), Asia Pacific \(Osaka\), Europe \(Milan\), Africa \(Cape Town\) Region
+**AWS Region:** All supported AWS regions except Asia Pacific \(Jakarta\), Africa \(Cape Town\), Asia Pacific \(Osaka\), Europe \(Milan\), Europe \(Spain\), Europe \(Zurich\) Region
 
 **Parameters:**
 
@@ -16,6 +16,6 @@ Minimum value for the retention period\. Minimum value is 1\.
 MaxRetentionPeriod \(Optional\)Type: int  
 Maximum value for the retention period\. Maximum value is 35\.
 
-## AWS CloudFormation template<a name="w85aac12c32c17b9d447c15"></a>
+## AWS CloudFormation template<a name="w2aac12c31c27b9d447c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

@@ -6,7 +6,7 @@ The AWS CLI is a unified tool to manage your AWS services\. With just one tool t
 + [AWS Command Line Interface User Guide](https://docs.aws.amazon.com/cli/latest/userguide/)
 + [Getting Set Up with the AWS Command Line Interface](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-set-up.html) 
 
-If necessary, type `aws configure` to configure the AWS CLI to use an AWS Region where AWS Config conformance packs are available\.
+If necessary, type `aws configure` to configure the AWS CLI to use an AWS Region where AWS Config aggregators are available\.
 
 **Topics**
 + [Add an Aggregator Using Individual Accounts](#add-an-aggregator-cli)

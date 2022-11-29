@@ -6,13 +6,13 @@ Checks whether an AWS Lambda function is allowed access to an Amazon Virtual Pri
 
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS regions except China \(Ningxia\), Asia Pacific \(Jakarta\), Asia Pacific \(Osaka\) Region
+**AWS Region:** All supported AWS regions except Asia Pacific \(Jakarta\), Asia Pacific \(Osaka\), Europe \(Spain\), China \(Ningxia\), Europe \(Zurich\) Region
 
 **Parameters:**
 
 subnetIds \(Optional\)Type: String  
 Comma\-separated list of Subnet IDs that Lambda functions can be associated with\.
 
-## AWS CloudFormation template<a name="w85aac12c32c17b9d369c15"></a>
+## AWS CloudFormation template<a name="w2aac12c31c27b9d369c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

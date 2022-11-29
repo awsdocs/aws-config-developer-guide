@@ -84,3 +84,15 @@ To change the configuration recorder name, you must delete it and create a new c
   ```
   $ aws configservice delete-configuration-recorder --configuration-recorder-name default
   ```
+
+## Drift Detection for the Configuration Recorder<a name="drift-detection"></a>
+
+The `AWS::Config::ConfigurationRecorder` resource type is a *configuration item* \(CI\) for the configuration recorder that tracks all changes to the state of configuration recorder\. You can use this CI to check if the state of the configuration recorder differs, or has *drifted*, from its previous state\. For example, this CI tracks if there are updates to resource types that you have enabled AWS Config to track, if you have stopped or started the configuration recorder, or if you have deleted or uninstalled the configuration recorder\. A drifted configuration recorder indicates that you are not accurately detecting changes to your intended resource types\. If your configuration recorder has been drifted, this can result in false negative or false positive compliance results\.
+
+The `AWS::Config::ConfigurationRecorder` resource type is a system resource type of AWS Config and recording of this resource type is enabled by default in all supported Regions\. Recording for the `AWS::Config::ConfigurationRecorder` resource type comes with no additional charge\.
+
+**Drift detection for the configuration recorder is supported in the following Regions:**
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/stop-start-recorder.html)

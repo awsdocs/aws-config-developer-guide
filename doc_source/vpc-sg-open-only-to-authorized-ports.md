@@ -6,7 +6,7 @@ Checks whether any security groups with inbound 0\.0\.0\.0/0 have TCP or UDP por
 
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS regions except Asia Pacific \(Jakarta\), Asia Pacific \(Osaka\) Region
+**AWS Region:** All supported AWS regions except Asia Pacific \(Jakarta\), Asia Pacific \(Osaka\), Europe \(Spain\), Europe \(Zurich\) Region
 
 **Parameters:**
 
@@ -16,6 +16,6 @@ authorizedTcpPorts \(Optional\)Type: String
 authorizedUdpPorts \(Optional\)Type: String  
  Comma\-separated list of UDP ports authorized to be open to 0\.0\.0\.0/0\. Ranges are defined by dash, for example, "500,1020\-1025"\.
 
-## AWS CloudFormation template<a name="w85aac12c32c17b9d561c15"></a>
+## AWS CloudFormation template<a name="w2aac12c31c27b9d561c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

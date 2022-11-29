@@ -1,6 +1,6 @@
 # Notifications that AWS Config Sends to an Amazon SNS topic<a name="notifications-for-AWS-Config"></a>
 
-You can configure AWS Config to stream configuration changes and notifications to an Amazon SNS topic\. For example, when a resource is updated, you can get a notification sent to your email, so that you can view the changes\. You can also be notified when AWS Config evaluates your custom or managed rules against your resources\. 
+You can configure AWS Config to stream configuration changes and notifications to an Amazon SNS topic\. For example, when a resource is updated, you can get a notification sent to your email, so that you can view the changes\. You can also be notified when AWS Config evaluates your custom or managed rules against your resources\. For more information, see [Logging and Monitoring in AWS Config](https://docs.aws.amazon.com/config/latest/developerguide/security-logging-and-monitoring.html)\.
 
 AWS Config sends notifications for the following events:
 + Configuration item change for a resource\.

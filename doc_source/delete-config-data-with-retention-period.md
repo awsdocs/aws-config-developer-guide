@@ -32,4 +32,6 @@ In the AWS Management Console, if you do not select a data retention period, the
 
 To set a custom data retention period for configuration items select the checkbox\. You can select 1 year, 3 years, 5 years, or a custom period\. For a custom period, enter the number of days between 30 and 2557 days\.
 
+You can access **General Settings** from the AWS Config console by choosing **Settings** in the left navigation bar, and then choosing **Edit**\.
+
 ![\[AWS Config retention period example\]](http://docs.aws.amazon.com/config/latest/developerguide/images/retention-period-console.png)

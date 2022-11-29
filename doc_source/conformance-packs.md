@@ -16,7 +16,7 @@ Conformance packs are created by authoring a YAML template that contains the lis
 + [Managing Conformance Packs \(API\)](conformance-pack-apis.md)
 + [Managing Conformance Packs Across all Accounts in Your Organization](conformance-pack-organization-apis.md)
 + [Viewing the Compliance History Timeline for Conformance Packs](compliance-history-conformance-pack.md)
-+ [Troubleshooting](#w85aac14c35)
++ [Troubleshooting](#w2aac14c35)
 
 ## Region Support<a name="conformance-packs-regions"></a>
 
@@ -32,7 +32,7 @@ Deploying conformance packs across member accounts in an AWS Organization is sup
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/conformance-packs.html)
 
-## Troubleshooting<a name="w85aac14c35"></a>
+## Troubleshooting<a name="w2aac14c35"></a>
 
 If you get an error indicating that the conformance pack failed while creating, updating, or deleting it, you can check the status of your conformance pack\.
 
