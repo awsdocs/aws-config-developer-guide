@@ -1,6 +1,6 @@
 # secretsmanager\-secret\-unused<a name="secretsmanager-secret-unused"></a>
 
-Checks if AWS Secrets Manager secrets have been accessed within a specified number of days\. The rule is NON\_COMPLIANT if a secret has not been accessed in â€˜unusedForDaysâ€™ number of days\. The default value is 90 days\.
+Checks if AWS Secrets Manager secrets have been accessed within a specified number of days\. The rule is NON\_COMPLIANT if a secret has not been accessed in `unusedForDays` number of days\. The default value is 90 days\.
 
 **Identifier:** SECRETSMANAGER\_SECRET\_UNUSED
 
