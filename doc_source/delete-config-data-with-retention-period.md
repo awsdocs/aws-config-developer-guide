@@ -24,7 +24,7 @@ After you specify a retention period, AWS Config APIs no longer return `Configur
 
 **Note**  
 AWS Config cannot record your `ConfigurationItems` if recording is switched off\.
-AWS Config cannot record your `ConfigurationItems` if your IAM role is broken\.
+AWS Config cannot record your `ConfigurationItems` if your IAM role has insufficient permissions\. For more information, see [Permissions for the IAM Role Assigned to AWS Config](iamrole-permissions.md)\.
 
 ## Setting Data Retention Period in AWS Management Console<a name="delete-config-data-with-retention-period-console"></a>
 
