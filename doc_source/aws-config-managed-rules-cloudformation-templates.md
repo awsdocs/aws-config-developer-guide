@@ -1,5 +1,8 @@
 # Creating AWS Config Managed Rules With AWS CloudFormation Templates<a name="aws-config-managed-rules-cloudformation-templates"></a>
 
+**Important**  
+You must first create and start the AWS Config configuration recorder in order to create AWS Config managed rules with AWS CloudFormation\. For more information, see [Managing the Configuration Recorder](https://docs.aws.amazon.com/config/latest/developerguide/stop-start-recorder.html)\.
+
 For supported AWS Config managed rules, you can use the AWS CloudFormation templates to create the rule for your account or update an existing AWS CloudFormation stack\. A stack is a collection of related resources that you provision and update as a single unit\. When you launch a stack with a template, the AWS Config managed rule is created for you\. The templates create only the rule, and don't create additional AWS resources\.
 
 **Note**  

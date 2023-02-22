@@ -1,6 +1,6 @@
 # Supported Resource Types<a name="resource-config-reference"></a>
 
-AWS Config supports the following AWS resources types and resource relationships\. Some regions support a subset of these resource types\. What is available in the AWS Config Console in a given region is the source of truth regarding what is, or is not, supported in a given region\.
+AWS Config supports the following AWS resources types and resource relationships\. Some Regions support a subset of these resource types\. For information on which resource types are supported in which Regions, see [Resource Coverage by Region Availability](https://docs.aws.amazon.com/config/latest/developerguide/what-is-resource-config-coverage.html)\.
 
 Advanced Queries for AWS Config supports a subset of these resource types\. For a list of those supported resource types, see [Supported Resource Types for Advanced Queries](https://github.com/awslabs/aws-config-resource-schema/tree/master/config/properties/resource-types)\.
 
@@ -28,8 +28,6 @@ To learn more about how AWS Config integrates with Amazon API Gateway, see [Moni
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
-\*AWS Config support for Amazon CloudFront is available only in the US East \(N\. Virginia\) region\.
-
 ## Amazon CloudWatch<a name="amazoncloudwatch"></a>
 
 
@@ -38,6 +36,7 @@ To learn more about how AWS Config integrates with Amazon API Gateway, see [Moni
 | AWS Service | Resource Type Value | Relationship | Related Resource | 
 | --- | --- | --- | --- | 
 | Amazon CloudWatch | AWS::CloudWatch::Alarm | NA | NA | 
+| Amazon CloudWatch RUM | AWS::RUM::AppMonitor | NA | NA | 
 
 ## Amazon Detective<a name="amazondetective"></a>
 
@@ -80,9 +79,7 @@ To learn more about how AWS Config integrates with Amazon API Gateway, see [Moni
 
 | AWS Service | Resource Type Value | Relationship | Related Resource | 
 | --- | --- | --- | --- | 
-| Amazon Elastic Container Registry Public\* | AWS::ECR::PublicRepository | NA | NA | 
-
-\*AWS Config support for Amazon Elastic Container Registry Public is available only in the US East \(N\. Virginia\) Region\.
+| Amazon Elastic Container Registry Public | AWS::ECR::PublicRepository | NA | NA | 
 
 ## Amazon Elastic Container Service<a name="amazonelasticcontainerservice"></a>
 
@@ -117,16 +114,25 @@ New \(supported\): `arn:aws:ecs:region:aws_account_id:service/cluster-name/servi
 | --- | --- | --- | --- | 
 | Amazon EMR | AWS::EMR::SecurityConfiguration | NA | NA | 
 
-## Amazon EventBridge<a name="amazonemr"></a>
+## Amazon EventBridge<a name="amazoneventbridge"></a>
 
 
 ****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
-| AWS Service | Resource Type Value | Relationship | Related Resource | 
-| --- | --- | --- | --- | 
-| Amazon EventBridge | AWS::Events::EventBus | NA | NA | 
+## Amazon Fraud Detector<a name="amazonfrauddetector"></a>
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
 ## Amazon GuardDuty<a name="amazonguardduty"></a>
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
+
+## Amazon Interactive Video Service<a name="amazoninteractivevideoservice"></a>
 
 
 ****  
@@ -157,6 +163,21 @@ You may continue to see your data for `AWS::OpenSearch::Domain` under the existi
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
+## Amazon Lightsail<a name="amazonlightsail"></a>
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
+
+## Amazon MQ<a name="amazonmq"></a>
+
+
+****  
+
+| AWS Service | Resource Type Value | Relationship | Related Resource | 
+| --- | --- | --- | --- | 
+| Amazon MQ | AWS::AmazonMQ::Broker | NA | NA | 
+
 ## Amazon Managed Streaming for Apache Kafka<a name="amazonmsk"></a>
 
 
@@ -183,8 +204,6 @@ You may continue to see your data for `AWS::OpenSearch::Domain` under the existi
 
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
-
-\*AWS Config support for these Amazon Route 53 resource types are available only in the  US East \(N\. Virginia\) Region\.
 
 ## Amazon SageMaker<a name="amazonsagemaker"></a>
 
@@ -264,10 +283,7 @@ For more information about the attributes, see [Bucket Configuration Options](ht
 
 
 ****  
-
-| AWS Service | Resource Type Value | Relationship | Related Resource | 
-| --- | --- | --- | --- | 
-| AWS AppConfig | AWS::AppConfig::Application | NA | NA | 
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
 ## AWS AppSync<a name="awsappsync"></a>
 
@@ -331,6 +347,15 @@ For more information, see [Managing backups using backup plans](https://docs.aws
 | --- | --- | --- | --- | 
 | AWS CloudTrail | AWS::CloudTrail::Trail | NA | NA | 
 
+## AWS Cloud9<a name="awscloud9"></a>
+
+
+****  
+
+| AWS Service | Resource Type Value | Relationship | Related Resource | 
+| --- | --- | --- | --- | 
+| AWS Cloud9 | AWS::Cloud9::EnvironmentEC2 | NA | NA | 
+
 ## AWS Cloud Map<a name="awscloudmap"></a>
 
 
@@ -390,13 +415,20 @@ Recording for the `AWS::Config::ConformancePackCompliance` and `AWS::Config::Con
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
+## AWS Fault Injection Simulator<a name="awsfis"></a>
+
+
+****  
+
+| AWS Service | Resource Type Value | Relationship | Related Resource | 
+| --- | --- | --- | --- | 
+| AWS Fault Injection Simulator | AWS::FIS::ExperimentTemplate | NA | NA | 
+
 ## AWS Global Accelerator<a name="awsglobalaccelerator"></a>
 
 
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
-
-\*This resource is only available in US West \(Oregon\) Region\.
 
 ## AWS Glue<a name="awsglue"></a>
 
@@ -412,7 +444,7 @@ Recording for the `AWS::Config::ConformancePackCompliance` and `AWS::Config::Con
 
 AWS Config includes inline policies with the configuration details that it records\. For more information on inline policies, see [Managed policies and inline policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html#inline-policies) in the IAM User Guide\.
 
-## AWS IoT Events<a name="awsiotevents"></a>
+## AWS IoT<a name="awsiot"></a>
 
 
 ****  
@@ -436,13 +468,22 @@ AWS Config includes inline policies with the configuration details that it recor
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
+## AWS Resilience Hub<a name="awsresiliencehub"></a>
+
+
+****  
+
+| AWS Service | Resource Type Value | Relationship | Related Resource | 
+| --- | --- | --- | --- | 
+| AWS Resilience Hub | AWS::ResilienceHub::ResiliencyPolicy | NA | NA | 
+
 ## AWS Secrets Manager<a name="awssecretsmanager"></a>
 
 
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
-## AWS Service Catalog<a name="servicecatalog"></a>
+## Service Catalog<a name="servicecatalog"></a>
 
 
 ****  
@@ -453,8 +494,6 @@ AWS Config includes inline policies with the configuration details that it recor
 
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
-
-\*AWS Config support for `AWS::Shield::Protection` is available only in the US East \(N\. Virginia\) Region\. The `AWS::ShieldRegional::Protection` is available in all regions where AWS Shield is supported\. 
 
 ## AWS Step Functions<a name="awsstepfunctions"></a>
 
@@ -470,15 +509,20 @@ AWS Config includes inline policies with the configuration details that it recor
 
 \*To learn more about managed instance inventory, see [Recording Software Configuration for Managed Instances](recording-managed-instance-inventory.md)\.
 
+## AWS Transfer Family<a name="awstransferfamily"></a>
+
+
+****  
+
+| AWS Service | Resource Type Value | Relationship | Related Resource | 
+| --- | --- | --- | --- | 
+| AWS Transfer Family | AWS::Transfer::Workflow | NA | NA | 
+
 ## AWS WAF<a name="awswaf"></a>
 
 
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
-
-AWS Config support for the AWS WAF resource types are available only in the US East \(N\. Virginia\) Region\.
-
-AWS Config support for the AWS WAF Regional and AWS WAF V2 resource types are available in all the AWS Regions where AWS WAF and AWS WAF V2 are supported, respectively\.
 
 ## AWS X\-Ray<a name="awsxray"></a>
 
@@ -494,3 +538,12 @@ AWS Config support for the AWS WAF Regional and AWS WAF V2 resource types are av
 
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
+
+## AWS Elemental MediaPackage<a name="mediapackage"></a>
+
+
+****  
+
+| AWS Service | Resource Type Value | Relationship | Related Resource | 
+| --- | --- | --- | --- | 
+| AWS Elemental MediaPackage | AWS::MediaPackage::PackagingGroup | NA | NA | 

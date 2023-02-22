@@ -61,7 +61,7 @@ You can only manage remediations for non\-service linked AWS Config rules\. For 
 
    If a resource is still non\-compliant after auto remediation, you can set the rule to try auto remediation again\. Enter the desired retries and seconds\.
 **Note**  
-There are costs associated with running a remediation script multiple times\.
+There are costs associated with running a remediation script multiple times\. Retries only occur if remediation fails and work within the specified time period; for example, 5 retries in 300 seconds\.
 
 1. \(Optional\): If you want to pass the resource ID of noncompliant resources to the remediation action, choose **Resource ID parameter**\. If selected, at runtime that parameter is substituted with the ID of the resource to be remediated\.
 

@@ -12,11 +12,11 @@ AWS Config uses the service\-linked role named **AWSServiceRoleForConfig** – A
 
 The **AWSServiceRoleForConfig** service\-linked role trusts the `config.amazonaws.com` service to assume the role\.
 
-The permissions policy for the `AWSServiceRoleForConfig` role contains read\-only and write\-only permissions for AWS Config resources and read\-only permissions for resources in other services that AWS Config supports\. For more information, see [Supported Resource Types](resource-config-reference.md)\. 
+The permissions policy for the `AWSServiceRoleForConfig` role contains read\-only and write\-only permissions for AWS Config resources and read\-only permissions for resources in other services that AWS Config supports\. To view the managed policy **AWSServiceRoleForConfig**, see [AWS managed policies for AWS Config](https://docs.aws.amazon.com/config/latest/developerguide/security-iam-awsmanpol.html#security-iam-awsmanpol-AWSConfigServiceRolePolicy)\. For more information, see [Supported Resource Types](resource-config-reference.md)\. 
 
 You must configure permissions to allow an IAM entity \(such as a user, group, or role\) to create, edit, or delete a service\-linked role\. For more information, see [Service\-Linked Role Permissions](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html#service-linked-role-permissions) in the *IAM User Guide*\.
 
-To use a service\-linked role with AWS Config, you must configure permissions on your Amazon S3 bucket and Amazon SNS topic\. For more information, see [Required Permissions for the Amazon S3 Bucket When Using Service\-Linked Roles](s3-bucket-policy.md#required-permissions-using-servicelinkedrole) and [Required Permissions for the Amazon SNS Topic When Using Service\-Linked Roles](sns-topic-policy.md#required-permissions-snstopic-using-servicelinkedrole)\. 
+To use a service\-linked role with AWS Config, you must configure permissions on your Amazon S3 bucket and Amazon SNS topic\. For more information, see [Required Permissions for the Amazon S3 Bucket When Using Service\-Linked Roles](s3-bucket-policy.md#required-permissions-using-servicelinkedrole), [Required Permissions for the AWS KMS Key When Using Service\-Linked Roles \(S3 Bucket Delivery\)](s3-kms-key-policy.md#required-permissions-s3-kms-key-using-servicelinkedrole), and [Required Permissions for the Amazon SNS Topic When Using Service\-Linked Roles](sns-topic-policy.md#required-permissions-snstopic-using-servicelinkedrole)\. 
 
 ## Creating a Service\-Linked Role for AWS Config<a name="create-slr"></a>
 

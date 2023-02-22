@@ -18,13 +18,16 @@ When AWS Config sends configuration information \(history files and snapshots\) 
 
 Before AWS Config can deliver logs to your Amazon S3 bucket AWS Config checks whether the bucket exists and in which AWS region the bucket is located\. AWS Config attempts to call Amazon S3 [HeadBucket](https://docs.aws.amazon.com/AmazonS3/latest/API/API_RESTBucketHEAD.html) API to check whether the bucket exists and to get the bucket region\. If permissions are not provided to locate the bucket when the location check is performed, you see `AccessDenied` error in AWS CloudTrail logs\. However, the log delivery to your Amazon S3 bucket succeeds if you do not provide bucket location permissions\.
 
+**Note**  
+To allow permission for the Amazon S3 `HeadBucket` API, provide permission to perform the `s3:ListBucket` action as the Sid `AWSConfigBucketExistenceCheck`, mentioned in the step 6 below\.
+
 ## Required Permissions for the Amazon S3 Bucket When Using Service\-Linked Roles<a name="required-permissions-using-servicelinkedrole"></a>
 
 The AWS Config service\-linked role does not have permission to put objects to Amazon S3 buckets\. So, if you set up AWS Config using a service\-linked role, AWS Config will send configuration items as the AWS Config service principal instead\. You will need to attach an access policy, mentioned in step 6 below, to the Amazon S3 bucket in your own account or another account to grant AWS Config access to the Amazon S3 bucket\.
 
 ## Granting AWS Config access to the Amazon S3 Bucket<a name="granting-access-in-another-account"></a>
 
-Follow these steps to add an access policy to the Amazon S3 bucket in your own account or another account\. The access policy allows AWS Config to send configuration information to the Amazon S3 bucket\.
+Follow these steps to add an access policy to an Amazon S3 bucket in your own account or another account\. The access policy allows AWS Config to send configuration information to an Amazon S3 bucket\.
 
 1. Sign in to the AWS Management Console using the account that has the S3 bucket\.
 
@@ -93,7 +96,7 @@ As a security best practice when allowing AWS Config access to an Amazon S3 buck
 **Note**  
 AWS Config is owned by AWS and does not belong specifically to one of your AWS accounts or linked accounts within your AWS Organization\. This means that when AWS Config is sending configuration items as the AWS Config service principal \(such as when the IAM role that you assigned when you set up AWS Config doesn’t have `WRITE` access to the bucket or when you setup AWS Config to use a service\-linked role\), the service won't work with organization ID or organization units based conditions\.
 **Note**  
-When granting permissions to your IAM role instead of AWS Config service principal name \(SPN\), ensure that your IAM role has `PutObjectACL` permission on cross\-account bucket to avoid insufficient permission error\.  See sample IAM role policy at [ IAM Role Policy for Amazon S3 Bucket](iamrole-permissions.md#iam-role-policies-S3-bucket)\.
+When granting permissions to your IAM role instead of AWS Config service principal name \(SPN\), ensure that your IAM role has `PutObjectACL` permission on cross\-account bucket to avoid insufficient permission error\.  See sample IAM role policy at [ IAM Role Policy for your S3 Bucket](iamrole-permissions.md#iam-role-policies-S3-bucket)\.
 
 1. Substitute the following values in the bucket policy:
    + *targetBucketName* – The name of the Amazon S3 bucket to which AWS Config will deliver configuration items\.

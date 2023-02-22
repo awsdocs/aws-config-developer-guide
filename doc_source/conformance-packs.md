@@ -37,7 +37,7 @@ Deploying conformance packs across member accounts in an AWS Organization is sup
 If you get an error indicating that the conformance pack failed while creating, updating, or deleting it, you can check the status of your conformance pack\.
 
 ```
-aws configservice describe-conformance-pack-status --conformance-pack-name MyConformancePack1
+AWS configservice describe-conformance-pack-status --conformance-pack-name MyConformancePack1
 ```
 
 You should see output similar to the following\.

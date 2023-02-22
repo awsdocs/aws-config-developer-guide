@@ -8,7 +8,7 @@ To understand the behavior of retention period, let's take a look at the timelin
 
 In the following timeline, AWS Config records `ConfigurationItems` at the following dates\. For the purpose of this timeline, today is represented as May 24, 2018\.
 
-![\[AWS Config retention period example\]](http://docs.aws.amazon.com/config/latest/developerguide/images/retention-period-timeline.png)
+![\[AWS Config retention period example.\]](http://docs.aws.amazon.com/config/latest/developerguide/images/retention-period-timeline.png)
 
 The following table explains which `ConfigurationItems` are displayed on the AWS Config timeline based on selected retention period\.
 
@@ -32,6 +32,6 @@ In the AWS Management Console, if you do not select a data retention period, the
 
 To set a custom data retention period for configuration items select the checkbox\. You can select 1 year, 3 years, 5 years, or a custom period\. For a custom period, enter the number of days between 30 and 2557 days\.
 
-You can access **General Settings** from the AWS Config console by choosing **Settings** in the left navigation bar, and then choosing **Edit**\.
+The following image displays how you can access **General Settings** from the AWS Config console by choosing **Settings** in the left navigation bar, and then choosing **Edit**\.
 
-![\[AWS Config retention period example\]](http://docs.aws.amazon.com/config/latest/developerguide/images/retention-period-console.png)
+![\[AWS Config retention period example.\]](http://docs.aws.amazon.com/config/latest/developerguide/images/retention-period-console.png)

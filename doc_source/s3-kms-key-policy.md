@@ -1,10 +1,11 @@
 # Permissions for the KMS Key<a name="s3-kms-key-policy"></a>
 
-Create a policy for an Amazon S3 KMS Key that allows you to use KMS\-based encryption on objects delivered by AWS Config for S3 bucket delivery\.
+Use the information in this topic if you want to create a policy for an AWS KMS key for your S3 bucket that allows you to use KMS\-based encryption on objects delivered by AWS Config for S3 bucket delivery\.
 
 **Contents**
 + [Required Permissions for the KMS Key When Using IAM Roles \(S3 Bucket Delivery\)](#required-permissions-s3-kms-key-using-iam-role)
-+ [Required Permissions for the KMS Key When Using Service\-Linked Roles \(S3 Bucket Delivery\)](#required-permissions-s3-kms-key-using-servicelinkedrole)
++ [Required Permissions for the AWS KMS Key When Using Service\-Linked Roles \(S3 Bucket Delivery\)](#required-permissions-s3-kms-key-using-servicelinkedrole)
++ [Granting AWS Config access to the AWS KMS Key](#granting-access-s3-kms-key)
 
 ## Required Permissions for the KMS Key When Using IAM Roles \(S3 Bucket Delivery\)<a name="required-permissions-s3-kms-key-using-iam-role"></a>
 
@@ -37,9 +38,13 @@ If you set up AWS Config using an IAM role, you can attach the follow permission
 **Note**  
 If the IAM role, Amazon S3 bucket policy, or AWS KMS key do not provide appropriate access to AWS Config, then AWS Config’s attempt to send configuration information to the Amazon S3 bucket will fail\. In this event, AWS Config sends the information again, this time as the AWS Config service principal\. For this case, you must attach a permission policy, mentioned below, to the AWS KMS key to grant AWS Config access to use the key when delivering information to the Amazon S3 bucket\. 
 
-## Required Permissions for the KMS Key When Using Service\-Linked Roles \(S3 Bucket Delivery\)<a name="required-permissions-s3-kms-key-using-servicelinkedrole"></a>
+## Required Permissions for the AWS KMS Key When Using Service\-Linked Roles \(S3 Bucket Delivery\)<a name="required-permissions-s3-kms-key-using-servicelinkedrole"></a>
 
-If you set up AWS Config using a service\-linked role, you need to attach the following permission policy to the KMS Key\.
+The AWS Config service\-linked role does not have permission to access the AWS KMS key\. So, if you set up AWS Config using a service\-linked role, AWS Config will send information as the AWS Config service principal instead\. You will need to attach an access policy, mentioned below, to the AWS KMS key to grant AWS Config access to use the AWS KMS key when delivering information to the Amazon S3 bucket\.
+
+## Granting AWS Config access to the AWS KMS Key<a name="granting-access-s3-kms-key"></a>
+
+This policy allows AWS Config to use an AWS KMS key when delivering information to an Amazon S3 bucket
 
 ```
 {

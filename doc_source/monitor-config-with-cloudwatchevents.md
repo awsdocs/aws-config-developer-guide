@@ -69,7 +69,7 @@ Use the following steps to create an EventBridge rule that triggers on an event 
    + Choose **Config Configuration History Delivery Status** to get configuration history delivery status notifications\.
 
 1. Choose **Any message type** to receive notifications of any type\. Choose **Specific message type\(s\)** to receive the following types of notifications:
-   + If you choose **ConfigurationItemChangeNotification**, you receive messages when AWS Config successfully delivers the configuration snapshot to your Amazon S3 bucket\.
+   + If you choose **ConfigurationItemChangeNotification**, you receive messages when the configuration of a resource that AWS Config evaluates has changed\.
    + If you choose **ComplianceChangeNotification**, you receive messages when the compliance type of a resource that AWS Config evaluates has changed\.
    + If you choose **ConfigRulesEvaluationStarted**, you receive messages when AWS Config starts evaluating your rule against the specified resources\.
    + If you choose **ConfigurationSnapshotDeliveryCompleted**, you receive messages when AWS Config successfully delivers the configuration snapshot to your Amazon S3 bucket\.

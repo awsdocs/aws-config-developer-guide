@@ -35,6 +35,10 @@ This command uses the following options for the `--recording-group` parameter:
 **Pre\-existing AWS Config role**  
 If you have used an AWS service that uses AWS Config, such as AWS Security Hub or AWS Control Tower, and an AWS Config role has already been created, make sure that the IAM role that you use when setting up AWS Config keeps the same minimum permissions as the already created AWS Config role\. You must do this so that the other AWS service continues to run as expected\.   
 For example, if AWS Control Tower has an IAM role that allows AWS Config to read Amazon Simple Storage Service \(Amazon S3\) objects, make sure that the same permissions are granted within the IAM role you use when setting up AWS Config\. Otherwise, it may interfere with how AWS Control Tower operates\. For more information about IAM roles for AWS Config, see [AWS Identity and Access Management](https://docs.aws.amazon.com/config/latest/developerguide/security-iam.html)\. 
+**Note**  
+** High Number of AWS Config Evaluations**  
+You may notice increased activity in your account during your initial month recording with AWS Config when compared to subsequent months\. During the initial bootstrapping process, AWS Config goes through all the resources in your account that you have selected for AWS Config to record\.  
+If you are running ephemeral workloads, you may see increased activity from AWS Config as it records configuration changes associated with creating and deleting these temporary resources\. An ephemeral workload is a temporary use of computing resources that are loaded and run when needed\. Examples include Amazon Elastic Compute Cloud \(Amazon EC2\) spot instances, Amazon EMR jobs, and AWS Auto Scaling\. If you want to avoid the increased activity from running ephemeral workloads, you can run these types of workloads in a separate account with AWS Config turned off to avoid increased configuration recording and rule evaluations\.
 
 ## put\-delivery\-channel<a name="gs-cli-subscribe-put-delivery-channel"></a>
 

@@ -4,6 +4,8 @@ Checks instances for specified tenancy\. Specify AMI IDs to check instances that
 
 **Identifier:** DESIRED\_INSTANCE\_TENANCY
 
+**Resource Types:** AWS::EC2::Instance
+
 **Trigger type:** Configuration changes
 
 **AWS Region:** All supported AWS regions
@@ -19,6 +21,6 @@ The rule evaluates instances launched only from AMIs with the specified IDs\. Se
 hostId \(Optional\)Type: CSV  
 The IDs of the EC2 Dedicated Hosts on which the instances are meant to be launched\. Separate multiple Host IDs with commas\.
 
-## AWS CloudFormation template<a name="w2aac12c31c27b9d143c15"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d149c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

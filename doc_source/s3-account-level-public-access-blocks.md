@@ -7,12 +7,14 @@ If you are using this rule, ensure that S3 Block Public Access is enabled\. The 
 
 **Identifier:** S3\_ACCOUNT\_LEVEL\_PUBLIC\_ACCESS\_BLOCKS
 
+**Resource Types:** AWS::S3::AccountPublicAccessBlock
+
 **Trigger type:** Configuration changes \(current status not checked, only evaluated when changes generate new events\)
 
 **Note**  
 This rule is only triggered by configuration changes for the specific region where the S3 endpoint is located\. In all other regions, the rule is checked periodically\. If a change was made in another region, there could be a delay before the rule returns NON\_COMPLIANT\. 
 
-**AWS Region:** All supported AWS regions except Middle East \(Bahrain\), Asia Pacific \(Jakarta\), Middle East \(UAE\), Asia Pacific \(Osaka\), Europe \(Milan\), Europe \(Spain\), Europe \(Zurich\) Region
+**AWS Region:** All supported AWS regions except Middle East \(Bahrain\), Asia Pacific \(Jakarta\), Middle East \(UAE\), Asia Pacific \(Hyderabad\), Asia Pacific \(Osaka\), Asia Pacific \(Melbourne\), Europe \(Milan\), Europe \(Spain\), Europe \(Zurich\) Region
 
 **Parameters:**
 
@@ -28,6 +30,6 @@ BlockPublicAcls is enforced or not, default True
 RestrictPublicBuckets \(Optional\)Type: StringDefault: True  
 RestrictPublicBuckets is enforced or not, default True
 
-## AWS CloudFormation template<a name="w2aac12c31c27b9d473c19"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d483c21"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

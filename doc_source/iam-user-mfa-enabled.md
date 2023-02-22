@@ -6,12 +6,12 @@ Checks whether the AWS Identity and Access Management users have multi\-factor a
 
 **Trigger type:** Periodic
 
-**AWS Region:** All supported AWS regions except Middle East \(UAE\), Europe \(Spain\), Europe \(Zurich\) Region
+**AWS Region:** All supported AWS regions except Middle East \(UAE\), Asia Pacific \(Hyderabad\), Asia Pacific \(Melbourne\), Europe \(Spain\), Europe \(Zurich\) Region
 
 **Parameters:**
 
 None  
 
-## AWS CloudFormation template<a name="w2aac12c31c27b9d345c15"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d355c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

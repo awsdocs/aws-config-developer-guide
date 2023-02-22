@@ -4,7 +4,7 @@ Conformance packs provide a general\-purpose compliance framework designed to en
 
 The following provides a sample mapping between the NIST Privacy Framework and AWS managed Config rules\. Each AWS Config rule applies to a specific AWS resource, and relates to one or more NIST Privacy Framework controls\. A NIST Privacy Framework control can be related to multiple AWS Config rules\. Refer to the table below for more detail and guidance related to these mappings\. 
 
-**AWS Region:** All supported AWS Regions except Middle East \(Bahrain\)
+**AWS Region:** All AWS Regions where conformance packs are supported \([Region support](https://docs.aws.amazon.com/config/latest/developerguide/conformance-packs.html#conformance-packs-regions)\) except AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), and Middle East \(Bahrain\)
 
 
 ****  

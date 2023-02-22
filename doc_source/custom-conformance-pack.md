@@ -8,7 +8,7 @@ To make a custom conformance pack, follow the steps in the following **Customizi
 **AWS Config Managed Rules**  
 AWS Config Managed rules are predefined rules owned by AWS Config\.  
 **AWS Config Custom Rules**  
-AWS Config Custom Rules are rules that you can develop either with Guard or AWS Lambda\. Guard \([Guard GitHub Repository](https://github.com/aws-cloudformation/cloudformation-guard)\) is a policy\-as\-code language that allows you to write policies that are enforced by AWS Config rules\. AWS Lambda uses custom code that you upload to evaluate a custom rule\.
+AWS Config Custom Rules are rules that you create from scratch\. There are two ways to create AWS Config custom rules: with Lambda functions \([AWS Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-concepts.html#gettingstarted-concepts-function)\) and with Guard \([Guard GitHub Repository](https://github.com/aws-cloudformation/cloudformation-guard)\), a policy\-as\-code language\. AWS Config custom rules created with AWS Lambda are called *AWS Config Custom Lambda Rules* and AWS Config custom rules created with Guard are called *AWS Config Custom Policy Rules*\.
 
 ## Customizing the template<a name="create-yaml-file.title"></a>
 
@@ -57,7 +57,7 @@ For each parameter, `Type` must be specified\. `Type` can be one of "String", "i
 
 ** Resources**
 
-The `Resources` section lists the rules that are being added to your Custom Conformance Pack\. Add the following `Resources` block directly beneath your `Parameters` section, customizing it as needed and repeating for each rule\.
+The `Resources` section lists the rules that are being added to your Custom Conformance Pack\. Add the following `Resources` block directly beneath your `Parameters` section, customizing it as needed and repeating for each rule\. For more information on the specifications, see [AWS::Config::ConfigRule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html#aws-resource-config-configrule-syntax)\.
 
 ```
 Resources:

@@ -87,7 +87,7 @@ The ARN that you specify in this step must not include the `$LATEST` qualifier\.
 
       For **Key**, type **desiredInstanceType**\. For **Value**, type **t2\.micro**\.
 
-1. Choose **Next**\. On the **Review and create** page, verify the details about your rule, and choose **Add rule function**\. Your new rule displays on the **Rules**page\.
+1. Choose **Next**\. On the **Review and create** page, verify the details about your rule, and choose **Add rule function**\. Your new rule displays on the **Rules** page\.
 
    **Compliance** will display **Evaluating\.\.\.** until AWS Config receives evaluation results from your AWS Lambda function\. If the rule and the function are working as expected, a summary of the results appears after several minutes\. For example, a result of **2 noncompliant resource\(s\)** indicates that 2 of your instances are not t2\.micro instances, and a result of **Compliant** indicates that all instances are t2\.micro\. You can update the results with the refresh button\.
 

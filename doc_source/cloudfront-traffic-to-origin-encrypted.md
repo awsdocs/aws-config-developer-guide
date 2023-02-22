@@ -4,6 +4,8 @@ Checks if Amazon CloudFront distributions are encrypting traffic to custom origi
 
 **Identifier:** CLOUDFRONT\_TRAFFIC\_TO\_ORIGIN\_ENCRYPTED
 
+**Resource Types:** AWS::CloudFront::Distribution
+
 **Trigger type:** Configuration changes
 
 **AWS Region:** Only available in US East \(N\. Virginia\) Region
@@ -12,6 +14,6 @@ Checks if Amazon CloudFront distributions are encrypting traffic to custom origi
 
 None  
 
-## AWS CloudFormation template<a name="w2aac12c31c27b9c87c15"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9c93c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

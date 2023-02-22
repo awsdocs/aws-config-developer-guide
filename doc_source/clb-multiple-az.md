@@ -4,15 +4,17 @@ Checks if a Classic Load Balancer spans multiple Availability Zones \(AZs\)\. Th
 
 **Identifier:** CLB\_MULTIPLE\_AZ
 
+**Resource Types:** AWS::ElasticLoadBalancing::LoadBalancer
+
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS regions except China \(Beijing\), Middle East \(UAE\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), Europe \(Spain\), China \(Ningxia\), Europe \(Zurich\) Region
+**AWS Region:** All supported AWS regions except China \(Beijing\), Asia Pacific \(Hyderabad\), Asia Pacific \(Melbourne\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), Europe \(Spain\), China \(Ningxia\), Europe \(Zurich\) Region
 
 **Parameters:**
 
 minAvailabilityZones \(Optional\)Type: int  
 Desired minimum number of expected AZs\. Valid values are between 2 and 10, both inclusive\. Default value is 2 if parameter is not specified\.
 
-## AWS CloudFormation template<a name="w2aac12c31c27b9c65c15"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9c69c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

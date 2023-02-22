@@ -6,13 +6,13 @@ Checks if an AWS account is part of AWS Organizations\. The rule is NON\_COMPLIA
 
 **Trigger type:** Periodic
 
-**AWS Region:** All supported AWS regions except China \(Beijing\), Asia Pacific \(Jakarta\), Middle East \(UAE\), Asia Pacific \(Osaka\), Europe \(Spain\), Europe \(Zurich\) Region
+**AWS Region:** All supported AWS regions except China \(Beijing\), Asia Pacific \(Jakarta\), Middle East \(UAE\), Asia Pacific \(Hyderabad\), Asia Pacific \(Osaka\), Asia Pacific \(Melbourne\), Europe \(Spain\), Europe \(Zurich\) Region
 
 **Parameters:**
 
 MasterAccountId \(Optional\)Type: String  
 The master account ID for an AWS account\.
 
-## AWS CloudFormation template<a name="w2aac12c31c27b9b3c15"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9b3c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

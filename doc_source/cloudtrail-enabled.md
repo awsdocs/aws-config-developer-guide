@@ -19,6 +19,6 @@ SNS topic ARN for CloudTrail to use for notifications\.
 cloudWatchLogsLogGroupArn \(Optional\)Type: String  
 CloudWatch log group ARN for CloudTrail to send data to\.
 
-## AWS CloudFormation template<a name="w2aac12c31c27b9d107c15"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d113c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

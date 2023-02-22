@@ -2,9 +2,14 @@
 
 AWS Config continuously detects when any resource of a supported type is created, changed, or deleted\. AWS Config records these events as configuration items\. You can customize AWS Config to record changes for all supported types of resources or for only those types that are relevant to you\. To learn which types of resources AWS Config can record, see [Supported Resource Types](resource-config-reference.md)\.
 
+**Note**  
+** High Number of AWS Config Evaluations**  
+You may notice increased activity in your account during your initial month recording with AWS Config when compared to subsequent months\. During the initial bootstrapping process, AWS Config goes through all the resources in your account that you have selected for AWS Config to record\.  
+If you are running ephemeral workloads, you may see increased activity from AWS Config as it records configuration changes associated with creating and deleting these temporary resources\. An ephemeral workload is a temporary use of computing resources that are loaded and run when needed\. Examples include Amazon Elastic Compute Cloud \(Amazon EC2\) spot instances, Amazon EMR jobs, and AWS Auto Scaling\. If you want to avoid the increased activity from running ephemeral workloads, you can run these types of workloads in a separate account with AWS Config turned off to avoid increased configuration recording and rule evaluations\.
+
 ## Recording All Supported Resource Types<a name="select-resources-all"></a>
 
-By default, AWS Config records the configuration changes for all supported types of *regional resources* that AWS Config discovers in the region in which it is running\. Regional resources are tied to a region and can be used only in that region\. Examples of regional resources are EC2 instances and EBS volumes\.
+By default, AWS Config records the configuration changes for all current and future supported types of *regional resources* that AWS Config discovers in the region in which it is running\. When AWS Config adds support for a new type of regional resource, it starts recording resources of that type automatically\. Regional resources are tied to a region and can be used only in that region\. Examples of regional resources are Amazon EC2 instances and Amazon EBS volumes\.
 
 You can also have AWS Config record supported types of *global resources*\. Global resources are not tied to a specific region and can be used in all regions\. The global resource types that AWS Config supports include IAM users, groups, roles, and customer managed policies\.
 

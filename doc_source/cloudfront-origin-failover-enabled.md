@@ -4,6 +4,8 @@ Checks whether an origin group is configured for the distribution of at least 2 
 
 **Identifier:** CLOUDFRONT\_ORIGIN\_FAILOVER\_ENABLED
 
+**Resource Types:** AWS::CloudFront::Distribution
+
 **Trigger type:** Configuration changes
 
 **AWS Region:** Only available in US East \(N\. Virginia\) Region
@@ -12,6 +14,6 @@ Checks whether an origin group is configured for the distribution of at least 2 
 
 None  
 
-## AWS CloudFormation template<a name="w2aac12c31c27b9c83c15"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9c87c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

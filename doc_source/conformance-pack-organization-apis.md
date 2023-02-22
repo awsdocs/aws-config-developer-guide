@@ -14,6 +14,8 @@ If you deploy an organizational rule or conformance pack in an organization admi
 **Retry mechanism for new accounts added to an organization**  
 Deployment of existing organizational rules and conformance packs will only be retried for 7 hours after an account is added to your organization if a recorder is not available\. You are expected to create a recorder if one doesn't exist within 7 hours of adding an account to your organization\.
 
+To a deploy a conformance pack across an organization from the AWS console, use AWS Systems Manager\. For more information, see [Deploy AWS Config conformance packs](https://docs.aws.amazon.com/systems-manager/latest/userguide/quick-setup-cpack.html) in the AWS Systems Manager User Guide\.
+
 Ensure AWS Config recording is on before you use the following APIs to manage conformance pack rules across all AWS accounts within an organization:
 + [DeleteOrganizationConformancePack](https://docs.aws.amazon.com/config/latest/APIReference/API_DeleteOrganizationConformancePack.html), deletes the specified organization conformance pack and all of the config rules and remediation actions from all member accounts in that organization\.
 + [DescribeOrganizationConformancePacks](https://docs.aws.amazon.com/config/latest/APIReference/API_DescribeOrganizationConformancePacks.html), returns a list of organization conformance packs\.

@@ -7,6 +7,8 @@ The rule does not return NOT\_APPLICABLE if the origin is not an S3 bucket\.
 
 **Identifier:** CLOUDFRONT\_ORIGIN\_ACCESS\_IDENTITY\_ENABLED
 
+**Resource Types:** AWS::CloudFront::Distribution
+
 **Trigger type:** Configuration changes
 
 **AWS Region:** Only available in US East \(N\. Virginia\) Region
@@ -15,6 +17,6 @@ The rule does not return NOT\_APPLICABLE if the origin is not an S3 bucket\.
 
 None  
 
-## AWS CloudFormation template<a name="w2aac12c31c27b9c81c17"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9c85c19"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

@@ -6,7 +6,7 @@ The following provides a sample mapping between Spain Esquema Nacional de Seguri
 
 This sample conformance pack template contains mappings to controls within the Spain ENS Low framework, as last updated on 2020/10/23\.
 
-**AWS Region:** All supported AWS Regions except Middle East \(Bahrain\)
+**AWS Region:** All AWS Regions where conformance packs are supported \([Region support](https://docs.aws.amazon.com/config/latest/developerguide/conformance-packs.html#conformance-packs-regions)\) except AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), and Middle East \(Bahrain\)
 
 
 ****  

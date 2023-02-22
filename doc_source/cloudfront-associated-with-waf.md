@@ -4,6 +4,8 @@ Checks if Amazon CloudFront distributions are associated with either WAF or WAFv
 
 **Identifier:** CLOUDFRONT\_ASSOCIATED\_WITH\_WAF
 
+**Resource Types:** AWS::CloudFront::Distribution
+
 **Trigger type:** Configuration changes
 
 **AWS Region:** Only available in US East \(N\. Virginia\) Region
@@ -13,6 +15,6 @@ Checks if Amazon CloudFront distributions are associated with either WAF or WAFv
 wafWebAclIds \(Optional\)Type: CSV  
 Comma\-separated list of web ACL IDs for WAF or web ACL Amazon Resource Names \(ARNs\) for WAFV2\.
 
-## AWS CloudFormation template<a name="w2aac12c31c27b9c73c15"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9c77c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

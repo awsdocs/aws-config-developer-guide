@@ -6,7 +6,7 @@ The following provides a sample mapping between the Australian Cyber Security Ce
 
 This sample conformance pack template contains mappings to controls within the ACSC Essential 8, which was created by the Commonwealth of Australia and can be found at [ACSC \| Essential Eight](https://www.cyber.gov.au/acsc/view-all-content/essential-eight)\. Licensing of the framework under Creative Commons Attribution 4\.0 International Public License and copyright information for the framework \(including a disclaimer of warranties\) can be found at [ACSC \| Copyright](https://www.cyber.gov.au/acsc/copyright)\.
 
-**AWS Region:** All supported AWS Regions except Asia Pacific \(Hong Kong\), Middle East \(Bahrain\), and South America \(São Paulo\)
+**AWS Region:** All AWS Regions where conformance packs are supported \([Region support](https://docs.aws.amazon.com/config/latest/developerguide/conformance-packs.html#conformance-packs-regions)\) except AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), Asia Pacific \(Hong Kong\), Middle East \(Bahrain\), and South America \(São Paulo\)
 
 
 ****  

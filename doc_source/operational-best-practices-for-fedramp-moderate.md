@@ -6,7 +6,7 @@ The following provides a sample mapping between the Federal Risk and Authorizati
 
 This Conformance Pack was validated by AWS Security Assurance Services LLC \(AWS SAS\), which is a team of Payment Card Industry Qualified Security Assessors \(QSAs\), HITRUST Certified Common Security Framework Practitioners \(CCSFPs\), and compliance professionals certified to provide guidance and assessments for various industry frameworks\. AWS SAS professionals designed this Conformance Pack to enable a customer to align to a subset of the FedRAMP controls\.
 
-**AWS Region:** All supported AWS Regions except Middle East \(Bahrain\)
+**AWS Region:** All AWS Regions where conformance packs are supported \([Region support](https://docs.aws.amazon.com/config/latest/developerguide/conformance-packs.html#conformance-packs-regions)\) except AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), and Middle East \(Bahrain\)
 
 
 ****  

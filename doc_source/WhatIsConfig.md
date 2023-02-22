@@ -56,6 +56,6 @@ You can also use the historical configurations of your resources provided by AWS
 
 To analyze potential security weaknesses, you need detailed historical information about your AWS resource configurations, such as the AWS Identity and Access Management \(IAM\) permissions that are granted to your users, or the Amazon EC2 security group rules that control access to your resources\.
 
-You can use AWS Config to view the IAM policy that was assigned to an IAM user, group, or role at any time in which AWS Config was recording\. This information can help you determine the permissions that belonged to a user at a specific time: for example, you can view whether the user `John Doe` had permission to modify Amazon VPC settings on Jan 1, 2015\.
+You can use AWS Config to view the IAM policy that was assigned to a user, group, or role at any time in which AWS Config was recording\. This information can help you determine the permissions that belonged to a user at a specific time: for example, you can view whether the user `John Doe` had permission to modify Amazon VPC settings on Jan 1, 2015\.
 
 You can also use AWS Config to view the configuration of your EC2 security groups, including the port rules that were open at a specific time\. This information can help you determine whether a security group blocked incoming TCP traffic to a specific port\.

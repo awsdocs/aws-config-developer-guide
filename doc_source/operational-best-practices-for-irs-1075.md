@@ -4,6 +4,8 @@ Conformance packs provide a general\-purpose compliance framework designed to en
 
 The following provides a sample mapping between the IRS 1075 and AWS managed Config rules\. Each Config rule applies to a specific AWS resource, and relates to one or more IRS 1075 controls\. An IRS 1075 control can be related to multiple Config rules\. Refer to the table below for more detail and guidance related to these mappings\.
 
+**AWS Region:** All AWS Regions where conformance packs are supported \([Region support](https://docs.aws.amazon.com/config/latest/developerguide/conformance-packs.html#conformance-packs-regions)\) except AWS GovCloud \(US\-East\) and AWS GovCloud \(US\-West\)
+
 
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/operational-best-practices-for-irs-1075.html)

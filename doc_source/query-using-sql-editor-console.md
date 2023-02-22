@@ -6,7 +6,7 @@ You can either use AWS sample queries or you can create your own query called as
 
 You must have permissions for `config:SelectResourceConfig` and `config:SelectAggregateResourceConfig` APIs\. For more information, see [SelectResourceConfig](https://docs.aws.amazon.com/config/latest/APIReference/API_SelectResourceConfig.html) API and [SelectAggregateResourceConfig](https://docs.aws.amazon.com/config/latest/APIReference/API_SelectAggregateResourceConfig.html) API\.
 
-You must have permissions for the `AWSConfigUserAccess` IAM managed policy\. For more information, see [Granting Permissions for AWS Config Administration](grant-permissions-for-config-administration.md)\.
+You must have permissions for the `AWSConfigUserAccess` IAM managed policy\. For more information, see [Read\-only access to AWS Config](security_iam_id-based-policy-examples.md#read-only-config-permission)\.
 
 If you are using `AWSServiceRoleForConfig` \(service linked role\) or `AWSConfigRole`, you will have permissions to save a query\. If you are not using either of these roles, you must have permissions to `config:PutStoredQuery`, `config:GetStoredQuery`, `config:TagResource`, `config:UntagResource`, `config:ListTagsForResource` and `config:GetResources`\. 
 

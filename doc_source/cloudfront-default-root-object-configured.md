@@ -4,6 +4,8 @@ Checks if an Amazon CloudFront distribution is configured to return a specific o
 
 **Identifier:** CLOUDFRONT\_DEFAULT\_ROOT\_OBJECT\_CONFIGURED
 
+**Resource Types:** AWS::CloudFront::Distribution
+
 **Trigger type:** Configuration changes
 
 **AWS Region:** Only available in US East \(N\. Virginia\) Region
@@ -12,6 +14,6 @@ Checks if an Amazon CloudFront distribution is configured to return a specific o
 
 None  
 
-## AWS CloudFormation template<a name="w2aac12c31c27b9c77c15"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9c81c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

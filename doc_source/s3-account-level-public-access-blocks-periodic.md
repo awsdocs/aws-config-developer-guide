@@ -6,7 +6,7 @@ Checks if the required public access block settings are configured from account 
 
 **Trigger type:** Periodic
 
-**AWS Region:** All supported AWS regions except China \(Beijing\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), Europe \(Spain\), China \(Ningxia\), Europe \(Zurich\) Region
+**AWS Region:** All supported AWS regions except China \(Beijing\), Asia Pacific \(Hyderabad\), Asia Pacific \(Melbourne\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), Europe \(Spain\), China \(Ningxia\), Europe \(Zurich\) Region
 
 **Parameters:**
 
@@ -22,6 +22,6 @@ BlockPublicAcls is enforced or not, default True
 RestrictPublicBuckets \(Optional\)Type: String  
 RestrictPublicBuckets is enforced or not, default True
 
-## AWS CloudFormation template<a name="w2aac12c31c27b9d475c15"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d485c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

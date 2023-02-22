@@ -4,14 +4,16 @@ Checks if the default security group of any Amazon Virtual Private Cloud \(VPC\)
 
 **Identifier:** VPC\_DEFAULT\_SECURITY\_GROUP\_CLOSED
 
+**Resource Types:** AWS::EC2::SecurityGroup
+
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS regions except Asia Pacific \(Jakarta\), Europe \(Spain\), Europe \(Zurich\) Region
+**AWS Region:** All supported AWS regions except Asia Pacific \(Jakarta\), Asia Pacific \(Hyderabad\), Asia Pacific \(Melbourne\), Europe \(Spain\), Europe \(Zurich\) Region
 
 **Parameters:**
 
 None  
 
-## AWS CloudFormation template<a name="w2aac12c31c27b9d553c15"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d571c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

@@ -4,9 +4,9 @@ Conformance packs provide a general\-purpose compliance framework designed to en
 
  The following provides a sample mapping between the Center for Internet Security \(CIS\) Amazon Web Services Foundation v1\.4 Level 2 and AWS managed Config rules/AWS Config Process Checks\. Each Config rule applies to a specific AWS resource, and relates to one or more CIS Amazon Web Services Foundation v1\.4 Level 2 controls\. A CIS Amazon Web Services Foundation v1\.4 Level 2 control can be related to multiple Config rules\. Refer to the table below for more detail and guidance related to these mappings\.
 
-For more information about process checks, see [AWS Config Process Checks Within a Conformance Pack](process-checks.md)\.
+For more information about process checks, see [process\-checks](https://docs.aws.amazon.com/config/latest/developerguide/process-checks.html)\.
 
-**AWS Region:** All supported AWS Regions except Middle East \(Bahrain\)
+**AWS Region:** All AWS Regions where conformance packs are supported \([Region support](https://docs.aws.amazon.com/config/latest/developerguide/conformance-packs.html#conformance-packs-regions)\) except AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), and Middle East \(Bahrain\)
 
 
 ****  

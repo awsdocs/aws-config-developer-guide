@@ -1,13 +1,13 @@
 # Permissions for the IAM Role Assigned to AWS Config<a name="iamrole-permissions"></a>
 
-An AWS Identity and Access Management \(IAM\) role lets you define a set of permissions\. AWS Config assumes the role that you assign to it to write to your S3 bucket, publish to your SNS topic, and to make `Describe` or `List` API requests to get configuration details for your AWS resources\. For more information on IAM roles, see [IAM Roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/WorkingWithRoles.html) in the *IAM User Guide*\.
+An IAM role lets you define a set of permissions\. AWS Config assumes the role that you assign to it to write to your S3 bucket, publish to your SNS topic, and make `Describe` or `List` API requests to get configuration details for your AWS resources\. For more information about IAM roles, see [IAM Roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/WorkingWithRoles.html) in the *IAM User Guide*\.
 
 When you use the AWS Config console to create or update an IAM role, AWS Config automatically attaches the required permissions for you\. For more information, see [Setting Up AWS Config with the Console](gs-console.md)\.
 
 **Contents**
 + [Creating IAM Role Policies](#iam-role-policies)
   + [Adding an IAM Trust Policy to your Role](#iam-trust-policy)
-  + [IAM Role Policy for Amazon S3 Bucket](#iam-role-policies-S3-bucket)
+  + [IAM Role Policy for your S3 Bucket](#iam-role-policies-S3-bucket)
   + [IAM Role Policy for KMS Key](#iam-role-policies-S3-kms-key)
   + [IAM Role Policy for Amazon SNS Topic](#iam-role-policies-sns-topic)
   + [IAM Role Policy for Getting Configuration Details](#iam-role-policies-describe-apis)
@@ -21,7 +21,7 @@ If you are using the AWS CLI to set up AWS Config or you are updating an existin
 
 ### Adding an IAM Trust Policy to your Role<a name="iam-trust-policy"></a>
 
-You can create an IAM trust policy that enables AWS Config to assume a role and use it to track your resources\. For more information about trust policies, see [Assuming a Role](https://docs.aws.amazon.com/IAM/latest/UserGuide/roles-assume-role.html) in the* IAM User Guide*\.
+You can create an IAM trust policy that enables AWS Config to assume a role and use it to track your resources\. For more information about trust policies, see [Roles terms and concepts](https://docs.aws.amazon.com/IAM/latest/UserGuide/d_roles_terms-and-concepts.html) in the* IAM User Guide*\.
 
 The following is an example trust policy for AWS Config roles:
 
@@ -50,9 +50,9 @@ You can use the `AWS:SourceAccount` condition in the IAM Role Trust relationship
 
 AWS Config also supports the `AWS:SourceArn` condition which restricts the Config service principal to only assume the IAM Role when performing operations on behalf of the owning account\. When using the AWS Config service principal, the `AWS:SourceArn` property will always be set to `arn:aws:config:sourceRegion:sourceAccountID:*` where `sourceRegion` is the region of the configuration recorder and `sourceAccountID` is the ID of the account containing the configuration recorder\. For more information on the AWS Config Configuration Recorder see [Managing the Configuration Recorder](https://docs.aws.amazon.com/config/latest/developerguide/stop-start-recorder.html)\. For example, add the following condition restrict the Config service principal to only assume the IAM Role only on behalf of a configuration recorder in the `us-east-1` region in the account `123456789012`: `"ArnLike": {"AWS:SourceArn": "arn:aws:config:us-east-1:123456789012:*"}`\.
 
-### IAM Role Policy for Amazon S3 Bucket<a name="iam-role-policies-S3-bucket"></a>
+### IAM Role Policy for your S3 Bucket<a name="iam-role-policies-S3-bucket"></a>
 
-The following example policy grants AWS Config permissions to access your Amazon S3 bucket:
+The following example policy grants AWS Config permission to access your S3 bucket:
 
 ```
 {
@@ -86,7 +86,7 @@ The following example policy grants AWS Config permissions to access your Amazon
 
 ### IAM Role Policy for KMS Key<a name="iam-role-policies-S3-kms-key"></a>
 
-The following example policy grants AWS Config permissions to use KMS\-based encryption on new objects for S3 bucket delivery:
+The following example policy grants AWS Config permission to use KMS\-based encryption on new objects for S3 bucket delivery:
 
 ```
 {
@@ -106,7 +106,7 @@ The following example policy grants AWS Config permissions to use KMS\-based enc
 
 ### IAM Role Policy for Amazon SNS Topic<a name="iam-role-policies-sns-topic"></a>
 
-The following example policy grants AWS Config permissions to access your SNS topic:
+The following example policy grants AWS Config permission to access your SNS topic:
 
 ```
 {

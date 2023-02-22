@@ -6,7 +6,7 @@ The following provides a sample mapping between the Australian Prudential Regula
 
 This sample conformance pack template contains mappings to controls within APRA CPG 234 2019, which was created by the Commonwealth of Australia and can be found at [Prudential Practice Guide: CPG 234 Information Security](https://www.apra.gov.au/sites/default/files/cpg_234_information_security_june_2019_1.pdf)\. Licensing of the framework under Creative Commons Australia Attribution 3\.0 Licence and copyright information for the framework \(including a disclaimer of warranties\) can be found at [APRA \| Copyright](https://www.apra.gov.au/copyright)\.
 
-**AWS Region:** All supported AWS Regions except Middle East \(Bahrain\)
+**AWS Region:** All AWS Regions where conformance packs are supported \([Region support](https://docs.aws.amazon.com/config/latest/developerguide/conformance-packs.html#conformance-packs-regions)\) except AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), and Middle East \(Bahrain\)
 
 
 ****  

@@ -6,7 +6,7 @@ The following provides a sample mapping between the National Bank of Cambodia’
 
 This sample conformance pack template contains mappings to controls within the National Bank of Cambodia’s \(NBC\) Technology Risk Management \(TRM\) Guidelines framework, which can be accessed here: [National Bank of Cambodia: Technology Risk Mangement Guidelines](https://www.nbc.org.kh/download_files/publication/itguideline_eng/NBC-Risk-Management-Guidelines-July%202019.pdf)\.
 
-**AWS Region:** All supported AWS Regions except Middle East \(Bahrain\)
+**AWS Region:** All AWS Regions where conformance packs are supported \([Region support](https://docs.aws.amazon.com/config/latest/developerguide/conformance-packs.html#conformance-packs-regions)\) except AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), and Middle East \(Bahrain\)
 
 
 ****  

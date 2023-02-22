@@ -28,7 +28,7 @@ After setting up, AWS Config will evaluate your AWS resources against the rules 
 ## <a name="gs-console-settings"></a>
 
 1. On the **Settings** page, for **Resource types to record**, specify all the resource types you want AWS Config to record\. These resource types are AWS resources or third\-party resources or custom resources\. For more information about the following options, see [Selecting Which Resources AWS Config Records](select-resources.md)\.
-   + **Record all resources supported in this region**
+   + **Record all current and future resources supported in this region**
      + AWS Config records configuration changes for supported AWS resource types as well as third\-party resource types registered in the AWS CloudFormation registry\. AWS Config automatically starts recording new supported AWS resource types\. AWS Config also automatically starts recording third\-party resources and custom resource types that are managed through AWS CloudFormation\. For more information, see [Supported Resource Types](https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)\.
      + Choose **Include global resources** to record supported global resources types \(such as IAM resources\)\. AWS Config automatically starts recording new supported global resource types\.
 **Important**  
@@ -36,6 +36,10 @@ Global resource types onboarded to AWS Config recording after February 2022 will
 Supported global resource types onboarded before February 2022 such as `AWS::IAM::Group`, `AWS::IAM::Policy`, `AWS::IAM::Role`, `AWS::IAM::User` remain unchanged, and they will continue to deliver Configuration Items in all supported regions in AWS Config\. The change will only affect new global resource types onboarded after February 2022\.
    + **Record specific resource types**
      + AWS Config records configuration changes for only the resource types that you specify\.
+**Note**  
+** High Number of AWS Config Evaluations**  
+You may notice increased activity in your account during your initial month recording with AWS Config when compared to subsequent months\. During the initial bootstrapping process, AWS Config goes through all the resources in your account that you have selected for AWS Config to record\.  
+If you are running ephemeral workloads, you may see increased activity from AWS Config as it records configuration changes associated with creating and deleting these temporary resources\. An ephemeral workload is a temporary use of computing resources that are loaded and run when needed\. Examples include Amazon Elastic Compute Cloud \(Amazon EC2\) spot instances, Amazon EMR jobs, and AWS Auto Scaling\. If you want to avoid the increased activity from running ephemeral workloads, you can run these types of workloads in a separate account with AWS Config turned off to avoid increased configuration recording and rule evaluations\.
 
 1. For **AWS Config role**, choose either an existing AWS Config service\-linked role or choose a role from your account\. 
    + Service\-linked roles are predefined by AWS Config and include all the permissions that the service requires to call other AWS services\.

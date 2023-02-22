@@ -15,14 +15,16 @@ This rule does not evaluate changes to account level public block access\. To ch
 
 **Identifier:** S3\_BUCKET\_PUBLIC\_WRITE\_PROHIBITED
 
+**Resource Types:** AWS::S3::Bucket
+
 **Trigger type:** Configuration changes and Periodic
 
-**AWS Region:** All supported AWS regions except Middle East \(UAE\), Europe \(Spain\), Europe \(Zurich\) Region
+**AWS Region:** All supported AWS regions except Asia Pacific \(Hyderabad\), Asia Pacific \(Melbourne\), Europe \(Spain\), Europe \(Zurich\) Region
 
 **Parameters:**
 
 None  
 
-## AWS CloudFormation template<a name="w2aac12c31c27b9d493c25"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d503c27"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

@@ -4,6 +4,8 @@ Checks if running instances are using specified AMIs\. Specify the tags that ide
 
 **Identifier:** APPROVED\_AMIS\_BY\_TAG
 
+**Resource Types:** AWS::EC2::Instance
+
 **Trigger type:** Configuration changes
 
 **AWS Region:** All supported AWS regions
@@ -13,6 +15,6 @@ Checks if running instances are using specified AMIs\. Specify the tags that ide
 amisByTagKeyAndValueType: StringMapDefault: tag\-key:tag\-value,other\-tag\-key  
 The AMIs by tag \(comma\-separated list up to 10; for example,`tag-key:tag-value`; i\.e\. `tag-key1` matches AMIs with `tag-key1`,`tag-key2:value2` matches `tag-key2` having value2\)\.
 
-## AWS CloudFormation template<a name="w2aac12c31c27b9c29c15"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9c33c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

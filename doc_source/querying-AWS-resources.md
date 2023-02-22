@@ -31,6 +31,9 @@ Advanced queries supports a subset of the resource types supported by AWS Config
 
 ## Limitations<a name="query-limitations"></a>
 
+**Note**  
+Advance query does not support querying resources which have not been configured to be recorded by the configuration recorder\. AWS Config creates Configuration Items \(CIs\) with `ResourceNotRecorded` in the `configurationItemStatus` when a resource has been discovered but is not configured to be recorded by the configuration recorder\. While an aggregator will aggregate these CIs, advanced query does not support querying CIs with `ResourceNotRecorded`\. Update your recorder settings to enable recording of the resource types that you want to query\.
+
 As a subset of SQL `SELECT`, the query syntax has following limitations:
 + No support for `ALL`, `AS`, `DISTINCT`, `FROM`, `HAVING`, `JOIN`, and `UNION` keywords in a query\. `NULL` value queries are not supported\.
 + No support for querying on third\-party resources\. Third\-party resources retrieved using advanced queries will have the configuration field set as `NULL`\.

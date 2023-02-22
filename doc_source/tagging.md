@@ -29,3 +29,6 @@ Tag based access controls are available for three resources `ConfigurationAggreg
 + [ListTagsForResource](https://docs.aws.amazon.com/config/latest/APIReference/API_ListTagsForResource.html)
 + [TagResource](https://docs.aws.amazon.com/config/latest/APIReference/API_TagResource.html)
 + [UntagResource](https://docs.aws.amazon.com/config/latest/APIReference/API_UntagResource.html)
+
+**Note**  
+`TagResource` and `UntagResource` require certain AWS Identity and Access Management \(IAM\) permissions to control access\. For more information, see [Controlling access based on tag keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_tags.html#access_tags_control-tag-keys) in the IAM User Guide\.

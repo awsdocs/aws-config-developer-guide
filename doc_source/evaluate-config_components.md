@@ -12,7 +12,7 @@ This page discusses the structure of rule definitions and best practices on how 
 + [Rule definitions](#evaluate-config_components_structure)
 + [Rule metadata](#evaluate-config_components_definitions)
 + [Rule structure](#evaluate-config_components_logic)
-  + [Writing rules](#w2aac12c25c19b5)
+  + [Writing rules](#w2aac12c27c19b5)
   + [Rule logic](#evaluate-config_rule-logic)
 
 ## Rule definitions<a name="evaluate-config_components_structure"></a>
@@ -87,13 +87,13 @@ The defaultName is the name that instances of a rule will get by default\.
 The rule description provides context for what the rule evaluates\. The AWS Config Console has a limit of 256 characters\. As a best practice, the rule description should be with “Checks if” and include a description of the NON\_COMPLIANT scenario\. Service Names should be written in full beginning with AWS or Amazon when first mentioned in the rule description\. For example, AWS CloudTrail or Amazon CloudWatch instead of CloudTrail or CloudWatch for first use\. Services names can be abbreviated after subsequent reference\. 
 
 **scope**  
-The scope determines which resource types the rule targets\. This is required if the rule is change\-triggered or is both change\-triggered and periodic\. It is optional for periodic rules\. For a list of supported resource types, see [Supported Resource Types](https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources.html)\.
+The scope determines which resource types the rule targets\. For a list of supported resource types, see [Supported Resource Types](https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources.html)\.
 
 **sourceDetails**  
-The sourceDetails determine the rule's trigger type when detective evaluation occurs\. Use detective evaluation to evaluate the configuration settings of your existing resources with either change\-triggered or periodic rules\.  
+The sourceDetails determine the rule's trigger type\. There are two trigger types: configuration changes for *change\-triggered rules* and periodic for *periodic rules*\. You can also configure your rule to use both triggered types in what is called a *hybrid rule*\. For more information, see [Trigger types](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config-rules.html#aws-config-rules-trigger-types)  
  `ConfigurationItemChangeNotification` and `OversizedConfigurationItemChangeNotification` are used for change\-triggered rules\. When AWS Config detects a configuration change for a resource, it sends a configuration item notification\. If the notification exceeds the maximum size allowed by Amazon Simple Notification Service \(Amazon SNS\), the notification includes a brief summary of the configuration item\. You can view the complete notification in the S3 bucket location specified in the s3BucketLocation field\.  
-`ScheduleNotification` is used for periodic rules\. If a rule is evaluated both periodically and by configuration changes, all three types of notifications can be used\.  
-Change\-triggered rules can also be initiated by proactive evaluation\. In the rule definition, this metadata is stored in **supportedEvaluationModes**\. Proactive evaluation allows you to evaluate the configuration settings of your resources before they are created or updated\. For more information, see [Evaluation Mode and Trigger Types for AWS Config Rules](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config-rules.html)\.
+`ScheduleNotification` is used for periodic rules\.  
+If there is a hybrid rule that is evaluated both periodically and by configuration changes, all three types of notifications can be used\.
 
 **compulsoryInputParameterDetails**  
 The compulsoryInputParameterDetails are used for parameters that are required for a rule to do its evaluation\. For example, the `access-keys-rotated` managed rule includes `maxAccessKeyAge` as a required parameter\. If a parameter is required, it will not be marked as \(Optional\)\. For each parameter, a type must be specified\. Type can be one of "String", "int", "double", "CSV", "boolean" and "StringMap"\.
@@ -105,15 +105,18 @@ The optionalInputParameterDetails are used for parameters that are optional for 
 Labels can be used to tag rules\. For example, the `codedeploy-auto-rollback-monitor-enabled`, `codedeploy-ec2-minimum-healthy-hosts-configured`, and `codedeploy-lambda-allatonce-traffic-shift-disabled` managed rules all include the label `CodeDeploy`\. You can use labels to help manage, search for, and filter rules\.
 
 **supportedEvaluationModes**  
-The supportedEvaluationModes determines when resources will be evaluated, either prior to or after a resource has been provisioned\.  
- `DETECTIVE` is used to evaluate resources which have already been provisioned\. This allows you to evaluate the configuration settings of your existing resources\. `PROACTIVE` is used to evaluate resources prior to resource provisioning\. This allows you to evaluate the configuration settings of your resources before they are created or updated\. Proactive evaluation is only available for change\-triggered rules\.  
-You can specify the supportedEvaluationModes to `DETECTIVE`, `PROACTIVE`, or both `DETECTIVE` and `PROACTIVE`\. You must specify an evaluation mode and this field cannot be remain empty\.
+The supportedEvaluationModes determines when resources will be evaluated, either before a resource has been deployed or after a resource has been deployed\.  
+ `DETECTIVE` is used to evaluate resources which have already been deployed\. This allows you to evaluate the configuration settings of your existing resources\. `PROACTIVE` is used to evaluate resources before they have been deployed\.   
+This allows you to evaluate whether a set of resource properties, if used to define an AWS resource, would be COMPLIANT or NON\_COMPLIANT given the set of proactive rules that you have in your account in your Region\.   
+You can specify the supportedEvaluationModes to `DETECTIVE`, `PROACTIVE`, or both `DETECTIVE` and `PROACTIVE`\. You must specify an evaluation mode and this field cannot be remain empty\.  
+For more information, see [Evaluation modes](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config-rules.html#aws-config-rules-evaluation-modes)\. For a list of managed rules that support proactive evaluation, see [List of AWS Config Managed Rules by Evaluation Mode](https://docs.aws.amazon.com/config/latest/developerguide/managed-rules-by-evaluation-mode.html)\.  
+Proactive rules do not remediate resources that are flagged as NON\_COMPLIANT or prevent them from being deployed\.
 
 ## Rule structure<a name="evaluate-config_components_logic"></a>
 
 This section contains information on using the AWS Config Rules Development Kit \(RDK\) and AWS Config Rules Development Kit Library \(RDKlib\)\. For more information on the RDK or RDKlib, see the [aws\-config\-rdk ](https://github.com/awslabs/aws-config-rdk) and [aws\-config\-rdklib](https://github.com/awslabs/aws-config-rdklib) GitHub Repositories\.
 
-### Writing rules<a name="w2aac12c25c19b5"></a>
+### Writing rules<a name="w2aac12c27c19b5"></a>
 
 #### Prerequisites<a name="rule-logic-prereqs"></a>
 

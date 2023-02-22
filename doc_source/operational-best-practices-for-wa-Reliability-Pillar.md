@@ -4,7 +4,7 @@ Conformance packs provide a general\-purpose compliance framework designed to en
 
 The following provides a sample mapping between Amazon Web Services’ Well\-Architected Framework Reliability Pillar and AWS managed Config rules\. Each Config rule applies to a specific AWS resource, and relates to one or more of the pillar’s design principles\. A Well\-Architected Framework category can be related to multiple Config rules\. Refer to the table below for more detail and guidance related to these mappings\.
 
-**AWS Region:** All supported AWS Regions except Middle East \(Bahrain\)
+**AWS Region:** All AWS Regions where conformance packs are supported \([Region support](https://docs.aws.amazon.com/config/latest/developerguide/conformance-packs.html#conformance-packs-regions)\) except AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), and Middle East \(Bahrain\)
 
 
 ****  

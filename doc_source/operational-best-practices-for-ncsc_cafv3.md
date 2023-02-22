@@ -6,7 +6,7 @@ The following provides a sample mapping between UK National Cyber Security Centr
 
 This sample conformance pack template contains mappings to controls within the UK NCSC CAF \([National Cyber Security Centre \| NCSC CAF guidance](https://www.ncsc.gov.uk/collection/caf/cyber-assessment-framework)\), with such public sector information licensed under the Open Government Licence v3\.0\. The Open Government Licence should can be accessed here: [Open Government Licence for public sector information](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)\. 
 
-**AWS Region:** All supported AWS Regions except Middle East \(Bahrain\)
+**AWS Region:** All AWS Regions where conformance packs are supported \([Region support](https://docs.aws.amazon.com/config/latest/developerguide/conformance-packs.html#conformance-packs-regions)\) except AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), and Middle East \(Bahrain\)
 
 
 ****  

@@ -4,7 +4,7 @@ Conformance packs provide a general\-purpose compliance framework designed to en
 
 The following provides a sample mapping between the Germany Cloud Computing Compliance Criteria Catalog \(C5\) and AWS managed Config rules\. Each Config rule applies to a specific AWS resource, and relates to one or more Germany C5 controls\. A Germany C5 control can be related to multiple Config rules\. Refer to the table below for more detail and guidance related to these mappings\.
 
-**AWS Region:** All supported AWS Regions except South America \(São Paulo\), Asia Pacific \(Hong Kong\), and Middle East \(Bahrain\)
+**AWS Region:** All AWS Regions where conformance packs are supported \([Region support](https://docs.aws.amazon.com/config/latest/developerguide/conformance-packs.html#conformance-packs-regions)\) except AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), South America \(São Paulo\), Asia Pacific \(Hong Kong\), and Middle East \(Bahrain\)
 
 
 ****  

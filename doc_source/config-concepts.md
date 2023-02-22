@@ -14,6 +14,8 @@ AWS Config provides a detailed view of the resources associated with your AWS ac
 + [AWS Config Rules](#aws-config-rules)
   + [AWS Config Managed Rules](#aws-config-managed-rules)
   + [AWS Config Custom Rules](#aws-config-custom-rules)
+  + [Trigger Types](#aws-config-rules-trigger)
+  + [Evaluation modes](#aws-config-rules-proactive-detective)
 + [Multi\-Account Multi\-Region Data Aggregation](#multi-account-multi-region-data-aggregation)
   + [Source Account](#source-accounts)
   + [Source Region](#source-region)
@@ -72,23 +74,55 @@ For more information, see [Supported Resource Types](resource-config-reference.m
 
 ## AWS Config Rules<a name="aws-config-rules"></a>
 
-An AWS Config rule represents your desired configuration settings for specific AWS resources or for an entire AWS account\. If a resource does not pass a rule check, AWS Config flags the resource and the rule as noncompliant, and AWS Config notifies you through Amazon SNS\.
-
-After you activate a rule, AWS Config compares your resources to the conditions of the rule\. After this initial evaluation, AWS Config continues to run evaluations each time one is triggered\. The evaluation triggers are defined as part of the rule, and they can include the following types:
-+ Configuration changes – AWS Config triggers the evaluation when any resource that matches the rule's scope changes in configuration\. The evaluation runs after AWS Config sends a configuration item change notification\.
-+ Periodic – AWS Config runs evaluations for the rule at a frequency that you choose \(for example, every 24 hours\)\.
+An AWS Config rule represents your desired configuration settings for specific AWS resources or for an entire AWS account\. If a resource does not pass a rule check, AWS Config flags the resource and the rule as *noncompliant*, and AWS Config notifies you through Amazon SNS\. The following are the possible evaluation results for an AWS Config rule:
++ `COMPLIANT` \- the rule passes the conditions of the compliance check\.
++ `NON_COMPLIANT` \- the rule fails the conditions of the compliance check\.
++ `ERROR` \- the one of the required/optional parameters is not valid, not of the correct type, or is formatted incorrectly\.
++ `NOT_APPLICABLE` \- used to filter out resources that the logic of the rule cannot be applied to\. For example, the [alb\-desync\-mode\-check](https://docs.aws.amazon.com/config/latest/developerguide/alb-desync-mode-check.html) rule only checks Application Load Balancers, and ignores Network Load Balancers and Gateway Load Balancers\.
 
 There are two types of rules: AWS Config Managed Rules and AWS Config Custom Rules\. For more information about the structure of rule definitions and rule metadata, see [Components of an AWS Config Rule](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_components.html)\.
 
 ### AWS Config Managed Rules<a name="aws-config-managed-rules"></a>
 
-Managed rules are predefined, customizable rules created by AWS Config\. For a list of managed rules, see [List of AWS Config Managed Rules](https://docs.aws.amazon.com/config/latest/developerguide/managed-rules-by-aws-config.html)\.
+AWS Config Managed Rules are predefined, customizable rules created by AWS Config\. For a list of managed rules, see [List of AWS Config Managed Rules](https://docs.aws.amazon.com/config/latest/developerguide/managed-rules-by-aws-config.html)\.
 
 ### AWS Config Custom Rules<a name="aws-config-custom-rules"></a>
 
-Custom rules are rules that you can create using either Guard or AWS Lambda functions\. Guard \([Guard GitHub Repository](https://github.com/aws-cloudformation/cloudformation-guard)\) is a policy\-as\-code language that allows you to write policies that are enforced by AWS Config Custom Policy rules\. AWS Lambda uses custom code that you upload to evaluate a custom rule\. It is invoked by events that are published to it by an event source, which AWS Config invokes when the custom rule is initiated\.
+AWS Config Custom Rules are rules that you create from scratch\. There are two ways to create AWS Config custom rules: with Lambda functions \([AWS Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-concepts.html#gettingstarted-concepts-function)\) and with Guard \([Guard GitHub Repository](https://github.com/aws-cloudformation/cloudformation-guard)\), a policy\-as\-code language\. AWS Config custom rules created with AWS Lambda are called *AWS Config Custom Lambda Rules* and AWS Config custom rules created with Guard are called *AWS Config Custom Policy Rules*\.
 
 For a walkthrough showing how to create AWS Config Custom Policy Rules, see [Creating AWS Config Custom Policy Rules](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules_cfn-guard.html)\. For a walkthrough showing how to create AWS Config Custom Lambda Rules, see [Creating AWS Config Custom Lambda Rules](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules_lambda-functions.html)\.
+
+### Trigger Types<a name="aws-config-rules-trigger"></a>
+
+After you add a rule to your account, AWS Config compares your resources to the conditions of the rule\. After this initial evaluation, AWS Config continues to run evaluations each time one is triggered\. The evaluation triggers are defined as part of the rule, and they can include the following types:
+
+**Configuration changes**  
+AWS Config runs evaluations for the rule when there is a resource that matches the rule's scope and there is a change in configuration of the resource\. The evaluation runs after AWS Config sends a configuration item change notification\.  
+You choose which resources initiate the evaluation by defining the rule's *scope*\. The scope can include the following:  
++ One or more resource types
++ A combination of a resource type and a resource ID
++ A combination of a tag key and value
++ When any recorded resource is created, updated, or deleted
+AWS Config runs the evaluation when it detects a change to a resource that matches the rule's scope\. You can use the scope to define which resources initiate evaluations\.
+
+**Periodic**  
+AWS Config runs evaluations for the rule at a frequency that you choose; for example, every 24 hours\.
+
+**Hybrid**  
+Some rules have both configuration change and periodic triggers\. For these rules, AWS Config evaluates your resources when it detects a configuration change and also at the frequency that you specify\.   
+
+
+### Evaluation modes<a name="aws-config-rules-proactive-detective"></a>
+
+There are two evaluation modes for AWS Config rules:
+
+**Proactive**  
+Use proactive evaluation to evaluate resources before they have been deployed\. This allows you to evaluate whether a set of resource properties, if used to define an AWS resource, would be COMPLIANT or NON\_COMPLIANT given the set of proactive rules that you have in your account in your Region\.  
+For more information, see [Evaluation modes](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config-rules.html#aws-config-rules-evaluation-modes)\. For a list of managed rules that support proactive evaluation, see [List of AWS Config Managed Rules by Evaluation Mode](https://docs.aws.amazon.com/config/latest/developerguide/managed-rules-by-evaluation-mode.html)\.  
+Proactive rules do not remediate resources that are flagged as NON\_COMPLIANT or prevent them from being deployed\.
+
+**Detective**  
+Use detective evaluation to evaluate resources that have already been deployed\. This allows you to evaluate the configuration settings of your existing resources\.
 
 ## Multi\-Account Multi\-Region Data Aggregation<a name="multi-account-multi-region-data-aggregation"></a>
 
@@ -150,7 +184,18 @@ As an alternative to using the AWS Config API, you can use one of the AWS SDKs\.
 
 ## Control Access to AWS Config<a name="config-concepts-iam"></a>
 
-AWS Identity and Access Management is a web service that enables Amazon Web Services \(AWS\) customers to manage users and user permissions\. Use IAM to create individual users for anyone who needs access to AWS Config\. Create an IAM user for yourself, give that IAM user administrative privileges, and use that IAM user for all of your work\. By creating individual IAM users for people accessing your account, you can give each IAM user a unique set of security credentials\. You can also grant different permissions to each IAM user\. If necessary, you can change or revoke an IAM user’s permissions at any time\. For more information, see [AWS Identity and Access Management](security-iam.md)\.
+AWS Identity and Access Management is a web service that enables Amazon Web Services \(AWS\) customers to manage users and user permissions\.
+
+To provide access, add permissions to your users, groups, or roles:
++ Users and groups in AWS IAM Identity Center \(successor to AWS Single Sign\-On\):
+
+  Create a permission set\. Follow the instructions in [Create a permission set](https://docs.aws.amazon.com/singlesignon/latest/userguide/howtocreatepermissionset.html) in the *AWS IAM Identity Center \(successor to AWS Single Sign\-On\) User Guide*\.
++ Users managed in IAM through an identity provider:
+
+  Create a role for identity federation\. Follow the instructions in [Creating a role for a third\-party identity provider \(federation\)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-idp.html) in the *IAM User Guide*\.
++ IAM users:
+  + Create a role that your user can assume\. Follow the instructions in [Creating a role for an IAM user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html) in the *IAM User Guide*\.
+  + \(Not recommended\) Attach a policy directly to a user or add a user to a user group\. Follow the instructions in [Adding permissions to a user \(console\)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_change-permissions.html#users_change_permissions-add-console) in the *IAM User Guide*\.
 
 ## Partner Solutions<a name="config-concepts-partner-solutions"></a>
 

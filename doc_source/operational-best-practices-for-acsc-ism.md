@@ -6,7 +6,7 @@ The following provides a sample mapping between the Australian Cyber Security Ce
 
 This sample conformance pack template contains mappings to controls within the ISM framework, which was created by the Commonwealth of Australia and can be found at [Australian Government Information Security Manual](https://www.cyber.gov.au/sites/default/files/2021-12/Information%20Security%20Manual%20%28December%202021%29.pdf)\. Licensing of the framework under Creative Commons Attribution 4\.0 International Public License and copyright information for the framework \(including a disclaimer of warranties\) can be found at [ACSC \| Copyright](hhttps://www.cyber.gov.au/acsc/copyright)\.
 
-**AWS Region:** All supported AWS Regions except Asia Pacific \(Hong Kong\), Middle East \(Bahrain\), and South America \(São Paulo\)
+**AWS Region:** All AWS Regions where conformance packs are supported \([Region support](https://docs.aws.amazon.com/config/latest/developerguide/conformance-packs.html#conformance-packs-regions)\) except AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), Asia Pacific \(Hong Kong\), Middle East \(Bahrain\), and South America \(São Paulo\)
 
 
 ****  

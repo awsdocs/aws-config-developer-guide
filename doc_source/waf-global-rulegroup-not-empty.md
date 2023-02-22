@@ -4,6 +4,8 @@ Checks if an AWS WAF Classic rule group contains any rules\. The rule is NON\_CO
 
 **Identifier:** WAF\_GLOBAL\_RULEGROUP\_NOT\_EMPTY
 
+**Resource Types:** AWS::WAF::RuleGroup
+
 **Trigger type:** Configuration changes
 
 **AWS Region:** Only available in US East \(N\. Virginia\) Region
@@ -12,6 +14,6 @@ Checks if an AWS WAF Classic rule group contains any rules\. The rule is NON\_CO
 
 None  
 
-## AWS CloudFormation template<a name="w2aac12c31c27b9d569c15"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d591c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

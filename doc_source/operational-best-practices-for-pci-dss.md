@@ -4,7 +4,7 @@ Conformance packs provide a general\-purpose compliance framework designed to en
 
 The following provides a sample mapping between the Payment Card Industry Data Security Standard \(PCI DSS\) 3\.2\.1 and AWS managed Config rules\. Each AWS Config rule applies to a specific AWS resource, and relates to one or more PCI DSS controls\. A PCI DSS control can be related to multiple Config rules\. Refer to the table below for more detail and guidance related to these mappings\.
 
-**AWS Region:** All supported AWS Regions except Asia Pacific \(Hong Kong\), Europe \(Stockholm\), and Middle East \(Bahrain\)
+**AWS Region:** All AWS Regions where conformance packs are supported \([Region support](https://docs.aws.amazon.com/config/latest/developerguide/conformance-packs.html#conformance-packs-regions)\) except AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), South America \(São Paulo\), and Middle East \(Bahrain\)
 
 
 ****  

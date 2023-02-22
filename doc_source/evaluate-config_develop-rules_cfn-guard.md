@@ -1,6 +1,9 @@
 # Creating AWS Config Custom Policy Rules<a name="evaluate-config_develop-rules_cfn-guard"></a>
 
-You can create AWS Config Custom Policy rules from the AWS Management Console, AWS CLI, or AWS Config API\. For more information on how to write rules with Guard, see [Writing Guard rules](https://docs.aws.amazon.com/cfn-guard/latest/ug/writing-rules.html) in the AWS CloudFormation Guard User Guide\. For more information on the schemas of supported resource types that AWS Config can evalute, see [resource\-types](https://github.com/awslabs/aws-config-resource-schema/tree/master/config/properties/resource-types) in the AWS Config Resource Schema GitHub Repository\.
+You can create AWS Config Custom Policy rules from the AWS Management Console, AWS CLI, or AWS Config API\. For more information on how to write rules with Guard, see [Writing Guard rules](https://docs.aws.amazon.com/cfn-guard/latest/ug/writing-rules.html) in the AWS CloudFormation Guard User Guide\. For more information on the schemas of supported resource types that AWS Config can evaluate, see [resource\-types](https://github.com/awslabs/aws-config-resource-schema/tree/master/config/properties/resource-types) in the AWS Config Resource Schema GitHub Repository\.
+
+**Important**  
+The AWS Config resource schema to evaluate configuration items is *different* than the CFN schema to evaluate AWS CloudFormation templates\. If you use the CFN schema for AWS Config Custom Policy rules, your evaluation results will return `NOT_APPLICABLE`\. Use the AWS Config resource schema when creating AWS Config Custom Policy rules and write policies based on the configuration item structure\. For a list AWS Config resource schemas, see [resource\-types](https://github.com/awslabs/aws-config-resource-schema/tree/master/config/properties/resource-types) in the AWS Config Resource Schema GitHub Repository\.
 
 ## Creating AWS Config Custom Policy Rules \(Console\)<a name="create-cfn-guard-rule-console"></a>
 
@@ -23,6 +26,8 @@ You can create AWS Config Custom Policy rules from the AWS Management Console, A
    1. For **Guard runtime version**, choose the runtime system for your AWS Config Custom Policy rule\.
 
    1. For **Rule Content**, you can populate it with the Guard Custom policy for your rule\. For more information about the structure and features for Guard Custom policies, see the [AWS CloudFormation Guard 2\.0's Modes of Operation](https://github.com/aws-cloudformation/cloudformation-guard/tree/main/guard) in the Guard GitHub Repository\.
+**Note**  
+The AWS Config resource schema to evaluate configuration items is *different* than the CFN schema to evaluate AWS CloudFormation templates\. If you use the CFN schema for AWS Config Custom Policy rules, your evaluation results will return `NOT_APPLICABLE`\. Use the AWS Config resource schema when creating AWS Config Custom Policy rules and write policies based on the configuration item structure\. For a list AWS Config resource schemas, see [resource\-types](https://github.com/awslabs/aws-config-resource-schema/tree/master/config/properties/resource-types) in the AWS Config Resource Schema GitHub Repository\.
 
       The following example shows the policy definition for an AWS Config Custom Policy rule version of the AWS Config Managed rule [dynamodb\-pitr\-enabled](dynamodb-pitr-enabled.md)
 
@@ -45,9 +50,11 @@ You can create AWS Config Custom Policy rules from the AWS Management Console, A
 
    1. For **Evaluation mode**, choose when in the resource creation and management process you want AWS Config to evaluate your resources\. Depending on the rule, AWS Config can evaluate your resource configurations before a resource has been provisioned, after a resource has been provisoned, or both\.
 
-      1. Choose **Turn on proactive evaluation** to evaluate the configuration settings of your resources before they are created or updated\.
+      1. Choose **Turn on proactive evaluation** to allow you to run evaluations on the configuration settings of your resources before they are deployed\.
 
-         For proactive evaluation, there is only one type of trigger: **When configuration changes**\. This option is pre\-selected and does not show up in the console\. AWS Config runs evaluations for the rule when there is a change to a pre\-provisioned resource\.
+         Once you have turned on proactive evaluation, you can use the [StartResourceEvaluation](https://docs.aws.amazon.com/config/latest/APIReference/API_StartResourceEvaluation.html) API and [GetResourceEvaluationSummary](https://docs.aws.amazon.com/config/latest/APIReference/API_GetResourceEvaluationSummary.html) API to check if the resources you specify in these commands would be flagged as NON\_COMPLIANT by the proactive rules in your account in your Region\.
+
+          For more information on using this commands, see [Evaluating Your Resources with AWS Config Rules](https://docs.aws.amazon.com/config/latest/developerguide/evaluating-your-resources.html#evaluating-your-resources-proactive)\. For a list of managed rules that support proactive evaluation, see [List of AWS Config Managed Rules by Evaluation Mode](https://docs.aws.amazon.com/config/latest/developerguide/managed-rules-by-evaluation-mode.html)\.
 
       1. Choose **Turn on detective evaluation** to evaluate the configuration settings of your existing resources\.
 

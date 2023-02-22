@@ -6,6 +6,8 @@ The following provides a sample mapping between the European Union Agency for Cy
 
 This sample conformance pack template contains mappings to controls adapted from the ENISA Cybersecurity guide for SMEs\. The ENISA Cybersecurity guide for SMEs is available at [Cybersecurity guide for SMEs \- 12 steps to securing your business](https://www.enisa.europa.eu/publications/cybersecurity-guide-for-smes)\.
 
+**AWS Region:** All AWS Regions where conformance packs are supported \([Region support](https://docs.aws.amazon.com/config/latest/developerguide/conformance-packs.html#conformance-packs-regions)\) except AWS GovCloud \(US\-East\) and AWS GovCloud \(US\-West\)
+
 
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/operational-best-practices-for-enisa-cybersecurity-guide-for-smes.html)
