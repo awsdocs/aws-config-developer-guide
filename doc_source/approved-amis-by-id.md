@@ -15,6 +15,6 @@ Checks if running instances are using specified AMIs\. Specify a list of approve
 amiIdsType: CSV  
 The AMI IDs \(comma\-separated list of up to 21 AMI IDs or 1024 characters total, whichever comes first\)\.
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9c31c17"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9c33c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

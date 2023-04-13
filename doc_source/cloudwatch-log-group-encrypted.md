@@ -1,6 +1,6 @@
 # cloudwatch\-log\-group\-encrypted<a name="cloudwatch-log-group-encrypted"></a>
 
-Checks if a log group in Amazon CloudWatch Logs is encrypted with an AWS Key Management Service \(KMS\) key\. The rule is NON\_COMPLIANT if no AWS KMS key is configured on the log groups\.
+Checks if Amazon CloudWatch Log Groups are encrypted with any AWS KMS key or a specified AWS KMS key Id\. The rule is NON\_COMPLIANT if a CloudWatch Log Group is not encrypted with a KMS key or is encrypted with a KMS key not supplied in the rule parameter\. 
 
 **Identifier:** CLOUDWATCH\_LOG\_GROUP\_ENCRYPTED
 
@@ -11,8 +11,8 @@ Checks if a log group in Amazon CloudWatch Logs is encrypted with an AWS Key Man
 **Parameters:**
 
 KmsKeyId \(Optional\)Type: String  
-Amazon Resource Name \(ARN\) of AWS Key Management Service \(KMS\) key that is used to encrypt the CloudWatch Logs log group\.
+Amazon Resource Name \(ARN\) of the ID for the KMS key that is used to encrypt the log group\.
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9d109c15"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d119c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

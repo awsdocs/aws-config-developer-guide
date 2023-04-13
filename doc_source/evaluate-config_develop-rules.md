@@ -12,6 +12,10 @@ Rules written using Guard can be created from the AWS Config console or by using
 
 Custom Lambda rules provide you with the option to use Java or Python to create a Lambda function for a AWS Config Custom rule\. A * Lambda function* is custom code that you upload to AWS Lambda, and it is invoked by events that are published to it by an event source\. If the Lambda function is associated with an AWS Config rule, AWS Config invokes it when the rule is initiated\. The Lambda function then evaluates the configuration information that is sent by AWS Config, and it returns the evaluation results\. For more information about Lambda functions, see [Function and Event Sources](https://docs.aws.amazon.com/lambda/latest/dg/intro-core-components.html) in the *AWS Lambda Developer Guide*\.
 
+**Note**  
+**High Number of Lambda Function Invocations**  
+AWS Config Custom Lambda Rules can cause a high number of Lambda function invocations if the rule is not scoped to one or more resource types\. To avoid increased activity associated with your account, provide resources in scope for your Custom Lambda rules\. If no resource types are selected, the rule will invoke the Lambda function for all resources in the account\.
+
 ## Trigger Types<a name="evaluate-config_develop-rules-trigger"></a>
 
 After you add a rule to your account, AWS Config compares your resources to the conditions of the rule\. After this initial evaluation, AWS Config continues to run evaluations each time one is triggered\. The evaluation triggers are defined as part of the rule, and they can include the following types:

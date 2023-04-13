@@ -1,5 +1,8 @@
 # Deleting AWS Config Data<a name="delete-config-data-with-retention-period"></a>
 
+**Note**  
+While AWS Config uses Amazon Simple Storage Service \(Amazon S3\) and Amazon Simple Notification Service \(Amazon SNS\) for sending configuration snapshots and configuration history files, AWS Config has its own data store and retention policies\. The information on this page is specific for AWS Config\. Amazon S3 and Amazon SNS have their own separate data store and retention policies\.
+
 AWS Config allows you to delete your data by specifying a retention period for your `ConfigurationItems`\. When you specify a retention period, AWS Config retains your `ConfigurationItems` for that specified period\. You can choose a period between a minimum of 30 days and a maximum of 7 years \(2557 days\)\. AWS Config deletes data older than your specified retention period\. If you do not specify a retention period, AWS Config continues to store `ConfigurationItems` for the default period of 7 years \(2557 days\)\. When recording is switched on, the current state of the resource is when a `ConfigurationItem` is recorded and until the next change \(a new `ConfigurationItem`\) is recorded\.
 
 To understand the behavior of retention period, let's take a look at the timeline\.
@@ -24,7 +27,7 @@ After you specify a retention period, AWS Config APIs no longer return `Configur
 
 **Note**  
 AWS Config cannot record your `ConfigurationItems` if recording is switched off\.
-AWS Config cannot record your `ConfigurationItems` if your IAM role is broken\.
+AWS Config cannot record your `ConfigurationItems` if your IAM role has insufficient permissions\. For more information, see [Permissions for the IAM Role Assigned to AWS Config](https://docs.aws.amazon.com/config/latest/developerguide/iamrole-permissions.html)\.
 
 ## Setting Data Retention Period in AWS Management Console<a name="delete-config-data-with-retention-period-console"></a>
 

@@ -11,12 +11,12 @@ The rule returns NOT\_APPLICABLE for secrets without rotation\.
 
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS regions except Asia Pacific \(Jakarta\), Middle East \(UAE\), Asia Pacific \(Hyderabad\), Asia Pacific \(Osaka\), Asia Pacific \(Melbourne\), Europe \(Spain\), Europe \(Zurich\) Region
+**AWS Region:** All supported AWS regions
 
 **Parameters:**
 
 None  
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9d537c19"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d567c19"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

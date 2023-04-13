@@ -15,6 +15,6 @@ Checks if an Amazon SageMaker notebook instance is launched within a VPC or with
 SubnetIds \(Optional\)Type: CSV  
 Comma\-separated list of subnet IDs that notebook instances can be launched in\.
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9d527c17"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d557c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

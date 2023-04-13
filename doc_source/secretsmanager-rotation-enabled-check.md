@@ -11,7 +11,7 @@ Re\-evaluating this rule within 4 hours of the first evaluation will have no eff
 
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS regions except Asia Pacific \(Melbourne\) Region
+**AWS Region:** All supported AWS regions
 
 **Parameters:**
 
@@ -21,6 +21,6 @@ Maximum allowed rotation frequency of the secret in days\.
 maximumAllowedRotationFrequencyInHours \(Optional\)Type: int  
 Maximum allowed rotation frequency of the secret in hours\.
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9d535c19"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d565c19"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

@@ -18,6 +18,6 @@ Comma separated list of IAM policy arns which should not be attached to any IAM 
 exceptionList \(Optional\)Type: CSV  
 Comma separated list of resourcetypes and list of resource name pairs\. \(for example, users:\[user1;user2\], groups:\[group1;group2\], roles:\[role1;role2;role3\]\)\.
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9d341c17"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d367c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

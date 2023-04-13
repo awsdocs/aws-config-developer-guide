@@ -3,12 +3,14 @@
 Use AWS Config to evaluate the configuration settings of your AWS resources\. You do this by creating AWS Config rules, which represent your ideal configuration settings\. AWS Config provides customizable, predefined rules called managed rules to help you get started\. While AWS Config continuously tracks the configuration changes that occur among your resources, it checks whether these changes do not comply with the conditions in your rules\. If a resource does not comply with rule, AWS Config flags the resource and the rule as *noncompliant*\. The following are the possible evaluation results for an AWS Config rule:
 + `COMPLIANT` \- the rule passes the conditions of the compliance check\.
 + `NON_COMPLIANT` \- the rule fails the conditions of the compliance check\.
-+ `ERROR` \- the one of the required/optional parameters is not valid, not of the correct type, or is formatted incorrectly\.
-+ `NOT_APPLICABLE` \- used to filter out resources that the logic of the rule cannot be applied to\. For example, the [alb\-desync\-mode\-check](https://docs.aws.amazon.com/config/latest/developerguide/alb-desync-mode-check.html) rule only checks Application Load Balancers, and ignores Network Load Balancers and Gateway Load Balancers\.
++ `ERROR` \- one of the required/optional parameters is not valid, or not of the correct type, or is formatted incorrectly\.
++ `NOT_APPLICABLE` \- used to filter out resources that the logic of the rule cannot be applied to\. 
+
+  For example, the [alb\-desync\-mode\-check](https://docs.aws.amazon.com/config/latest/developerguide/alb-desync-mode-check.html) rule only checks Application Load Balancers, and ignores Network Load Balancers and Gateway Load Balancers\.
 
 For example, when an EC2 volume is created, AWS Config can evaluate the volume against a rule that requires volumes to be encrypted\. If the volume is not encrypted, AWS Config flags the volume and the rule as noncompliant\. AWS Config can also check all of your resources for account\-wide requirements\. For example, AWS Config can check whether the number of EC2 volumes in an account stays within a desired total, or whether an account uses AWS CloudTrail for logging\.
 
-Service\-linked rules are a unique type of managed rule that support other AWS services to create AWS Config rules in your account\. These rules are predefined to include all the permissions required to call other AWS services on your behalf\. These rules are similar to standards that an AWS service recommends in your AWS account for compliance verification\. For more information, see [Service\-Linked AWS Config Rules](service-linked-awsconfig-rules.md)\.
+**Service\-linked rules** are a unique type of managed rule that support other AWS services to create AWS Config rules in your account\. These rules are predefined to include all the permissions required to call other AWS services on your behalf\. These rules are similar to standards that an AWS service recommends in your AWS account for compliance verification\. For more information, see [Service\-Linked AWS Config Rules](service-linked-awsconfig-rules.md)\.
 
 The AWS Config console shows the compliance status of your rules and resources\. You can see how your AWS resources comply overall with your desired configurations, and learn which specific resources are noncompliant\. You can also use the AWS CLI, the AWS Config API, and AWS SDKs to make requests to the AWS Config service for compliance information\.
 

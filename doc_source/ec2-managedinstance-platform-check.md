@@ -24,6 +24,6 @@ Agent version \(for example, '2\.0\.433\.0'\)\.
 platformName \(Optional\)Type: String  
 The version of the platform \(for example, '2016\.09'\)
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9d209c17"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d219c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

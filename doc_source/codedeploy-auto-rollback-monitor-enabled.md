@@ -14,6 +14,6 @@ Checks if the deployment group is configured with automatic deployment rollback 
 
 None  
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9d133c17"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d143c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

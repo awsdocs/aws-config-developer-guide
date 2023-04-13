@@ -8,13 +8,13 @@ Checks if all secrets in AWS Secrets Manager are encrypted using the AWS managed
 
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS regions except China \(Beijing\), Asia Pacific \(Melbourne\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), China \(Ningxia\) Region
+**AWS Region:** All supported AWS regions except China \(Beijing\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), China \(Ningxia\) Region
 
 **Parameters:**
 
 kmsKeyArns \(Optional\)Type: CSV  
 Comma\-separated list of KMS key Amazon Resource Names \(ARNs\) to check if the keys are used in the encryption\.
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9d543c17"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d573c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

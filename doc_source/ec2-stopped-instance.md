@@ -6,13 +6,14 @@ Checks if there are Amazon Elastic Compute Cloud \(Amazon EC2\) instances stoppe
 
 **Trigger type:** Periodic
 
-**AWS Region:** All supported AWS regions except Asia Pacific \(Jakarta\), Africa \(Cape Town\), Middle East \(UAE\), Asia Pacific \(Hyderabad\), Asia Pacific \(Osaka\), Asia Pacific \(Melbourne\), Europe \(Milan\), Europe \(Spain\), Europe \(Zurich\) Region
+**AWS Region:** All supported AWS regions except Asia Pacific \(Jakarta\), Africa \(Cape Town\), Middle East \(UAE\), Asia Pacific \(Osaka\), Asia Pacific \(Melbourne\), Europe \(Milan\) Region
 
 **Parameters:**
 
 AllowedDays \(Optional\)Type: intDefault: 30  
-The number of days an Amazon EC2 instance can be stopped before the rule is NON\_COMPLIANT\. The default number of days is 30\.
+The number of days an Amazon EC2 instance can be stopped before the rule is NON\_COMPLIANT\. The default number of days is 30\.  
+The number of days selected needs to be less than the configured retention period since this rule relies on the historical data collected\. For more information about historical data retention, see [Deleting AWS Config Data](https://docs.aws.amazon.com/config/latest/developerguide/delete-config-data-with-retention-period.html)\.
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9d221c15"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d231c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

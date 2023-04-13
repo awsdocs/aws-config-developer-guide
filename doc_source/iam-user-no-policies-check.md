@@ -14,6 +14,6 @@ Checks if none of your IAM users have policies attached\. IAM users must inherit
 
 None  
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9d357c17"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d383c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

@@ -16,6 +16,6 @@ Percentage of provisioned read capacity units for your account\. When this value
 accountWCUThresholdPercentage \(Optional\)Type: intDefault: 80  
 Percentage of provisioned write capacity units for your account\. When this value is reached, the rule is marked as noncompliant\.
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9d169c15"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d179c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

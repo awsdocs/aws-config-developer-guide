@@ -32,6 +32,6 @@ Comma\-separated list of CIDR formatted IP addresses, for example '10\.0\.0\.1, 
 vpcIds \(Optional\)Type: CSV  
 Comma\-separated list of Amazon Virtual Private Clouds \(Amazon VPC\) IDs, for example 'vpc\-1234abc0, vpc\-ab1234c0'\.
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9d497c21"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d527c21"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

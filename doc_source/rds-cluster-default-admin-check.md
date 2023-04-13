@@ -15,6 +15,6 @@ Checks if an Amazon Relational Database Service \(Amazon RDS\) database cluster 
 validAdminUserNames \(Optional\)Type: CSV  
 Comma\-separated list of admin username\(s\) that Amazon RDS clusters can use\. Cannot include 'postgres' or 'admin' as valid username\(s\) as these are default values\.
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9d419c17"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d449c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

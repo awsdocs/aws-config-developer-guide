@@ -8,7 +8,7 @@ Checks if Amazon S3 Events Notifications are enabled on an S3 bucket\. The rule 
 
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS regions except China \(Beijing\), Asia Pacific \(Jakarta\), Asia Pacific \(Hyderabad\), Asia Pacific \(Melbourne\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), Europe \(Spain\), China \(Ningxia\), Europe \(Zurich\) Region
+**AWS Region:** All supported AWS regions except China \(Beijing\), Asia Pacific \(Jakarta\), Asia Pacific \(Melbourne\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), China \(Ningxia\) Region
 
 **Parameters:**
 
@@ -18,6 +18,6 @@ The Amazon Resource Name \(ARN\) of the destination for the event notification \
 eventTypes \(Optional\)Type: CSV  
 Comma\-separated list of the preferred Amazon S3 event types
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9d515c17"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d545c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

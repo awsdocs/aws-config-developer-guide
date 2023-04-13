@@ -24,6 +24,6 @@ Time range in which backups are created\.
 checkReadReplicas \(Optional\)Type: boolean  
 Checks whether RDS DB instances have backups enabled for read replicas\.
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9d147c17"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d157c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

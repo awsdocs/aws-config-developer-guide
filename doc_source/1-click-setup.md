@@ -18,7 +18,7 @@ The set up page includes three steps, but through the **1\-click setup** workflo
 + Settings: To select the manner by which the AWS Config console records resources and roles, and choose where configuration history and configuration snapshot files are sent\.
 + Rules: For regions that support rules, this subsection is available for you to configure initial AWS managed rules that you can add to your account\.
 **Note**  
-After setting up, AWS Config will evaluate your AWS resources against the rules that you chose\. Additional rules can be created and existing ones can be updated and in your account after setup\. For more information about rules, see [Managing your AWS Config Rules](https://docs.aws.amazon.com/config/latest/developerguide/setting-up-aws-config-rules-with-console.html)\.
+After setting up, AWS Config will evaluate your AWS resources against the rules that you chose\. Additional rules can be created and existing ones can be updated in your account after setup\. For more information about rules, see [Managing your AWS Config Rules](https://docs.aws.amazon.com/config/latest/developerguide/setting-up-aws-config-rules-with-console.html)\.
 + Review: To verify your setup details\.
 
 ## Settings<a name="1-click-setup-settings.title"></a>

@@ -15,6 +15,6 @@ Checks if your Amazon S3 buckets have replication rules enabled\. The rule is NO
 ReplicationType \(Optional\)Type: String  
 Accepted values: 'CROSS\-REGION' and 'SAME\-REGION'\. Enter 'CROSS\-REGION' for the rule to check that all buckets have only Cross\-Region Replication enabled\. Enter 'SAME\-REGION' for the rule to check that all buckets have only Same\-Region Replication enabled\.
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9d505c17"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d535c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

@@ -14,6 +14,6 @@ Checks if the virtualization type of an EC2 instance is paravirtual\. This rule 
 
 None  
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9d213c17"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d223c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

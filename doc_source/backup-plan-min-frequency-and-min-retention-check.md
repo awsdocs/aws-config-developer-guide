@@ -21,6 +21,6 @@ Required retention period in days\.
 requiredFrequencyUnit \(Optional\)Type: StringDefault: days  
 Unit of time for required backup frequency\. Accepted values: 'hours', 'days'\.
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9c57c17"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9c65c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

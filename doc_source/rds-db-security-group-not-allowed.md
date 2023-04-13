@@ -14,6 +14,6 @@ Checks if there are any Amazon Relational Database Service \(RDS\) DB security g
 
 None  
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9d427c17"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d457c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

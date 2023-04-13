@@ -8,13 +8,13 @@ Checks if an Application Load Balancer \(ALB\) is configured with a user defined
 
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS regions except China \(Beijing\), Asia Pacific \(Jakarta\), Asia Pacific \(Hyderabad\), Asia Pacific \(Melbourne\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), Europe \(Spain\), China \(Ningxia\), Europe \(Zurich\) Region
+**AWS Region:** All supported AWS regions except China \(Beijing\), Asia Pacific \(Jakarta\), Asia Pacific \(Melbourne\), AWS GovCloud \(US\-East\), AWS GovCloud \(US\-West\), China \(Ningxia\) Region
 
 **Parameters:**
 
 desyncModeType: CSV  
 Comma\-separated list, in which customers can choose max 2 values among \- 'defensive', 'strictest', and 'monitor'\.
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9b7c17"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9b9c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

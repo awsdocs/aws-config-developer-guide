@@ -24,6 +24,6 @@ Numerical value for maximum allowed age\. No more than 744 for hours, 31 for day
 recoveryPointAgeUnit \(Optional\)Type: StringDefault: days  
 Unit of time for maximum allowed age\. Accepted values: 'hours', 'days'\.
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9d561c17"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d593c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

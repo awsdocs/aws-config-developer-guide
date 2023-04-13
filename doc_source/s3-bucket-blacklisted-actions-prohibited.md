@@ -18,6 +18,6 @@ The rule will only check for entities in the Principal property and does not tak
 blacklistedActionPatternType: CSV  
 Comma\-separated list of blacklisted action patterns, for example, s3:GetBucket\* and s3:DeleteObject\.
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9d489c19"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d519c19"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

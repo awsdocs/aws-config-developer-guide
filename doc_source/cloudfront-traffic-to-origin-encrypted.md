@@ -14,6 +14,6 @@ Checks if Amazon CloudFront distributions are encrypting traffic to custom origi
 
 None  
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9c93c17"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d103c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

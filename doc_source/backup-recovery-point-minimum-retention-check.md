@@ -15,6 +15,6 @@ Checks if a recovery point expires no earlier than after the specified period\. 
 requiredRetentionDays \(Optional\)Type: intDefault: 35  
 Required retention period in days\.
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9c63c17"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9c71c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

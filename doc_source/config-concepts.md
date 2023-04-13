@@ -16,6 +16,7 @@ AWS Config provides a detailed view of the resources associated with your AWS ac
   + [AWS Config Custom Rules](#aws-config-custom-rules)
   + [Trigger Types](#aws-config-rules-trigger)
   + [Evaluation modes](#aws-config-rules-proactive-detective)
++ [Conformance Packs](#aws-config-conformance-packs)
 + [Multi\-Account Multi\-Region Data Aggregation](#multi-account-multi-region-data-aggregation)
   + [Source Account](#source-accounts)
   + [Source Region](#source-region)
@@ -123,6 +124,16 @@ Proactive rules do not remediate resources that are flagged as NON\_COMPLIANT or
 
 **Detective**  
 Use detective evaluation to evaluate resources that have already been deployed\. This allows you to evaluate the configuration settings of your existing resources\.
+
+## Conformance Packs<a name="aws-config-conformance-packs"></a>
+
+A conformance pack is a collection of AWS Config rules and remediation actions that can be easily deployed as a single entity in an account and a Region or across an organization in AWS Organizations\.
+
+Conformance packs are created by authoring a YAML template that contains the list of AWS Config managed or custom rules and remediation actions\. You can deploy the template by using the AWS Config console or the AWS CLI\. 
+
+To quickly get started and to evaluate your AWS environment, use one of the [sample conformance pack templates](https://docs.aws.amazon.com/config/latest/developerguide/conformancepack-sample-templates.html)\. You can also create a conformance pack YAML file from scratch based on [Custom Conformance Pack](https://docs.aws.amazon.com/config/latest/developerguide/custom-conformance-pack.html)\. A custom conformance pack is a unique collection of AWS Config rules and remediation actions that you can deploy together in an account and an AWS Region, or across an organization in AWS Organizations\.
+
+**Process checks** is a type of AWS Config rule that allows you to track your external and internal tasks that require verification as part of the conformance packs\. These checks can be added to an existing conformance pack or a new conformance pack\. You can track all compliance that includes AWS Configurations and manual checks in a single location\. 
 
 ## Multi\-Account Multi\-Region Data Aggregation<a name="multi-account-multi-region-data-aggregation"></a>
 

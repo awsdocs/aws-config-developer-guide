@@ -15,6 +15,6 @@ Checks if an Amazon Elastic Compute Cloud \(EC2\) instance metadata has a specif
 tokenHopLimit \(Optional\)Type: int  
 The desired token hop limit\. Valid values are between 1 and 64, both inclusive\. Default value is 1 if parameter is not specified\.
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9d223c17"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d233c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

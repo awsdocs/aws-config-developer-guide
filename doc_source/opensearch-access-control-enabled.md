@@ -14,6 +14,6 @@ Checks if Amazon OpenSearch Service domains have fine\-grained access control en
 
 None  
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9d401c17"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d431c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

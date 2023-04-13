@@ -15,6 +15,6 @@ Checks whether the first deployment stage of the AWS Codepipeline performs more 
 deploymentLimit \(Optional\)Type: int  
 The maximum number of deployments each stage can perform\.
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9d139c17"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d149c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

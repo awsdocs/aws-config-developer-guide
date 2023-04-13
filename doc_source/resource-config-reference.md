@@ -1,12 +1,22 @@
 # Supported Resource Types<a name="resource-config-reference"></a>
 
-AWS Config supports the following AWS resources types and resource relationships\. Some Regions support a subset of these resource types\. For information on which resource types are supported in which Regions, see [Resource Coverage by Region Availability](https://docs.aws.amazon.com/config/latest/developerguide/what-is-resource-config-coverage.html)\.
-
-Advanced Queries for AWS Config supports a subset of these resource types\. For a list of those supported resource types, see [Supported Resource Types for Advanced Queries](https://github.com/awslabs/aws-config-resource-schema/tree/master/config/properties/resource-types)\.
+AWS Config supports the following AWS resources types and resource relationships\. 
++ Some AWS Regions support a subset of these resource types\. For information on which resource types are supported in which Regions, see [Resource Coverage by Region Availability](https://docs.aws.amazon.com/config/latest/developerguide/what-is-resource-config-coverage.html)\.
++ Advanced queries for AWS Config supports a subset of these resource types\. For a list of those supported resource types, see [Supported Resource Types for Advanced Queries](https://github.com/awslabs/aws-config-resource-schema/tree/master/config/properties/resource-types)\.
++ Proactive evaluation for AWS Config supports a subset of these resource types\. For a list of those supported resource types, see [Supported Resource Types for Proactive Evaluation](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config-rules.html#aws-config-rules-evaluation-modes)\.
++ Periodic rules can run on resources that AWS Config recording does not support and can be run without the configuration recorder being enabled\. Periodic rules do not depend on configuration items\. For more information on the difference between change–triggered rules and periodic rules, see [Evaluation Mode and Trigger Types for AWS Config Rules](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config-rules.html)\.
 
 **Note**  
-Periodic rules can run on resources that AWS Config recording does not support and can be run without the configuration recorder being enabled\. Periodic rules do not depend on configuration items\. For more information on the difference between change–triggered rules and periodic rules, see [Evaluation Mode and Trigger Types for AWS Config Rules](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config-rules.html)\.  
-When AWS Config onboards new resource types, the default resources for the new resource types will be discovered during the account baselining process\. If you have the configuration recorder set up to record all supported resource types, you may receive notifications for default resources while a new resource type is in the process of onboarding\. The public documentation will be updated once the onboarding process is complete\.
+When AWS Config onboards new resource types, the default resources for the new resource types will be discovered during the account baselining process\. If you have the configuration recorder set up to record all supported resource types, you may receive notifications for default resources while a new resource type is in the process of onboarding\. The public documentation is updated once the onboarding process is complete\.
+
+## Amazon AppStream 2\.0<a name="appstream"></a>
+
+
+****  
+
+| AWS Service | Resource Type Value | Relationship | Related Resource | 
+| --- | --- | --- | --- | 
+| Amazon AppStream 2\.0 | AWS::AppStream::DirectoryConfig | NA | NA | 
 
 ## Amazon API Gateway<a name="amazonapigateway"></a>
 
@@ -37,6 +47,21 @@ To learn more about how AWS Config integrates with Amazon API Gateway, see [Moni
 | --- | --- | --- | --- | 
 | Amazon CloudWatch | AWS::CloudWatch::Alarm | NA | NA | 
 | Amazon CloudWatch RUM | AWS::RUM::AppMonitor | NA | NA | 
+
+## Amazon CodeGuru<a name="amazoncodeguru"></a>
+
+
+****  
+
+| AWS Service | Resource Type Value | Relationship | Related Resource | 
+| --- | --- | --- | --- | 
+| Amazon CodeGuru Reviewer | AWS::CodeGuruReviewer::RepositoryAssociation | NA | NA | 
+
+## Amazon Connect<a name="amazonconnect"></a>
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
 ## Amazon Detective<a name="amazondetective"></a>
 
@@ -132,6 +157,15 @@ New \(supported\): `arn:aws:ecs:region:aws_account_id:service/cluster-name/servi
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
+## HealthLake<a name="healthlake"></a>
+
+
+****  
+
+| AWS Service | Resource Type Value | Relationship | Related Resource | 
+| --- | --- | --- | --- | 
+| HealthLake | AWS::HealthLake::FHIRDatastore | NA | NA | 
+
 ## Amazon Interactive Video Service<a name="amazoninteractivevideoservice"></a>
 
 
@@ -148,6 +182,12 @@ New \(supported\): `arn:aws:ecs:region:aws_account_id:service/cluster-name/servi
 On September 8, 2021, Amazon Elasticsearch Service was renamed to Amazon OpenSearch Service\. OpenSearch Service supports OpenSearch as well as legacy Elasticsearch OSS\. For more information, see [Amazon OpenSearch Service \- Summary of changes](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/rename.html)\.  
 You may continue to see your data for `AWS::OpenSearch::Domain` under the existing `AWS::Elasticsearch::Domain` resource type for several weeks, even if you upgrade one or more domains to OpenSearch\.
 
+## Amazon Pinpoint<a name="amazonpinpoint"></a>
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
+
 ## Amazon Quantum Ledger Database \(Amazon QLDB\)<a name="amazonqldb"></a>
 
 
@@ -163,11 +203,35 @@ You may continue to see your data for `AWS::OpenSearch::Domain` under the existi
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
+## Amazon Lex<a name="amazonlex"></a>
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
+
 ## Amazon Lightsail<a name="amazonlightsail"></a>
 
 
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
+
+## Amazon Lookout for Metrics<a name="amazonlookoutmetrics"></a>
+
+
+****  
+
+| AWS Service | Resource Type Value | Relationship | Related Resource | 
+| --- | --- | --- | --- | 
+| Amazon Lookout for Metrics | AWS::LookoutMetrics::Alert | NA | NA | 
+
+## Lookout for Vision<a name="amazonlookoutvision"></a>
+
+
+****  
+
+| AWS Service | Resource Type Value | Relationship | Related Resource | 
+| --- | --- | --- | --- | 
+| Lookout for Vision | AWS::LookoutVision::Project | NA | NA | 
 
 ## Amazon MQ<a name="amazonmq"></a>
 
@@ -318,6 +382,15 @@ For more information, see [Managing backups using backup plans](https://docs.aws
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
+## AWS Budgets<a name="awsbudgets"></a>
+
+
+****  
+
+| AWS Service | Resource Type Value | Relationship | Related Resource | 
+| --- | --- | --- | --- | 
+| AWS Budgets | AWS::Budgets::BudgetsAction | NA | NA | 
+
 ## AWS Certificate Manager<a name="awscertificatemanager"></a>
 
 
@@ -409,6 +482,15 @@ Recording for the `AWS::Config::ConformancePackCompliance` and `AWS::Config::Con
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
+## AWS Device Farm<a name="awsdevicefarm"></a>
+
+
+****  
+
+| AWS Service | Resource Type Value | Relationship | Related Resource | 
+| --- | --- | --- | --- | 
+| AWS Device Farm | AWS::DeviceFarm::TestGridProject | NA | NA | 
+
 ## AWS Elastic Beanstalk<a name="awselasticbeanstalk"></a>
 
 
@@ -477,13 +559,19 @@ AWS Config includes inline policies with the configuration details that it recor
 | --- | --- | --- | --- | 
 | AWS Resilience Hub | AWS::ResilienceHub::ResiliencyPolicy | NA | NA | 
 
+## AWS RoboMaker<a name="awsrobomaker"></a>
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
+
 ## AWS Secrets Manager<a name="awssecretsmanager"></a>
 
 
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
 
-## Service Catalog<a name="servicecatalog"></a>
+## AWS Service Catalog<a name="servicecatalog"></a>
 
 
 ****  
@@ -543,7 +631,4 @@ AWS Config includes inline policies with the configuration details that it recor
 
 
 ****  
-
-| AWS Service | Resource Type Value | Relationship | Related Resource | 
-| --- | --- | --- | --- | 
-| AWS Elemental MediaPackage | AWS::MediaPackage::PackagingGroup | NA | NA | 
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)

@@ -18,6 +18,6 @@ The rule does not evaluate Elasticsearch domains\.
 logTypes \(Optional\)Type: CSV  
 Comma\-separated list of logs that are enabled\. Valid values are 'search', 'index', 'error'\.
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9d413c19"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d443c19"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

@@ -6,13 +6,13 @@ Checks whether Service Endpoint for the service provided in rule parameter is cr
 
 **Trigger type:** Periodic
 
-**AWS Region:** All supported AWS regions except Asia Pacific \(Jakarta\), Asia Pacific \(Hyderabad\), Asia Pacific \(Osaka\), Asia Pacific \(Melbourne\), Europe \(Spain\), Europe \(Zurich\) Region
+**AWS Region:** All supported AWS regions except Asia Pacific \(Jakarta\), Asia Pacific \(Osaka\), Asia Pacific \(Melbourne\) Region
 
 **Parameters:**
 
 serviceNameType: String  
 The short name or suffix for the service\. Note: To get a list of available service names or valid suffix list, use DescribeVpcEndpointServices\.
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9d549c15"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d579c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

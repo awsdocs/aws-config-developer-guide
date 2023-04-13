@@ -15,6 +15,6 @@ Checks if managed platform updates in an AWS Elastic Beanstalk environment is en
 UpdateLevel \(Optional\)Type: String  
 Indicates whether update levels are set to 'minor' version updates or a 'patch' version updates\.
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9d291c17"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d317c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

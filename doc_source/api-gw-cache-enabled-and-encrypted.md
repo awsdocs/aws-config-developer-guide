@@ -14,6 +14,6 @@ Checks that all methods in Amazon API Gateway stages have cache enabled and cach
 
 None  
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9c21c17"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9c23c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

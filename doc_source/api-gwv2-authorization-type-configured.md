@@ -15,6 +15,6 @@ Checks if Amazon API Gatewayv2 API routes have an authorization type set\. This 
 authorizationType \(Optional\)Type: String  
 Parameter to check API routes' authorization types against\. String parameters matching CUSTOM, AWS\_IAM, JWT are valid\.
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9c17c17"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9c19c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

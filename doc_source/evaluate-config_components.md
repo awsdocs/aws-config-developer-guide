@@ -34,7 +34,8 @@ The following JSON example shows the rule definition for the [elasticsearch\-log
 {
   "identifier": "ELASTICSEARCH_LOGS_TO_CLOUDWATCH",
   "defaultName": "elasticsearch-logs-to-cloudwatch", 
-  "description": "Checks if Elasticsearch domains are configured to send logs to Amazon CloudWatch Logs. The rule is COMPLIANT if a log is enabled for an Elasticsearch domain. This rule is NON_COMPLIANT if logging is not configured.",
+  "description": "Checks if Amazon OpenSearch Service domains are configured to send logs to Amazon CloudWatch Logs. 
+  The rule is COMPLIANT if a log is enabled for an Amazon ES domain. This rule is NON_COMPLIANT if logging is not configured."
   "scope": {
     "resourceTypes": [
       "AWS::Elasticsearch::Domain"
@@ -84,7 +85,7 @@ For some rules, the rule identifier is different from the rule name\. For exampl
 The defaultName is the name that instances of a rule will get by default\.
 
 **description**  
-The rule description provides context for what the rule evaluates\. The AWS Config Console has a limit of 256 characters\. As a best practice, the rule description should be with “Checks if” and include a description of the NON\_COMPLIANT scenario\. Service Names should be written in full beginning with AWS or Amazon when first mentioned in the rule description\. For example, AWS CloudTrail or Amazon CloudWatch instead of CloudTrail or CloudWatch for first use\. Services names can be abbreviated after subsequent reference\. 
+The rule description provides context for what the rule evaluates\. The AWS Config Console has a limit of 256 characters\. As a best practice, the rule description should begin with “Checks if” and include a description of the NON\_COMPLIANT scenario\. Service Names should be written in full beginning with AWS or Amazon when first mentioned in the rule description\. For example, AWS CloudTrail or Amazon CloudWatch instead of CloudTrail or CloudWatch for first use\. Services names can be abbreviated after subsequent reference\. 
 
 **scope**  
 The scope determines which resource types the rule targets\. For a list of supported resource types, see [Supported Resource Types](https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources.html)\.

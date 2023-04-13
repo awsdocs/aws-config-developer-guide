@@ -16,6 +16,6 @@ groupNames \(Optional\)Type: String
 Comma\-separated list of IAM groups in which IAM users must be members\.  
 This rule does not support group names with commas\.
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9d353c17"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d379c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

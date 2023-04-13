@@ -15,6 +15,6 @@ Checks if Lambda has more than 1 availability zone associated\. The rule is NON\
 availabilityZones \(Optional\)Type: int  
 Number of expected Availability zones\.
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9d381c17"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d407c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

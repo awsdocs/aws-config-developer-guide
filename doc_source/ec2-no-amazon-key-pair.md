@@ -14,6 +14,6 @@ Checks if running Amazon Elastic Compute Cloud \(EC2\) instances are launched us
 
 None  
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9d211c17"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d221c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

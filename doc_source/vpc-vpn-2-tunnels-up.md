@@ -8,12 +8,12 @@ Checks that both VPN tunnels provided by AWS Site\-to\-Site VPN are in UP status
 
 **Trigger type:** Configuration changes
 
-**AWS Region:** All supported AWS regions except Middle East \(Bahrain\), China \(Beijing\), Asia Pacific \(Jakarta\), Asia Pacific \(Hyderabad\), Asia Pacific \(Osaka\), Asia Pacific \(Melbourne\), Europe \(Spain\), China \(Ningxia\), Europe \(Zurich\) Region
+**AWS Region:** All supported AWS regions except Middle East \(Bahrain\), China \(Beijing\), Asia Pacific \(Jakarta\), Asia Pacific \(Osaka\), Asia Pacific \(Melbourne\), China \(Ningxia\) Region
 
 **Parameters:**
 
 None  
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9d581c17"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d613c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

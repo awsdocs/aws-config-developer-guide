@@ -45,6 +45,25 @@ For more information, see [Managing extensions through the AWS CloudFormation re
 **Note**  
 Proactive rules do not remediate resources that are flagged as NON\_COMPLIANT or prevent them from being deployed\.
 
+#### List of managed rules with proactive evaluation<a name="list-proactive-rules"></a>
+
+For a list of managed rules that support proactive evaluation, see [List of AWS Config Managed Rules by Evaluation Mode](https://docs.aws.amazon.com/config/latest/developerguide/managed-rules-by-evaluation-mode.html)\.
+
+#### List of supported resource types for proactive evaluation<a name="list-proactive-resource-types"></a>
+
+The following is a list of resource types that are supported for proactive evaluation:
++ `AWS::ApiGateway::Stage`
++ `AWS::AutoScaling::AutoScalingGroup`
++ `AWS::EC2::EIP`
++ `AWS::EC2::Instance`
++ `AWS::EC2::Subnet`
++ `AWS::Elasticsearch::Domain`
++ `AWS::Lambda::Function`
++ `AWS::RDS::DBInstance`
++ `AWS::Redshift::Cluster`
++ `AWS::S3::Bucket`
++ `AWS::SNS::Topic`
+
 #### Example rule with proactive evaluation<a name="example-evaluation-modes"></a>
 
 **Example proactive rule**
@@ -102,10 +121,6 @@ You should receive output similiar to the following:
 
 To see additional information about the evaluation result, such as which rule flagged a resource as NON\_COMPLIANT, use the [GetComplianceDetailsByResource](https://docs.aws.amazon.com/config/latest/APIReference/API_GetComplianceDetailsByResource.html) API\.
 
-#### List of managed rules with proactive evaluation<a name="list-proactive-rules"></a>
-
-For a list of managed rules that support proactive evaluation, see [List of AWS Config Managed Rules by Evaluation Mode](https://docs.aws.amazon.com/config/latest/developerguide/managed-rules-by-evaluation-mode.html)\.
-
 ### Detective mode<a name="aws-config-rules-evaluation-detective"></a>
 
 Use detective evaluation to evaluate resources that have already been deployed\. This allows you to evaluate the configuration settings of your existing resources\.
@@ -134,7 +149,7 @@ Use detective evaluation to evaluate resources that have already been deployed\.
 
 1. You want AWS Config to run evaluations for the rule every time a trail is created, updated, or deleted\. You also want AWS Config to run the rule every 12 hours\.
 
-1. For the trigger type, you write logic for both configuration change and periodic triggers\. For more information, see [Components of an AWS Config Rule: Writing Rules](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_writing-rules)\.
+1. For the trigger type, you write logic for both configuration change and periodic triggers\. For more information, see [Components of an AWS Config Rule: Writing Rules](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_components.html)\.
 
 ## Rule evaluations when the configuration recorder is turned off<a name="turning-off-configuration-recorder"></a>
 

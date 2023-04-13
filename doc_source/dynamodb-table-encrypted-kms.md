@@ -15,6 +15,6 @@ Checks if Amazon DynamoDB table is encrypted with AWS Key Management Service \(K
 kmsKeyArns \(Optional\)Type: CSV  
 Comma separated list of AWS KMS key ARNs allowed for encrypting Amazon DynamoDB Tables\.
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9d165c17"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d175c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

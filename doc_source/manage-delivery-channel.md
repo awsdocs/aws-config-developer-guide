@@ -9,7 +9,7 @@ When AWS Config detects a configuration change for a resource and the notificati
 **Note**  
 **AWS Config supports AWS KMS encryption for Amazon S3 buckets used by AWS Config**  
 You can provide an AWS Key Management Service \(AWS KMS\) key or alias Amazon Resource Name \(ARN\) to encrypt the data delivered to your Amazon Simple Storage Service \(Amazon S3\) bucket\. By default, AWS Config delivers configuration history and snapshot files to your Amazon S3 bucket and encrypts the data at rest using S3 AES\-256 server\-side encryption, SSE\-S3\. However, if you provide AWS Config with your KMS key or alias ARN, AWS Config uses that KMS key instead of AES\-256 encryption\.  
-AWS Config does not support the delivery channel to an Amazon S3 bucket where object lock is enabled\. For more information, see [How S3 Object Lock works](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock-overview.html)\.
+AWS Config does not support the delivery channel to an Amazon S3 bucket where object lock is enabled with default rentention enabled\. For more information, see [How S3 Object Lock works](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock-overview.html)\.
 
 ## Updating the Delivery Channel<a name="update-dc-console"></a>
 

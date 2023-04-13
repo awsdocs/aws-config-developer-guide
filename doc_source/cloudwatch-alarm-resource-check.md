@@ -16,6 +16,6 @@ AWS resource type\. The value can be one of the following: AWS::EC2::Volume, AWS
 metricNameType: String  
 The name for the metric associated with the alarm \(for example, 'CPUUtilization' for EC2 instances\)\.
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9d105c15"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d115c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

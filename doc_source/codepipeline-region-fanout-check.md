@@ -15,6 +15,6 @@ Checks if each stage in the AWS CodePipeline deploys to more than N times the nu
 regionFanoutFactor \(Optional\)Type: intDefault: 3  
 The number of regions the AWS CodePipeline has deployed to in all previous stages is the acceptable number of regions any stage can deploy to\.
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9d141c17"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d151c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

@@ -15,6 +15,6 @@ Checks if versioning is enabled for your S3 buckets\. Optionally, the rule check
 isMfaDeleteEnabled \(Optional\)Type: String  
 MFA delete is enabled for your S3 buckets\.
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9d511c17"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d541c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

@@ -78,4 +78,4 @@ You should see output similar to the following:
 }
 ```
 
-For more information, see [Supported Resource Types \(AWS Config\)](https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#awsconfig) and [GetResourceConfigHistory](https://docs.aws.amazon.com/config/latest/APIReference/APIReference/API_GetResourceConfigHistory.html) in the API reference\.
+For more information, see [Supported Resource Types \(AWS Config\)](https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#awsconfig) and [GetResourceConfigHistory](https://docs.aws.amazon.com/config/latest/APIReference/API_GetResourceConfigHistory.html) in the API reference\.

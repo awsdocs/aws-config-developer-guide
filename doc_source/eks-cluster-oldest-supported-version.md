@@ -15,6 +15,6 @@ Checks if an Amazon Elastic Kubernetes Service \(EKS\) cluster is running the ol
 oldestVersionSupportedType: String  
 Value of the oldest version of Kubernetes supported on AWS\.
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9d271c17"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d283c17"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.

@@ -16,6 +16,6 @@ An IAM policy ARN to be checked\.
 policyUsageType \(Optional\)Type: String  
 Specify whether you expect the policy to be attached to an IAM user, group or role\. Valid values are IAM\_USER, IAM\_GROUP, IAM\_ROLE, or ANY\. Default value is ANY\.
 
-## AWS CloudFormation template<a name="w2aac12c33c15b9d343c15"></a>
+## AWS CloudFormation template<a name="w2aac12c33c15b9d369c15"></a>
 
 To create AWS Config managed rules with AWS CloudFormation templates, see [Creating AWS Config Managed Rules With AWS CloudFormation Templates](aws-config-managed-rules-cloudformation-templates.md)\.
