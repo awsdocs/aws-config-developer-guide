@@ -93,6 +93,11 @@ The "`_`" \(single underscore\) is also treated as a wildcard\.
   + For all other aggregations `GROUP BY` clauses may contain up to three properties\.
   + Pagination is supported for all aggregate queries except when `ORDER BY` clause has an aggregate function\. For example, `GROUP BY X, ORDER BY Y` does not work if `Y` is an aggregate function\.
   + No support for `HAVING` clauses in aggregations\.
++ Mismatched identifier limitations:
+
+  Mismatched identifiers are properties that have the same spelling but different cases \(upper and lower case\)\. Advanced query does not support processing queries that contain mismatched identifiers\. For example:
+  + Two properties that have the exact same spelling but with different casing \(`configuration.dbclusterIdentifier` and `configuration.dBClusterIdentifier`\)\.
+  + Two properties where one property is a subset of the other, and they have different casing \(`configuration.ipAddress` and `configuration.ipaddressPermissions`\)\.
 
 ## Region Support<a name="query-regionsupport"></a>
 
