@@ -176,86 +176,79 @@ If you use the AWS Config console to create a rule that is associated with a fun
 This example checks whether the total number of a specified resource exceeds a specified maximum\.
 
 ```
-var aws = require('aws-sdk'), // Loads the AWS SDK for JavaScript.
-    config = new aws.ConfigService(), // Constructs a service object to use the aws.ConfigService class.
-    COMPLIANCE_STATES = {
-        COMPLIANT : 'COMPLIANT',
-        NON_COMPLIANT : 'NON_COMPLIANT',
-        NOT_APPLICABLE : 'NOT_APPLICABLE'
+/** @see https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-config-service/ */
+const aws = require("@aws-sdk/client-config-service");
+
+const config = new aws.ConfigService();
+
+/** Receives the event and context from AWS Lambda. */
+exports.handler = async ({ accountId, invokingEvent: invokingEventJSON, resultToken, ruleParameters: ruleParametersJSON }, _context) => {
+    const invokingEvent = JSON.parse(invokingEventJSON);
+    const ruleParameters = JSON.parse(ruleParametersJSON);
+    let numberOfResources = 0;
+
+    if (!isScheduledNotification(invokingEvent)) {
+        console.log("Invoked for a notification other than Scheduled Notification... Ignoring.");
+        return;
+    }
+
+    /** @see https://docs.aws.amazon.com/config/latest/APIReference/API_ListDiscoveredResources.html#config-ListDiscoveredResources-request-resourceType */
+    const count = await countResourceTypes(ruleParameters.applicableResourceType, numberOfResources);
+
+    /**
+     * Initializes the request that contains the evaluation results.
+     * @type aws.PutEvaluationsCommandInput
+     */
+    const putEvaluationsRequest = {
+        Evaluations: [{
+            // Applies the evaluation result to the AWS account published in the event.
+            ComplianceResourceType: "AWS::::Account",
+            ComplianceResourceId: accountId,
+            ComplianceType: evaluateCompliance(ruleParameters.maxCount, count),
+            OrderingTimestamp: new Date()
+        }],
+        ResultToken: resultToken
     };
 
-// Receives the event and context from AWS Lambda.
-exports.handler = function(event, context, callback) {
-    // Parses the invokingEvent and ruleParameters values, which contain JSON objects passed as strings.
-    var invokingEvent = JSON.parse(event.invokingEvent), 
-        ruleParameters = JSON.parse(event.ruleParameters),
-        noOfResources = 0;
+    console.log(putEvaluationsRequest);
 
-    if (isScheduledNotification(invokingEvent)) {
-        countResourceTypes(ruleParameters.applicableResourceType, "", noOfResources, function(err, count) {
-            if (err === null) {
-                var putEvaluationsRequest;
-                // Initializes the request that contains the evaluation results.
-                putEvaluationsRequest = {
-                    Evaluations : [ {
-                        // Applies the evaluation result to the AWS account published in the event.
-                        ComplianceResourceType : 'AWS::::Account',
-                        ComplianceResourceId : event.accountId,
-                        ComplianceType : evaluateCompliance(ruleParameters.maxCount, count),
-                        OrderingTimestamp : new Date()
-                    } ],
-                    ResultToken : event.resultToken
-                };
-                // Sends the evaluation results to AWS Config.
-                config.putEvaluations(putEvaluationsRequest, function(err, data) {
-                    if (err) {
-                        callback(err, null);
-                    } else {
-                        if (data.FailedEvaluations.length > 0) {
-                            // Ends the function execution if evaluation results are not successfully reported
-                            callback(JSON.stringify(data));
-                        }
-                        callback(null, data);
-                    }
-                });
-            } else {
-                callback(err, null);
-            }
-        });
-    } else {
-        console.log("Invoked for a notification other than Scheduled Notification... Ignoring.");
+    // Sends the evaluation results to AWS Config.
+    const data = await config.putEvaluations(putEvaluationsRequest);
+
+    if (data.FailedEvaluations?.length > 0) {
+        // Ends the function execution if evaluation results are not successfully reported.
+        console.error(JSON.stringify(data));
+        return;
     }
+
+    return data;
 };
 
-// Checks whether the invoking event is ScheduledNotification.
-function isScheduledNotification(invokingEvent) {
-    return (invokingEvent.messageType === 'ScheduledNotification');
-}
+/** Checks whether the invoking event is `"ScheduledNotification"`. */
+const isScheduledNotification = ({ messageType }) => messageType === "ScheduledNotification";
 
-// Checks whether the compliance conditions for the rule are violated.
-function evaluateCompliance(maxCount, actualCount) {
-    if (actualCount > maxCount) {
-        return COMPLIANCE_STATES.NON_COMPLIANT;
-    } else {
-        return COMPLIANCE_STATES.COMPLIANT;
+/**
+ * Checks whether the compliance conditions for the rule are violated.
+ * @returns {aws.ComplianceType}
+ */
+const evaluateCompliance = (maxCount, actualCount) => actualCount > maxCount ? "NON_COMPLIANT" : "COMPLIANT";
+
+/**
+ * Counts the applicable resources that belong to the AWS account.
+ * @param count {number} Mutable count of resources found.
+ */
+const countResourceTypes = async (applicableResourceType, count, initialToken) => {
+    const { nextToken, resourceIdentifiers } = await config.listDiscoveredResources({ resourceType: applicableResourceType, nextToken: initialToken });
+
+    count += resourceIdentifiers?.length || 0;
+
+    if (nextToken) {
+        await countResourceTypes(applicableResourceType, count, nextToken);
     }
-}
 
-// Counts the applicable resources that belong to the AWS account.
-function countResourceTypes(applicableResourceType, nextToken, count, callback) {
-    config.listDiscoveredResources({resourceType : applicableResourceType, nextToken : nextToken}, function(err, data) {
-        if (err) {
-            callback(err, null);
-        } else {
-            count = count + data.resourceIdentifiers.length;
-            if (data.nextToken !== undefined && data.nextToken != null) {
-                countResourceTypes(applicableResourceType, data.nextToken, count, callback);
-            }
-            callback(null, count);
-        }
-    });
+    console.log({ count });
     return count;
-}
+};
 ```
 
 **Function Operations**
